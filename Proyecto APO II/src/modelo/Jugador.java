@@ -39,7 +39,7 @@ public class Jugador {
 	}
 	
 	/**
-	 * Este modifica el nombre del jugador
+	 * Este metodo modifica el nombre del jugador
 	 * @param nickName nombre del jugador.
 	 */
 	public void setNickName(String nickName) {
@@ -55,7 +55,7 @@ public class Jugador {
 	}
 	
 	/**
-	 * Este modifica la contrasena del jugador
+	 * Este metodo modifica la contrasena del jugador
 	 * @param contrasena contrasena del jugador del jugador.
 	 */
 	public void setContrasena(String contrasena) {
