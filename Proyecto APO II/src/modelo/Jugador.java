@@ -18,6 +18,9 @@ public class Jugador {
 	
 	//CONSTRUCTOR
 	
+	/**
+	 * Constructor de la clase Jugador.
+	 */
 	public Jugador(String nickName, String contrasena) {
 		
 		this.nickName = nickName;
