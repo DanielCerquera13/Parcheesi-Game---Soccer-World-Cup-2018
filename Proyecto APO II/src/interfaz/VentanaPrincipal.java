@@ -14,7 +14,7 @@ public class VentanaPrincipal extends JFrame  {
 		
 		
 		  
-		setSize(1920,1080); 
+		setSize(1280, 1024); 
 		
 		ventanaSesion = new VentanaIniciarSesion();
 		ventanaUsuario = new VentanaNuevoUsuario();
