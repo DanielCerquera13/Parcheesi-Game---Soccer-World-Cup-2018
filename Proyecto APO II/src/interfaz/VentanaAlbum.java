@@ -8,6 +8,6 @@ public class VentanaAlbum extends JDialog{
 
 
  public VentanaAlbum() {
-	 
+  	 
  }
 } 
