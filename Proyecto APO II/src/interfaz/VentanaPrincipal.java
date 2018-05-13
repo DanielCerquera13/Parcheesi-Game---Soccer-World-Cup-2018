@@ -23,13 +23,16 @@ private int valor;
 	public VentanaPrincipal() {
 
 		setTitle("Parqu�s Mundial Rusia 2018");
-		setResizable(false);
+		setResizable(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(1580, 1024);
+		
+	// esta es 
+		//setSize(1580, 1024);
 
+		setSize(1020, 800);
 		// Custom Cursor
-		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-				new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
+		//setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+		//		new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
 
 		// Icono del programa
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
