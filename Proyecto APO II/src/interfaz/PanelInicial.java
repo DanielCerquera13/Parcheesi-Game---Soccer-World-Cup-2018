@@ -7,12 +7,12 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.tools.Tool;
 
-public class PanelAuxiliarPrincipal extends JPanel implements ActionListener {
+public class PanelInicial extends JPanel implements ActionListener {
 
 	/**
 	 * Constantes
 	 */
-	
+
 	public final static Image DADOS = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/dadoRojoPro.gif");
 	public final static Image LOGO = Toolkit.getDefaultToolkit()
@@ -25,7 +25,7 @@ public class PanelAuxiliarPrincipal extends JPanel implements ActionListener {
 	public final static String INICIAR = "iniciar";
 	public final static String CREAR = "crear";
 	public final static String RAPIDA = "rapida";
-	
+
 	/**
 	 * Relaciones y atributos
 	 */
@@ -36,9 +36,10 @@ public class PanelAuxiliarPrincipal extends JPanel implements ActionListener {
 
 	/**
 	 * Constructor
-	 * @param window 
+	 * 
+	 * @param window
 	 */
-	public PanelAuxiliarPrincipal(VentanaPrincipal window) {
+	public PanelInicial(VentanaPrincipal window) {
 
 		ventana = window;
 		setLayout(null);
@@ -106,34 +107,29 @@ public class PanelAuxiliarPrincipal extends JPanel implements ActionListener {
 	}
 
 	/**
-	 * Este método se encarga de colocarle las acciones a los botones frente a un evento.
+	 * Este método se encarga de colocarle las acciones a los botones frente a un
+	 * evento.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+
 		String comando = e.getActionCommand();
-		
-		
-		if(comando.equals(CREAR)) {
-			
-			
-			
+
+		if (comando.equals(CREAR)) {
+
 		}
-		
-		if(comando.equals(INICIAR)) {
-			
-			
-			
+
+		if (comando.equals(INICIAR)) {
+
+			ventana.remove(this);
+			ventana.add(ventana.getIniciarSesion());
+			ventana.refresh();
+
 		}
-		
-		if(comando.equals(RAPIDA)) {
-			
-			
-			
-			
+
+		if (comando.equals(RAPIDA)) {
+
 		}
-		
-		
 
 	}
 

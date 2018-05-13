@@ -9,9 +9,10 @@ public class VentanaPrincipal extends JFrame {
 	/**
 	 * Relaciones
 	 */
-	private VentanaIniciarSesion ventanaSesion;
+
 	private VentanaNuevoUsuario ventanaUsuario;
-	private PanelAuxiliarPrincipal aux;
+	private PanelInicial inicial;
+	private VentanaIniciarSesion iniciarSesion;
 
 	/**
 	 * Constructor
@@ -31,11 +32,31 @@ public class VentanaPrincipal extends JFrame {
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
 		setIconImage(icon);
 
-		ventanaSesion = new VentanaIniciarSesion();
 		ventanaUsuario = new VentanaNuevoUsuario();
-		aux = new PanelAuxiliarPrincipal(this);
+		inicial = new PanelInicial(this);
+		iniciarSesion = new VentanaIniciarSesion(this);
 
-		add(aux);
+		add(inicial);
+
+	}
+
+	public VentanaIniciarSesion getIniciarSesion() {
+
+		return iniciarSesion;
+
+	}
+
+	public PanelInicial getAux() {
+
+		return inicial;
+
+	}
+
+	public void refresh() {
+
+		invalidate();
+		revalidate();
+		repaint();
 
 	}
 
