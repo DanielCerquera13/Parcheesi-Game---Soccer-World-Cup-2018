@@ -53,35 +53,35 @@ public class PanelInicial extends JPanel implements ActionListener {
 	}
 
 	/**
-	 * Este método se encarga de inicializar y modificar los botones del panel.
+	 * Este mï¿½todo se encarga de inicializar y modificar los botones del panel.
 	 */
 	public void ajustarBotones() {
 
-		butIniciarSesion = new JButton("Iniciar Sesión");
+		butIniciarSesion = new JButton("Iniciar Sesiï¿½n");
 		butIniciarSesion.setActionCommand(INICIAR);
 		butIniciarSesion.addActionListener(this);
 		butIniciarSesion.setBounds(620, 590, 400, 80);
 		butIniciarSesion.setFont(new Font("Garamond", 1, 40));
-		butIniciarSesion.setToolTipText("¡Ingresa con tu usuario y contraseña para seguir con tu proceso!");
+		butIniciarSesion.setToolTipText("ï¿½Ingresa con tu usuario y contraseï¿½a para seguir con tu proceso!");
 
 		butCrearUsuario = new JButton("Crear Nuevo Usuario");
 		butCrearUsuario.setActionCommand(CREAR);
 		butCrearUsuario.addActionListener(this);
 		butCrearUsuario.setBounds(620, 690, 400, 80);
 		butCrearUsuario.setFont(new Font("Garamond", 1, 40));
-		butCrearUsuario.setToolTipText("¡Crea un nuevo usuario para completar el álbum y mucho más!");
+		butCrearUsuario.setToolTipText("ï¿½Crea un nuevo usuario para completar el ï¿½lbum y mucho mï¿½s!");
 
-		butPartidaRapida = new JButton("Partida Rápida");
+		butPartidaRapida = new JButton("Partida Rï¿½pida");
 		butPartidaRapida.setActionCommand(RAPIDA);
 		butPartidaRapida.addActionListener(this);
 		butPartidaRapida.setBounds(620, 790, 400, 80);
 		butPartidaRapida.setFont(new Font("Garamond", 1, 40));
-		butPartidaRapida.setToolTipText("¡Juega sin la necesidad de iniciar sesión o crear un usuario!");
+		butPartidaRapida.setToolTipText("ï¿½Juega sin la necesidad de iniciar sesiï¿½n o crear un usuario!");
 
 	}
 
 	/**
-	 * Este método se encarga de pintar las imagenes y gifs en el panel.
+	 * Este mï¿½todo se encarga de pintar las imagenes y gifs en el panel.
 	 */
 	@Override
 	public void paintComponent(Graphics g) {
@@ -100,14 +100,14 @@ public class PanelInicial extends JPanel implements ActionListener {
 		g.drawImage(FICHA, 1100, 500, null);
 		g.setFont(parques);
 		g.setColor(Color.WHITE);
-		g.drawString("Parqués Mundial Rusia 2018", 460, 935);
+		g.drawString("Parquï¿½s Mundial Rusia 2018", 460, 935);
 
 		repaint();
 
 	}
 
 	/**
-	 * Este método se encarga de colocarle las acciones a los botones frente a un
+	 * Este mï¿½todo se encarga de colocarle las acciones a los botones frente a un
 	 * evento.
 	 */
 	@Override
@@ -116,7 +116,10 @@ public class PanelInicial extends JPanel implements ActionListener {
 		String comando = e.getActionCommand();
 
 		if (comando.equals(CREAR)) {
-
+            
+			ventana.remove(this);
+			ventana.add(ventana.getPanelNuevoUsuario());
+			ventana.refresh();
 		}
 
 		if (comando.equals(INICIAR)) {

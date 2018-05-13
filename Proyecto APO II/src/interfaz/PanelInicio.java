@@ -8,4 +8,5 @@ public class PanelInicio extends JPanel{
 	public PanelInicio () {
 		
 	}
-}
+}     
+ 

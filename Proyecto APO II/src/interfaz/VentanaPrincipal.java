@@ -10,7 +10,7 @@ public class VentanaPrincipal extends JFrame {
 	 * Relaciones
 	 */
 
-	private VentanaNuevoUsuario ventanaUsuario;
+	private PanelNuevoUsuario panelUsuario;
 private int valor;
 	
 	
@@ -29,7 +29,7 @@ private int valor;
 	// esta es 
 		//setSize(1580, 1024);
 
-		setSize(1020, 800);
+		setSize(800, 600);
 		// Custom Cursor
 
 		//setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
@@ -43,14 +43,21 @@ private int valor;
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
 		setIconImage(icon);
 
-		ventanaUsuario = new VentanaNuevoUsuario();
+		panelUsuario = new PanelNuevoUsuario(this);
 		inicial = new PanelInicial(this);
 		iniciarSesion = new VentanaIniciarSesion(this);
 
 		add(inicial);
-
+        
+		
+	
 	}
 
+	
+	public PanelNuevoUsuario getPanelNuevoUsuario() {
+		
+		return panelUsuario;
+	} 
 	public VentanaIniciarSesion getIniciarSesion() {
 
 		return iniciarSesion;
