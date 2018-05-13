@@ -12,7 +12,7 @@ public class VentanaPrincipal extends JFrame {
 
 	private VentanaNuevoUsuario ventanaUsuario;
 	private PanelInicial inicial;
-	private VentanaIniciarSesion iniciarSesion;
+	private PanelIniciarSesion iniciarSesion;
 
 	/**
 	 * Constructor
@@ -23,10 +23,12 @@ public class VentanaPrincipal extends JFrame {
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(1580, 1024);
+		
+		
 
 		// Custom Cursor
-//		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-//				new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
+		//setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+		//new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
 
 		// Icono del programa
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
@@ -34,13 +36,13 @@ public class VentanaPrincipal extends JFrame {
 
 		ventanaUsuario = new VentanaNuevoUsuario();
 		inicial = new PanelInicial(this);
-		iniciarSesion = new VentanaIniciarSesion(this);
+		iniciarSesion = new PanelIniciarSesion(this);
 
 		add(inicial);
 
 	}
 
-	public VentanaIniciarSesion getIniciarSesion() {
+	public PanelIniciarSesion getIniciarSesion() {
 
 		return iniciarSesion;
 
