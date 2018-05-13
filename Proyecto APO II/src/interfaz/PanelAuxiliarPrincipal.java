@@ -35,14 +35,17 @@ public class PanelAuxiliarPrincipal extends JPanel {
 		butIniciarSesion = new JButton("Iniciar Sesión");
 		butIniciarSesion.setBounds(620, 590, 400, 80);
 		butIniciarSesion.setFont(new Font("Garamond", 1 , 40));
+		butIniciarSesion.setToolTipText("¡Ingresa con tu usuario y contraseña para seguir con tu proceso!");
 		
 		butCrearUsuario = new JButton("Crear Nuevo Usuario");
 		butCrearUsuario.setBounds(620, 690, 400, 80);
 		butCrearUsuario.setFont(new Font("Garamond", 1 , 40));
+		butCrearUsuario.setToolTipText("¡Crea un nuevo usuario para completar el álbum y mucho más!");
 		
 		butPartidaRapida = new JButton("Partida Rápida");
 		butPartidaRapida.setBounds(620, 790, 400, 80);
 		butPartidaRapida.setFont(new Font("Garamond", 1 , 40));
+		butPartidaRapida.setToolTipText("¡Juega sin la necesidad de iniciar sesión o crear un usuario!");
 		
 		
 		
