@@ -31,8 +31,13 @@ private int valor;
 
 		setSize(1020, 800);
 		// Custom Cursor
+
 		//setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
 		//		new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
+
+//		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+//				new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
+//github.com/JavaCracks/proyectoFinal.git
 
 		// Icono del programa
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
