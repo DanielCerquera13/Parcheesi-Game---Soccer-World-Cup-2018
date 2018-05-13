@@ -6,10 +6,16 @@ import java.awt.*;
 
 public class VentanaPrincipal extends JFrame {
 
+	/**
+	 * Relaciones
+	 */
 	private VentanaIniciarSesion ventanaSesion;
 	private VentanaNuevoUsuario ventanaUsuario;
 	private PanelAuxiliarPrincipal aux;
 
+	/**
+	 * Constructor
+	 */
 	public VentanaPrincipal() {
 
 		setTitle("Parqués Mundial Rusia 2018");

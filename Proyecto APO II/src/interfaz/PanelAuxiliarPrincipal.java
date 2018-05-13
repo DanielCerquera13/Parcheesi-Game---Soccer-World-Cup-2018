@@ -1,24 +1,45 @@
 package interfaz;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import javax.tools.Tool;
 
-public class PanelAuxiliarPrincipal extends JPanel {
+public class PanelAuxiliarPrincipal extends JPanel implements ActionListener {
 
-	public final static Image DADOS = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/dadoRojoPro.gif");
-	public final static Image LOGO = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
-	public final static Image FICHA = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/fichaInicio.png");
-	public final static Image FONDO = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/fondoPrincipal.jpg");
+	/**
+	 * Constantes
+	 */
 	
+	public final static Image DADOS = Toolkit.getDefaultToolkit()
+			.createImage("./Archivos/imagenes/recursos/dadoRojoPro.gif");
+	public final static Image LOGO = Toolkit.getDefaultToolkit()
+			.createImage("./Archivos/imagenes/recursos/logoPro.png");
+	public final static Image FICHA = Toolkit.getDefaultToolkit()
+			.createImage("./Archivos/imagenes/recursos/fichaInicio.png");
+	public final static Image FONDO = Toolkit.getDefaultToolkit()
+			.createImage("./Archivos/imagenes/recursos/fondoPrincipal.jpg");
+
+	public final static String INICIAR = "iniciar";
+	public final static String CREAR = "crear";
+	public final static String RAPIDA = "rapida";
 	
+	/**
+	 * Relaciones y atributos
+	 */
 	private VentanaPrincipal ventana;
 	private JButton butIniciarSesion;
 	private JButton butCrearUsuario;
 	private JButton butPartidaRapida;
 
+	/**
+	 * Constructor
+	 * @param window 
+	 */
 	public PanelAuxiliarPrincipal(VentanaPrincipal window) {
-		
+
 		ventana = window;
 		setLayout(null);
 
@@ -30,35 +51,44 @@ public class PanelAuxiliarPrincipal extends JPanel {
 
 	}
 
+	/**
+	 * Este método se encarga de inicializar y modificar los botones del panel.
+	 */
 	public void ajustarBotones() {
-		
+
 		butIniciarSesion = new JButton("Iniciar Sesión");
+		butIniciarSesion.setActionCommand(INICIAR);
+		butIniciarSesion.addActionListener(this);
 		butIniciarSesion.setBounds(620, 590, 400, 80);
-		butIniciarSesion.setFont(new Font("Garamond", 1 , 40));
+		butIniciarSesion.setFont(new Font("Garamond", 1, 40));
 		butIniciarSesion.setToolTipText("¡Ingresa con tu usuario y contraseña para seguir con tu proceso!");
-		
+
 		butCrearUsuario = new JButton("Crear Nuevo Usuario");
+		butCrearUsuario.setActionCommand(CREAR);
+		butCrearUsuario.addActionListener(this);
 		butCrearUsuario.setBounds(620, 690, 400, 80);
-		butCrearUsuario.setFont(new Font("Garamond", 1 , 40));
+		butCrearUsuario.setFont(new Font("Garamond", 1, 40));
 		butCrearUsuario.setToolTipText("¡Crea un nuevo usuario para completar el álbum y mucho más!");
-		
+
 		butPartidaRapida = new JButton("Partida Rápida");
+		butPartidaRapida.setActionCommand(RAPIDA);
+		butPartidaRapida.addActionListener(this);
 		butPartidaRapida.setBounds(620, 790, 400, 80);
-		butPartidaRapida.setFont(new Font("Garamond", 1 , 40));
+		butPartidaRapida.setFont(new Font("Garamond", 1, 40));
 		butPartidaRapida.setToolTipText("¡Juega sin la necesidad de iniciar sesión o crear un usuario!");
-		
-		
-		
+
 	}
-	
+
+	/**
+	 * Este método se encarga de pintar las imagenes y gifs en el panel.
+	 */
 	@Override
 	public void paintComponent(Graphics g) {
 
 		super.paintComponent(g);
 
 		Font parques = new Font("Broadway", 4, 45);
-		
-		
+
 		g.drawImage(FONDO, 0, 0, null);
 		g.drawImage(DADOS, 80, 40, null);
 		g.drawImage(DADOS, 280, 220, null);
@@ -72,6 +102,38 @@ public class PanelAuxiliarPrincipal extends JPanel {
 		g.drawString("Parqués Mundial Rusia 2018", 460, 935);
 
 		repaint();
+
+	}
+
+	/**
+	 * Este método se encarga de colocarle las acciones a los botones frente a un evento.
+	 */
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		String comando = e.getActionCommand();
+		
+		
+		if(comando.equals(CREAR)) {
+			
+			
+			
+		}
+		
+		if(comando.equals(INICIAR)) {
+			
+			
+			
+		}
+		
+		if(comando.equals(RAPIDA)) {
+			
+			
+			
+			
+		}
+		
+		
 
 	}
 
