@@ -62,11 +62,11 @@ public class PanelAuxiliarPrincipal extends JPanel {
 		g.drawImage(DADOS, 1300, 40, null);
 		g.drawImage(DADOS, 1100, 220, null);
 		g.drawImage(LOGO, 560, -10, null);
-		g.drawImage(FICHA, 50, 500, null);
+		g.drawImage(FICHA, -15, 500, null);
 		g.drawImage(FICHA, 1100, 500, null);
 		g.setFont(parques);
 		g.setColor(Color.WHITE);
-		g.drawString("Parqués Mundial Rusia 2018", 485, 935);
+		g.drawString("Parqués Mundial Rusia 2018", 460, 935);
 
 		repaint();
 
