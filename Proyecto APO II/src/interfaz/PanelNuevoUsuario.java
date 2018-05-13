@@ -112,7 +112,13 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+        String  comando = e.getActionCommand();
+        
+        if(comando.equals(REGRESAR)) {
+        	
+        	ven.remove(this);
+			ven.add(ven.getPanelInicial());
+			ven.refresh();
+        }
 	}
 }

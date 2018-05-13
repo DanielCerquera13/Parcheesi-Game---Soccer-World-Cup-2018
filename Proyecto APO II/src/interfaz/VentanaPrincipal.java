@@ -54,6 +54,11 @@ private int valor;
 	}
 
 	
+public PanelInicial getPanelInicial() {
+		
+		return inicial;
+	} 
+	
 	public PanelNuevoUsuario getPanelNuevoUsuario() {
 		
 		return panelUsuario;
