@@ -8,17 +8,24 @@ public class VentanaPrincipal extends JFrame {
 
 	private VentanaIniciarSesion ventanaSesion;
 	private VentanaNuevoUsuario ventanaUsuario;
+	private PanelAuxiliarPrincipal aux;
 
 	public VentanaPrincipal() {
 
 		setTitle("Parqués Mundial Rusia 2018");
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(1580, 1024);
 
-		setSize(1280, 1024);
+		// Icono del programa
+		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
+		setIconImage(icon);
 
 		ventanaSesion = new VentanaIniciarSesion();
 		ventanaUsuario = new VentanaNuevoUsuario();
+		aux = new PanelAuxiliarPrincipal(this);
+
+		add(aux);
 
 	}
 
