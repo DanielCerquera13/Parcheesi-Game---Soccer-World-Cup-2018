@@ -91,8 +91,8 @@ public class PanelPanini extends JPanel implements ActionListener{
 	    add(laminaUno);
 	    
 	    ImageIcon imagen2 = new ImageIcon("Archivos/imagenes/laminas/alemania/boateng.jpg");
-	    laminaTres= new JLabel(imagen2);
-	    laminaTres.setBounds(230, 150, 160, 220);
+	    laminaDos= new JLabel(imagen2);
+	    laminaDos.setBounds(230, 150, 160, 220);
 	    add(laminaDos);
 	    
 	    ImageIcon imagen3 = new ImageIcon("Archivos/imagenes/laminas/alemania/hummels.jpg");
