@@ -53,6 +53,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		nombre = new JLabel("Nombre");
 		nombre.setBounds(936, 180, 400, 80);
 		nombre.setFont(new Font("Garamond", 1, 40));
+		nombre.setForeground(Color.WHITE);
 
 		nombretxt = new JTextField();
 		nombretxt.setBounds(936, 280, 400, 80);
