@@ -10,10 +10,7 @@ public class VentanaPrincipal extends JFrame {
 	 * Relaciones
 	 */
 
-	private PanelNuevoUsuario panelUsuario;
 	private PanelInicial inicial;
-	private PanelIniciarSesion iniciarSesion;
-	private PanelEscogerEquipo pEscogerEquipo;
 
 	/**
 	 * Constructor
@@ -27,43 +24,24 @@ public class VentanaPrincipal extends JFrame {
 		setSize(1280, 768);
 		// Custom Cursor
 
-		 setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-		 new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new
-		 Point(0, 0), "Ball Cursor"));
+		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+				new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
 
 		// Icono del programa
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
 		setIconImage(icon);
 
-		panelUsuario = new PanelNuevoUsuario(this);
 		inicial = new PanelInicial(this);
-		iniciarSesion = new PanelIniciarSesion(this);
 
 		add(inicial);
 
 		// asd
 
 	}
-	
 
 	public PanelInicial getPanelInicial() {
 
 		return inicial;
-	}
-
-	public PanelNuevoUsuario getPanelNuevoUsuario() {
-
-		return panelUsuario;
-	}
-
-	public PanelIniciarSesion getIniciarSesion() {
-
-		return iniciarSesion;
-
-	}
-	
-	public PanelEscogerEquipo getPanelEscogerEquipo() {
-		return pEscogerEquipo;
 	}
 
 	public void refresh() {

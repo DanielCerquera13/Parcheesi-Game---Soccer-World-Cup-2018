@@ -13,6 +13,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	public final static Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
 
+	private PanelInicial inicial;
 	private JPasswordField contrasenatxt;
 	private JPasswordField contrasenaConfirmartxt;
 	private JLabel nombre;
@@ -21,12 +22,11 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	private JLabel contrasenaConfirmar;
 	private JButton botonComenzar;
 	private JButton botonRegresar;
-	private VentanaPrincipal ven;
 
-	public PanelNuevoUsuario(VentanaPrincipal ven) {
+	public PanelNuevoUsuario(PanelInicial inicial) {
 
-		this.ven = ven;
-		setPreferredSize(new Dimension(1100,690));
+		this.inicial = inicial;
+		setPreferredSize(new Dimension(1100, 690));
 		setLayout(null);
 
 		inicializarComponentes();
@@ -76,9 +76,6 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		botonComenzar.setFont(new Font(" Garamond ", 1, 30));
 		botonComenzar.addActionListener(this);
 		botonComenzar.setActionCommand(COMENZAR);
-		
-
-		// 136 330
 
 		botonRegresar = new JButton(REGRESAR);
 		botonRegresar.setBounds(100, 450, 330, 40);
@@ -105,11 +102,10 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 
 		if (comando.equals(REGRESAR)) {
 
-			ven.remove(this);
-			ven.add(ven.getPanelInicial());
-			ven.refresh();
-			// pruebaaaa
-			// prueba
+			inicial.getVentana().remove(this);
+			inicial.getVentana().add(inicial);
+			inicial.getVentana().refresh();
+
 		}
 	}
 }

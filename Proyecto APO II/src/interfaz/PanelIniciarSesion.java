@@ -15,7 +15,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	public final static String INICIAR = "iniciar";
 	public final static String CANCELAR = "cancelar";
 
-	private VentanaPrincipal ventana;
+	private PanelInicial inicial;
 	private JLabel labUsuario;
 	private JLabel contrasena;
 	private JTextField txtUsuario;
@@ -23,9 +23,9 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	private JButton butIniciar;
 	private JButton butCancelar;
 
-	public PanelIniciarSesion(VentanaPrincipal window) {
+	public PanelIniciarSesion(PanelInicial inicial) {
 
-		ventana = window;
+		this.inicial = inicial;
 
 		setLayout(null);
 
@@ -95,9 +95,9 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 
 		if (comando.equals(CANCELAR)) {
 
-			ventana.remove(this);
-			ventana.add(ventana.getPanelInicial());
-			ventana.refresh();
+			inicial.getVentana().remove(this);
+			inicial.getVentana().add(inicial);
+			inicial.getVentana().refresh();
 
 		}
 		

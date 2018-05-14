@@ -30,6 +30,8 @@ public class PanelInicial extends JPanel implements ActionListener {
 	 * Relaciones y atributos
 	 */
 	private VentanaPrincipal ventana;
+	private PanelIniciarSesion iniciar;
+	private PanelNuevoUsuario nuevo;
 	private PanelEscogerTipoDeJuego pEscogerJugabilidad;
 	private JButton butIniciarSesion;
 	private JButton butCrearUsuario;
@@ -43,6 +45,9 @@ public class PanelInicial extends JPanel implements ActionListener {
 	public PanelInicial(VentanaPrincipal window) {
 
 		ventana = window;
+		
+		iniciar = new PanelIniciarSesion(this);
+		nuevo = new PanelNuevoUsuario(this);
 		pEscogerJugabilidad = new PanelEscogerTipoDeJuego(this);
 		setLayout(null);
 
@@ -133,14 +138,14 @@ public class PanelInicial extends JPanel implements ActionListener {
 		if (comando.equals(CREAR)) {
             
 			ventana.remove(this);
-			ventana.add(ventana.getPanelNuevoUsuario());
+			ventana.add(nuevo);
 			ventana.refresh();
 		}
 
 		if (comando.equals(INICIAR)) {
 
 			ventana.remove(this);
-			ventana.add(ventana.getIniciarSesion());
+			ventana.add(iniciar);
 			ventana.refresh();
 
 		}
