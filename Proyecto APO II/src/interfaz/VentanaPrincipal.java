@@ -38,7 +38,6 @@ public class VentanaPrincipal extends JFrame {
 		panelUsuario = new PanelNuevoUsuario(this);
 		inicial = new PanelInicial(this);
 		iniciarSesion = new PanelIniciarSesion(this);
-		pEscogerEquipo = new PanelEscogerEquipo(this);
 
 		add(inicial);
 

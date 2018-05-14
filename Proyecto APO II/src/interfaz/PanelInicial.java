@@ -30,6 +30,7 @@ public class PanelInicial extends JPanel implements ActionListener {
 	 * Relaciones y atributos
 	 */
 	private VentanaPrincipal ventana;
+	private PanelEscogerTipoDeJuego pEscogerJugabilidad;
 	private JButton butIniciarSesion;
 	private JButton butCrearUsuario;
 	private JButton butPartidaRapida;
@@ -42,6 +43,7 @@ public class PanelInicial extends JPanel implements ActionListener {
 	public PanelInicial(VentanaPrincipal window) {
 
 		ventana = window;
+		pEscogerJugabilidad = new PanelEscogerTipoDeJuego(this);
 		setLayout(null);
 
 		ajustarBotones();
@@ -80,6 +82,17 @@ public class PanelInicial extends JPanel implements ActionListener {
 		add(butCrearUsuario);
 		add(butPartidaRapida);
 		
+	}
+	
+	
+	
+
+	public VentanaPrincipal getVentana() {
+		return ventana;
+	}
+
+	public void setVentana(VentanaPrincipal ventana) {
+		this.ventana = ventana;
 	}
 
 	/**
@@ -133,6 +146,9 @@ public class PanelInicial extends JPanel implements ActionListener {
 		}
 
 		if (comando.equals(RAPIDA)) {
+			ventana.remove(this);
+			ventana.add(pEscogerJugabilidad);
+			ventana.refresh();
 
 		}
 
