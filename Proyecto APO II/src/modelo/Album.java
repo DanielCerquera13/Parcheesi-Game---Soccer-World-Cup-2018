@@ -638,7 +638,7 @@ public class Album {
 		colombia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/colombia/rodriguez.jpg",11);
 		
 		//Japon
-		Pagina japon=new Pagina("./Archivos/imagenes/banderasRec/japonRec.png","Japon",33,"Grupo F");
+		Pagina japon=new Pagina("./Archivos/imagenes/banderasRec/japonRec.png","Japon",32,"Grupo F");
 		japon.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/japon/nishikawa.jpg",1);
 		japon.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/japon/h. sakai.jpg",2);
 		japon.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/japon/hasebe.jpg",3);
