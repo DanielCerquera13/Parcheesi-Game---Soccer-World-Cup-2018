@@ -272,18 +272,18 @@ public class Album {
 		portugal.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/portugal/silva.jpg",11);
 		
 		//España
-		Pagina españa=new Pagina("./Archivos/imagenes/banderasRec/españaRec.png","España",6,"Grupo B");
-		españa.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/españa/DeGea.jpg",1);
-		españa.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/españa/alba.jpg",2);
-		españa.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/españa/asensio.jpg",3);
-		españa.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/españa/busquet.jpg",4);
-		españa.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/españa/carvajal.jpg",5);
-		españa.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/españa/costa.jpg",6);
-		españa.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/españa/iniesta.jpg",7);
-		españa.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/españa/isco.jpg",8);
-		españa.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/españa/morata.jpg",9);
-		españa.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/españa/ramos.jpg",10);
-		españa.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/españa/vitolo.jpg",11);
+		Pagina espana=new Pagina("./Archivos/imagenes/banderasRec/españaRec.png","España",6,"Grupo B");
+		espana.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/españa/DeGea.jpg",1);
+		espana.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/españa/alba.jpg",2);
+		espana.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/españa/asensio.jpg",3);
+		espana.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/españa/busquet.jpg",4);
+		espana.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/españa/carvajal.jpg",5);
+		espana.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/españa/costa.jpg",6);
+		espana.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/españa/iniesta.jpg",7);
+		espana.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/españa/isco.jpg",8);
+		espana.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/españa/morata.jpg",9);
+		espana.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/españa/ramos.jpg",10);
+		espana.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/españa/vitolo.jpg",11);
 		
 		//Marruecos
 		Pagina marruecos=new Pagina("./Archivos/imagenes/banderasRec/marruecosRec.png","Marruecos",7,"Grupo B");
@@ -428,6 +428,234 @@ public class Album {
 		nigeria.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/nigeria/omeruo.jpg",11);
 		
 		//Brasil
+		Pagina brasil=new Pagina("./Archivos/imagenes/banderasRec/brasilRec.png","Brasil",17,"Grupo E");
+		brasil.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/brasil/alisson.jpg",1);
+		brasil.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/brasil/alves.jpg",2);
+		brasil.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/brasil/casemiro.jpg",3);
+		brasil.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/brasil/coutinho.jpg",4);
+		brasil.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/brasil/firminho.jpg",5);
+		brasil.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/brasil/jesus.jpg",6);
+		brasil.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/brasil/marcelo.jpg",7);
+		brasil.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/brasil/marquinhos.jpg",8);
+		brasil.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/brasil/neymar.jpg",9);
+		brasil.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/brasil/paulinho.jpg",10);
+		brasil.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/brasil/silva.jpg",11);
+		
+		//Suiza
+		Pagina suiza=new Pagina("./Archivos/imagenes/banderasRec/suizaRec.png","Suiza",18,"Grupo E");
+		suiza.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/suiza/sommer.jpg",1);
+		suiza.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/suiza/akanji.jpg",2);
+		suiza.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/suiza/behrami.jpg",3);
+		suiza.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/suiza/derdijok.jpg",4);
+		suiza.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/suiza/djorou.jpg",5);
+		suiza.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/suiza/embolo.jpg",6);
+		suiza.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/suiza/lichtsteiner.jpg",7);
+		suiza.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/suiza/mehmedi.jpg",8);
+		suiza.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/suiza/rodriguez.jpg",9);
+		suiza.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/suiza/shaqiri.jpg",10);
+		suiza.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/suiza/xhaka.jpg",11);
+		
+		//Costa Rica
+		Pagina costa=new Pagina("./Archivos/imagenes/banderasRec/costa ricaRec.png","Costa Rica",19,"Grupo E");
+		costa.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/costa rica/navas.jpg",1);
+		costa.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/costa rica/azofeifa.jpg",2);
+		costa.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/costa rica/borges.jpg",3);
+		costa.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/costa rica/calvo.jpg",4);
+		costa.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/costa rica/guzman.jpg",5);
+		costa.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/costa rica/matarrita.jpg",6);
+		costa.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/costa rica/oviedo.jpg",7);
+		costa.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/costa rica/ureña.jpg",8);
+		costa.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/costa rica/venegas.jpg",9);
+		costa.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/costa rica/wallace.jpg",10);
+		costa.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/costa rica/waston.jpg",11);
+		
+		//Serbia
+		Pagina serbia=new Pagina("./Archivos/imagenes/banderasRec/serbiaRec.png","Serbia",20,"Grupo E");
+		serbia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/serbia/stojkovic.jpg",1);
+		serbia.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/serbia/gacinovic.jpg",2);
+		serbia.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/serbia/ivanovic.jpg",3);
+		serbia.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/serbia/kolarov.jpg",4);
+		serbia.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/serbia/kostic.jpg",5);
+		serbia.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/serbia/milivojevic.jpg",6);
+		serbia.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/serbia/mitrovic.jpg",7);
+		serbia.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/serbia/nastasic.jpg",8);
+		serbia.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/serbia/prijovic.jpg",9);
+		serbia.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/serbia/rukavina.jpg",10);
+		serbia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/serbia/vukovic.jpg",11);
+		
+		//Alemania
+		Pagina alemania=new Pagina("./Archivos/imagenes/banderasRec/alemaniaRec.png","Alemania",21,"Grupo F");
+		alemania.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/alemania/neuer.jpg",1);
+		alemania.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/alemania/boateng.jpg",2);
+		alemania.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/alemania/draxler.jpg",3);
+		alemania.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/alemania/gotze.jpg",4);
+		alemania.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/alemania/hummels.jpg",5);
+		alemania.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/alemania/khedira.jpg",6);
+		alemania.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/alemania/kroos.jpg",7);
+		alemania.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/alemania/muller.jpg",8);
+		alemania.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/alemania/ozil.jpg",9);
+		alemania.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/alemania/sane.jpg",10);
+		alemania.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/alemania/werner.jpg",11);
+		
+		//Mexico
+		Pagina mexico=new Pagina("./Archivos/imagenes/banderasRec/mexicoRec.png","Mexico",22,"Grupo F");
+		mexico.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/mexico/ochoa.jpg",1);
+		mexico.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/mexico/chicharito.jpg",2);
+		mexico.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/mexico/dos-santos.jpg",3);
+		mexico.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/mexico/gallardo.jpg",4);
+		mexico.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/mexico/gDosSantos.jpg",5);
+		mexico.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/mexico/herrera.jpg",6);
+		mexico.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/mexico/jimenez.jpg",7);
+		mexico.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/mexico/layun.jpg",8);
+		mexico.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/mexico/moreno.jpg",9);
+		mexico.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/mexico/reyes.jpg",10);
+		mexico.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/mexico/vela.jpg",11);
+		
+		//Suecia
+		Pagina suecia=new Pagina("./Archivos/imagenes/banderasRec/sueciaRec.png","Suecia",23,"Grupo F");
+		suecia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/suecia/olsen.jpg",1);
+		suecia.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/suecia/berg.jpg",2);
+		suecia.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/suecia/durmaz.jpg",3);
+		suecia.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/suecia/forsberg.jpg",4);
+		suecia.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/suecia/granqist.jpg",5);
+		suecia.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/suecia/jansson.jpg",6);
+		suecia.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/suecia/larsson.jpg",7);
+		suecia.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/suecia/lindelof.jpg",8);
+		suecia.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/suecia/olsson.jpg",9);
+		suecia.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/suecia/svensson.jpg",10);
+		suecia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/suecia/thelin.jpg",11);
+		
+		//Corea del Sur
+		Pagina corea=new Pagina("./Archivos/imagenes/banderasRec/coreaRec.png","Corea del Sur",24,"Grupo F");
+		corea.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/corea/seunggyu.jpg",1);
+		corea.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/corea/dongwon.jpg",2);
+		corea.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/corea/heechan.jpg",3);
+		corea.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/corea/jeongho.jpg",4);
+		corea.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/corea/jinsu.jpg",5);
+		corea.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/corea/kookyoung.jpg",6);
+		corea.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/corea/shinwook.jpg",7);
+		corea.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/corea/sungyueng.jpg",8);
+		corea.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/corea/taehee.jpg",9);
+		corea.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/corea/taehwi.jpg",10);
+		corea.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/corea/younggwon.jpg",11);
+		
+		//Belgica
+		Pagina belgica=new Pagina("./Archivos/imagenes/banderasRec/belgicaRec.png","Belgica",25,"Grupo G");
+		belgica.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/belgica/courtois.jpg",1);
+		belgica.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/belgica/bruyne.jpg",2);
+		belgica.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/belgica/carrasco.jpg",3);
+		belgica.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/belgica/fellaini.jpg",4);
+		belgica.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/belgica/hazard.jpg",5);
+		belgica.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/belgica/kompany.jpg",6);
+		belgica.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/belgica/lukaku.jpg",7);
+		belgica.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/belgica/mertens.jpg",8);
+		belgica.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/belgica/meunier.jpg",9);
+		belgica.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/belgica/nainggolan.jpg",10);
+		belgica.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/belgica/vertonghen.jpg",11);
+		
+		//Panama
+		Pagina panama=new Pagina("./Archivos/imagenes/banderasRec/panamaRec.png","Panama",26,"Grupo G");
+		panama.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/panama/calderon.jpg",1);
+		panama.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/panama/arroyo.jpg",2);
+		panama.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/panama/barcenas.jpg",3);
+		panama.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/panama/davis.jpg",4);
+		panama.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/panama/godoy.jpg",5);
+		panama.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/panama/gTorres.jpg",6);
+		panama.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/panama/machado.jpg",7);
+		panama.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/panama/murillo.jpg",8);
+		panama.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/panama/quintero.jpg",9);
+		panama.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/panama/tejada.jpg",10);
+		panama.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/panama/torres.jpg",11);
+		
+		//Tunez
+		Pagina tunez=new Pagina("./Archivos/imagenes/banderasRec/tunezRec.png","Tunez",27,"Grupo G");
+		tunez.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/tunez/mathlouthi.jpg",1);
+		tunez.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/tunez/akaichi.jpg",2);
+		tunez.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/tunez/badri.jpg",3);
+		tunez.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/tunez/chaalali.jpg",4);
+		tunez.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/tunez/khazri.jpg",5);
+		tunez.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/tunez/maaloul.jpg",6);
+		tunez.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/tunez/meriah.jpg",7);
+		tunez.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/tunez/naguez.jpg",8);
+		tunez.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/tunez/sliti.jpg",9);
+		tunez.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/tunez/touzghar.jpg",10);
+		tunez.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/tunez/youssef.jpg",11);
+		
+		//Inglaterra
+		Pagina inglaterra=new Pagina("./Archivos/imagenes/banderasRec/inglaterraRec.png","Inglaterra",28,"Grupo G");
+		inglaterra.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/inglaterra/hart.jpg",1);
+		inglaterra.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/inglaterra/alli.jpg",2);
+		inglaterra.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/inglaterra/bertrand.jpg",3);
+		inglaterra.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/inglaterra/cahill.jpg",4);
+		inglaterra.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/inglaterra/henderson.jpg",5);
+		inglaterra.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/inglaterra/kane.jpg",6);
+		inglaterra.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/inglaterra/lingard.jpg",7);
+		inglaterra.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/inglaterra/rose.jpg",8);
+		inglaterra.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/inglaterra/sterling.jpg",9);
+		inglaterra.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/inglaterra/vardy.jpg",10);
+		inglaterra.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/inglaterra/walker.jpg",11);
+		
+		//Polonia
+		Pagina polonia=new Pagina("./Archivos/imagenes/banderasRec/poloniaRec.png","Polonia",29,"Grupo F");
+		polonia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/polonia/szczesny.jpg",1);
+		polonia.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/polonia/artur.jpg",2);
+		polonia.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/polonia/bartosz.jpg",3);
+		polonia.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/polonia/cionek.jpg",4);
+		polonia.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/polonia/glik.jpg",5);
+		polonia.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/polonia/grosicki.jpg",6);
+		polonia.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/polonia/krychowiak.jpg",7);
+		polonia.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/polonia/linetty.jpg",8);
+		polonia.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/polonia/rybus.jpg",9);
+		polonia.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/polonia/piszczek.jpg",10);
+		polonia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/polonia/teodorczyk.jpg",11);
+		
+		//Senegal
+		Pagina senegal=new Pagina("./Archivos/imagenes/banderasRec/senegalRec.png","Senegal",30,"Grupo F");
+		senegal.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/senegal/diaye.jpg",1);
+		senegal.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/senegal/balde.jpg",2);
+		senegal.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/senegal/gassama.jpg",3);
+		senegal.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/senegal/konate.jpg",4);
+		senegal.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/senegal/koulibaly.jpg",5);
+		senegal.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/senegal/kouyate.jpg",6);
+		senegal.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/senegal/mane.jpg",7);
+		senegal.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/senegal/mbodj.jpg",8);
+		senegal.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/senegal/ndoye.jpg",9);
+		senegal.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/senegal/niang.jpg",10);
+		senegal.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/senegal/sane.jpg",11);
+		
+		//Colombia
+		Pagina colombia=new Pagina("./Archivos/imagenes/banderasRec/colombiaRec.png","Colombia",31,"Grupo F");
+		colombia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/colombia/ospina.jpg",1);
+		colombia.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/colombia/arias.jpg",2);
+		colombia.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/colombia/bacca.jpg",3);
+		colombia.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/colombia/barrios.jpg",4);
+		colombia.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/colombia/cSanchez.jpg",5);
+		colombia.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/colombia/cZapata.jpg",6);
+		colombia.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/colombia/dSanchez.jpg",7);
+		colombia.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/colombia/dZapata.jpg",8);
+		colombia.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/colombia/falcao.jpg",9);
+		colombia.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/colombia/mina.jpg",10);
+		colombia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/colombia/rodriguez.jpg",11);
+		
+		//Japon
+		Pagina japon=new Pagina("./Archivos/imagenes/banderasRec/japonRec.png","Japon",33,"Grupo F");
+		japon.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/japon/nishikawa.jpg",1);
+		japon.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/japon/h. sakai.jpg",2);
+		japon.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/japon/hasebe.jpg",3);
+		japon.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/japon/honda.jpg",4);
+		japon.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/japon/kagawa.jpg",5);
+		japon.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/japon/kubo.jpg",6);
+		japon.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/japon/morishige.jpg",7);
+		japon.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/japon/nagatomo.jpg",8);
+		japon.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/japon/okazaki.jpg",9);
+		japon.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/japon/osako.jpg",10);
+		japon.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/japon/sakai.jpg",11);
+		
+		
+		
+		
+		
+
 	}
 }
 
