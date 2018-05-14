@@ -57,7 +57,9 @@ public class PanelPanini extends JPanel implements ActionListener{
 	    siguiente.setActionCommand(SIGUIENTE);
 		siguiente.setBounds(900, 600, 330, 40);
 	    siguiente.setFont(new Font(" Garamond ", 1, 30));
-   	   
+   	     
+	    bandera = new JLabel();
+	    
        }
 
 
