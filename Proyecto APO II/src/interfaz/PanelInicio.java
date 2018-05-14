@@ -24,6 +24,7 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	private JButton butJugar;
 	private JLabel labLaminas;
 	private JLabel labAlbum;
+	private PanelPanini panini; 
 
 	public PanelInicio() {
 
@@ -85,6 +86,8 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 		if((e.getX() >= 100 && e.getX() <= 310)&&(e.getY() >=185 && e.getY() <= 485)) {
 			
 			System.out.println("hola");
+			ventana.remove(this);
+			
 			
 		}
 		
