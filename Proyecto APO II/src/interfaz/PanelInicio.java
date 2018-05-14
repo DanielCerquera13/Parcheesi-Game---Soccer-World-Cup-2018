@@ -4,8 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class PanelInicio extends JPanel implements ActionListener {
+public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 
 	public static final Image ALBUM = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/album.png");
 	public static final Image LAMINA = Toolkit.getDefaultToolkit()
@@ -25,9 +27,21 @@ public class PanelInicio extends JPanel implements ActionListener {
 
 	public PanelInicio() {
 
+	setLayout(null);
+	ajustarComponentes();
+	addMouseListener(this);
+		
 	}
+	
 
 	public void ajustarComponentes() {
+		
+	butJugar = new JButton("JUGAR");
+	butJugar.setFont(new Font("Garamond", 1, 40));
+	butJugar.setBounds(530, 480, 235, 95);
+	butJugar.setActionCommand(JUGAR);
+	butJugar.addActionListener(this);
+	add(butJugar);
 
 	}
 
@@ -51,7 +65,63 @@ public class PanelInicio extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String comando = e.getActionCommand();
+		
+		if(comando.equals(JUGAR)) {
+			
+			
+			
+		}
 
+	}
+
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		
+		System.out.println("x = "+e.getX()+"  y = "+ e.getY());
+		
+		
+		// Condicion para entrar al album panini
+		if((e.getX() >= 100 && e.getX() <= 310)&&(e.getY() >=185 && e.getY() <= 485)) {
+			
+			System.out.println("hola");
+			
+		}
+		
+		if((e.getX()>=950 && e.getX()<= 1180)&&(e.getY() >= 230 && e.getY()<= 445)) {
+			
+			System.out.println("bye");
+			
+		}
+		
+	}
+
+
+	@Override
+	public void mouseEntered(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseExited(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mousePressed(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseReleased(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
