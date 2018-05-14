@@ -13,12 +13,12 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	public final static Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
 
-	private JPasswordField contraseñatxt;
-	private JPasswordField contraseñaConfirmartxt;
+	private JPasswordField contrasenatxt;
+	private JPasswordField contrasenaConfirmartxt;
 	private JLabel nombre;
 	private JTextField nombretxt;
-	private JLabel contraseña;
-	private JLabel contraseñaConfirmar;
+	private JLabel contrasena;
+	private JLabel contrasenaConfirmar;
 	private JButton botonComenzar;
 	private JButton botonRegresar;
 	private VentanaPrincipal ven;
@@ -35,10 +35,10 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		
 		add(nombre);
 		add(nombretxt);
-		add(contraseña);
-		add(contraseñatxt);
-		add(contraseñaConfirmar);
-		add(contraseñaConfirmartxt);
+		add(contrasena);
+		add(contrasenatxt);
+		add(contrasenaConfirmar);
+		add(contrasenaConfirmartxt);
 		add(botonComenzar);
 		add(botonRegresar);
 
@@ -56,28 +56,28 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	        nombretxt.setFont(new Font("Garamond", 1, 40));
 	        
 		
-		contraseña = new JLabel("Contraseña");
-		contraseña.setBounds(936, 380, 400, 80);
-		contraseña.setFont(new Font("Garamond", 1, 40));
+		contrasena = new JLabel("Contrasena");
+		contrasena.setBounds(936, 380, 400, 80);
+		contrasena.setFont(new Font("Garamond", 1, 40));
 		
 		
 
-        contraseñatxt = new JPasswordField();
-        contraseñatxt.setBounds(936, 480, 400, 80);
-        contraseñatxt.setFont(new Font("Garamond", 1, 40));
+        contrasenatxt = new JPasswordField();
+        contrasenatxt.setBounds(936, 480, 400, 80);
+        contrasenatxt.setFont(new Font("Garamond", 1, 40));
         
         
         
         
-		contraseñaConfirmar = new JLabel("Confirmar contraseña");
-		contraseñaConfirmar.setBounds(936, 580, 500, 80);
-		contraseñaConfirmar.setFont(new Font("Garamond", 1, 40));
+		contrasenaConfirmar = new JLabel("Confirmar contrasena");
+		contrasenaConfirmar.setBounds(936, 580, 500, 80);
+		contrasenaConfirmar.setFont(new Font("Garamond", 1, 40));
 		
      
         
-		  contraseñaConfirmartxt = new JPasswordField();
-	      contraseñaConfirmartxt.setBounds(936, 680, 400, 80);
-	      contraseñaConfirmartxt.setFont(new Font("Garamond", 1, 40));
+		  contrasenaConfirmartxt = new JPasswordField();
+	      contrasenaConfirmartxt.setBounds(936, 680, 400, 80);
+	      contrasenaConfirmartxt.setFont(new Font("Garamond", 1, 40));
 	        
 	        
 	        
@@ -120,6 +120,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 			ven.add(ven.getPanelInicial());
 			ven.refresh();
 			//pruebaaaa
+			//prueba
         }
 	}
 }
