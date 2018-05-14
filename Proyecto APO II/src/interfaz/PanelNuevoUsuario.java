@@ -26,7 +26,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	public PanelNuevoUsuario(VentanaPrincipal ven) {
 
 		this.ven = ven;
-
+		setPreferredSize(new Dimension(1280,768));
 		setLayout(null);
 
 		inicializarComponentes();
@@ -45,34 +45,34 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	public void inicializarComponentes() {
 
 		nombre = new JLabel(" Nombre ");
-		nombre.setBounds(936, 180, 400, 80);
+		nombre.setBounds(700, 100, 400, 80);
 		nombre.setFont(new Font(" Garamond ", 1, 40));
 		nombre.setForeground(Color.WHITE);
 
 		nombretxt = new JTextField();
-		nombretxt.setBounds(936, 280, 400, 80);
+		nombretxt.setBounds(700, 200, 400, 80);
 		nombretxt.setFont(new Font(" Garamond ", 1, 40));
 
 		contrasena = new JLabel(" Contraseña ");
-		contrasena.setBounds(936, 380, 400, 80);
+		contrasena.setBounds(700, 300, 400, 80);
 		contrasena.setFont(new Font(" Garamond ", 1, 40));
 		contrasena.setForeground(Color.WHITE);
 
 		contrasenatxt = new JPasswordField();
-		contrasenatxt.setBounds(936, 480, 400, 80);
+		contrasenatxt.setBounds(700, 400, 400, 80);
 		contrasenatxt.setFont(new Font(" Garamond ", 1, 40));
 
 		contrasenaConfirmar = new JLabel(" Confirmar contraseña ");
-		contrasenaConfirmar.setBounds(936, 580, 500, 80);
+		contrasenaConfirmar.setBounds(700, 500, 500, 80);
 		contrasenaConfirmar.setFont(new Font(" Garamond ", 1, 40));
 		contrasenaConfirmar.setForeground(Color.WHITE);
 
 		contrasenaConfirmartxt = new JPasswordField();
-		contrasenaConfirmartxt.setBounds(936, 680, 400, 80);
+		contrasenaConfirmartxt.setBounds(700, 600, 400, 80);
 		contrasenaConfirmartxt.setFont(new Font(" Garamond ", 1, 40));
 
 		botonComenzar = new JButton(COMENZAR);
-		botonComenzar.setBounds(236, 500, 400, 80);
+		botonComenzar.setBounds(100, 350, 350, 50);
 		botonComenzar.setFont(new Font(" Garamond ", 1, 40));
 		botonComenzar.addActionListener(this);
 		botonComenzar.setActionCommand(COMENZAR);
@@ -80,7 +80,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		// 136 330
 
 		botonRegresar = new JButton(REGRESAR);
-		botonRegresar.setBounds(236, 700, 400, 80);
+		botonRegresar.setBounds(100, 450, 350, 50);
 		botonRegresar.setFont(new Font(" Garamond ", 1, 40));
 		botonRegresar.addActionListener(this);
 		botonRegresar.setActionCommand(REGRESAR);
