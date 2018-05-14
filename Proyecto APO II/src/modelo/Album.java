@@ -198,6 +198,15 @@ public class Album {
 //			aModificar.setPuntos(puntos);
 //		}
 //	}
+	
+	public void rellenarAlbum() {
+		
+		//Rusia
+		Pagina rusia=new Pagina("./Archivos/imagenes/banderasRec/rusia.png", "Rusia", 1, "Grupo A");
+		rusia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/rusia/akinfeev.jpg",1);
+		
+		
+	}
 }
 
 
