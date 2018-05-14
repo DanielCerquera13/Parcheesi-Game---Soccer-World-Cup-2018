@@ -51,14 +51,11 @@ public class VentanaPrincipal extends JFrame {
 		iniciarSesion = new PanelIniciarSesion(this);
 
 		add(inicial);
-<<<<<<< HEAD
         
 		//asd
 		
 	
-=======
 
->>>>>>> branch 'master' of https://github.com/JavaCracks/proyectoFinal.git
 	}
 
 	public PanelInicial getPanelInicial() {
