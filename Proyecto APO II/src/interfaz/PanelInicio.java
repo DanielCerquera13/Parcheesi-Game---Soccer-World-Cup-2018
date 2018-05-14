@@ -25,6 +25,7 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	private JLabel labLaminas;
 	private JLabel labAlbum;
 	private PanelPanini panini; 
+	private PanelTienda tienda;
 
 	public PanelInicio(PanelIniciarSesion sesion) {
 
@@ -33,6 +34,7 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	ajustarComponentes();
 	addMouseListener(this);
 	panini = new PanelPanini();
+	tienda = new PanelTienda();
 		
 	}
 	
@@ -98,7 +100,9 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 		if((e.getX()>=950 && e.getX()<= 1180)&&(e.getY() >= 230 && e.getY()<= 445)) {
 			
 			System.out.println("bye");
-			
+			sesion.getVentana().remove(this);
+			sesion.getVentana().add(tienda);
+			sesion.getVentana().refresh();
 		}
 		
 	}
