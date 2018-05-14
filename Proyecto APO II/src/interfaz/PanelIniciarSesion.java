@@ -16,6 +16,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	public final static String CANCELAR = "cancelar";
 
 	private PanelInicial inicial;
+	private PanelInicio inicio;
 	private JLabel labUsuario;
 	private JLabel contrasena;
 	private JTextField txtUsuario;
@@ -26,6 +27,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	public PanelIniciarSesion(PanelInicial inicial) {
 
 		this.inicial = inicial;
+		inicio = new PanelInicio();
 
 		setLayout(null);
 
@@ -103,6 +105,9 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		
 		if (comando.equals(INICIAR)) {
 			
+			inicial.getVentana().remove(this);
+			inicial.getVentana().add(inicio);
+			inicial.getVentana().refresh();
 			
 		}
 
