@@ -42,7 +42,7 @@ public class PanelEscogerTipoDeJuego extends JPanel implements ActionListener{
 	public void inicializarComponentes() {
 		
 		lbEscoger = new JLabel(" Escoge el tipo de partida ");
-		lbEscoger.setBounds(410, 260, 450, 80);
+		lbEscoger.setBounds(390, 260, 500, 80);
 		lbEscoger.setFont(new Font(" Garamond ", 1, 35));
 		lbEscoger.setForeground(Color.WHITE);
 		add(lbEscoger);
