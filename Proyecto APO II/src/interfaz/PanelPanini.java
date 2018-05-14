@@ -118,30 +118,30 @@ public class PanelPanini extends JPanel implements ActionListener{
 	    
 	    ImageIcon imagen7 = new ImageIcon("Archivos/imagenes/laminas/alemania/gotze.jpg");
 	    laminaSiete= new JLabel(imagen7);
-	    laminaSiete.setBounds(250, 390, 160, 220);
+	    laminaSiete.setBounds(170, 390, 160, 220);
 	    add(laminaSiete);
 	    
 	    ImageIcon imagen8 = new ImageIcon("Archivos/imagenes/laminas/alemania/muller.jpg");
 	    laminaOcho= new JLabel(imagen8);
-	    laminaOcho.setBounds(420, 390, 160, 220);
+	    laminaOcho.setBounds(370, 390, 160, 220);
 	    add(laminaOcho);
 	    
 	    
 	    ImageIcon imagen9 = new ImageIcon("Archivos/imagenes/laminas/alemania/sane.jpg");
 	    laminaNueve= new JLabel(imagen9);
-	    laminaNueve.setBounds(590, 390, 160, 220);
+	    laminaNueve.setBounds(570, 390, 160, 220);
 	    add(laminaNueve);
 	    
 	    
 	    ImageIcon imagen10 = new ImageIcon("Archivos/imagenes/laminas/alemania/ozil.jpg");
 	    laminaDiez= new JLabel(imagen10);
-	    laminaDiez.setBounds(760, 390, 160, 220);
+	    laminaDiez.setBounds(770, 390, 160, 220);
 	    add(laminaDiez);
 	    
 	    
 	    ImageIcon imagen11 = new ImageIcon("Archivos/imagenes/laminas/alemania/werner.jpg");
 	    laminaOnce= new JLabel(imagen11);
-	    laminaOnce.setBounds(930, 390, 160, 220);
+	    laminaOnce.setBounds(970, 390, 160, 220);
 	    add(laminaOnce);
        }
 
