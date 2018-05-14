@@ -11,6 +11,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 
 	
 	public final static Image FONDO = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/fondoDos.png");
+	public final static Image COPA = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/copaMundo.png");
 	public final static String INICIAR = "iniciar";
 	public final static String CANCELAR = "cancelar";
 
@@ -34,7 +35,8 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 
 	public void ajustarComponentes() {
 
-		Font fuente = new Font("Garamond", 1, 60);
+		Font fuente = new Font("Garamond", 1, 45);
+		Font fuenteBoton = new Font("Garamond", 1, 30);
 	
 		
 		labUsuario = new JLabel("Usuario");
@@ -61,14 +63,14 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		butIniciar = new JButton("Iniciar");
 		butIniciar.setActionCommand(INICIAR);
 		butIniciar.addActionListener(this);
-		butIniciar.setFont(fuente);
-		butIniciar.setBounds(375, 720, 180, 80);
+		butIniciar.setFont(fuenteBoton);
+		butIniciar.setBounds(350, 720, 180, 80);
 		
 		butCancelar = new JButton("Cancelar");
-		butCancelar.setFont(fuente);
+		butCancelar.setFont(fuenteBoton);
 		butCancelar.setActionCommand(CANCELAR);
 		butCancelar.addActionListener(this);
-		butIniciar.setBounds(136, 720, 180, 80);
+		butCancelar.setBounds(136, 720, 180, 80);
 		
 		add(labUsuario);
 		add(txtUsuario);
@@ -86,6 +88,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		super.paintComponent(g);
 		
 		g.drawImage(FONDO, 0, 0, null);
+		g.drawImage(COPA, 1000, 150, null);
 		
 		repaint();
 
@@ -95,10 +98,10 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String comando = e.getActionCommand();
 
-		if (comando.equals(INICIAR)) {
+		if (comando.equals(CANCELAR)) {
 
 			ventana.remove(this);
-			ventana.add(ventana.getAux());
+			ventana.add(ventana.getPanelInicial());
 			ventana.refresh();
 
 		}

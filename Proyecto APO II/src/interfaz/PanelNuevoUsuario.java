@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PanelNuevoUsuario extends JPanel implements ActionListener {
-   
+
 	public final static String REGRESAR = "REGRESAR";
 
 	public final static String COMENZAR = "COMENZAR";
@@ -22,17 +22,15 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	private JButton botonComenzar;
 	private JButton botonRegresar;
 	private VentanaPrincipal ven;
+
 	public PanelNuevoUsuario(VentanaPrincipal ven) {
-		
+
 		this.ven = ven;
-		
-		
-	   
+
 		setLayout(null);
-		
+
 		inicializarComponentes();
-		
-		
+
 		add(nombre);
 		add(nombretxt);
 		add(contrasena);
@@ -42,10 +40,10 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		add(botonComenzar);
 		add(botonRegresar);
 
-	
 	}
-	
+
 	public void inicializarComponentes() {
+<<<<<<< HEAD
 		
 		   nombre = new JLabel("Nombre");
 	        nombre.setBounds(936, 180, 400, 80);
@@ -58,12 +56,28 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	        
 		
 		contrasena = new JLabel("Contraseña");
+=======
+
+		nombre = new JLabel("Nombre");
+		nombre.setBounds(936, 180, 400, 80);
+		nombre.setFont(new Font("Garamond", 1, 40));
+
+		nombretxt = new JTextField();
+		nombretxt.setBounds(936, 280, 400, 80);
+		nombretxt.setFont(new Font("Garamond", 1, 40));
+
+		contrasena = new JLabel("Contrasena");
+>>>>>>> branch 'master' of https://github.com/JavaCracks/proyectoFinal.git
 		contrasena.setBounds(936, 380, 400, 80);
 		contrasena.setFont(new Font("Garamond", 1, 40));
+<<<<<<< HEAD
         contrasena.setForeground(Color.WHITE);
 
 		
+=======
+>>>>>>> branch 'master' of https://github.com/JavaCracks/proyectoFinal.git
 
+<<<<<<< HEAD
         contrasenatxt = new JPasswordField();
         contrasenatxt.setBounds(936, 480, 400, 80);
         contrasenatxt.setFont(new Font("Garamond", 1, 40));
@@ -72,8 +86,16 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
         
         
 		contrasenaConfirmar = new JLabel("Confirmar contraseña");
+=======
+		contrasenatxt = new JPasswordField();
+		contrasenatxt.setBounds(936, 480, 400, 80);
+		contrasenatxt.setFont(new Font("Garamond", 1, 40));
+
+		contrasenaConfirmar = new JLabel("Confirmar contrasena");
+>>>>>>> branch 'master' of https://github.com/JavaCracks/proyectoFinal.git
 		contrasenaConfirmar.setBounds(936, 580, 500, 80);
 		contrasenaConfirmar.setFont(new Font("Garamond", 1, 40));
+<<<<<<< HEAD
         contrasenaConfirmar.setForeground(Color.WHITE);
 
 		
@@ -100,31 +122,51 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
         botonRegresar.addActionListener(this);
         botonRegresar.setActionCommand(REGRESAR);
 		
+=======
+
+		contrasenaConfirmartxt = new JPasswordField();
+		contrasenaConfirmartxt.setBounds(936, 680, 400, 80);
+		contrasenaConfirmartxt.setFont(new Font("Garamond", 1, 40));
+
+		botonComenzar = new JButton(COMENZAR);
+		botonComenzar.setBounds(236, 500, 400, 80);
+		botonComenzar.setFont(new Font("Garamond", 1, 40));
+		botonComenzar.addActionListener(this);
+		botonComenzar.setActionCommand(COMENZAR);
+
+		// 136 330
+
+		botonRegresar = new JButton(REGRESAR);
+		botonRegresar.setBounds(236, 700, 400, 80);
+		botonRegresar.setFont(new Font("Garamond", 1, 40));
+		botonRegresar.addActionListener(this);
+		botonRegresar.setActionCommand(REGRESAR);
+
+>>>>>>> branch 'master' of https://github.com/JavaCracks/proyectoFinal.git
 	}
-	
+
 	@Override
 	public void paintComponent(Graphics g) {
 
 		super.paintComponent(g);
 
-
 		g.drawImage(FONDO, 0, 0, null);
-	
+
 		repaint();
 
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-        String  comando = e.getActionCommand();
-        
-        if(comando.equals(REGRESAR)) {
-        	
-        	ven.remove(this);
+		String comando = e.getActionCommand();
+
+		if (comando.equals(REGRESAR)) {
+
+			ven.remove(this);
 			ven.add(ven.getPanelInicial());
 			ven.refresh();
-			//pruebaaaa
-			//prueba
-        }
+			// pruebaaaa
+			// prueba
+		}
 	}
 }
