@@ -72,16 +72,16 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		contrasenaConfirmartxt.setFont(new Font(" Garamond ", 1, 26));
 
 		botonComenzar = new JButton(COMENZAR);
-		botonComenzar.setBounds(100, 350, 350, 50);
-		botonComenzar.setFont(new Font(" Garamond ", 1, 40));
+		botonComenzar.setBounds(100, 350, 330, 40);
+		botonComenzar.setFont(new Font(" Garamond ", 1, 30));
 		botonComenzar.addActionListener(this);
 		botonComenzar.setActionCommand(COMENZAR);
 
 		// 136 330
 
 		botonRegresar = new JButton(REGRESAR);
-		botonRegresar.setBounds(100, 450, 350, 50);
-		botonRegresar.setFont(new Font(" Garamond ", 1, 40));
+		botonRegresar.setBounds(100, 450, 330, 40);
+		botonRegresar.setFont(new Font(" Garamond ", 1, 30));
 		botonRegresar.addActionListener(this);
 		botonRegresar.setActionCommand(REGRESAR);
 
