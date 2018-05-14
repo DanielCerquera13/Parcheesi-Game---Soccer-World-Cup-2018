@@ -13,6 +13,7 @@ public class VentanaPrincipal extends JFrame {
 	private PanelNuevoUsuario panelUsuario;
 	private PanelInicial inicial;
 	private PanelIniciarSesion iniciarSesion;
+	private PanelEscogerEquipo pEscogerEquipo;
 
 	/**
 	 * Constructor
@@ -37,12 +38,14 @@ public class VentanaPrincipal extends JFrame {
 		panelUsuario = new PanelNuevoUsuario(this);
 		inicial = new PanelInicial(this);
 		iniciarSesion = new PanelIniciarSesion(this);
+		pEscogerEquipo = new PanelEscogerEquipo(this);
 
 		add(inicial);
 
 		// asd
 
 	}
+	
 
 	public PanelInicial getPanelInicial() {
 
@@ -58,6 +61,10 @@ public class VentanaPrincipal extends JFrame {
 
 		return iniciarSesion;
 
+	}
+	
+	public PanelEscogerEquipo getPanelEscogerEquipo() {
+		return pEscogerEquipo;
 	}
 
 	public void refresh() {

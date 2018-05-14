@@ -76,6 +76,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		botonComenzar.setFont(new Font(" Garamond ", 1, 30));
 		botonComenzar.addActionListener(this);
 		botonComenzar.setActionCommand(COMENZAR);
+		
 
 		// 136 330
 
