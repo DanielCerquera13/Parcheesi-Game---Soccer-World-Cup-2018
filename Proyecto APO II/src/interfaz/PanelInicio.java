@@ -19,18 +19,20 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 
 	public static final String JUGAR = "jugar";
 
-	private VentanaPrincipal ventana;
+	private PanelIniciarSesion sesion;
 	private JLabel labUsuario;
 	private JButton butJugar;
 	private JLabel labLaminas;
 	private JLabel labAlbum;
 	private PanelPanini panini; 
 
-	public PanelInicio() {
+	public PanelInicio(PanelIniciarSesion sesion) {
 
+	this.sesion = sesion;
 	setLayout(null);
 	ajustarComponentes();
 	addMouseListener(this);
+	panini = new PanelPanini();
 		
 	}
 	
@@ -86,7 +88,9 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 		if((e.getX() >= 100 && e.getX() <= 310)&&(e.getY() >=185 && e.getY() <= 485)) {
 			
 			System.out.println("hola");
-			ventana.remove(this);
+			sesion.getVentana().remove(this);
+			sesion.getVentana().add(panini);
+			sesion.getVentana().refresh();
 			
 			
 		}

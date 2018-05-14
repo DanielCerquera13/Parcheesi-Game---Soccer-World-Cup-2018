@@ -27,7 +27,9 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	public PanelIniciarSesion(PanelInicial inicial) {
 
 		this.inicial = inicial;
-		inicio = new PanelInicio();
+		
+		
+		inicio = new PanelInicio(this);
 
 		setLayout(null);
 
@@ -77,6 +79,13 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		add(butIniciar);
 		add(butCancelar);
 
+	}
+	
+	
+	public VentanaPrincipal getVentana() {
+		
+	return inicial.getVentana();	
+		
 	}
 
 	@Override
