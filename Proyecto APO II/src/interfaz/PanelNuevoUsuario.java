@@ -50,6 +50,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		   nombre = new JLabel("Nombre");
 	        nombre.setBounds(936, 180, 400, 80);
 	        nombre.setFont(new Font("Garamond", 1, 40));
+	        nombre.setForeground(Color.WHITE);
 	        
 	        nombretxt = new JTextField();
 	        nombretxt.setBounds(936, 280, 400, 80);
@@ -59,7 +60,8 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		contrasena = new JLabel("Contrasena");
 		contrasena.setBounds(936, 380, 400, 80);
 		contrasena.setFont(new Font("Garamond", 1, 40));
-		
+        contrasena.setForeground(Color.WHITE);
+
 		
 
         contrasenatxt = new JPasswordField();
@@ -72,6 +74,8 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		contrasenaConfirmar = new JLabel("Confirmar contrasena");
 		contrasenaConfirmar.setBounds(936, 580, 500, 80);
 		contrasenaConfirmar.setFont(new Font("Garamond", 1, 40));
+        contrasena.setForeground(Color.WHITE);
+
 		
      
         
