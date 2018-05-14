@@ -15,7 +15,7 @@ private int valor;
 	
 	
 	private PanelInicial inicial;
-	private VentanaIniciarSesion iniciarSesion;
+	private PanelIniciarSesion iniciarSesion;
 
 	/**
 	 * Constructor
@@ -28,9 +28,17 @@ private int valor;
 		
 	// esta es 
 		//setSize(1580, 1024);
+		// setSize(1580, 1024);
+
+		Toolkit t = Toolkit.getDefaultToolkit();
+		Dimension d = t.getScreenSize();
+		int h = d.height;
+		int w = d.width;
+		this.setSize(w-330, h-60);
 
 		setSize(800, 600);
 		// Custom Cursor
+
 
 		//setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
 		//		new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
@@ -38,6 +46,9 @@ private int valor;
 //		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
 //				new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new Point(0, 0), "Ball Cursor"));
 //github.com/JavaCracks/proyectoFinal.git
+		// setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+		// new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new
+		// Point(0, 0), "Ball Cursor"));
 
 		// Icono del programa
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
@@ -45,7 +56,7 @@ private int valor;
 
 		panelUsuario = new PanelNuevoUsuario(this);
 		inicial = new PanelInicial(this);
-		iniciarSesion = new VentanaIniciarSesion(this);
+		iniciarSesion = new PanelIniciarSesion(this);
 
 		add(inicial);
         
@@ -63,7 +74,8 @@ public PanelInicial getPanelInicial() {
 		
 		return panelUsuario;
 	} 
-	public VentanaIniciarSesion getIniciarSesion() {
+	
+	public PanelIniciarSesion getIniciarSesion() {
 
 		return iniciarSesion;
 
