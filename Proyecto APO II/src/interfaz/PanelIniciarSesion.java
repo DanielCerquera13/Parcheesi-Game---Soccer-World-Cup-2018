@@ -35,38 +35,38 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 
 	public void ajustarComponentes() {
 
-		Font fuente = new Font("Garamond", 1, 45);
-		Font fuenteBoton = new Font("Garamond", 1, 30);
+		Font fuente = new Font("Garamond", 1, 30);
+		Font fuenteBoton = new Font("Garamond", 1, 24);
 
 		labUsuario = new JLabel("Usuario");
 		labUsuario.setFont(fuente);
 		labUsuario.setForeground(Color.WHITE);
-		labUsuario.setBounds(136, 330, 400, 80);
+		labUsuario.setBounds(125, 265, 400, 40);
 
 		txtUsuario = new JTextField();
-		txtUsuario.setBounds(136, 400, 400, 80);
+		txtUsuario.setBounds(125, 300, 400, 40);
 		txtUsuario.setFont(fuente);
 
 		contrasena = new JLabel("Contraseña");
 		contrasena.setFont(fuente);
 		contrasena.setForeground(Color.WHITE);
-		contrasena.setBounds(136, 530, 400, 80);
+		contrasena.setBounds(125, 365, 400, 40);
 
 		pass = new JPasswordField();
 		pass.setFont(fuente);
-		pass.setBounds(136, 600, 400, 80);
+		pass.setBounds(125, 400, 400, 40);
 
 		butIniciar = new JButton("Iniciar");
 		butIniciar.setActionCommand(INICIAR);
 		butIniciar.addActionListener(this);
 		butIniciar.setFont(fuenteBoton);
-		butIniciar.setBounds(350, 720, 180, 80);
+		butIniciar.setBounds(125, 480, 180, 40);
 
 		butCancelar = new JButton("Cancelar");
 		butCancelar.setFont(fuenteBoton);
 		butCancelar.setActionCommand(CANCELAR);
 		butCancelar.addActionListener(this);
-		butCancelar.setBounds(136, 720, 180, 80);
+		butCancelar.setBounds(340, 480, 180, 40);
 
 		add(labUsuario);
 		add(txtUsuario);

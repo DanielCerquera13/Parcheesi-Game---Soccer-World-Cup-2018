@@ -11,7 +11,6 @@ public class VentanaPrincipal extends JFrame {
 	 */
 
 	private PanelNuevoUsuario panelUsuario;
-
 	private PanelInicial inicial;
 	private PanelIniciarSesion iniciarSesion;
 
