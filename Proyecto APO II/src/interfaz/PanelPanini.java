@@ -173,6 +173,7 @@ public class PanelPanini extends JPanel implements ActionListener{
 	    laminaOnce= new JLabel(icono11);
 	    laminaOnce.setBounds(970, 390, 160, 220);
 	    add(laminaOnce);
+	    //dsa
        }
 
      public BufferedImage convertidor (String ruta) {
