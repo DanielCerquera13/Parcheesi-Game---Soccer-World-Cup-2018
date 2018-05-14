@@ -119,6 +119,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
         	ven.remove(this);
 			ven.add(ven.getPanelInicial());
 			ven.refresh();
+			//pruebaaaa
         }
 	}
 }
