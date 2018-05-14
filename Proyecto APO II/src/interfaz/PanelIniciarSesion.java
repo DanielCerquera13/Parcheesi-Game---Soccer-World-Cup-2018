@@ -83,7 +83,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		super.paintComponent(g);
 
 		g.drawImage(FONDO, 0, 0, null);
-		g.drawImage(COPA, 1000, 150, null);
+		g.drawImage(COPA, 800, 35, null);
 
 		repaint();
 
