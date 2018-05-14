@@ -58,6 +58,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		contrasena.setFont(new Font("Garamond", 1, 40));
 		contrasena.setForeground(Color.WHITE);
 
+		//contra
 		contrasenatxt = new JPasswordField();
 		contrasenatxt.setBounds(936, 480, 400, 80);
 		contrasenatxt.setFont(new Font("Garamond", 1, 40));
