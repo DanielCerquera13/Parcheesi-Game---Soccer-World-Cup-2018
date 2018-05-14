@@ -26,9 +26,9 @@ public class VentanaPrincipal extends JFrame {
 		setSize(1280, 768);
 		// Custom Cursor
 
-		// setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-		// new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new
-		// Point(0, 0), "Ball Cursor"));
+		 setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+		 new ImageIcon("./Archivos/imagenes/recursos/balon.png").getImage(), new
+		 Point(0, 0), "Ball Cursor"));
 
 		// Icono del programa
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
