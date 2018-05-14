@@ -18,7 +18,7 @@ public class PanelInicial extends JPanel implements ActionListener {
 	public final static Image LOGO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/logoPro.png");
 	public final static Image FICHA = Toolkit.getDefaultToolkit()
-			.createImage("./Archivos/imagenes/recursos/fichaInicio.png");
+			.createImage("./Archivos/imagenes/recursos/ficha.png");
 	public final static Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoPrincipal.jpg");
 
@@ -46,9 +46,7 @@ public class PanelInicial extends JPanel implements ActionListener {
 
 		ajustarBotones();
 
-		add(butIniciarSesion);
-		add(butCrearUsuario);
-		add(butPartidaRapida);
+
 
 	}
 
@@ -60,24 +58,28 @@ public class PanelInicial extends JPanel implements ActionListener {
 		butIniciarSesion = new JButton("Iniciar Sesion");
 		butIniciarSesion.setActionCommand(INICIAR);
 		butIniciarSesion.addActionListener(this);
-		butIniciarSesion.setBounds(620, 590, 400, 80);
-		butIniciarSesion.setFont(new Font("Garamond", 1, 40));
+		butIniciarSesion.setBounds(450, 480, 400, 40);
+		butIniciarSesion.setFont(new Font("Garamond", 1, 25));
 		butIniciarSesion.setToolTipText("¡Ingresa con tu usuario y contraseña para seguir con tu proceso!");
 
 		butCrearUsuario = new JButton("Crear Nuevo Usuario");
 		butCrearUsuario.setActionCommand(CREAR);
 		butCrearUsuario.addActionListener(this);
-		butCrearUsuario.setBounds(620, 690, 400, 80);
-		butCrearUsuario.setFont(new Font("Garamond", 1, 40));
+		butCrearUsuario.setBounds(450, 540, 400, 40);
+		butCrearUsuario.setFont(new Font("Garamond", 1, 25));
 		butCrearUsuario.setToolTipText("¡Crea un nuevo usuario para completar el álbum y mucho más!");
 
 		butPartidaRapida = new JButton("Partida Rapida");
 		butPartidaRapida.setActionCommand(RAPIDA);
 		butPartidaRapida.addActionListener(this);
-		butPartidaRapida.setBounds(620, 790, 400, 80);
-		butPartidaRapida.setFont(new Font("Garamond", 1, 40));
+		butPartidaRapida.setBounds(450, 600, 400, 40);
+		butPartidaRapida.setFont(new Font("Garamond", 1, 25));
 		butPartidaRapida.setToolTipText("¡Juega sin la necesidad de iniciar sesión o crear un usuario!");
 
+		add(butIniciarSesion);
+		add(butCrearUsuario);
+		add(butPartidaRapida);
+		
 	}
 
 	/**
@@ -88,19 +90,19 @@ public class PanelInicial extends JPanel implements ActionListener {
 
 		super.paintComponent(g);
 
-		Font parques = new Font("Broadway", 4, 45);
+		Font parques = new Font("Broadway", 4, 40);
 
 		g.drawImage(FONDO, 0, 0, null);
-		g.drawImage(DADOS, 80, 40, null);
-		g.drawImage(DADOS, 280, 220, null);
-		g.drawImage(DADOS, 1300, 40, null);
-		g.drawImage(DADOS, 1100, 220, null);
-		g.drawImage(LOGO, 560, -10, null);
-		g.drawImage(FICHA, -15, 500, null);
-		g.drawImage(FICHA, 1100, 500, null);
+		g.drawImage(DADOS, 0, 0, null);	
+		g.drawImage(DADOS, 195, 220, null);
+		g.drawImage(DADOS, 1050, 0, null);
+		g.drawImage(DADOS, 860, 220, null);
+		g.drawImage(LOGO, 450, 10, null);
+		g.drawImage(FICHA, 50, 430, null);
+		g.drawImage(FICHA, 980, 430, null);
 		g.setFont(parques);
 		g.setColor(Color.WHITE);
-		g.drawString("Parques Mundial Rusia 2018", 460, 935);
+		g.drawString("Parques Mundial Rusia 2018", 350, 700);
 
 		repaint();
 

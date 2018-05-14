@@ -11,7 +11,6 @@ public class VentanaPrincipal extends JFrame {
 	 */
 
 	private PanelNuevoUsuario panelUsuario;
-	
 
 	private PanelInicial inicial;
 	private PanelIniciarSesion iniciarSesion;
@@ -22,20 +21,10 @@ public class VentanaPrincipal extends JFrame {
 	public VentanaPrincipal() {
 
 		setTitle("Parques Mundial Rusia 2018");
-		setResizable(true);
+		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-		// esta es
-		// setSize(1580, 1024);
-		// setSize(1580, 1024);
-
-		Toolkit t = Toolkit.getDefaultToolkit();
-		Dimension d = t.getScreenSize();
-		int h = d.height;
-		int w = d.width;
-		this.setSize(w - 330, h - 60);
-
-//		setSize(800, 600);
+		setSize(1280, 768);
 		// Custom Cursor
 
 		// setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
@@ -51,10 +40,8 @@ public class VentanaPrincipal extends JFrame {
 		iniciarSesion = new PanelIniciarSesion(this);
 
 		add(inicial);
-        
-		//asd
-		
-	
+
+		// asd
 
 	}
 
