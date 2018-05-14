@@ -12,7 +12,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener{
 		// TODO Auto-generated method stub
 		
 	}
-	
+	//pruebaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	
 	  
 
