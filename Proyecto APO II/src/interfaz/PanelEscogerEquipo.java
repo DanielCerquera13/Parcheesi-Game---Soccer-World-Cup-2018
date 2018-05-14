@@ -13,9 +13,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener{
 		
 	}
 	
-	public void prueba() {
-	}
-	//Holaaaavsbds
+	
 	  
 
 }
