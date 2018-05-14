@@ -22,7 +22,7 @@ public class Lamina {
 	 * Constructor de la clase Lamina.
 	 */
 	public Lamina(String jugador, int numero) {
-		super();
+		
 		this.jugador = jugador;
 		this.numero = numero;
 	}
