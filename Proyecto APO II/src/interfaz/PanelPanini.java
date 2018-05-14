@@ -1,9 +1,13 @@
 package interfaz;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class PanelPanini extends JPanel implements ActionListener{
    
@@ -88,68 +92,124 @@ public class PanelPanini extends JPanel implements ActionListener{
 	    
 	    
 	    
-	    ImageIcon imagen1 = new ImageIcon("Archivos/imagenes/laminas/alemania/neuer.jpg");
-	    laminaUno= new JLabel(imagen1);
+	    String ruta1 = "Archivos/imagenes/laminas/alemania/neuer.jpg";
+	    BufferedImage imagen1 =  convertidor(ruta1);
+	    ImageIcon icono1 = new ImageIcon(imagen1);
+	    laminaUno= new JLabel(icono1);
 	    laminaUno.setBounds(60, 150, 160, 220);
 	   
 	    add(laminaUno);
 	    
-	    ImageIcon imagen2 = new ImageIcon("Archivos/imagenes/laminas/alemania/boateng.jpg");
-	    laminaDos= new JLabel(imagen2);
+	    String ruta2 = "Archivos/imagenes/laminas/alemania/boateng.jpg";
+	    BufferedImage imagen2 =  convertidor(ruta2);
+	    ImageIcon icono2 = new ImageIcon(imagen2);
+	    laminaDos= new JLabel(icono2);
 	    laminaDos.setBounds(260, 150, 160, 220);
 	    add(laminaDos);
 	    
-	    ImageIcon imagen3 = new ImageIcon("Archivos/imagenes/laminas/alemania/hummels.jpg");
-	    laminaTres= new JLabel(imagen3);
+	    String ruta3 = "Archivos/imagenes/laminas/alemania/hummels.jpg";
+	    BufferedImage imagen3 =  convertidor(ruta3);
+	    ImageIcon icono3 = new ImageIcon(imagen3);
+	    laminaTres= new JLabel(icono3);
 	    laminaTres.setBounds(460, 150, 160, 220);
 	    add(laminaTres);
 	    
-	    ImageIcon imagen4 = new ImageIcon("Archivos/imagenes/laminas/alemania/khedira.jpg");
-	    laminaCuatro= new JLabel(imagen4);
+	    String ruta4 = "Archivos/imagenes/laminas/alemania/khedira.jpg";
+	    BufferedImage imagen4 =  convertidor(ruta4);
+	    ImageIcon icono4 = new ImageIcon(imagen4);
+	    laminaCuatro= new JLabel(icono4);
 	    laminaCuatro.setBounds(660, 150, 160, 220);
 	    add(laminaCuatro);
 	    
 	    
-	    ImageIcon imagen5 = new ImageIcon("Archivos/imagenes/laminas/alemania/kroos.jpg");
-	    laminaCinco= new JLabel(imagen5);
+	    String ruta5 = "Archivos/imagenes/laminas/alemania/kroos.jpg";
+	    BufferedImage imagen5 =  convertidor(ruta5);
+	    ImageIcon icono5 = new ImageIcon(imagen5);
+	    laminaCinco= new JLabel(icono5);
 	    laminaCinco.setBounds(860, 150, 160, 220);
 	    add(laminaCinco);
-	    
-	    ImageIcon imagen6 = new ImageIcon("Archivos/imagenes/laminas/alemania/draxler.jpg");
-	    laminaSeis= new JLabel(imagen6);
+
+	    String ruta6 = "Archivos/imagenes/laminas/alemania/draxler.jpg";
+	    BufferedImage imagen6 =  convertidor(ruta6);
+	    ImageIcon icono6 = new ImageIcon(imagen6);
+	    laminaSeis= new JLabel(icono6);
 	    laminaSeis.setBounds(1060, 150, 160, 220);
 	    add(laminaSeis);
 	    
-	    ImageIcon imagen7 = new ImageIcon("Archivos/imagenes/laminas/alemania/gotze.jpg");
-	    laminaSiete= new JLabel(imagen7);
+	    String ruta7 = "Archivos/imagenes/laminas/alemania/gotze.jpg";
+	    BufferedImage imagen7 =  convertidor(ruta7);
+	    ImageIcon icono7 = new ImageIcon(imagen7);
+	    laminaSiete= new JLabel(icono7);
 	    laminaSiete.setBounds(170, 390, 160, 220);
 	    add(laminaSiete);
 	    
-	    ImageIcon imagen8 = new ImageIcon("Archivos/imagenes/laminas/alemania/muller.jpg");
-	    laminaOcho= new JLabel(imagen8);
+	    String ruta8 = "Archivos/imagenes/laminas/alemania/muller.jpg";
+	    BufferedImage imagen8 =  convertidor(ruta8);
+	    ImageIcon icono8 = new ImageIcon(imagen8);
+	    laminaOcho= new JLabel(icono8);
 	    laminaOcho.setBounds(370, 390, 160, 220);
 	    add(laminaOcho);
 	    
 	    
-	    ImageIcon imagen9 = new ImageIcon("Archivos/imagenes/laminas/alemania/sane.jpg");
-	    laminaNueve= new JLabel(imagen9);
+	    String ruta9 = "Archivos/imagenes/laminas/alemania/sane.jpg";
+	    BufferedImage imagen9 =  convertidor(ruta9);
+	    ImageIcon icono9 = new ImageIcon(imagen9);
+	    laminaNueve= new JLabel(icono9);
 	    laminaNueve.setBounds(570, 390, 160, 220);
 	    add(laminaNueve);
 	    
 	    
-	    ImageIcon imagen10 = new ImageIcon("Archivos/imagenes/laminas/alemania/ozil.jpg");
-	    laminaDiez= new JLabel(imagen10);
+	    String ruta10 = "Archivos/imagenes/laminas/alemania/ozil.jpg";
+	    BufferedImage imagen10 =  convertidor(ruta10);
+	    ImageIcon icono10 = new ImageIcon(imagen10);
+	    laminaDiez= new JLabel(icono10);
 	    laminaDiez.setBounds(770, 390, 160, 220);
 	    add(laminaDiez);
 	    
 	    
-	    ImageIcon imagen11 = new ImageIcon("Archivos/imagenes/laminas/alemania/werner.jpg");
-	    laminaOnce= new JLabel(imagen11);
+	    String ruta11 = "Archivos/imagenes/laminas/alemania/werner.jpg";
+	    BufferedImage imagen11 =  convertidor(ruta11);
+	    ImageIcon icono11 = new ImageIcon(imagen11);
+	    laminaOnce= new JLabel(icono11);
 	    laminaOnce.setBounds(970, 390, 160, 220);
 	    add(laminaOnce);
        }
 
-     
+     public BufferedImage convertidor (String ruta) {
+    	     
+    	 File archivo = new File(ruta);
+    	 BufferedImage  imgs = null;
+    	 BufferedImage grayScaleImage = null;
+    	  
+    	 try {
+    		 imgs = ImageIO.read(archivo);
+    		 
+    		 
+    		  grayScaleImage = new BufferedImage(imgs.getWidth(), imgs.getHeight(), BufferedImage.TYPE_INT_ARGB);
+    		 
+    		 for(int i =0; i<imgs.getHeight(); i++) {
+    			 for(int j =0; j<imgs.getWidth(); j++) {
+    			
+    				 Color c = new Color(imgs.getRGB(j, i));
+    				 int r = c.getRed();
+    				 int g = c.getGreen();
+    				 int b = c.getBlue();
+    				 int a = c.getAlpha();
+    				 
+    				 
+    				 int gr = (r+g+b)/3;
+    				 
+    				 Color gColor = new Color(gr, gr, gr, a);
+    				 grayScaleImage.setRGB(j, i, gColor.getRGB());
+    			 }
+    		 }
+          
+    	 }    catch(IOException e) {
+    		  System.out.println(e.getMessage());
+    	 }
+    	    
+    	    return grayScaleImage;
+     }
        public void paintComponent(Graphics g) {
     	   
     		super.paintComponent(g);
