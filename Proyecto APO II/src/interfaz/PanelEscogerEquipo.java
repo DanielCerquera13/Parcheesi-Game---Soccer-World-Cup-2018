@@ -68,6 +68,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener{
 	
 	public void paintComponent(Graphics g) {
 		paintBackGround(g);
+		
 	}
 	
 	public void paintBackGround(Graphics g) {
@@ -107,7 +108,6 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener{
 			btMultijugador.setVisible(true);
 			btSolitario.setVisible(true);
 			lbEscoger.setVisible(true);
-			
 			ventana.remove(this);
 			ventana.add(ventana.getPanelInicial());
 			ventana.refresh();

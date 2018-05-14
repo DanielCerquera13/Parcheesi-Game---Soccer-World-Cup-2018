@@ -102,9 +102,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		}
 		
 		if (comando.equals(INICIAR)) {
-			ventana.remove(this);
-			ventana.add(ventana.getPanelEscogerEquipo());
-			ventana.refresh();
+			
 			
 		}
 
