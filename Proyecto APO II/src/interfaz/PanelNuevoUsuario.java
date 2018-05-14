@@ -122,6 +122,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		botonComenzar.addActionListener(this);
 		botonComenzar.setActionCommand(COMENZAR);
 
+		//fd
 		// 136 330
 
 		botonRegresar = new JButton(REGRESAR);
