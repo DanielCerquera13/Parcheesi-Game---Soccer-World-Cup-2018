@@ -100,6 +100,14 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener{
 		
 		if (comando.equals(REGRESAR)) {
 			
+			btMultijugador.setVisible(true);
+			btSolitario.setVisible(true);
+			lbEscoger.setVisible(true);
+			
+			btMultijugador.setVisible(true);
+			btSolitario.setVisible(true);
+			lbEscoger.setVisible(true);
+			
 			ventana.remove(this);
 			ventana.add(ventana.getPanelInicial());
 			ventana.refresh();
