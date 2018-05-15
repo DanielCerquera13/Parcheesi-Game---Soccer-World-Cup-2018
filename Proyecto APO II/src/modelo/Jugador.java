@@ -14,7 +14,10 @@ public class Jugador {
 	 */
 	private String contrasena;
 	
-	
+	/**
+	 * Atributo que representa el dinero del usuario
+	 */
+	private int dinero;
 	
 	//CONSTRUCTOR
 	
@@ -25,11 +28,25 @@ public class Jugador {
 		
 		this.nickName = nickName;
 		this.contrasena = contrasena;
+		dinero = 0;
 	}
 	
-
 	// GET AND SET
 
+	
+	public void setDinero(int dinero) {
+		
+	this.dinero = dinero;	
+		
+	}
+	
+	public int getDinero() {
+		
+	return dinero;	
+		
+	}
+	
+	
 	/**
 	 * Este metodo retorna el nombre del jugador
 	 * @return String nickName.
