@@ -33,6 +33,7 @@ public class PanelInicial extends JPanel implements ActionListener {
 	private PanelIniciarSesion iniciar;
 	private PanelNuevoUsuario nuevo;
 	private PanelEscogerTipoDeJuego pEscogerJugabilidad;
+	private PanelEscogerEquipo pEscogerEquipo;
 	private JButton butIniciarSesion;
 	private JButton butCrearUsuario;
 	private JButton butPartidaRapida;
@@ -49,6 +50,7 @@ public class PanelInicial extends JPanel implements ActionListener {
 		iniciar = new PanelIniciarSesion(this);
 		nuevo = new PanelNuevoUsuario(this);
 		pEscogerJugabilidad = new PanelEscogerTipoDeJuego(this);
+		pEscogerEquipo = new PanelEscogerEquipo(this);
 		setLayout(null);
 
 		ajustarBotones();
@@ -98,6 +100,16 @@ public class PanelInicial extends JPanel implements ActionListener {
 
 	public void setVentana(VentanaPrincipal ventana) {
 		this.ventana = ventana;
+	}
+	
+	
+
+	public PanelEscogerEquipo getpEscogerEquipo() {
+		return pEscogerEquipo;
+	}
+
+	public void setpEscogerEquipo(PanelEscogerEquipo pEscogerEquipo) {
+		this.pEscogerEquipo = pEscogerEquipo;
 	}
 
 	/**

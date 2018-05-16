@@ -25,7 +25,7 @@ public class PanelEscogerTipoDeJuego extends JPanel implements ActionListener{
 	private JButton btMultijugador;
 	private JButton btSolitario;
 	private JButton btRegresar;
-
+	private PanelEscogerEquipo pEscogerEquipo;
 	
 	private PanelInicial panelInicial;
 
@@ -94,9 +94,14 @@ public class PanelEscogerTipoDeJuego extends JPanel implements ActionListener{
 
 		if (comando.equals(SOLITARIO)) {
 			
+			
+			
 			btMultijugador.setVisible(false);
 			btSolitario.setVisible(false);
 			lbEscoger.setVisible(false);
+			panelInicial.getVentana().remove(this);
+			panelInicial.getVentana().add(panelInicial.getpEscogerEquipo());
+			panelInicial.getVentana().refresh();
 		}
 		
 		if (comando.equals(MULTIJUGADOR)) {
