@@ -9,11 +9,14 @@ import java.awt.event.MouseListener;
 
 public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseListener{
 	
-	
+	public final static String REGRESAR = "Regresar";
 	public static final Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
 	
-	private PanelInicial pI;
+	
+	private JButton btRegresar;
+
+	private PanelInicial panelInicial;
 	private JLabel lbtitulo;
 	
 	
@@ -22,7 +25,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	
 	public  PanelEscogerEquipo(PanelInicial p) {
 		
-		pI =p;
+		panelInicial =p;
 		setPreferredSize(new Dimension(300,400));
 		setLayout(null);
 		inicializarComponentes();
@@ -37,6 +40,12 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 		lbtitulo.setForeground(Color.WHITE);
 		add(lbtitulo);
 		
+		btRegresar = new JButton(REGRESAR);
+		btRegresar.setBounds(1050, 650, 150, 40);
+		btRegresar.setFont(new Font(" Garamond ", 1, 25));
+		btRegresar.addActionListener(this);
+		btRegresar.setActionCommand(REGRESAR);
+		add(btRegresar);
 	}
 	
 	
@@ -96,9 +105,13 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void actionPerformed(ActionEvent comando) {
+		if (comando.equals(REGRESAR)) {
+			
+			panelInicial.getVentana().remove(this);
+			panelInicial.getVentana().add(panelInicial);
+			panelInicial.getVentana().refresh();
+		}
 	}
 
 	@Override

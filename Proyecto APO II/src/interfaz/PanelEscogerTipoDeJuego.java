@@ -96,9 +96,9 @@ public class PanelEscogerTipoDeJuego extends JPanel implements ActionListener{
 			
 			
 			
-			btMultijugador.setVisible(false);
-			btSolitario.setVisible(false);
-			lbEscoger.setVisible(false);
+//			btMultijugador.setVisible(false);
+//			btSolitario.setVisible(false);
+//			lbEscoger.setVisible(false);
 			panelInicial.getVentana().remove(this);
 			panelInicial.getVentana().add(panelInicial.getpEscogerEquipo());
 			panelInicial.getVentana().refresh();
@@ -106,20 +106,23 @@ public class PanelEscogerTipoDeJuego extends JPanel implements ActionListener{
 		
 		if (comando.equals(MULTIJUGADOR)) {
 			
-			btMultijugador.setVisible(false);
-			btSolitario.setVisible(false);
-			lbEscoger.setVisible(false);
+//			btMultijugador.setVisible(false);
+//			btSolitario.setVisible(false);
+//			lbEscoger.setVisible(false);
+			panelInicial.getVentana().remove(this);
+			panelInicial.getVentana().add(panelInicial.getpEscogerEquipo());
+			panelInicial.getVentana().refresh();
 		}
 		
 		if (comando.equals(REGRESAR)) {
 			
-			btMultijugador.setVisible(true);
-			btSolitario.setVisible(true);
-			lbEscoger.setVisible(true);
-			
-			btMultijugador.setVisible(true);
-			btSolitario.setVisible(true);
-			lbEscoger.setVisible(true);
+//			btMultijugador.setVisible(true);
+//			btSolitario.setVisible(true);
+//			lbEscoger.setVisible(true);
+//			
+//			btMultijugador.setVisible(true);
+//			btSolitario.setVisible(true);
+//			lbEscoger.setVisible(true);
 			
 			panelInicial.getVentana().remove(this);
 			panelInicial.getVentana().add(panelInicial);
