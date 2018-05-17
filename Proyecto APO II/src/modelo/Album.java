@@ -42,41 +42,45 @@ public class Album {
 		return cantidad;
 
 	}
+	
+	public boolean isEmpty() {
+		
+	return primero==null;	
+		
+	}
 
-//	public Pagina agregarPagina() throws PaisYaExisteException {
+//	public Pagina agregarPagina(Pagina nuevo) {
 //
-//		Pagina nuevo = new Pagina();
 //
-//		Pagina actual = primero;
+//		if (isEmpty()) {
 //
-//		if (yaExiste(pais)) {
-//
-//			nuevo = null;
-//			throw new PaisYaExisteException(pais);
+//			primero = ultimo = nuevo;
+//			primero.setSiguiente(ultimo);
+//			primero.setAnterior(ultimo);
+//			ultimo.setSiguiente(primero);
+//			ultimo.setAnterior(primero);
+//			numPaginaes++;
 //
 //		} else {
 //
-//			if (actual == null) {
+//			if (yaExiste(nombre)) {
 //
-//				primero = nuevo;
-//				
+//				throw new PaginaYaExisteException(nombre);
 //
 //			} else {
 //
-//				while (actual.getNext() != null) {
-//
-//					actual = actual.getNext();
-//
-//				}
-//
-//				actual.linkNext(nuevo);
-//			
+//				ultimo.setSiguiente(nuevo);
+//				Pagina temp = ultimo;
+//				ultimo = nuevo;
+//				ultimo.setSiguiente(primero);
+//				primero.setAnterior(ultimo);
+//				ultimo.setAnterior(temp);
+//				numPaginaes++;
 //			}
-//			cantidad++;
 //		}
 //
-//		
 //		return nuevo;
+//
 //	}
 //
 //	public boolean yaExiste(String pais) {
@@ -153,36 +157,7 @@ public class Album {
 //
 //	}
 //
-//	public void eliminarPagina(String pais) throws PaginaNoRegistradaException {
-//
-//		if (yaExiste(pais)) {
-//			if (primero.getPais().equalsIgnoreCase(pais)) {
-//
-//				primero = primero.getNext();
-//
-//			} else {
-//
-//				Pagina actual = primero.getNext();
-//				Pagina anterior = primero;
-//
-//				while (!(actual.getPais().equalsIgnoreCase(pais))) {
-//
-//					actual = actual.getNext();
-//					anterior = anterior.getNext();
-//
-//				}
-//
-//				anterior.linkNext(actual.getNext());
-//
-//			}
-//			cantidad--;
-//		} else {
-//
-//			throw new PaginaNoRegistradaException(pais);
-//
-//		}
-//
-//	}
+
 //
 //	public void modificarPagina(Pagina aModificar, String pais, String imagen, int puntos)
 //			throws PaisYaExisteException {

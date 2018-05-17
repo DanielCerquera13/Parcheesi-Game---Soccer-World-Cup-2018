@@ -6,9 +6,9 @@ public class Ficha {
 	//ATRIBUTOS
 	
 	/**
-	 * Atributo que representa el color de la ficha
+	 * Atributo que representa el Equipo de la ficha
 	 */
-	private String color;
+	private String equipo;
 	
 	/**
 	 * Atributo que representa la posicion de la ficha
@@ -33,9 +33,9 @@ public class Ficha {
 	/**
 	 *Constructor de la clase Ficha.
 	 */
-	public Ficha(String color, int posicion, boolean libre, boolean ganada) {
+	public Ficha(String equipo, int posicion, boolean libre, boolean ganada) {
 		super();
-		this.color = color;
+		this.equipo = equipo;
 		this.posicion = posicion;
 		this.libre = libre;
 		this.ganada = ganada;
@@ -45,19 +45,19 @@ public class Ficha {
 	//GET AND SET
 	
 	/**
-	 * Este metodo retorna el color de la ficha
-	 * @return String color.
+	 * Este metodo retorna el Equipo de la ficha
+	 * @return String Equipo.
 	 */
-	public String getColor() {
-		return color;
+	public String getEquipo() {
+		return equipo;
 	}
 	
 	/**
-	 * Este metodo modifica el color de la ficha.
-	 * @param String color de la ficha
+	 * Este metodo modifica el Equipo de la ficha.
+	 * @param String Equipo de la ficha
 	 */
-	public void setColor(String color) {
-		this.color = color;
+	public void setEquipo(String equipo) {
+		this.equipo = equipo;
 	}
 	
 	/**
