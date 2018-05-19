@@ -600,7 +600,7 @@ public class Album {
 		inglaterra.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/inglaterra/walker.jpg",308);
 		
 		//Polonia
-		Pagina polonia=new Pagina("./Archivos/imagenes/banderasRec/poloniaRec.png","Polonia",29,"Grupo F");
+		Pagina polonia=new Pagina("./Archivos/imagenes/banderasRec/poloniaRec.png","Polonia",29,"Grupo H");
 		polonia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/polonia/szczesny.jpg",309);
 		polonia.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/polonia/artur.jpg",310);
 		polonia.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/polonia/bartosz.jpg",311);
@@ -614,7 +614,7 @@ public class Album {
 		polonia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/polonia/teodorczyk.jpg",319);
 		
 		//Senegal
-		Pagina senegal=new Pagina("./Archivos/imagenes/banderasRec/senegalRec.png","Senegal",30,"Grupo F");
+		Pagina senegal=new Pagina("./Archivos/imagenes/banderasRec/senegalRec.png","Senegal",30,"Grupo H");
 		senegal.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/senegal/diaye.jpg",320);
 		senegal.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/senegal/balde.jpg",321);
 		senegal.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/senegal/gassama.jpg",322);
@@ -628,7 +628,7 @@ public class Album {
 		senegal.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/senegal/sane.jpg",330);
 		
 		//Colombia
-		Pagina colombia=new Pagina("./Archivos/imagenes/banderasRec/colombiaRec.png","Colombia",31,"Grupo F");
+		Pagina colombia=new Pagina("./Archivos/imagenes/banderasRec/colombiaRec.png","Colombia",31,"Grupo H");
 		colombia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/colombia/ospina.jpg",331);
 		colombia.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/colombia/arias.jpg",332);
 		colombia.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/colombia/bacca.jpg",333);
@@ -642,7 +642,7 @@ public class Album {
 		colombia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/colombia/rodriguez.jpg",341);
 		
 		//Japon
-		Pagina japon=new Pagina("./Archivos/imagenes/banderasRec/japonRec.png","Japon",32,"Grupo F");
+		Pagina japon=new Pagina("./Archivos/imagenes/banderasRec/japonRec.png","Japon",32,"Grupo H");
 		japon.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/japon/nishikawa.jpg",342);
 		japon.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/japon/h. sakai.jpg",343);
 		japon.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/japon/hasebe.jpg",344);

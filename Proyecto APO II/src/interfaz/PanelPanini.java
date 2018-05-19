@@ -327,23 +327,19 @@ public class PanelPanini extends JPanel implements ActionListener {
 		if (a.equals(ANTERIOR)) {
 		
 			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
-			Pagina actual = album.getActual();
-			Pagina laAnterior = actual.getAnterior();
-			album.setActual(laAnterior);
-			
-			actualizarPanini(laAnterior);
+			Pagina actualizar = album.getActual().getAnterior();
+			actualizarPanini(actualizar);
+			album.setActual(actualizar);
 			
 		}
 
 		if (a.equals(SIGUIENTE)) {
-
-			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
-			Pagina actual = album.getActual();
-			Pagina laSiguiente = actual.getAnterior();
-			album.setActual(laSiguiente);
 			
-			actualizarPanini(laSiguiente);
-			actual = laSiguiente;
+			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
+			Pagina actualizar = album.getActual().getSiguiente();
+			actualizarPanini(actualizar);
+			album.setActual(actualizar);
+		
 		}
 	}
 
