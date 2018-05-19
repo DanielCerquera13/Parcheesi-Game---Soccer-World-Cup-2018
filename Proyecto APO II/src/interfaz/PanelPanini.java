@@ -136,18 +136,18 @@ public class PanelPanini extends JPanel implements ActionListener {
 		laminaOnce.setBounds(970, 390, 160, 220);
 		add(laminaOnce);
 		// dsa
-		
+
 		inicializar();
 	}
-       
-	    public void inicializar() {
-	    	
-			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
-               
-		Pagina pagina = 	album.getPrimero();
-		
-		
-		ImageIcon iconoBandera = new ImageIcon(pagina.getRutaBandera());
+
+	public void inicializar() {
+
+		Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
+
+		Pagina pagina = album.getPrimero();
+		album.setActual(pagina);
+
+		ImageIcon iconoBandera = new ImageIcon(album.getPrimero().getRutaBandera());
 		bandera.setIcon(iconoBandera);
 
 		nombre.setText(pagina.getSeleccion());
@@ -209,12 +209,9 @@ public class PanelPanini extends JPanel implements ActionListener {
 		ImageIcon icono11 = new ImageIcon(imagen11);
 		laminaOnce.setIcon(icono11);
 
-	    	
-	    }
-	public void actualizarPanini(Pagina pagina) {
+	}
 
-		Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
-		
+	public void actualizarPanini(Pagina pagina) {
 
 		ImageIcon iconoBandera = new ImageIcon(pagina.getRutaBandera());
 		bandera.setIcon(iconoBandera);
@@ -328,11 +325,21 @@ public class PanelPanini extends JPanel implements ActionListener {
 		String a = e.getActionCommand();
 
 		if (a.equals(ANTERIOR)) {
-
+		
+			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
+			Pagina actual = album.getActual();
+			Pagina laAnterior = actual.getAnterior();
+			album.setActual(laAnterior);
+			
 		}
 
 		if (a.equals(SIGUIENTE)) {
 
+			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
+			Pagina actual = album.getActual();
+			Pagina laAnterior = actual.getAnterior();
+			album.setActual(laAnterior);
+			
 		}
 	}
 

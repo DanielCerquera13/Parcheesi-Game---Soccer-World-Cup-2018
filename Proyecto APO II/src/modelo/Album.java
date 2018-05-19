@@ -7,6 +7,7 @@ public class Album {
 	private Pagina primero;
 	private Pagina ultimo;
 	private int cantidad;
+	private Pagina actual;
 
 	public Album() {
 
@@ -21,6 +22,18 @@ public class Album {
 			e.printStackTrace();
 		}
         
+		
+	}
+	
+	public void setActual(Pagina actual) {
+		
+	this.actual = actual;	
+		
+	}
+	
+	public Pagina getActual() {
+		
+	return actual;	
 		
 	}
 
@@ -187,7 +200,7 @@ public class Album {
 	public void rellenarAlbum() throws PaginaYaExisteException {
 		
 		//Rusia
-		Pagina rusia=new Pagina("./Archivos/imagenes/banderasRec/rusia.png", "Rusia", 1, "Grupo A");
+		Pagina rusia=new Pagina("./Archivos/imagenes/banderasRec/rusiaRec.png", "Rusia", 1, "Grupo A");
 		rusia.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/rusia/akinfeev.jpg",1);
 		rusia.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/rusia/dzagoev.jpg",2);
 		rusia.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/rusia/erokhin.jpg",3);
