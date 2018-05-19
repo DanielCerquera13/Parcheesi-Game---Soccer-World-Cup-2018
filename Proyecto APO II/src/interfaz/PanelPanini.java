@@ -331,7 +331,7 @@ public class PanelPanini extends JPanel implements ActionListener {
 			Pagina laAnterior = actual.getAnterior();
 			album.setActual(laAnterior);
 			
-			actualizarPanini(actual.getAnterior());
+			actualizarPanini(laAnterior);
 			
 		}
 
@@ -339,10 +339,10 @@ public class PanelPanini extends JPanel implements ActionListener {
 
 			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
 			Pagina actual = album.getActual();
-			Pagina laAnterior = actual.getAnterior();
-			album.setActual(laAnterior);
+			Pagina laSiguiente = actual.getAnterior();
+			album.setActual(laSiguiente);
 			
-			actualizarPanini(actual.getSiguiente());
+			actualizarPanini(laSiguiente);
 		}
 	}
 
