@@ -223,57 +223,57 @@ public class PanelPanini extends JPanel implements ActionListener {
 		String ruta1 = pagina.getLaminas()[0].getJugador();
 		BufferedImage imagen1 = convertidor(ruta1);
 		ImageIcon icono1 = new ImageIcon(imagen1);
-		laminaUno = new JLabel(icono1);
+		laminaUno.setIcon(icono1);
 
 		String ruta2 = pagina.getLaminas()[1].getJugador();
 		BufferedImage imagen2 = convertidor(ruta2);
 		ImageIcon icono2 = new ImageIcon(imagen2);
-		laminaDos = new JLabel(icono2);
+		laminaDos.setIcon(icono2);
 
-		String ruta3 = pagina.getLaminas()[20].getJugador();
+		String ruta3 = pagina.getLaminas()[2].getJugador();
 		BufferedImage imagen3 = convertidor(ruta3);
 		ImageIcon icono3 = new ImageIcon(imagen3);
-		laminaTres = new JLabel(icono3);
+		laminaTres.setIcon(icono3);
 
 		String ruta4 = pagina.getLaminas()[3].getJugador();
 		BufferedImage imagen4 = convertidor(ruta4);
 		ImageIcon icono4 = new ImageIcon(imagen4);
-		laminaCuatro = new JLabel(icono4);
+		laminaCuatro.setIcon(icono4);
 
 		String ruta5 = pagina.getLaminas()[4].getJugador();
 		BufferedImage imagen5 = convertidor(ruta5);
 		ImageIcon icono5 = new ImageIcon(imagen5);
-		laminaCinco = new JLabel(icono5);
+		laminaCinco.setIcon(icono5);
 
 		String ruta6 = pagina.getLaminas()[5].getJugador();
 		BufferedImage imagen6 = convertidor(ruta6);
 		ImageIcon icono6 = new ImageIcon(imagen6);
-		laminaSeis = new JLabel(icono6);
+		laminaSeis.setIcon(icono6);
 
 		String ruta7 = pagina.getLaminas()[6].getJugador();
 		BufferedImage imagen7 = convertidor(ruta7);
 		ImageIcon icono7 = new ImageIcon(imagen7);
-		laminaSiete = new JLabel(icono7);
+		laminaSiete.setIcon(icono7);
 
 		String ruta8 = pagina.getLaminas()[7].getJugador();
 		BufferedImage imagen8 = convertidor(ruta8);
 		ImageIcon icono8 = new ImageIcon(imagen8);
-		laminaOcho = new JLabel(icono8);
+		laminaOcho.setIcon(icono8);
 
 		String ruta9 = pagina.getLaminas()[8].getJugador();
 		BufferedImage imagen9 = convertidor(ruta9);
 		ImageIcon icono9 = new ImageIcon(imagen9);
-		laminaNueve = new JLabel(icono9);
+		laminaNueve.setIcon(icono9);
 
 		String ruta10 = pagina.getLaminas()[9].getJugador();
 		BufferedImage imagen10 = convertidor(ruta10);
 		ImageIcon icono10 = new ImageIcon(imagen10);
-		laminaDiez = new JLabel(icono10);
+		laminaDiez.setIcon(icono10);
 
 		String ruta11 = pagina.getLaminas()[10].getJugador();
 		BufferedImage imagen11 = convertidor(ruta11);
 		ImageIcon icono11 = new ImageIcon(imagen11);
-		laminaOnce = new JLabel(icono11);
+		laminaOnce.setIcon(icono11);
 
 	}
 
@@ -331,6 +331,8 @@ public class PanelPanini extends JPanel implements ActionListener {
 			Pagina laAnterior = actual.getAnterior();
 			album.setActual(laAnterior);
 			
+			actualizarPanini(actual.getAnterior());
+			
 		}
 
 		if (a.equals(SIGUIENTE)) {
@@ -340,6 +342,7 @@ public class PanelPanini extends JPanel implements ActionListener {
 			Pagina laAnterior = actual.getAnterior();
 			album.setActual(laAnterior);
 			
+			actualizarPanini(actual.getSiguiente());
 		}
 	}
 
