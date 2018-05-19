@@ -11,6 +11,7 @@ public class ParquesMundial {
 	public ParquesMundial() {
 		
 	usuarios = new ArrayList<Jugador>();	
+	jugadorDePrueba();
 		
 	}
 	
@@ -23,6 +24,13 @@ public class ParquesMundial {
 	public ArrayList<Jugador> getUsuarios(){
 		
 	return usuarios;	
+		
+	}
+	
+	public void jugadorDePrueba() {
+		
+	Jugador player = new Jugador("Juancho", "123456");
+	usuarios.add(player);
 		
 	}
 	

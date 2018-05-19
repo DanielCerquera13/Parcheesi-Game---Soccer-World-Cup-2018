@@ -1,5 +1,6 @@
 package interfaz;
 
+import modelo.*;
 import javax.swing.*;
 
 import java.awt.*;
@@ -11,6 +12,7 @@ public class VentanaPrincipal extends JFrame {
 	 */
 
 	private PanelInicial inicial;
+	private ParquesMundial mundial;
 
 	/**
 	 * Constructor
@@ -30,6 +32,7 @@ public class VentanaPrincipal extends JFrame {
 		// Icono del programa
 		Image icon = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/logoPro.png");
 		setIconImage(icon);
+		mundial = new ParquesMundial();
 
 		inicial = new PanelInicial(this);
 
@@ -37,6 +40,12 @@ public class VentanaPrincipal extends JFrame {
 
 		// asd
 
+	}
+	
+	public ParquesMundial getParquesMundial() {
+		
+	return mundial;	
+		
 	}
 
 	public PanelInicial getPanelInicial() {

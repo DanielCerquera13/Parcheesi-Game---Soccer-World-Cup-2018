@@ -34,6 +34,7 @@ public class Jugador {
 		this.nickName = nickName;
 		this.contrasena = contrasena;
 		dinero = 0;
+		album = new Album();
 	}
 	
 	// GET AND SET
@@ -82,6 +83,12 @@ public class Jugador {
 	 */
 	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
+	}
+	
+	public Album getAlbum() {
+		
+		return album;
+		
 	}
 	
 	
