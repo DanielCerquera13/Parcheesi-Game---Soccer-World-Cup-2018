@@ -256,7 +256,7 @@ public class Album {
 		uruguay.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/uruguay/gimenez.jpg",41);
 		uruguay.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/uruguay/cavani.jpg",42);
 		uruguay.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/uruguay/caceres.jpg",43);
-		uruguay.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/uruguay/c.rodriguez.jpg",44);
+		uruguay.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/uruguay/cRodriguez.jpg",44);
 		
 		
 
@@ -276,7 +276,7 @@ public class Album {
 		portugal.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/portugal/silva.jpg",55);
 		
 		//Espa�a
-		Pagina espana=new Pagina("./Archivos/imagenes/banderasRec/espanaRec.png","España",6,"Grupo B");
+		Pagina espana=new Pagina("./Archivos/imagenes/banderasRec/espanaRec.png","Espana",6,"Grupo B");
 		espana.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/espana/DeGea.jpg",56);
 		espana.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/espana/alba.jpg",57);
 		espana.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/espana/asensio.jpg",58);
