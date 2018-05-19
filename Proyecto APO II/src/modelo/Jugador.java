@@ -19,6 +19,11 @@ public class Jugador {
 	 */
 	private int dinero;
 	
+	
+	/**
+	 * relacion con el album
+	 */
+	private Album album;
 	//CONSTRUCTOR
 	
 	/**

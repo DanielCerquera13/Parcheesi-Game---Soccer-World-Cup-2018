@@ -1,16 +1,29 @@
 package modelo;
 
+import excepciones.PaginaYaExisteException;
+
 public class Album {
 	
 	private Pagina primero;
 	private Pagina ultimo;
 	private int cantidad;
+	private int  numPaginas;
 
 	public Album() {
 
 		primero = ultimo = null;
 		cantidad = 0;
-
+        numPaginas=0; 
+        
+        
+        try {
+			rellenarAlbum();
+		} catch (PaginaYaExisteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+		
 	}
 
 	public void setUltimo(Pagina ultimo) {
@@ -49,67 +62,66 @@ public class Album {
 		
 	}
 
-//	public Pagina agregarPagina(Pagina nuevo) {
-//
-//
-//		if (isEmpty()) {
-//
-//			primero = ultimo = nuevo;
-//			primero.setSiguiente(ultimo);
-//			primero.setAnterior(ultimo);
-//			ultimo.setSiguiente(primero);
-//			ultimo.setAnterior(primero);
-//			numPaginaes++;
-//
-//		} else {
-//
-//			if (yaExiste(nombre)) {
-//
-//				throw new PaginaYaExisteException(nombre);
-//
-//			} else {
-//
-//				ultimo.setSiguiente(nuevo);
-//				Pagina temp = ultimo;
-//				ultimo = nuevo;
-//				ultimo.setSiguiente(primero);
-//				primero.setAnterior(ultimo);
-//				ultimo.setAnterior(temp);
-//				numPaginaes++;
-//			}
-//		}
-//
-//		return nuevo;
-//
-//	}
-//
-//	public boolean yaExiste(String pais) {
-//
-//		boolean existe = false;
-//
-//		int i = 0;
-//
-//		Pagina Pagina = primero;
-//
-//		if (Pagina != null) {
-//
-//			while ((!(Pagina.getPais().equalsIgnoreCase(pais)) && i != cantidad) && Pagina.getNext() != null) {
-//
-//				Pagina = Pagina.getNext();
-//				i++;
-//
-//			}
-//
-//			if (Pagina.getPais().equalsIgnoreCase(pais)) {
-//
-//				existe = true;
-//
-//			}
-//		}
-//		return existe;
-//
-//	}
-//
+	public Pagina agregarPagina(Pagina nuevo) throws PaginaYaExisteException {
+
+
+	if (isEmpty()) {
+
+		primero = ultimo = nuevo;
+		primero.setSiguiente(ultimo);
+			primero.setAnterior(ultimo);
+			ultimo.setSiguiente(primero);
+			ultimo.setAnterior(primero);
+			numPaginas++;
+
+		} else {
+
+			if (yaExiste(nuevo.getSeleccion())) {
+
+			throw new PaginaYaExisteException(nuevo.getSeleccion());
+
+			} else {
+
+				ultimo.setSiguiente(nuevo);
+				Pagina temp = ultimo;
+				ultimo = nuevo;
+				ultimo.setSiguiente(primero);
+				primero.setAnterior(ultimo);
+				ultimo.setAnterior(temp);
+				numPaginas++;
+		}
+		}
+
+		return nuevo;
+
+	}
+
+	public boolean yaExiste(String pais) {
+
+		boolean existe = false;
+
+		int i = 0;
+
+		Pagina Pagina = primero;
+
+		if (Pagina != null) {
+			while ((!(Pagina.getSeleccion()).equalsIgnoreCase(pais)) && i != cantidad && Pagina.getSiguiente() != null) {
+
+				Pagina = Pagina.getSiguiente();
+				i++;
+
+			}
+
+			if (Pagina.getSeleccion().equalsIgnoreCase(pais)) {
+
+				existe = true;
+
+			}
+		}
+		return existe;
+
+	}
+
 //	public Pagina buscarPagina(String pais)
 //			throws PaginaNoRegistradaException, NoHayPaginaesRegistradasException {
 //
@@ -174,7 +186,7 @@ public class Album {
 //		}
 //	}
 	
-	public void rellenarAlbum() {
+	public void rellenarAlbum() throws PaginaYaExisteException {
 		
 		//Rusia
 		Pagina rusia=new Pagina("./Archivos/imagenes/banderasRec/rusia.png", "Rusia", 1, "Grupo A");
@@ -189,6 +201,7 @@ public class Album {
 		rusia.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/rusia/samedov.jpg",9);
 		rusia.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/rusia/smolnikov.jpg",10);
 		rusia.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/rusia/vasin.jpg",11);
+		
 		
 		//Arabia Saudita
 		Pagina arabia=new Pagina("./Archivos/imagenes/banderasRec/arabia sauditaRec.png","Arabia Saudita", 2,"Grupo A");
@@ -218,6 +231,8 @@ public class Album {
 		egipto.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/egipto/sobhi.jpg",32);
 		egipto.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/egipto/trezeguet.jpg",33);
 		
+
+		
 		//Uruguay
 		Pagina uruguay=new Pagina("./Archivos/imagenes/banderasRec/uruguayRec.png","Uruguay",4,"Grupo A");
 		uruguay.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",34);
@@ -231,6 +246,9 @@ public class Album {
 		uruguay.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",42);
 		uruguay.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",43);
 		uruguay.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",44);
+		
+		
+
 		
 		//Portugal
 		Pagina portugal=new Pagina("./Archivos/imagenes/banderasRec/portugalRec.png","Portugal",5,"Grupo B");
@@ -246,19 +264,19 @@ public class Album {
 		portugal.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/portugal/pepe.jpg",54);
 		portugal.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/portugal/silva.jpg",55);
 		
-		//España
-		Pagina espana=new Pagina("./Archivos/imagenes/banderasRec/españaRec.png","España",6,"Grupo B");
-		espana.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/españa/DeGea.jpg",56);
-		espana.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/españa/alba.jpg",57);
-		espana.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/españa/asensio.jpg",58);
-		espana.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/españa/busquet.jpg",59);
-		espana.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/españa/carvajal.jpg",60);
-		espana.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/españa/costa.jpg",61);
-		espana.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/españa/iniesta.jpg",62);
-		espana.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/españa/isco.jpg",63);
-		espana.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/españa/morata.jpg",64);
-		espana.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/españa/ramos.jpg",65);
-		espana.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/españa/vitolo.jpg",66);
+		//Espaï¿½a
+		Pagina espana=new Pagina("./Archivos/imagenes/banderasRec/espaï¿½aRec.png","Espaï¿½a",6,"Grupo B");
+		espana.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/DeGea.jpg",56);
+		espana.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/alba.jpg",57);
+		espana.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/asensio.jpg",58);
+		espana.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/busquet.jpg",59);
+		espana.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/carvajal.jpg",60);
+		espana.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/costa.jpg",61);
+		espana.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/iniesta.jpg",62);
+		espana.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/isco.jpg",63);
+		espana.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/morata.jpg",64);
+		espana.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/ramos.jpg",65);
+		espana.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/espaï¿½a/vitolo.jpg",66);
 		
 		//Marruecos
 		Pagina marruecos=new Pagina("./Archivos/imagenes/banderasRec/marruecosRec.png","Marruecos",7,"Grupo B");
@@ -439,7 +457,7 @@ public class Album {
 		costa.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/costa rica/guzman.jpg",203);
 		costa.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/costa rica/matarrita.jpg",204);
 		costa.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/costa rica/oviedo.jpg",205);
-		costa.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/costa rica/ureña.jpg",206);
+		costa.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/costa rica/ureï¿½a.jpg",206);
 		costa.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/costa rica/venegas.jpg",207);
 		costa.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/costa rica/wallace.jpg",208);
 		costa.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/costa rica/waston.jpg",209);
@@ -628,6 +646,40 @@ public class Album {
 		
 		
 		
+		
+		agregarPagina(rusia);
+		agregarPagina(arabia);
+		agregarPagina(egipto);
+		agregarPagina(uruguay );
+		agregarPagina(portugal);
+		agregarPagina(espana);
+		agregarPagina(marruecos);
+		agregarPagina(iran);
+		agregarPagina(francia);
+		agregarPagina(australia);
+		agregarPagina(peru);
+		agregarPagina(dinamarca);
+		agregarPagina(argentina);
+		agregarPagina(islandia);
+		agregarPagina(croacia);
+		agregarPagina(nigeria);
+		agregarPagina(brasil);
+		agregarPagina(suiza);
+		agregarPagina(costa);
+		agregarPagina(serbia);
+		agregarPagina(alemania);
+		agregarPagina(mexico);
+		agregarPagina(suecia);
+		agregarPagina(corea);
+		agregarPagina(belgica);
+		agregarPagina(panama);
+		agregarPagina(tunez);
+		agregarPagina(inglaterra);
+		agregarPagina(polonia);
+		agregarPagina(senegal);
+		agregarPagina(colombia);
+		agregarPagina(japon);
+
 		
 		
 
