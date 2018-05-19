@@ -7,13 +7,11 @@ public class Album {
 	private Pagina primero;
 	private Pagina ultimo;
 	private int cantidad;
-	private int  numPaginas;
 
 	public Album() {
 
 		primero = ultimo = null;
 		cantidad = 0;
-        numPaginas=0; 
         
         
         try {
@@ -72,7 +70,7 @@ public class Album {
 			primero.setAnterior(ultimo);
 			ultimo.setSiguiente(primero);
 			ultimo.setAnterior(primero);
-			numPaginas++;
+			cantidad++;
 
 		} else {
 
@@ -88,7 +86,7 @@ public class Album {
 				ultimo.setSiguiente(primero);
 				primero.setAnterior(ultimo);
 				ultimo.setAnterior(temp);
-				numPaginas++;
+				cantidad++;
 		}
 		}
 
