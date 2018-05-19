@@ -126,8 +126,7 @@ public class Album {
 			if (Pagina.getSeleccion().equalsIgnoreCase(pais)) {
 
 				existe = true;
-
-			}
+                   }
 		}
 		return existe;
 
