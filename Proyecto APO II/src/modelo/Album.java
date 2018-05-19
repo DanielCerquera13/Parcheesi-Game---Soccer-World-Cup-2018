@@ -247,16 +247,16 @@ public class Album {
 		//Uruguay
 		Pagina uruguay=new Pagina("./Archivos/imagenes/banderasRec/uruguayRec.png","Uruguay",4,"Grupo A");
 		uruguay.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",34);
-		uruguay.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",35);
-		uruguay.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",36);
-		uruguay.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",37);
-		uruguay.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",38);
-		uruguay.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",39);
-		uruguay.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",40);
-		uruguay.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",41);
-		uruguay.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",42);
-		uruguay.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",43);
-		uruguay.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/uruguay/muslera.jpg",44);
+		uruguay.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/uruguay/stuani.jpg",35);
+		uruguay.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/uruguay/suarez.jpg",36);
+		uruguay.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/uruguay/sanchez.jpg",37);
+		uruguay.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/uruguay/pereira.jpg",38);
+		uruguay.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/uruguay/godin.jpg",39);
+		uruguay.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/uruguay/lodeiro.jpg",40);
+		uruguay.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/uruguay/gimenez.jpg",41);
+		uruguay.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/uruguay/cavani.jpg",42);
+		uruguay.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/uruguay/caceres.jpg",43);
+		uruguay.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/uruguay/c.rodriguez.jpg",44);
 		
 		
 
@@ -276,18 +276,18 @@ public class Album {
 		portugal.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/portugal/silva.jpg",55);
 		
 		//Espa�a
-		Pagina espana=new Pagina("./Archivos/imagenes/banderasRec/espa�aRec.png","Espa�a",6,"Grupo B");
-		espana.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/espa�a/DeGea.jpg",56);
-		espana.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/espa�a/alba.jpg",57);
-		espana.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/espa�a/asensio.jpg",58);
-		espana.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/espa�a/busquet.jpg",59);
-		espana.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/espa�a/carvajal.jpg",60);
-		espana.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/espa�a/costa.jpg",61);
-		espana.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/espa�a/iniesta.jpg",62);
-		espana.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/espa�a/isco.jpg",63);
-		espana.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/espa�a/morata.jpg",64);
-		espana.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/espa�a/ramos.jpg",65);
-		espana.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/espa�a/vitolo.jpg",66);
+		Pagina espana=new Pagina("./Archivos/imagenes/banderasRec/espanaRec.png","España",6,"Grupo B");
+		espana.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/espana/DeGea.jpg",56);
+		espana.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/espana/alba.jpg",57);
+		espana.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/espana/asensio.jpg",58);
+		espana.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/espana/busquet.jpg",59);
+		espana.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/espana/carvajal.jpg",60);
+		espana.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/espana/costa.jpg",61);
+		espana.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/espana/iniesta.jpg",62);
+		espana.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/espana/isco.jpg",63);
+		espana.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/espana/morata.jpg",64);
+		espana.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/espana/ramos.jpg",65);
+		espana.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/espana/vitolo.jpg",66);
 		
 		//Marruecos
 		Pagina marruecos=new Pagina("./Archivos/imagenes/banderasRec/marruecosRec.png","Marruecos",7,"Grupo B");
@@ -308,7 +308,7 @@ public class Album {
 		Pagina iran=new Pagina("./Archivos/imagenes/banderasRec/iranRec.png","Iran",8,"Grupo B");
 		iran.getLaminas()[0]=new Lamina("./Archivos/imagenes/laminas/iran/beiranvand.jpg",78);
 		iran.getLaminas()[1]=new Lamina("./Archivos/imagenes/laminas/iran/amiri.jpg",79);
-		iran.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/iran/ansarifar.jpg",80);
+		iran.getLaminas()[2]=new Lamina("./Archivos/imagenes/laminas/iran/ansarifard.jpg",80);
 		iran.getLaminas()[3]=new Lamina("./Archivos/imagenes/laminas/iran/azmoun.jpg",81);
 		iran.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/iran/ebrahimi.jpg",82);
 		iran.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/iran/ghafouri.jpg",83);
@@ -468,7 +468,7 @@ public class Album {
 		costa.getLaminas()[4]=new Lamina("./Archivos/imagenes/laminas/costa rica/guzman.jpg",203);
 		costa.getLaminas()[5]=new Lamina("./Archivos/imagenes/laminas/costa rica/matarrita.jpg",204);
 		costa.getLaminas()[6]=new Lamina("./Archivos/imagenes/laminas/costa rica/oviedo.jpg",205);
-		costa.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/costa rica/ure�a.jpg",206);
+		costa.getLaminas()[7]=new Lamina("./Archivos/imagenes/laminas/costa rica/urena.jpg",206);
 		costa.getLaminas()[8]=new Lamina("./Archivos/imagenes/laminas/costa rica/venegas.jpg",207);
 		costa.getLaminas()[9]=new Lamina("./Archivos/imagenes/laminas/costa rica/wallace.jpg",208);
 		costa.getLaminas()[10]=new Lamina("./Archivos/imagenes/laminas/costa rica/waston.jpg",209);

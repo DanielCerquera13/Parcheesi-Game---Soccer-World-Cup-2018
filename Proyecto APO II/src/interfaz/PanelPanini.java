@@ -343,6 +343,7 @@ public class PanelPanini extends JPanel implements ActionListener {
 			album.setActual(laSiguiente);
 			
 			actualizarPanini(laSiguiente);
+			actual = laSiguiente;
 		}
 	}
 
