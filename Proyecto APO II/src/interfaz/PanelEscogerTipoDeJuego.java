@@ -26,8 +26,8 @@ public class PanelEscogerTipoDeJuego extends JPanel implements ActionListener{
 	private JButton btSolitario;
 	private JButton btRegresar;
 	private PanelEscogerEquipo pEscogerEquipo;
-	
 	private PanelInicial panelInicial;
+	
 
 	  public PanelEscogerTipoDeJuego(PanelInicial p) {
 		  
@@ -35,6 +35,7 @@ public class PanelEscogerTipoDeJuego extends JPanel implements ActionListener{
 		  this.panelInicial = p;
 			setPreferredSize(new Dimension(300,400));
 			setLayout(null);
+			
 			
 			inicializarComponentes();
 	  }
