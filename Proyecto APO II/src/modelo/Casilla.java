@@ -1,13 +1,9 @@
 package modelo;
 
 public class Casilla {
-<<<<<<< HEAD
  
 	
-	public Casilla() {
-		
-	}
-=======
+	
 
 	/**
 	 * Constantes para diferenciar el tipo de casillas.
@@ -80,8 +76,21 @@ public class Casilla {
 		return yes;
 
 	}
+	
+	public int casilllasOcupadas() {
+		
+		int valor = 0;
+		
+		for (int i = 0; i < getFichas().length; i++) {
+			if(getFichas()[i] != null) {
+				valor++;
+			}
+		}
+		
+		return valor;
+	}
+	
 
->>>>>>> branch 'master' of https://github.com/JavaCracks/proyectoFinal.git
 	
 	
 }
