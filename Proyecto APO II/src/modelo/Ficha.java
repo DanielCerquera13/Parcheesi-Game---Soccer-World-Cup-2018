@@ -2,6 +2,11 @@ package modelo;
 
 public class Ficha {
 	
+	public final static int FICHA1 =1;
+	public final static int FICHA2 =2;
+	public final static int FICHA3 =3;
+	public final static int FICHA4 =4;
+
 	
 	//ATRIBUTOS
 	
@@ -27,23 +32,44 @@ public class Ficha {
 	 */
 	private boolean ganada;
 	
+	/**
+	 * atributo tipo
+	 */
+	private int tipo;
 	
 	//CONSTRUCTOR
 	
 	/**
 	 *Constructor de la clase Ficha.
 	 */
-	public Ficha(String equipo, int posicion, boolean libre, boolean ganada) {
+	public Ficha(String equipo, int posicion, boolean libre, boolean ganada, int tipo) {
 		super();
 		this.equipo = equipo;
 		this.posicion = posicion;
 		this.libre = libre;
 		this.ganada = ganada;
+		this.tipo = tipo;
 	}
+	
+	
 	
 	
 	//GET AND SET
 	
+	public int getTipo() {
+		return tipo;
+	}
+
+
+
+
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
+	}
+
+
+
+
 	/**
 	 * Este metodo retorna el Equipo de la ficha
 	 * @return String Equipo.
