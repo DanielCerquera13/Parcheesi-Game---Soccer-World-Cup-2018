@@ -120,13 +120,14 @@ public class Album {
 
 				Pagina = Pagina.getSiguiente();
 				i++;
+ 
 
+				if (Pagina.getSeleccion().equalsIgnoreCase(pais)) {
+
+					existe = true;
+	                   }
 			}
 
-			if (Pagina.getSeleccion().equalsIgnoreCase(pais)) {
-
-				existe = true;
-                   }
 		}
 		return existe;
 

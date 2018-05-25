@@ -34,7 +34,7 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	ajustarComponentes();
 	addMouseListener(this);
 	panini = new PanelPanini(this);
-	tienda = new PanelTienda();
+	tienda = new PanelTienda(this);
 		
 	}
 	

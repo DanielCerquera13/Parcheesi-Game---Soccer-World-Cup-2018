@@ -21,9 +21,9 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 	private JLabel flechaDos;
 	private JLabel flechaTres;
 	private JLabel flechaCuatro;
-  
-	public PanelTienda () {
-		 
+    private PanelInicio inicio;
+	public PanelTienda (PanelInicio inicio) {
+		 this.inicio = inicio;
 		setLayout(null);
 		componentes();
 	}
@@ -89,8 +89,13 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+       String a = e.getActionCommand();
+       
+       if(a.equals(SALIR)) {
+    	   inicio.getVentana().remove(this);
+			inicio.getVentana().add(inicio);
+			inicio.getVentana().refresh();
+       }
 	}
 
 

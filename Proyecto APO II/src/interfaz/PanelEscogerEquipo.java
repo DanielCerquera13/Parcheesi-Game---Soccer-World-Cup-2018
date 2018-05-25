@@ -34,7 +34,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	
 	public void inicializarComponentes() {
 		
-		lbtitulo= new JLabel(" ¡Escoge tu selección favorita! ");
+		lbtitulo= new JLabel(" ï¿½Escoge tu selecciï¿½n favorita! ");
 		lbtitulo.setBounds(385, 100, 550, 80);
 		lbtitulo.setFont(new Font(" Garamond ", 1, 35));
 		lbtitulo.setForeground(Color.WHITE);
@@ -69,7 +69,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/croaciaRec.png").getImage(), 350,380,70,70,this);
 		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/dinamarcaRec.png").getImage(), 450,380,70,70,this);
 		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/egiptoRec.png").getImage(), 550,380,70,70,this);
-		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/españaRec.png").getImage(), 650,380,70,70,this);
+		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/espanaRec.png").getImage(), 650,380,70,70,this);
 		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/franciaRec.png").getImage(), 750,380,70,70,this);
 		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/inglaterraRec.png").getImage(), 850,380,70,70,this);
 		g.drawImage(new ImageIcon("Archivos/imagenes/banderasRec/iranRec.png").getImage(), 950,380,70,70,this);

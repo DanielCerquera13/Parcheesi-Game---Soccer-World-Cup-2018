@@ -341,6 +341,13 @@ public class PanelPanini extends JPanel implements ActionListener {
 			album.setActual(actualizar);
 		
 		}
+		
+		if(a.equals(SALIR)) {
+			
+			inicio.getVentana().remove(this);
+			inicio.getVentana().add(inicio);
+			inicio.getVentana().refresh();
+		}
 	}
 
 }

@@ -69,21 +69,21 @@ public class PanelInicial extends JPanel implements ActionListener {
 		butIniciarSesion.addActionListener(this);
 		butIniciarSesion.setBounds(450, 480, 400, 40);
 		butIniciarSesion.setFont(new Font("Garamond", 1, 25));
-		butIniciarSesion.setToolTipText("¡Ingresa con tu usuario y contraseña para seguir con tu proceso!");
+		butIniciarSesion.setToolTipText("ï¿½Ingresa con tu usuario y contraseï¿½a para seguir con tu proceso!");
 
 		butCrearUsuario = new JButton("Crear Nuevo Usuario");
 		butCrearUsuario.setActionCommand(CREAR);
 		butCrearUsuario.addActionListener(this);
 		butCrearUsuario.setBounds(450, 540, 400, 40);
 		butCrearUsuario.setFont(new Font("Garamond", 1, 25));
-		butCrearUsuario.setToolTipText("¡Crea un nuevo usuario para completar el álbum y mucho más!");
+		butCrearUsuario.setToolTipText("ï¿½Crea un nuevo usuario para completar el ï¿½lbum y mucho mï¿½s!");
 
 		butPartidaRapida = new JButton("Partida Rapida");
 		butPartidaRapida.setActionCommand(RAPIDA);
 		butPartidaRapida.addActionListener(this);
 		butPartidaRapida.setBounds(450, 600, 400, 40);
 		butPartidaRapida.setFont(new Font("Garamond", 1, 25));
-		butPartidaRapida.setToolTipText("¡Juega sin la necesidad de iniciar sesión o crear un usuario!");
+		butPartidaRapida.setToolTipText("ï¿½Juega sin la necesidad de iniciar sesiï¿½n o crear un usuario!");
 
 		add(butIniciarSesion);
 		add(butCrearUsuario);
