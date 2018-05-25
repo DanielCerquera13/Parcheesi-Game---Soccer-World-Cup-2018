@@ -26,7 +26,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	public  PanelEscogerEquipo(PanelInicial p) {
 		
 		panelInicial =p;
-		setPreferredSize(new Dimension(300,400));
+		setPreferredSize(new Dimension(280,400));
 		setLayout(null);
 		panelEscogerJuego=new PanelEscogerTipoDeJuego(panelInicial);
 		
@@ -121,131 +121,131 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	@Override
 	public void mouseClicked(MouseEvent e) {
 	
-		if((e.getX()>=255 && e.getX()<=285)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("ALEMANIA");
 		}
 		
-		if((e.getX()>=360 && e.getX()<=400)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("ARABIA SAUDITA");
 		}
 		
-		if((e.getX()>=455 && e.getX()<=495)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("ARGENTINA");
 		}
 		
-		if((e.getX()>=560 && e.getX()<=600)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("AUSTRALIA");
 		}
 		
-		if((e.getX()>=655 && e.getX()<=695)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("BELGICA");
 		}
 		
-		if((e.getX()>=760 && e.getX()<=800)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("BRASIL");
 		}
 		
-		if((e.getX()>=855 && e.getX()<=895)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("COLOMBIA");
 		}
 		
-		if((e.getX()>=960 && e.getX()<=1000)&&(e.getY()>=300 && e.getY()<=330)) {
+		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=280 && e.getY()<=350)) {
 			System.out.println("COREA");
 		}
 		
-		if((e.getX()>=255 && e.getX()<=295)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("COSTA RICA");
 		}
 		
-		if((e.getX()>=360 && e.getX()<=400)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("CROACIA");
 		}
 		
-		if((e.getX()>=455 && e.getX()<=495)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("DINAMARCA");
 		}
 		
-		if((e.getX()>=560 && e.getX()<=600)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("EGIPTO");
 		}
 		
-		if((e.getX()>=655 && e.getX()<=695)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("ESPAÑA");
 		}
 		
-		if((e.getX()>=760 && e.getX()<=800)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("FRANCIA");
 		}
 		
-		if((e.getX()>=855 && e.getX()<=895)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("INGLATERRA");
 		}
 		
-		if((e.getX()>=960 && e.getX()<=1000)&&(e.getY()>=405 && e.getY()<=445)) {
+		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=380 && e.getY()<=450)) {
 			System.out.println("IRAN");
 		}
 		
-		if((e.getX()>=255 && e.getX()<=295)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("IRLANDA");
 		}
 		
-		if((e.getX()>=360 && e.getX()<=400)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("JAPON");
 		}
 		
-		if((e.getX()>=455 && e.getX()<=495)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("MARRUECOS");
 		}
 		
-		if((e.getX()>=560 && e.getX()<=600)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("MEXICO");
 		}
 		
-		if((e.getX()>=655 && e.getX()<=695)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("NIGERIA");
 		}
 		
-		if((e.getX()>=760 && e.getX()<=800)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("PANAMA");
 		}
 		
-		if((e.getX()>=855 && e.getX()<=895)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("PERU");
 		}
 		
-		if((e.getX()>=960 && e.getX()<=1000)&&(e.getY()>=500 && e.getY()<=540)) {
+		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=480 && e.getY()<=550)) {
 			System.out.println("POLONIA");
 		}
 		
-		if((e.getX()>=255 && e.getX()<=295)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("PORTUGAL");
 		}
 		
-		if((e.getX()>=360 && e.getX()<=400)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("RUSIA");
 		}
 		
-		if((e.getX()>=455 && e.getX()<=495)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("SENEGAL");
 		}
 		
-		if((e.getX()>=560 && e.getX()<=600)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("SERBIA");
 		}
 		
-		if((e.getX()>=655 && e.getX()<=695)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("SUECIA");
 		}
 		
-		if((e.getX()>=760 && e.getX()<=800)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("SUIZA");
 		}
 		
-		if((e.getX()>=855 && e.getX()<=895)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("TURQUIA");
 		}
 		
-		if((e.getX()>=960 && e.getX()<=1000)&&(e.getY()>=605 && e.getY()<=645)) {
+		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=580 && e.getY()<=650)) {
 			System.out.println("URUGUAY");
 		}
 		
