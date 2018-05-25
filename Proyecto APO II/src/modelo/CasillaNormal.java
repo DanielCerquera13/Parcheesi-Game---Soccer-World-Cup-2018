@@ -19,7 +19,7 @@ public class CasillaNormal extends Casilla {
 			
 			for (int i = 0; i < getFichas().length; i++) {
 				if(getFichas()[i].getTipo()== ficha.getTipo()) {
-					getFichas()[i+1]=ficha;
+					getFichas()[tamanio+1]=ficha;
 				}
 				else if (getFichas()[i].getTipo()!= ficha.getTipo()) {
 					getFichas()[i]=null;
