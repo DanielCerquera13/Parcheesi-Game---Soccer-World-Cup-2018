@@ -2,8 +2,13 @@ package modelo;
 
 public class CasillaSalida extends Casilla {
 
-	public CasillaSalida() {
-		super();
+	
+	
+	private int equipo;
+	
+	
+	public CasillaSalida(int tipo) {
+		super(tipo);
 		// TODO Auto-generated constructor stub
 	}
 

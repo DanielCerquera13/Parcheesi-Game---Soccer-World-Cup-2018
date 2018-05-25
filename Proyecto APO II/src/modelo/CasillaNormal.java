@@ -2,9 +2,9 @@ package modelo;
 
 public class CasillaNormal extends Casilla {
 
-	public CasillaNormal() {
-		super();
-		// TODO Auto-generated constructor stub
+
+	public CasillaNormal(int tipo) {
+		super(tipo);
 	}
 
 }
