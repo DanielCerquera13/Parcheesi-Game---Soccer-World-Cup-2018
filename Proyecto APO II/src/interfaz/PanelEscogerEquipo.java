@@ -9,15 +9,15 @@ import java.awt.event.MouseListener;
 
 public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseListener{
 	
-	public final static String REGRESAR = "Regresar";
+	public final static String REGRESAR= "Regresar";
 	public static final Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
 	
 	
 	private JButton btRegresar;
-
 	private PanelInicial panelInicial;
 	private JLabel lbtitulo;
+	private PanelEscogerTipoDeJuego panelEscogerJuego;
 	
 	
 	
@@ -28,13 +28,14 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 		panelInicial =p;
 		setPreferredSize(new Dimension(300,400));
 		setLayout(null);
+		panelEscogerJuego=new PanelEscogerTipoDeJuego(panelInicial);
 		inicializarComponentes();
 		
 	}
 	
 	public void inicializarComponentes() {
 		
-		lbtitulo= new JLabel(" ï¿½Escoge tu selecciï¿½n favorita! ");
+		lbtitulo= new JLabel(" ¡Escoge tu selección favorita! ");
 		lbtitulo.setBounds(385, 100, 550, 80);
 		lbtitulo.setFont(new Font(" Garamond ", 1, 35));
 		lbtitulo.setForeground(Color.WHITE);
@@ -105,11 +106,12 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent comando) {
+	public void actionPerformed(ActionEvent e) {
+		String comando=e.getActionCommand();
 		if (comando.equals(REGRESAR)) {
 			
 			panelInicial.getVentana().remove(this);
-			panelInicial.getVentana().add(panelInicial);
+			panelInicial.getVentana().add(panelEscogerJuego);
 			panelInicial.getVentana().refresh();
 		}
 	}
