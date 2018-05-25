@@ -22,7 +22,7 @@ public class CasillaSegura  extends Casilla{
 			for (int i = 0; i < getFichas().length; i++) {
 			      
 				getFichas()[tamanio+1] = ficha;
-				tamanio++;
+				
 		}
 	}
 	
