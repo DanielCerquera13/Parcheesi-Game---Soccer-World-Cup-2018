@@ -1,8 +1,8 @@
 package modelo;
 
-public class casillaCasa  extends Casilla {
+public class CasillaCasa  extends Casilla {
 
-	public casillaCasa(int tipo) {
+	public CasillaCasa(int tipo) {
 		super(tipo);
 		// TODO Auto-generated constructor stub
 	}
