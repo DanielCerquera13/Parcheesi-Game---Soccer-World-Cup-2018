@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public class Jugador {
 	
 	//ATRIBUTOS
@@ -27,6 +29,10 @@ public class Jugador {
 	//CONSTRUCTOR
 	
 	/**
+	 * relacion con la lamina
+	 */
+	private ArrayList<Lamina>  laminas;
+	/**
 	 * Constructor de la clase Jugador.
 	 */
 	public Jugador(String nickName, String contrasena) {
@@ -35,10 +41,16 @@ public class Jugador {
 		this.contrasena = contrasena;
 		dinero = 0;
 		album = new Album();
+		laminas = new ArrayList<>();
 	}
 	
 	// GET AND SET
 
+	
+	public void agregarLamina(Lamina lamina) {
+		
+		laminas.add(lamina);
+	}
 	
 	public void setDinero(int dinero) {
 		
