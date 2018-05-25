@@ -4,7 +4,7 @@ public class CasillaNormal extends Casilla {
 
 	public CasillaNormal() {
 		super();
-		//wd
+		// TODO Auto-generated constructor stub
 	}
 
 }
