@@ -56,21 +56,21 @@ public class PanelPanini extends JPanel implements ActionListener {
 		salir = new JButton(SALIR);
 		salir.addActionListener(this);
 		salir.setActionCommand(SALIR);
-		salir.setBounds(500, 700, 330, 40);
+		salir.setBounds(500, 660, 330, 40);
 		salir.setFont(new Font(" Garamond ", 1, 30));
 		add(salir);
 
 		anterior = new JButton(ANTERIOR);
 		anterior.addActionListener(this);
 		anterior.setActionCommand(ANTERIOR);
-		anterior.setBounds(80, 700, 330, 40);
+		anterior.setBounds(80, 660, 330, 40);
 		anterior.setFont(new Font(" Garamond ", 1, 30));
 		add(anterior);
 
 		siguiente = new JButton(SIGUIENTE);
 		siguiente.addActionListener(this);
 		siguiente.setActionCommand(SIGUIENTE);
-		siguiente.setBounds(900, 700, 330, 40);
+		siguiente.setBounds(900, 660, 330, 40);
 		siguiente.setFont(new Font(" Garamond ", 1, 30));
 		add(siguiente);
 
