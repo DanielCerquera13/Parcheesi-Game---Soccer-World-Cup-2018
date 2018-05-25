@@ -36,37 +36,36 @@ public class Parques {
 	}
 	
 	
-	public void situarCasillas() {
-		
-	// Se situan las salidas
-	for(int i =0 ; i<96; i+=24) {
-	casillas[i] = new CasillaSalida(2);	
-	}
-	
-	for(int i = 0; i<casillas.length; i++) {
-		
-	if(i==0 || i==24 || i==48 || i==72) {
-		
-	casillas[i] = new CasillaSalida(2);	
-		
-	}else if(i==7 || i==12 || i==31 || i==36 || i == 55 || i == 60 || i == 79 || i == 84) {
-		
-	casillas[i] = new CasillaSegura(3); 	
-		
-	}
-		
-	}
-	
-	
-	
-		
-	
-		
-		
-		
-	}
+//	public void situarCasillas() {
+//		
+//	// Se situan las salidas
+//	for(int i =0 ; i<96; i+=24) {
+//	casillas[i] = new CasillaSalida(2);	
+//	}
+//	
+//	for(int i = 0; i<casillas.length; i++) {
+//		
+//	if(i==0 || i==24 || i==48 || i==72) {
+//		
+//	casillas[i] = new CasillaSalida(2);	
+//		
+//	}else if(i==7 || i==12 || i==31 || i==36 || i == 55 || i == 60 || i == 79 || i == 84) {
+//		
+//	casillas[i] = new CasillaSegura(3); 	
+//		
+//	}
+//		
+//	}
 	
 	
+	
+		
+	
+		
+		
+		
+	
+
 	
 	
 }
