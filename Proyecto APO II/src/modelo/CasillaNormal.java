@@ -2,8 +2,8 @@ package modelo;
 
 public class CasillaNormal extends Casilla {
 
-	public CasillaNormal() {
-		super();
+	public CasillaNormal(int tipo) {
+		super(tipo);
 		//wd
 	}
 
