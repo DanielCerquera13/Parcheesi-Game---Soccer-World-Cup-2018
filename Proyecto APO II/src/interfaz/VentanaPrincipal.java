@@ -61,6 +61,12 @@ public class VentanaPrincipal extends JFrame {
 		
 	}
 	
+	public void guardar() {
+		
+	mundial.guardar();	
+		
+	}
+	
 	public void refresh() {
 
 		invalidate();

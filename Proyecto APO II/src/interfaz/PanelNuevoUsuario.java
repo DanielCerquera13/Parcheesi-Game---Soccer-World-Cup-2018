@@ -153,6 +153,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 
 						try {
 							inicial.getVentana().agregarUsuario(nuevo);
+							inicial.getVentana().guardar();
 
 							nombretxt.setText("");
 							contrasenatxt.setText("");
