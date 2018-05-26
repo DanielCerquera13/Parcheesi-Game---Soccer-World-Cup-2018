@@ -1,6 +1,11 @@
 package interfaz;
 
 import javax.swing.*;
+
+import excepciones.ContrasenasNoCoincidenException;
+import excepciones.UsuarioYaRegistradoException;
+import modelo.Jugador;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +14,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 
 	public final static String REGRESAR = "REGRESAR";
 
-	public final static String COMENZAR = "COMENZAR";
+	public final static String CREAR = "CREAR";
 	public final static Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
 
@@ -20,7 +25,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 	private JTextField nombretxt;
 	private JLabel contrasena;
 	private JLabel contrasenaConfirmar;
-	private JButton botonComenzar;
+	private JButton botonCrear;
 	private JButton botonRegresar;
 
 	public PanelNuevoUsuario(PanelInicial inicial) {
@@ -37,7 +42,7 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		add(contrasenatxt);
 		add(contrasenaConfirmar);
 		add(contrasenaConfirmartxt);
-		add(botonComenzar);
+		add(botonCrear);
 		add(botonRegresar);
 
 	}
@@ -71,17 +76,33 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 		contrasenaConfirmartxt.setBounds(700, 570, 320, 40);
 		contrasenaConfirmartxt.setFont(new Font(" Garamond ", 1, 26));
 
-		botonComenzar = new JButton(COMENZAR);
-		botonComenzar.setBounds(100, 350, 330, 40);
-		botonComenzar.setFont(new Font(" Garamond ", 1, 30));
-		botonComenzar.addActionListener(this);
-		botonComenzar.setActionCommand(COMENZAR);
+		botonCrear = new JButton(CREAR);
+		botonCrear.setBounds(100, 350, 330, 40);
+		botonCrear.setFont(new Font(" Garamond ", 1, 30));
+		botonCrear.addActionListener(this);
+		botonCrear.setActionCommand(CREAR);
 
 		botonRegresar = new JButton(REGRESAR);
 		botonRegresar.setBounds(100, 450, 330, 40);
 		botonRegresar.setFont(new Font(" Garamond ", 1, 30));
 		botonRegresar.addActionListener(this);
 		botonRegresar.setActionCommand(REGRESAR);
+
+	}
+
+	public JTextField getNombreTxt() {
+
+		return nombretxt;
+
+	}
+
+	public String getContrasenatxt() {
+		return String.valueOf(contrasenatxt.getPassword());
+	}
+
+	public String getContrasenaConfirmarTxt() {
+
+		return String.valueOf(contrasenaConfirmartxt.getPassword());
 
 	}
 
@@ -106,6 +127,63 @@ public class PanelNuevoUsuario extends JPanel implements ActionListener {
 			inicial.getVentana().add(inicial);
 			inicial.getVentana().refresh();
 
+			nombretxt.setText("");
+			contrasenatxt.setText("");
+			contrasenaConfirmartxt.setText("");
+
+		}
+
+		if (comando.equals(CREAR)) {
+
+			if (nombretxt.getText() == null || nombretxt.getText().equals("")) {
+
+				JOptionPane.showMessageDialog(null, "El nickname debe contener al menos un caracter");
+
+			} else {
+				if ((getContrasenatxt() == null || getContrasenatxt().equals(""))
+						&& (getContrasenaConfirmarTxt() == null || getContrasenaConfirmarTxt().equals(""))) {
+
+					JOptionPane.showMessageDialog(null, "La contraseña debe contener al menos un caracter");
+
+				} else {
+
+					if (getContrasenatxt().equalsIgnoreCase(getContrasenaConfirmarTxt())) {
+
+						Jugador nuevo = new Jugador(getNombreTxt().getText(), getContrasenatxt());
+
+						try {
+							inicial.getVentana().agregarUsuario(nuevo);
+
+							nombretxt.setText("");
+							contrasenatxt.setText("");
+							contrasenaConfirmartxt.setText("");
+
+							inicial.getVentana().remove(this);
+							inicial.getVentana().add(inicial);
+							inicial.getVentana().refresh();
+
+						} catch (UsuarioYaRegistradoException ex) {
+
+							JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+						}
+
+					} else {
+
+						contrasenatxt.setText("");
+						contrasenaConfirmartxt.setText("");
+
+						try {
+							throw new ContrasenasNoCoincidenException();
+						} catch (ContrasenasNoCoincidenException ex) {
+
+							JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+						}
+
+					}
+
+				}
+			}
 		}
 	}
 }

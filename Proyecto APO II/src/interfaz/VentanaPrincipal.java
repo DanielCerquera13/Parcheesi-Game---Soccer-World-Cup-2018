@@ -3,6 +3,8 @@ package interfaz;
 import modelo.*;
 import javax.swing.*;
 
+import excepciones.UsuarioYaRegistradoException;
+
 import java.awt.*;
 
 public class VentanaPrincipal extends JFrame {
@@ -53,6 +55,12 @@ public class VentanaPrincipal extends JFrame {
 		return inicial;
 	}
 
+	public void agregarUsuario(Jugador usuario) throws UsuarioYaRegistradoException {
+		
+	mundial.agregarUsuario(usuario);	
+		
+	}
+	
 	public void refresh() {
 
 		invalidate();
