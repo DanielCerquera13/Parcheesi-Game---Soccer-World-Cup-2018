@@ -13,7 +13,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	public static final Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
 	
-	
+	//fdsf
 	private JButton btRegresar;
 	private PanelInicial panelInicial;
 	private JLabel lbtitulo;
@@ -37,7 +37,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	
 	public void inicializarComponentes() {
 		
-		lbtitulo= new JLabel(" ¡Escoge tu selección favorita! ");
+		lbtitulo= new JLabel(" ï¿½Escoge tu selecciï¿½n favorita! ");
 		lbtitulo.setBounds(385, 100, 550, 80);
 		lbtitulo.setFont(new Font(" Garamond ", 1, 35));
 		lbtitulo.setForeground(Color.WHITE);
@@ -170,7 +170,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("ESPAÑA");
+			System.out.println("ESPAï¿½A");
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=380 && e.getY()<=450)) {

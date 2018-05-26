@@ -2,9 +2,10 @@ package modelo;
 
 public class CasillaCasa  extends Casilla {
 
-	public CasillaCasa(int tipo) {
+	private int tipoFicha;
+	public CasillaCasa(int tipo, int tipoFicha) {
 		super(tipo);
-		// TODO Auto-generated constructor stub
+		this.tipoFicha = tipoFicha;
 	}
 
 	
@@ -23,6 +24,7 @@ public void agregarFicha(Ficha ficha) {
 			for (int i = 0; i < getFichas().length; i++) {
 			      
 			if(getFichas()[i].getTipo()== ficha.getTipo()) {
+				
 					getFichas()[tamanio+1]=ficha;
 				}
 				
