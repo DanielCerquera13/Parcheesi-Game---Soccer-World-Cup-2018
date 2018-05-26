@@ -42,6 +42,7 @@ public class Pagina {
 	private String grupo;
 
 	
+	
 	/**
 	 *  Constructor de la clase Pagina.
 	 * @param rutaBandera - ruta de la bandera de la seleccion
