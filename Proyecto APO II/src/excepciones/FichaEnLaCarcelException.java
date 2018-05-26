@@ -5,7 +5,7 @@ public class FichaEnLaCarcelException extends Exception {
 	
 	public FichaEnLaCarcelException() {
 		
-	super("La ficha se encuentra en la cárcel!");	
+	super("¡La ficha se encuentra en la cárcel!");	
 		
 	}
 	

@@ -5,7 +5,7 @@ public class ContrasenaIncorrectaException extends Exception {
 
 	public ContrasenaIncorrectaException() {
 		
-	super("La contraseï¿½a es incorrecta");	
+	super("La contraseña es incorrecta");	
 		
 	}
 	
