@@ -2,6 +2,9 @@ package interfaz;
 
 import javax.swing.*;
 
+import excepciones.ContrasenaIncorrectaException;
+import excepciones.UsuarioNoRegistradoException;
+import modelo.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,8 +30,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	public PanelIniciarSesion(PanelInicial inicial) {
 
 		this.inicial = inicial;
-		
-		
+
 		inicio = new PanelInicio(this);
 
 		setLayout(null);
@@ -80,12 +82,11 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		add(butCancelar);
 
 	}
-	
-	
+
 	public VentanaPrincipal getVentana() {
-		
-	return inicial.getVentana();	
-		
+
+		return inicial.getVentana();
+
 	}
 
 	@Override
@@ -111,22 +112,58 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 			inicial.getVentana().refresh();
 
 		}
-		
+
 		if (comando.equals(INICIAR)) {
+
+			System.out.println(inicial.getVentana().getParquesMundial().yaExiste(txtUsuario.getText()));
 			
-			
-			
-		if(inicial.getVentana().getParquesMundial().yaExiste(txtUsuario.getText())) {
-			
-			
-			
-			
-		}
-			
-			inicial.getVentana().remove(this);
-			inicial.getVentana().add(inicio);
-			inicial.getVentana().refresh();
-			
+			if (inicial.getVentana().getParquesMundial().yaExiste(txtUsuario.getText())) {
+
+				Jugador actual = null;
+
+				try {
+					actual = inicial.getVentana().buscarUsuario(txtUsuario.getText());
+					String contra = String.valueOf(pass.getPassword());
+
+					if (actual.getContrasena().equalsIgnoreCase(contra)) {
+
+						inicial.getVentana().remove(this);
+						inicial.getVentana().add(inicio);
+						inicial.getVentana().refresh();
+						inicial.getVentana().setSesionActiva(actual);
+
+						txtUsuario.setText("");
+						pass.setText("");
+
+					} else {
+
+						try {
+							throw new ContrasenaIncorrectaException();
+						} catch (ContrasenaIncorrectaException ex) {
+
+							JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+						}
+
+					}
+
+				} catch (UsuarioNoRegistradoException ex) {
+
+					JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+
+				}
+
+			}else {
+				
+			try {
+				throw new UsuarioNoRegistradoException(txtUsuario.getText());
+			} catch (UsuarioNoRegistradoException ex) {
+				
+				JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+			}	
+				
+				
+			}
+
 		}
 
 	}

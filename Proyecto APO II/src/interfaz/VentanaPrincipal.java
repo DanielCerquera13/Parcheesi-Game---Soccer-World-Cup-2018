@@ -3,6 +3,7 @@ package interfaz;
 import modelo.*;
 import javax.swing.*;
 
+import excepciones.UsuarioNoRegistradoException;
 import excepciones.UsuarioYaRegistradoException;
 
 import java.awt.*;
@@ -61,9 +62,23 @@ public class VentanaPrincipal extends JFrame {
 		
 	}
 	
+	
+	public Jugador buscarUsuario(String nickname) throws UsuarioNoRegistradoException {
+		
+		
+	return mundial.buscarUsuario(nickname);	
+		
+	}
+	
 	public void guardar() {
 		
 	mundial.guardar();	
+		
+	}
+	
+	public void setSesionActiva(Jugador sesion) {
+		
+	mundial.setSesionActiva(sesion);	
 		
 	}
 	
