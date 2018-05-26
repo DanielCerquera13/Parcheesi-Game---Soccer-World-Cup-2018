@@ -114,6 +114,15 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		
 		if (comando.equals(INICIAR)) {
 			
+			
+			
+		if(inicial.getVentana().getParquesMundial().yaExiste(txtUsuario.getText())) {
+			
+			
+			
+			
+		}
+			
 			inicial.getVentana().remove(this);
 			inicial.getVentana().add(inicio);
 			inicial.getVentana().refresh();
