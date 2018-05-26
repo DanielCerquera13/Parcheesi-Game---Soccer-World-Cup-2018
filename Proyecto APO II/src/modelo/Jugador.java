@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import excepciones.LaminaNoObtenidaException;
+
 public class Jugador implements Serializable {
 
 	// ATRIBUTOS
@@ -105,7 +107,7 @@ public class Jugador implements Serializable {
 		}
 
 	}
-	
+
 	/**
 	 * Inicializa todas las posiciones del arreglo laminasObtenidas en false. (False
 	 * = Jugador no ha obtenido la lamina , True = Jugador ha obtenido la lamina)
@@ -125,6 +127,7 @@ public class Jugador implements Serializable {
 
 		laminasObtenidas[numero] = true;
 		actualizarLaminasObtenidas();
+		ordenarLaminasObtenidas();
 
 	}
 
@@ -202,32 +205,100 @@ public class Jugador implements Serializable {
 		this.laminasObtenidas = laminasObtenidas;
 	}
 
-	public static void main(String[] args) {
+	public void ordenarLaminasObtenidas() {
 
-//		 Jugador j = new Jugador("Juancho", "hola");
-//		
-//		 Lamina lam = new Lamina("James", 10);
-//		 Lamina lam2 = new Lamina("Falcao", 1);
-//		
-//		 j.agregarLamina(lam);
-//		 j.agregarLamina(lam2);
-//		
-//		 System.out.println(j.getLaminas());
+		for (int i = 0; i < laminas.size() - 1; i++) {
 
-//		int lam = 256;
-//
-//		int mod = lam % 11;
-//
-//		int div = lam / 11;
-//
-//		if (mod != 0) {
-//
-//			div += 1;
-//
-//		}
-//
-//		System.out.println(div);
+			Lamina menor = laminas.get(i);
+			int cual = i;
+
+			for (int j = i + 1; j < laminas.size(); j++) {
+
+				if (laminas.get(j).compareTo(menor) < 0) {
+
+					menor = laminas.get(j);
+					cual = j;
+
+				}
+
+			}
+
+			Lamina temp = laminas.get(i);
+			laminas.set(i, menor);
+			laminas.set(cual, temp);
+
+		}
 
 	}
+
+	public Lamina buscarLamina(int num) throws LaminaNoObtenidaException {
+
+		Lamina lam = null;
+		int inicio = 0;
+		int fin = laminas.size() - 1;
+		while (inicio <= fin && lam == null) {
+
+			int medio = (inicio + fin) / 2;
+			if (laminas.get(medio).getNumero() == num) {
+
+				lam = laminas.get(medio);
+
+			} else if (laminas.get(medio).getNumero() < num) {
+
+				inicio = medio + 1;
+			} else {
+
+				fin = medio - 1;
+			}
+		}
+
+		if (lam == null) {
+
+			throw new LaminaNoObtenidaException(num);
+
+		}
+
+		return lam;
+
+	}
+
+//	public static void main(String[] args) {
+
+//		Jugador j = new Jugador("Juancho", "hola");
+//
+//		Lamina lam = new Lamina("James", 10);
+//		Lamina lam2 = new Lamina("Falcao", 1);
+//		Lamina x = new Lamina("Bacca", 300);
+//		Lamina y = new Lamina("Pogba", 119);
+//		Lamina z = new Lamina("Messi", 200);
+//
+//		j.agregarLamina(lam);
+//		j.agregarLamina(lam2);
+//		j.agregarLamina(x);
+//		j.agregarLamina(y);
+//		j.agregarLamina(z);
+//
+//		try {
+//			System.out.println(j.buscarLamina(2));
+//		} catch (LaminaNoObtenidaException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+		// int lam = 256;
+		//
+		// int mod = lam % 11;
+		//
+		// int div = lam / 11;
+		//
+		// if (mod != 0) {
+		//
+		// div += 1;
+		//
+		// }
+		//
+		// System.out.println(div);
+
+//	}
 
 }
