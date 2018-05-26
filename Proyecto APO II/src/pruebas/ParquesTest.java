@@ -57,7 +57,7 @@ class ParquesTest extends TestCase{
 	}
 	
 	/**
-	 * test que confirman que las casillas normales estan correctamente inicializadas, 
+	 * test que confirman que las casillas normales estan correctamente inicializadas
 	 * basado en algunos ejemplos de casillas
 	 * 
 	 */
