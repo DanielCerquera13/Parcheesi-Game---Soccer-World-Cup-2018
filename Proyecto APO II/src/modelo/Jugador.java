@@ -105,7 +105,7 @@ public class Jugador implements Serializable {
 		}
 
 	}
-
+	
 	/**
 	 * Inicializa todas las posiciones del arreglo laminasObtenidas en false. (False
 	 * = Jugador no ha obtenido la lamina , True = Jugador ha obtenido la lamina)
@@ -204,29 +204,29 @@ public class Jugador implements Serializable {
 
 	public static void main(String[] args) {
 
-		// Jugador j = new Jugador("Juancho", "hola");
-		//
-		// Lamina lam = new Lamina("James", 10);
-		// Lamina lam2 = new Lamina("Falcao", 1);
-		//
-		// j.agregarLamina(lam);
-		// j.agregarLamina(lam2);
-		//
-		// System.out.println(Arrays.toString(j.getlaminasObtenidas()));
+//		 Jugador j = new Jugador("Juancho", "hola");
+//		
+//		 Lamina lam = new Lamina("James", 10);
+//		 Lamina lam2 = new Lamina("Falcao", 1);
+//		
+//		 j.agregarLamina(lam);
+//		 j.agregarLamina(lam2);
+//		
+//		 System.out.println(j.getLaminas());
 
-		int lam = 256;
-
-		int mod = lam % 11;
-
-		int div = lam / 11;
-
-		if (mod != 0) {
-
-			div += 1;
-
-		}
-
-		System.out.println(div);
+//		int lam = 256;
+//
+//		int mod = lam % 11;
+//
+//		int div = lam / 11;
+//
+//		if (mod != 0) {
+//
+//			div += 1;
+//
+//		}
+//
+//		System.out.println(div);
 
 	}
 

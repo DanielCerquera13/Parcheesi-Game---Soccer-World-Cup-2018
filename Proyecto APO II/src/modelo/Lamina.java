@@ -4,7 +4,7 @@
  */
 package modelo;
 
-public class Lamina {
+public class Lamina implements Comparable<Lamina>{
 	
 	//ATRIBUTOS
 	
@@ -99,6 +99,17 @@ public class Lamina {
 		this.numero = numero;
 	}
 	
+	@Override
+	public int compareTo(Lamina lam) {
+		
+		return this.getNumero()-lam.getNumero();
+	}
 	
+	@Override
+	public String toString() {
+		
+	return "Jugador: "+jugador+" - Lamina # : "+numero;	
+		
+	}
 
 }
