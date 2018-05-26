@@ -30,6 +30,12 @@ public class ParquesMundial {
 		return usuarios;
 
 	}
+	
+	public Partida getPartidaRapida() {
+		
+	return partidaRapida;	
+		
+	}
 
 	public boolean yaExiste(String nickname) {
 

@@ -3,10 +3,11 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Jugador {
+public class Jugador implements Serializable {
 
 	// ATRIBUTOS
 
@@ -41,9 +42,9 @@ public class Jugador {
 	 */
 
 	/**
-	 * arreglo de jugadores boolean
+	 * arreglo de laminas boolean
 	 */
-	private boolean[] jugadoresPintar;
+	private boolean[] laminasObtenidas;
 
 	public Jugador(String nickName, String contrasena) {
 
@@ -52,7 +53,7 @@ public class Jugador {
 		dinero = 0;
 		album = new Album();
 		laminas = new ArrayList<Lamina>();
-		jugadoresPintar = new boolean[353];
+		laminasObtenidas = new boolean[353];
 
 		iniciarFalse();
 	}
@@ -60,16 +61,19 @@ public class Jugador {
 	// GET AND SET
 
 	/**
-	 * Este metodo permite actualizar las laminas obtenidas en el album, para que se puedan visualizar a color en la interfaz
+	 * Este metodo permite actualizar las laminas obtenidas en el album, para que se
+	 * puedan visualizar a color en la interfaz
 	 * 
 	 */
 	public void actualizarLaminasObtenidas() {
 
+		// Primera pagina del album del jugador
 		Pagina actual = album.getPrimero();
 
-		for (int i = 1; i < jugadoresPintar.length; i++) {
+		// Recorremos
+		for (int i = 1; i < laminasObtenidas.length; i++) {
 
-			if (jugadoresPintar[i] == true) {
+			if (laminasObtenidas[i] == true) {
 
 				int mod = i % 11;
 				int pag = i / 11;
@@ -101,16 +105,15 @@ public class Jugador {
 		}
 
 	}
-	
-	
 
 	/**
-	 *  
+	 * Inicializa todas las posiciones del arreglo laminasObtenidas en false. (False
+	 * = Jugador no ha obtenido la lamina , True = Jugador ha obtenido la lamina)
 	 */
 	public void iniciarFalse() {
 
-		for (int i = 0; i < jugadoresPintar.length; i++) {
-			jugadoresPintar[i] = false;
+		for (int i = 0; i < laminasObtenidas.length; i++) {
+			laminasObtenidas[i] = false;
 		}
 	}
 
@@ -120,7 +123,7 @@ public class Jugador {
 
 		int numero = lamina.getNumero();
 
-		jugadoresPintar[numero] = true;
+		laminasObtenidas[numero] = true;
 		actualizarLaminasObtenidas();
 
 	}
@@ -181,14 +184,11 @@ public class Jugador {
 
 	}
 
-	public boolean[] getJugadoresPintar() {
+	public boolean[] getLaminasObtenidas() {
 
-		return jugadoresPintar;
+		return laminasObtenidas;
 
 	}
-	
-	
-	
 
 	public ArrayList<Lamina> getLaminas() {
 		return laminas;
@@ -198,8 +198,8 @@ public class Jugador {
 		this.laminas = laminas;
 	}
 
-	public void setJugadoresPintar(boolean[] jugadoresPintar) {
-		this.jugadoresPintar = jugadoresPintar;
+	public void setLaminasObtenidas(boolean[] laminasObtenidas) {
+		this.laminasObtenidas = laminasObtenidas;
 	}
 
 	public static void main(String[] args) {
@@ -212,7 +212,7 @@ public class Jugador {
 		// j.agregarLamina(lam);
 		// j.agregarLamina(lam2);
 		//
-		// System.out.println(Arrays.toString(j.getJugadoresPintar()));
+		// System.out.println(Arrays.toString(j.getlaminasObtenidas()));
 
 		int lam = 256;
 
@@ -229,6 +229,5 @@ public class Jugador {
 		System.out.println(div);
 
 	}
-	
 
 }
