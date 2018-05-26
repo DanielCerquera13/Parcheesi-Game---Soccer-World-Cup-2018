@@ -99,10 +99,10 @@ class JugadorTest extends TestCase implements Constantes{
 		escenario1();
 		
 		
-		Lamina lamina1 = new Lamina("messi", 0);
-		Lamina lamina2 = new Lamina("james", 1);
-		Lamina lamina3 = new Lamina("falcao", 2);
-		Lamina lamina4 = new Lamina("salah", 3);
+		Lamina lamina1 = new Lamina("messi", 1);
+		Lamina lamina2 = new Lamina("james", 2);
+		Lamina lamina3 = new Lamina("falcao",3);
+		Lamina lamina4 = new Lamina("salah", 4);
          
 		jugador.agregarLamina(lamina1);
 		jugador.agregarLamina(lamina2);
@@ -111,10 +111,10 @@ class JugadorTest extends TestCase implements Constantes{
 		
       
 		 
+		assertTrue(album.getPrimero().getLaminas()[0].estaObtenida());
 		assertTrue(album.getPrimero().getLaminas()[1].estaObtenida());
 		assertTrue(album.getPrimero().getLaminas()[2].estaObtenida());
 		assertTrue(album.getPrimero().getLaminas()[3].estaObtenida());
-		assertTrue(album.getPrimero().getLaminas()[4].estaObtenida());
 
 		//fgd
 
