@@ -8,9 +8,20 @@ import java.util.Arrays;
 public class Parques implements Constantes {
 
 	
+	/**
+	 * Arreglo de casillas
+	 */
 	private Casilla[] casillas;
+	
+	/**
+	 * Arreglo de equipos 
+	 */
 	private Equipo[] equipos;
 	
+	
+	/**
+	 * Constructor de la clase parques.
+	 */
 	
 	public Parques() {
 		
@@ -21,19 +32,31 @@ public class Parques implements Constantes {
 	
 	}
 	
+
+	/**
+	 * Modifica el arreglo de equipos por uno nuevo.
+	 * @param equipos - el nuevo arreglo de equipo
+	 */
 	public void setEquipos(Equipo[] equipos) {
 		
 	this.equipos = equipos;	
 		
 	}
 	
+	/**
+	 * Entrega el arreglo de equipos
+	 * @return arreglo de equipos
+	 */
 	public Equipo[] getEquipos() {
 		
 	return equipos;	
 		
 	}
 	
-	
+	/**
+	 * Entrega el arreglo de casillas
+	 * @return arreglo de casillas
+	 */
 	public Casilla[] getCasillas() {
 		
 	return casillas;	
@@ -41,6 +64,9 @@ public class Parques implements Constantes {
 	}
 	
 	
+	/**
+	 * Inicializa el parques con sus respectivas casillas y posiciones 
+	 */
 	public void situarCasillas() {
 		
 	// Se situan las salidas

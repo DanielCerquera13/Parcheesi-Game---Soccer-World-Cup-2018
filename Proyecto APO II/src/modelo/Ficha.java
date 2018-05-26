@@ -51,15 +51,23 @@ public class Ficha {
 	
 	
 	
-	//GET AND SET
 	
+	/**
+	 * Enrega el tipo de ficha que es.<br>
+	 * @return  tipo de ficha.
+	 */
 	public int getTipo() {
 		return tipo;
 	}
 
 
 
-
+   /**
+    * Modifica el tipo de ficha que es.<br>
+    * @param tipo - nuevo tipo de ficha. <br>
+    *  <b> pre: </b> tipo>0  y tipo<=4 <br>
+	 * <b> post: </b> el tipo de ficha se modifica adecuadamente.
+    */
 	public void setTipo(int tipo) {
 		this.tipo = tipo;
 	}
