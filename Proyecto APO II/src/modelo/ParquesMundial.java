@@ -63,12 +63,11 @@ public class ParquesMundial {
 	
 	/**
 	 * El metodo modifica la lista de usuarios.<br>
-	 * 
+	 *  <b> pre: </b> usuarios != null <br>
+	 *   <b> post: </b> la lista de usuarios se modifica correctamente.
 	 * @param usuarios
 	 *            - el nuevo arraylist de usuarios.<br>
-	 *            <b> pre: </b> usuarios != null <br>
-	 *            <b> post: </b> la lista de usuarios se modifica correctamente.
-	 */
+	 *        	 */
 	public void setUsuarios(ArrayList<Jugador> usuarios) {
 
 		this.usuarios = usuarios;
@@ -123,11 +122,11 @@ public class ParquesMundial {
 
 	/**
 	 * El metodo agrega una nuevo usuario.<br>
-	 * 
+	 *   <b> pre: </b> usuario != null <br>
+	 *        <b> post: </b> el usuario se agrego correctamente.
 	 * @param usuario
 	 *            - el nuevo usuario que se va a agregar.<br>
-	 *            <b> pre: </b> usuario != null <br>
-	 *            <b> post: </b> el usuario se agrego correctamente.
+	 *          
 	 * @throws UsuarioYaRegistradoException
 	 *             - se lanza cuando el usuario ya existe
 	 * 

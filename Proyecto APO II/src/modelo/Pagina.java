@@ -7,15 +7,48 @@ package modelo;
 public class Pagina {
 	
 	
+	/**
+	 * Relacion la pagina anterior. 
+	 */
 	private Pagina anterior;
+	
+	/**
+	 * Relacion con la pagina siguiente.
+	 */
 	private Pagina siguiente;
+	/**
+	 * Arreglo de laminas de la pagina.
+	 */
 	private Lamina[] laminas;
+	
+	/**
+	 * Nombre de la seleccion.
+	 */
 	private String seleccion;
+	
+	/**
+	 * Ruta de la bandera de la seleccion.
+	 */
 	private String rutaBandera;
+	
+	/**
+	 * Numero de pagina.
+	 */
 	private int numero;
+	
+	/**
+	 * Grupo al que pertenece la seleccion.
+	 */
 	private String grupo;
 
 	
+	/**
+	 *  Constructor de la clase Pagina.
+	 * @param rutaBandera - ruta de la bandera de la seleccion
+	 * @param seleccion - nombre de la seleccion
+	 * @param numero - numero de la seleccion
+	 * @param grupo - grupo al que pertenece la seleccion
+	 */
 	public Pagina(String rutaBandera, String seleccion,int numero, String grupo) {
 	
 	laminas = new Lamina[11];

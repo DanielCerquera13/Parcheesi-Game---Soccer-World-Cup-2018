@@ -50,8 +50,8 @@ public class Album {
 	
 	/**
 	 * Modifica la pagina actual del album.
+	 * 	<b> post: </b> La pagina actual ha sido modificada.
 	 * @param actual - nueva pagina actual.
-	 *  <b> post: </b> La pagina actual ha sido modificada.
 	 */
 	public void setActual(Pagina actual) {
 		
@@ -71,8 +71,8 @@ public class Album {
 
 	/**
 	 * Modifica la ultima pagina del album.
+	 * 		<b> post: </b> La pagina ultima ha sido modificada.
 	 * @param ultimo - la nueva ultima pagina del album.
-	 * 	<b> post: </b> La pagina ultima ha sido modificada.
 	 */
 	public void setUltimo(Pagina ultimo) {
 
@@ -93,8 +93,8 @@ public class Album {
 
 	/**
 	 * Modifica la ultima pagina del album.
+	 * 	 	<b> post: </b> La pagina ultima ha sido modificada.
 	 * @param ultimo - La nueva ultima pagina del album.
-	 * 	<b> post: </b> La pagina ultima ha sido modificada.
 	 */
 	public void setPrimero(Pagina primero) {
 
@@ -137,9 +137,9 @@ public class Album {
 
 	/**
 	 * El metodo agrega una nueva pagina al album.<br>
-	 * @param nuevo - La nueva pagina que se desea agregar.<br>
-	 * <b> pre: </b> nuevo != null <br>
+	 *  <b> pre: </b> nuevo != null <br>
 	 * <b> post: </b> La pagina es agregada correctamente.
+	 * @param nuevo - La nueva pagina que se desea agregar.<br>
 	 * @return La nueva pagina que se va a agregar.
 	 * @throws PaginaYaExisteException - Se lanza cuando la pagina ya existe en el album.
 	 */

@@ -16,9 +16,9 @@ public class CasillaNormal extends Casilla {
 
 	/**
 	 * El metodo agrega una nueva ficha a la casilla.<br>
-	 * @param ficha - La nueva ficha que se va a agregar.<br>
-	 * <b> pre: </b> ficha != null <br>
+	 *  <b> pre: </b> ficha != null <br>
 	 * <b> post: </b> La ficha es agregada correctamente.
+	 * @param ficha - La nueva ficha que se va a agregar.<br>
 	 */
 	public void agregarFicha(Ficha ficha) {
 		 

@@ -64,9 +64,9 @@ public class Ficha {
 
    /**
     * Modifica el tipo de ficha que es.<br>
-    * @param tipo - nuevo tipo de ficha. <br>
     *  <b> pre: </b> tipo>0  y tipo<=4 <br>
 	 * <b> post: </b> el tipo de ficha se modifica adecuadamente.
+    * @param tipo - nuevo tipo de ficha. <br>
     */
 	public void setTipo(int tipo) {
 		this.tipo = tipo;

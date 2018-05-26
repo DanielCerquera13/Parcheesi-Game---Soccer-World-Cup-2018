@@ -36,8 +36,8 @@ public class Dado {
 
 	/**
 	 * Metodo que modifica el valor del dado
+	 * 	 <b> post: </b> el valor se modifica .
 	 * @param valor valor que representa el numero del dado.
-	 * <b> post: </b> el valor se modifica .
 	 */
 	public void setValor(int valor) {
 		this.valor = valor;

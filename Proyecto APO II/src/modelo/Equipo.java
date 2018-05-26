@@ -63,9 +63,9 @@ public class Equipo {
 
 	/**
 	 * Metodo que modifica la ruta de la bandera. <br> 
+	 *  <b> pre: </b> rutaBandera != null . <br> 
+	 * <b> post: </b> se modifica la ruta de la bandera 
 	 * @param rutaBandera nueva ruta de la bandera. <br> 
-	 * <b> pre: </b> rutaBandera != null . <br> 
-	 * <b> post: </b> se modifica la ruta de la bandera .
 	 */
 	public void setRutaBandera(String rutaBandera) {
 
@@ -85,9 +85,9 @@ public class Equipo {
      
 	/**
 	 * Metodo que modifica el nomnbre de la seleccion.<br> 
-	 * @param seleccion - nuevo nombre de la seleccion.<br> 
-	 * <b> pre: </b> nombre != null y nombre!= "" . <br> 
+	 *   <b> pre: </b> nombre != null y nombre!= "" . <br> 
 	 * <b> post: </b> se modifica el nombre. <b> 
+	 * @param seleccion - nuevo nombre de la seleccion.<br> 
 	 */
 	public void setSeleccion(String seleccion) {
 
