@@ -79,7 +79,7 @@ class CasillaSeguraTest  extends TestCase implements Constantes{
 	 
 	 /**
 	  * test que verifica que si hay fichas
-	  */
+	  */ 
 	 @Test
 	 public void testHayFichasTrue() {
 		 
