@@ -1,6 +1,9 @@
 package interfaz;
 
 import javax.swing.*;
+
+import modelo.Equipo;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +16,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	public static final Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
 	
-	//fdsf
+	
 	private JButton btRegresar;
 	private PanelInicial panelInicial;
 	private JLabel lbtitulo;
@@ -37,7 +40,7 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	
 	public void inicializarComponentes() {
 		
-		lbtitulo= new JLabel(" ï¿½Escoge tu selecciï¿½n favorita! ");
+		lbtitulo= new JLabel(" ¡Escoge tu selección favorita! ");
 		lbtitulo.setBounds(385, 100, 550, 80);
 		lbtitulo.setFont(new Font(" Garamond ", 1, 35));
 		lbtitulo.setForeground(Color.WHITE);
@@ -122,130 +125,223 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 	public void mouseClicked(MouseEvent e) {
 	
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("ALEMANIA");
+			String ruta="Archivos/imagenes/banderasRec/alemaniaRec.png";
+			String seleccion="ALEMANIA";
+			Equipo alemania=new Equipo(ruta,seleccion);
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("ARABIA SAUDITA");
+			String ruta="Archivos/imagenes/banderasRec/arabia sauditaRec.png";
+			String seleccion="ARABIA SAUDITA";
+			Equipo arabia=new Equipo(ruta,seleccion);
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("ARGENTINA");
+			String ruta="Archivos/imagenes/banderasRec/argentinaRec.png";
+			String seleccion="ARGENTINA";
+			Equipo argentina=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("AUSTRALIA");
+			String ruta="Archivos/imagenes/banderasRec/australiaRec.png";
+			String seleccion="AUSTRALIA";
+			Equipo australia=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("BELGICA");
+			String ruta="Archivos/imagenes/banderasRec/belgicaRec.png";
+			String seleccion="BELGICA";
+			Equipo belgica=new Equipo(ruta,seleccion);
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("BRASIL");
+			String ruta="Archivos/imagenes/banderasRec/brasilRec.png";
+			String seleccion="BRASIL";
+			Equipo brasil=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("COLOMBIA");
+			String ruta="Archivos/imagenes/banderasRec/colombiaRec.png";
+			String seleccion="COLOMBIA";
+			Equipo colombia=new Equipo(ruta,seleccion);
+		
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=280 && e.getY()<=350)) {
-			System.out.println("COREA");
+			String ruta="Archivos/imagenes/banderasRec/coreaRec.png";
+			String seleccion="COREA DEL SUR";
+			Equipo corea=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("COSTA RICA");
+			String ruta="Archivos/imagenes/banderasRec/costa ricaRec.png";
+			String seleccion="COSTA RICA";
+			Equipo costa=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("CROACIA");
+			String ruta="Archivos/imagenes/banderasRec/croaciaRec.png";
+			String seleccion="CROACIA";
+			Equipo croacia=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("DINAMARCA");
+			String ruta="Archivos/imagenes/banderasRec/dinamarcaRec.png";
+			String seleccion="DINAMARCA";
+			Equipo dinamarca=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("EGIPTO");
+			String ruta="Archivos/imagenes/banderasRec/egiptoRec.png";
+			String seleccion="EGIPTO";
+			Equipo egipto=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("ESPAï¿½A");
+			String ruta="Archivos/imagenes/banderasRec/espanaRec.png";
+			String seleccion="ESPAÑA";
+			Equipo espana=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("FRANCIA");
+			String ruta="Archivos/imagenes/banderasRec/franciaRec.png";
+			String seleccion="FRANCIA";
+			Equipo francia=new Equipo(ruta,seleccion);
+	
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("INGLATERRA");
+			String ruta="Archivos/imagenes/banderasRec/inglaterraRec.png";
+			String seleccion="INGLATERRA";
+			Equipo inglaterra=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=380 && e.getY()<=450)) {
-			System.out.println("IRAN");
+			String ruta="Archivos/imagenes/banderasRec/iranRec.png";
+			String seleccion="IRAN";
+			Equipo iran=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("IRLANDA");
+			String ruta="Archivos/imagenes/banderasRec/irlandaRec.png";
+			String seleccion="IRLANDA";
+			Equipo irlanda=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("JAPON");
+			String ruta="Archivos/imagenes/banderasRec/japonRec.png";
+			String seleccion="JAPON";
+			Equipo japon=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("MARRUECOS");
+			String ruta="Archivos/imagenes/banderasRec/marruecosRec.png";
+			String seleccion="MARRUECOS";
+			Equipo marruecos=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("MEXICO");
+			String ruta="Archivos/imagenes/banderasRec/mexicoRec.png";
+			String seleccion="MEXICO";
+			Equipo mexico=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("NIGERIA");
+			String ruta="Archivos/imagenes/banderasRec/nigeriaRec.png";
+			String seleccion="NIGERIA";
+			Equipo nigeria=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("PANAMA");
+			String ruta="Archivos/imagenes/banderasRec/panamaRec.png";
+			String seleccion="PANAMA";
+			Equipo panama=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("PERU");
+			String ruta="Archivos/imagenes/banderasRec/peruRec.png";
+			String seleccion="PERU";
+			Equipo peru=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=480 && e.getY()<=550)) {
-			System.out.println("POLONIA");
+			String ruta="Archivos/imagenes/banderasRec/poloniaRec.png";
+			String seleccion="POLONIA";
+			Equipo polonia=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=580 && e.getY()<=650)) {
-			System.out.println("PORTUGAL");
+			String ruta="Archivos/imagenes/banderasRec/portugalRec.png";
+			String seleccion="PORTUGAL";
+			Equipo portugal=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=580 && e.getY()<=650)) {
-			System.out.println("RUSIA");
+			String ruta="Archivos/imagenes/banderasRec/rusiaRec.png";
+			String seleccion="RUSIA";
+			Equipo rusia=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=580 && e.getY()<=650)) {
-			System.out.println("SENEGAL");
+			String ruta="Archivos/imagenes/banderasRec/senegalRec.png";
+			String seleccion="SENEGAL";
+			Equipo senegal=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=580 && e.getY()<=650)) {
-			System.out.println("SERBIA");
+			String ruta="Archivos/imagenes/banderasRec/serbiaRec.png";
+			String seleccion="SERBIA";
+			Equipo serbia=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=580 && e.getY()<=650)) {
-			System.out.println("SUECIA");
+			String ruta="Archivos/imagenes/banderasRec/sueciaRec.png";
+			String seleccion="SUECIA";
+			Equipo suecia=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=580 && e.getY()<=650)) {
-			System.out.println("SUIZA");
+			String ruta="Archivos/imagenes/banderasRec/suizaRec.png";
+			String seleccion="SUIZA";
+			Equipo suiza=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=580 && e.getY()<=650)) {
-			System.out.println("TURQUIA");
+			String ruta="Archivos/imagenes/banderasRec/turquiaRec.png";
+			String seleccion="TURQUIA";
+			Equipo turquia=new Equipo(ruta,seleccion);
+			
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=580 && e.getY()<=650)) {
+			String ruta="Archivos/imagenes/banderasRec/uruguayRec.png";
+			String seleccion="URUGUAY";
+			Equipo uruguay=new Equipo(ruta,seleccion);
 			System.out.println("URUGUAY");
 		}
 		
