@@ -98,6 +98,8 @@ public class Jugador {
 		}
 
 	}
+	
+	
 
 	/**
 	 *  
@@ -181,6 +183,21 @@ public class Jugador {
 		return jugadoresPintar;
 
 	}
+	
+	
+	
+
+	public ArrayList<Lamina> getLaminas() {
+		return laminas;
+	}
+
+	public void setLaminas(ArrayList<Lamina> laminas) {
+		this.laminas = laminas;
+	}
+
+	public void setJugadoresPintar(boolean[] jugadoresPintar) {
+		this.jugadoresPintar = jugadoresPintar;
+	}
 
 	public static void main(String[] args) {
 
@@ -209,5 +226,6 @@ public class Jugador {
 		System.out.println(div);
 
 	}
+	
 
 }
