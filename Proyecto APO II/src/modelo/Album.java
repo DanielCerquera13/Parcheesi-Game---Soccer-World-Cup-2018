@@ -1,14 +1,37 @@
+
+/**
+ * @author juandavidpaz, juan camilo velez, jhonatan bellaiza, daniel alejandro cerquera
+ */
 package modelo;
+
 
 import excepciones.PaginaYaExisteException;
 
 public class Album {
 	
+	/**
+	 * Relacion con la primera pagina del album
+	 */
 	private Pagina primero;
+	
+	/**
+	 * Relacion con la ultima pagina del album
+	 */
 	private Pagina ultimo;
+	
+	/**
+	 * cantidad de paginas del album
+	 */
 	private int cantidad;
+	
+	/**
+	 * Relacion con la pagina actual del album
+	 */
 	private Pagina actual;
 
+	/**
+	 * Constructor de la clase album
+	 */
 	public Album() {
 
 		primero = ultimo = null;
@@ -25,30 +48,54 @@ public class Album {
 		
 	}
 	
+	/**
+	 * Modifica la pagina actual del album
+	 * @param actual - nueva pagina actual
+	 *  <b> post: </b> La pagina actual ha sido modificada.
+	 */
 	public void setActual(Pagina actual) {
 		
 	this.actual = actual;	
 		
 	}
 	
+	/**
+	 * Entrega la pagina actual del album
+	 * @return pagina actual del album
+	 */
 	public Pagina getActual() {
 		
 	return actual;	
 		
 	}
 
+	/**
+	 * Modifica la ultima pagina del album
+	 * @param ultimo - la nueva ultima pagina del album
+	 * 	<b> post: </b> La pagina ultima ha sido modificada.
+	 */
 	public void setUltimo(Pagina ultimo) {
 
 		this.ultimo = ultimo;
 
 	}
-
+    
+	/**
+	 * Entrega la pagina ultima del album
+	 * @return pagina actual del album
+	 */
 	public Pagina getUltimo() {
 
 		return ultimo;
 
-	}
+	} 
+     
 
+	/**
+	 * Modifica la ultima pagina del album
+	 * @param ultimo - la nueva ultima pagina del album
+	 * 	<b> post: </b> La pagina ultima ha sido modificada.
+	 */
 	public void setPrimero(Pagina primero) {
 
 		this.primero = primero;

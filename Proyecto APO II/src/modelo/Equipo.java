@@ -1,3 +1,7 @@
+
+/**
+ * @author juandavidpaz, juan camilo velez, jhonatan bellaiza, daniel alejandro cerquera
+ */
 package modelo;
 
 import java.util.Random;
