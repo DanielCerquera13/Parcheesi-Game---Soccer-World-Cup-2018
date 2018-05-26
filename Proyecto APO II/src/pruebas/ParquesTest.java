@@ -72,7 +72,6 @@ class ParquesTest extends TestCase{
 		assertEquals(parques.getCasillas()[28].getTipo(), valor);
 		assertEquals(parques.getCasillas()[44].getTipo(), valor);
 		assertEquals(parques.getCasillas()[78].getTipo(), valor);
-		//assertEquals(parques.getCasillas()[19].getTipo(), valor);
 		
 
 		
