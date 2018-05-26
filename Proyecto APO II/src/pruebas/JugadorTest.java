@@ -32,8 +32,8 @@ class JugadorTest extends TestCase implements Constantes{
 		
 		escenario1();
 		
-		for (int i = 0; i < jugador.getJugadoresPintar().length; i++) {
-			   assertFalse(jugador.getJugadoresPintar()[i]);
+		for (int i = 0; i < jugador.getLaminasObtenidas().length; i++) {
+			   assertFalse(jugador.getLaminasObtenidas()[i]);
 		}
 	}
 	
@@ -81,10 +81,10 @@ class JugadorTest extends TestCase implements Constantes{
 		jugador.agregarLamina(lamina4);
 		
 		
-		assertTrue(jugador.getJugadoresPintar()[1]);
-		assertTrue(jugador.getJugadoresPintar()[2]);
-		assertTrue(jugador.getJugadoresPintar()[3]);
-		assertTrue(jugador.getJugadoresPintar()[4]);
+		assertTrue(jugador.getLaminasObtenidas()[1]);
+		assertTrue(jugador.getLaminasObtenidas()[2]);
+		assertTrue(jugador.getLaminasObtenidas()[3]);
+		assertTrue(jugador.getLaminasObtenidas()[4]);
 
 		
 		
