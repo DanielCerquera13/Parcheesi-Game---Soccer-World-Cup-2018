@@ -5,12 +5,7 @@ public class Casilla {
 	
 	
 
-	/**
-	 * Constantes para diferenciar el tipo de casillas.
-	 */
-	public static final int NORMAL = 1;
-	public static final int SALIDA = 2;
-	public static final int SEGURO = 3;
+	
 
 	/**
 	 * Arreglo de fichas que contiene cada casilla
@@ -91,6 +86,11 @@ public class Casilla {
 	}
 	
 
-	
+	@Override
+	public String toString() {
+		
+	return ""+tipo;	
+		
+	}
 	
 }

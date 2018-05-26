@@ -2,10 +2,7 @@ package modelo;
 
 public class Ficha {
 	
-	public final static int FICHA1 =1;
-	public final static int FICHA2 =2;
-	public final static int FICHA3 =3;
-	public final static int FICHA4 =4;
+	
 
 	
 	//ATRIBUTOS

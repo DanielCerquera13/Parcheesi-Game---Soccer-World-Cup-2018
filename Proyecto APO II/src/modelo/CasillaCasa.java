@@ -14,6 +14,7 @@ public class CasillaCasa extends Casilla {
 		int tamanio = casilllasOcupadas();
 
 		if (tipoFicha == ficha.getTipo()) {
+			
 			if (hayFichas() == false) {
 				getFichas()[0] = ficha;
 			}
