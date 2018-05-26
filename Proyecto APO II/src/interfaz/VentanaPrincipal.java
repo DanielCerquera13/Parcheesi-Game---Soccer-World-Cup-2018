@@ -10,7 +10,7 @@ public class VentanaPrincipal extends JFrame {
 	/**
 	 * Relaciones
 	 */
-
+	
 	private PanelInicial inicial;
 	private ParquesMundial mundial;
 

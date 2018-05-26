@@ -45,7 +45,6 @@ public class Jugador {
 	}
 	
 	// GET AND SET
-
 	
 	public void agregarLamina(Lamina lamina) {
 		
@@ -63,8 +62,7 @@ public class Jugador {
 	return dinero;	
 		
 	}
-	
-	
+		
 	/**
 	 * Este metodo retorna el nombre del jugador
 	 * @return String nickName.
