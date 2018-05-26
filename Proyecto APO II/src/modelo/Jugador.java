@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 import excepciones.LaminaNoObtenidaException;
 
-public class Jugador implements Serializable {
+public class Jugador implements Serializable, Comparable<Jugador> {
 
 	// ATRIBUTOS
 
@@ -262,43 +262,49 @@ public class Jugador implements Serializable {
 
 	}
 
-//	public static void main(String[] args) {
+	@Override
+	public int compareTo(Jugador jug) {
 
-//		Jugador j = new Jugador("Juancho", "hola");
-//
-//		Lamina lam = new Lamina("James", 10);
-//		Lamina lam2 = new Lamina("Falcao", 1);
-//		Lamina x = new Lamina("Bacca", 300);
-//		Lamina y = new Lamina("Pogba", 119);
-//		Lamina z = new Lamina("Messi", 200);
-//
-//		j.agregarLamina(lam);
-//		j.agregarLamina(lam2);
-//		j.agregarLamina(x);
-//		j.agregarLamina(y);
-//		j.agregarLamina(z);
-//
-//		try {
-//			System.out.println(j.buscarLamina(2));
-//		} catch (LaminaNoObtenidaException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		return this.getNickName().compareToIgnoreCase(jug.getNickName());
+	}
 
-		// int lam = 256;
-		//
-		// int mod = lam % 11;
-		//
-		// int div = lam / 11;
-		//
-		// if (mod != 0) {
-		//
-		// div += 1;
-		//
-		// }
-		//
-		// System.out.println(div);
+	// public static void main(String[] args) {
 
-//	}
+	// Jugador j = new Jugador("Juancho", "hola");
+	//
+	// Lamina lam = new Lamina("James", 10);
+	// Lamina lam2 = new Lamina("Falcao", 1);
+	// Lamina x = new Lamina("Bacca", 300);
+	// Lamina y = new Lamina("Pogba", 119);
+	// Lamina z = new Lamina("Messi", 200);
+	//
+	// j.agregarLamina(lam);
+	// j.agregarLamina(lam2);
+	// j.agregarLamina(x);
+	// j.agregarLamina(y);
+	// j.agregarLamina(z);
+	//
+	// try {
+	// System.out.println(j.buscarLamina(2));
+	// } catch (LaminaNoObtenidaException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+
+	// int lam = 256;
+	//
+	// int mod = lam % 11;
+	//
+	// int div = lam / 11;
+	//
+	// if (mod != 0) {
+	//
+	// div += 1;
+	//
+	// }
+	//
+	// System.out.println(div);
+
+	// }
 
 }
