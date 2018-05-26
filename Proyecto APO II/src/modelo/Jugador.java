@@ -35,6 +35,14 @@ public class Jugador {
 	/**
 	 * Constructor de la clase Jugador.
 	 */
+	
+	/**
+	 *  arreglo de jugadores boolean
+	 */
+	private boolean[] jugadoresPintar;
+	
+	
+	
 	public Jugador(String nickName, String contrasena) {
 		
 		this.nickName = nickName;
@@ -42,13 +50,28 @@ public class Jugador {
 		dinero = 0;
 		album = new Album();
 		laminas = new ArrayList<>();
+		jugadoresPintar = new boolean[352];
+		
+		iniciarFalse();
 	}
 	
 	// GET AND SET
 	
+	
+	public void iniciarFalse() {
+		
+		for (int i = 0; i < jugadoresPintar.length; i++) {
+			jugadoresPintar[i] = false;
+		}
+	}
 	public void agregarLamina(Lamina lamina) {
 		
 		laminas.add(lamina);
+		
+		int numero = lamina.getNumero();
+		 
+		jugadoresPintar[numero] =true;
+		
 	}
 	
 	public void setDinero(int dinero) {
