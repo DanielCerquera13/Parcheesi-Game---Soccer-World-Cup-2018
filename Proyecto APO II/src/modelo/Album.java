@@ -136,8 +136,8 @@ public class Album {
 	}
 
 	/**
-	 * El metodo agrega una nueva pagina al album.
-	 * @param nuevo - La nueva pagina que se desea agregar.
+	 * El metodo agrega una nueva pagina al album.<br>
+	 * @param nuevo - La nueva pagina que se desea agregar.<br>
 	 * <b> pre: </b> nuevo != null <br>
 	 * <b> post: </b> La pagina es agregada correctamente.
 	 * @return La nueva pagina que se va a agregar.
@@ -178,9 +178,9 @@ public class Album {
 	}
       
 	/**
-	 * 
-	 * @param pais
-	 * @return
+	 * El metodo verifica si un pais en particular ya existe o no.
+	 * @param pais - el pais que se verificara.
+	 * @return true si el pais ya existe, false si el pais no existe.
 	 */
 	public boolean yaExiste(String pais) {
 
@@ -272,6 +272,12 @@ public class Album {
 //		}
 //	}
 	
+	
+	/**
+	 * Este metodo se encargar de inicializar el album con sus respectivas paginas y laminas.<br>
+	 * 
+	 * @throws PaginaYaExisteException - cuando se trata de inicializar una pagina que ya existe.
+	 */
 	public void rellenarAlbum() throws PaginaYaExisteException {
 		
 		//Rusia

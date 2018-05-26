@@ -2,15 +2,30 @@ package modelo;
 
 public class CasillaSalida extends Casilla {
 
-	private int equipo;
+	/**
+	 * numero de tipo de ficha que se va a agregar. 
+	 */
 	private int  tipoFicha;
 	
+	
+	/**
+	 * Constructor de la clase CasillaSalida.
+	 * @param tipo - tipo de Casilla
+	 * @param tipoFicha - tipo de Ficha
+	 */
 	public CasillaSalida(int tipo, int tipoFicha) {
 		super(tipo);
 		this.tipoFicha = tipoFicha;
 	}
 	
 	
+
+	/**
+	 * El metodo agrega una nueva ficha a la casilla.<br>
+	 * @param ficha - La nueva ficha que se va a agregar.<br>
+	 * <b> pre: </b> ficha != null <br>
+	 * <b> post: </b> La ficha es agregada correctamente.
+	 */
 	public void agregarFicha(Ficha ficha) {
 		
 		int tamanio = casilllasOcupadas();

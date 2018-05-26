@@ -5,12 +5,21 @@ package modelo;
 
 public class CasillaNormal extends Casilla {
 
-
+/**
+ * Constructor de la clase CasillaNormal.
+ * @param tipo -  tipo de Casilla
+ */
 	public CasillaNormal(int tipo) {
 		super(tipo);
 	}
  
-	
+
+	/**
+	 * El metodo agrega una nueva ficha a la casilla.<br>
+	 * @param ficha - La nueva ficha que se va a agregar.<br>
+	 * <b> pre: </b> ficha != null <br>
+	 * <b> post: </b> La ficha es agregada correctamente.
+	 */
 	public void agregarFicha(Ficha ficha) {
 		 
 		int tamanio = casilllasOcupadas();

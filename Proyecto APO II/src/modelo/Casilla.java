@@ -8,9 +8,7 @@ package modelo;
 
 
 public class Casilla {
- 
-	
-	
+
 
 	
 
@@ -78,7 +76,10 @@ public class Casilla {
 		return yes;
 
 	}
-	
+	/**
+	 * encuentra cuantas paginas del arreglo se encuentran ocupadas<br>
+	 * @return cantidad de casillasOcupadas
+	 */
 	public int casilllasOcupadas() {
 		
 		int valor = 0;
@@ -94,6 +95,7 @@ public class Casilla {
 	
 
 	@Override
+	
 	public String toString() {
 		
 	return ""+tipo;	
