@@ -5,9 +5,11 @@
 package modelo;
 
 
+import java.io.Serializable;
+
 import excepciones.PaginaYaExisteException;
 
-public class Album {
+public class Album implements Serializable {
 	
 	/**
 	 * Relacion con la primera pagina del album.

@@ -3,8 +3,10 @@
  */
 package modelo;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
@@ -38,6 +40,8 @@ public class ParquesMundial {
 		sesionActiva = null;
 
 		jugadorDePrueba();
+		
+		recuperarData();
 
 	}
 
@@ -67,11 +71,12 @@ public class ParquesMundial {
 
 	/**
 	 * El metodo modifica la lista de usuarios.<br>
-	 *  <b> pre: </b> usuarios != null <br>
-	 *   <b> post: </b> la lista de usuarios se modifica correctamente.
+	 * <b> pre: </b> usuarios != null <br>
+	 * <b> post: </b> la lista de usuarios se modifica correctamente.
+	 * 
 	 * @param usuarios
 	 *            - el nuevo arraylist de usuarios.<br>
-	 *        	 */
+	 */
 	public void setUsuarios(ArrayList<Jugador> usuarios) {
 
 		this.usuarios = usuarios;
@@ -165,11 +170,12 @@ public class ParquesMundial {
 
 	/**
 	 * El metodo agrega una nuevo usuario.<br>
-	 *   <b> pre: </b> usuario != null <br>
-	 *        <b> post: </b> el usuario se agrego correctamente.
+	 * <b> pre: </b> usuario != null <br>
+	 * <b> post: </b> el usuario se agrego correctamente.
+	 * 
 	 * @param usuario
 	 *            - el nuevo usuario que se va a agregar.<br>
-	 *          
+	 * 
 	 * @throws UsuarioYaRegistradoException
 	 *             - se lanza cuando el usuario ya existe
 	 * 
@@ -222,6 +228,47 @@ public class ParquesMundial {
 			} catch (IOException ex) {
 
 				System.out.println(ex.getMessage());
+			}
+
+		}
+
+	}
+
+	public void recuperarData() {
+
+		FileInputStream fS = null;
+		ObjectInputStream oS = null;
+
+		ArrayList<Jugador> users = null;
+
+		try {
+
+			fS = new FileInputStream("./Archivos/data/dataJuego.dat");
+			oS = new ObjectInputStream(fS);
+			users = (ArrayList<Jugador>) oS.readObject();
+			setUsuarios(users);
+
+		} catch (Exception ex) {
+
+			System.out.println(ex.getMessage());
+
+		} finally {
+
+			try {
+				if (fS != null) {
+
+					fS.close();
+				}
+
+				if (oS != null) {
+
+					oS.close();
+
+				}
+
+			} catch (IOException e) {
+
+				System.out.println(e.getMessage());
 			}
 
 		}

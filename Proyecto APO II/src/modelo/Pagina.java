@@ -4,7 +4,9 @@
  */
 package modelo;
 
-public class Pagina {
+import java.io.Serializable;
+
+public class Pagina implements Serializable{
 	
 	
 	/**

@@ -4,13 +4,7 @@
  */
 package modelo;
 
-
-
-
 public class Casilla {
-
-
-	
 
 	/**
 	 * Arreglo de fichas que contiene cada casilla
@@ -76,30 +70,31 @@ public class Casilla {
 		return yes;
 
 	}
+
 	/**
 	 * encuentra cuantas paginas del arreglo se encuentran ocupadas<br>
+	 * 
 	 * @return cantidad de casillasOcupadas
 	 */
 	public int casilllasOcupadas() {
-		
+
 		int valor = 0;
-		
+
 		for (int i = 0; i < getFichas().length; i++) {
-			if(getFichas()[i] != null) {
+			if (getFichas()[i] != null) {
 				valor++;
 			}
 		}
-		
+
 		return valor;
 	}
-	
 
 	@Override
-	
+
 	public String toString() {
-		
-	return ""+tipo;	
-		
+
+		return "" + tipo;
+
 	}
-	
+
 }

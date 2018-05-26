@@ -4,7 +4,9 @@
  */
 package modelo;
 
-public class Lamina implements Comparable<Lamina>{
+import java.io.Serializable;
+
+public class Lamina implements Comparable<Lamina>, Serializable{
 	
 	//ATRIBUTOS
 	
