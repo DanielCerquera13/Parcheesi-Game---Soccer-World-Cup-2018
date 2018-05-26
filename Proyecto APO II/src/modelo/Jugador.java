@@ -64,6 +64,8 @@ public class Jugador {
 			jugadoresPintar[i] = false;
 		}
 	}
+	
+	
 	public void agregarLamina(Lamina lamina) {
 		
 		laminas.add(lamina);
