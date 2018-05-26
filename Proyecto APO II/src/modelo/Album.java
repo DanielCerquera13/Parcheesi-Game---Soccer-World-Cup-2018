@@ -176,7 +176,12 @@ public class Album {
 		return nuevo;
 
 	}
-
+      
+	/**
+	 * 
+	 * @param pais
+	 * @return
+	 */
 	public boolean yaExiste(String pais) {
 
 		boolean existe = false;
