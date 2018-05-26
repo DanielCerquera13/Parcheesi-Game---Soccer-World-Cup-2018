@@ -15,17 +15,29 @@ public class Lamina {
 	 */
 	private int numero;
 	
+	/**
+	 * Este atributo representa si esta lamina ya ha sido obtenida o no por el Jugador.
+	 */
+	private boolean obtenida;
+	
 	
 	//CONSTRUCTOR
 	
 	/**
-	 * Constructor de la clase Lamina.
+	 * 
+	 * @param jugador
+	 * @param numero
 	 */
 	public Lamina(String jugador, int numero) {
 		
 		this.jugador = jugador;
 		this.numero = numero;
+		obtenida = false;
+		
 	}
+	
+	
+	
 	
 	
 	//GET AND SET
@@ -44,6 +56,27 @@ public class Lamina {
 	 */
 	public void setJugador(String jugador) {
 		this.jugador = jugador;
+	}
+	
+	
+	/**
+	 * 
+	 * @param obtenida
+	 */
+	public void setObtenida(boolean obtenida) {
+		
+	this.obtenida = obtenida;	
+		
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean estaObtenida() {
+		
+	return obtenida;	
+		
 	}
 	
 	/**

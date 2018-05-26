@@ -154,10 +154,20 @@ public class PanelPanini extends JPanel implements ActionListener {
 
 		grupo.setText(pagina.getGrupo());
 
-		String ruta1 = pagina.getLaminas()[0].getJugador();
-		BufferedImage imagen1 = convertidor(ruta1);
-		ImageIcon icono1 = new ImageIcon(imagen1);
-		laminaUno.setIcon(icono1);
+		if (pagina.getLaminas()[0].estaObtenida()) {
+
+			String ruta1 = pagina.getLaminas()[0].getJugador();
+			ImageIcon icono1 = new ImageIcon(ruta1);
+			laminaUno.setIcon(icono1);
+
+		} else {
+
+			String ruta1 = pagina.getLaminas()[0].getJugador();
+			BufferedImage imagen1 = convertidor(ruta1);
+			ImageIcon icono1 = new ImageIcon(imagen1);
+			laminaUno.setIcon(icono1);
+
+		}
 
 		String ruta2 = pagina.getLaminas()[1].getJugador();
 		BufferedImage imagen2 = convertidor(ruta2);
@@ -325,25 +335,25 @@ public class PanelPanini extends JPanel implements ActionListener {
 		String a = e.getActionCommand();
 
 		if (a.equals(ANTERIOR)) {
-		
+
 			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
 			Pagina actualizar = album.getActual().getAnterior();
 			actualizarPanini(actualizar);
 			album.setActual(actualizar);
-			
+
 		}
 
 		if (a.equals(SIGUIENTE)) {
-			
+
 			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
 			Pagina actualizar = album.getActual().getSiguiente();
 			actualizarPanini(actualizar);
 			album.setActual(actualizar);
-		
+
 		}
-		
-		if(a.equals(SALIR)) {
-			
+
+		if (a.equals(SALIR)) {
+
 			inicio.getVentana().remove(this);
 			inicio.getVentana().add(inicio);
 			inicio.getVentana().refresh();

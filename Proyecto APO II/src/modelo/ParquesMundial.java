@@ -31,6 +31,10 @@ public class ParquesMundial {
 		
 	Jugador player = new Jugador("Juancho", "123456");
 	usuarios.add(player);
+	
+	Lamina james = new Lamina("James", 1);	
+	
+	usuarios.get(0).agregarLamina(james);
 		
 	}
 	
