@@ -10,27 +10,27 @@ import excepciones.PaginaYaExisteException;
 public class Album {
 	
 	/**
-	 * Relacion con la primera pagina del album
+	 * Relacion con la primera pagina del album.
 	 */
 	private Pagina primero;
 	
 	/**
-	 * Relacion con la ultima pagina del album
+	 * Relacion con la ultima pagina del album.
 	 */
 	private Pagina ultimo;
 	
 	/**
-	 * cantidad de paginas del album
+	 * cantidad de paginas del album.
 	 */
 	private int cantidad;
 	
 	/**
-	 * Relacion con la pagina actual del album
+	 * Relacion con la pagina actual del album.
 	 */
 	private Pagina actual;
 
 	/**
-	 * Constructor de la clase album
+	 * Constructor de la clase album.
 	 */
 	public Album() {
 
@@ -49,8 +49,8 @@ public class Album {
 	}
 	
 	/**
-	 * Modifica la pagina actual del album
-	 * @param actual - nueva pagina actual
+	 * Modifica la pagina actual del album.
+	 * @param actual - nueva pagina actual.
 	 *  <b> post: </b> La pagina actual ha sido modificada.
 	 */
 	public void setActual(Pagina actual) {
@@ -60,8 +60,8 @@ public class Album {
 	}
 	
 	/**
-	 * Entrega la pagina actual del album
-	 * @return pagina actual del album
+	 * Entrega la pagina actual del album.
+	 * @return Pagina actual del album.
 	 */
 	public Pagina getActual() {
 		
@@ -70,8 +70,8 @@ public class Album {
 	}
 
 	/**
-	 * Modifica la ultima pagina del album
-	 * @param ultimo - la nueva ultima pagina del album
+	 * Modifica la ultima pagina del album.
+	 * @param ultimo - la nueva ultima pagina del album.
 	 * 	<b> post: </b> La pagina ultima ha sido modificada.
 	 */
 	public void setUltimo(Pagina ultimo) {
@@ -81,8 +81,8 @@ public class Album {
 	}
     
 	/**
-	 * Entrega la pagina ultima del album
-	 * @return pagina actual del album
+	 * Entrega la pagina ultima del album.
+	 * @return Pagina actual del album.
 	 */
 	public Pagina getUltimo() {
 
@@ -92,8 +92,8 @@ public class Album {
      
 
 	/**
-	 * Modifica la ultima pagina del album
-	 * @param ultimo - la nueva ultima pagina del album
+	 * Modifica la ultima pagina del album.
+	 * @param ultimo - La nueva ultima pagina del album.
 	 * 	<b> post: </b> La pagina ultima ha sido modificada.
 	 */
 	public void setPrimero(Pagina primero) {
@@ -101,25 +101,48 @@ public class Album {
 		this.primero = primero;
 
 	}
-
+     
+	 
+	/**
+	 * Entrega la pagina primera del album.
+	 * @return Pagina primera del album.
+	 */
 	public Pagina getPrimero() {
 
 		return primero;
 
 	}
+	
+	
 
+	/**
+	 * Entrega la cantidad de paginas del album.
+	 * @return cantidid de paginas.
+	 */ 
 	public int getCantidad() {
 
 		return cantidad;
 
 	}
 	
+	/**
+	 * Verifica si el album esta vacio.
+	 * @return true, si el album esta vacio - false, si no lo esta.
+	 */
 	public boolean isEmpty() {
 		
 	return primero==null;	
 		
 	}
 
+	/**
+	 * El metodo agrega una nueva pagina al album.
+	 * @param nuevo - La nueva pagina que se desea agregar.
+	 * <b> pre: </b> nuevo != null <br>
+	 * <b> post: </b> La pagina es agregada correctamente.
+	 * @return La nueva pagina que se va a agregar.
+	 * @throws PaginaYaExisteException - Se lanza cuando la pagina ya existe en el album.
+	 */
 	public Pagina agregarPagina(Pagina nuevo) throws PaginaYaExisteException {
 
 
