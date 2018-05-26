@@ -58,8 +58,6 @@ public class ParquesMundial {
 		}
 
 	}
-
-	
 	
 	public void jugadorDePrueba() {
 

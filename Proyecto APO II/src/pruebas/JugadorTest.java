@@ -111,10 +111,10 @@ class JugadorTest extends TestCase implements Constantes{
 		
       
 		 
+		assertTrue(album.getPrimero().getLaminas()[0].estaObtenida());
 		assertTrue(album.getPrimero().getLaminas()[1].estaObtenida());
 		assertTrue(album.getPrimero().getLaminas()[2].estaObtenida());
 		assertTrue(album.getPrimero().getLaminas()[3].estaObtenida());
-		assertTrue(album.getPrimero().getLaminas()[4].estaObtenida());
 
 		//fgd
 
