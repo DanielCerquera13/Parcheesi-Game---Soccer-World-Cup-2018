@@ -169,56 +169,128 @@ public class PanelPanini extends JPanel implements ActionListener {
 
 		}
 
-		String ruta2 = pagina.getLaminas()[1].getJugador();
-		BufferedImage imagen2 = convertidor(ruta2);
-		ImageIcon icono2 = new ImageIcon(imagen2);
-		laminaDos.setIcon(icono2);
+		if (pagina.getLaminas()[1].estaObtenida()) {
 
-		String ruta3 = pagina.getLaminas()[2].getJugador();
-		BufferedImage imagen3 = convertidor(ruta3);
-		ImageIcon icono3 = new ImageIcon(imagen3);
-		laminaTres.setIcon(icono3);
+			String ruta2 = pagina.getLaminas()[1].getJugador();
+			ImageIcon icono2 = new ImageIcon(ruta2);
+			laminaUno.setIcon(icono2);
+		} else {
 
-		String ruta4 = pagina.getLaminas()[3].getJugador();
-		BufferedImage imagen4 = convertidor(ruta4);
-		ImageIcon icono4 = new ImageIcon(imagen4);
-		laminaCuatro.setIcon(icono4);
+			String ruta2 = pagina.getLaminas()[1].getJugador();
+			BufferedImage imagen2 = convertidor(ruta2);
+			ImageIcon icono2 = new ImageIcon(imagen2);
+			laminaDos.setIcon(icono2);
+		}
 
-		String ruta5 = pagina.getLaminas()[4].getJugador();
-		BufferedImage imagen5 = convertidor(ruta5);
-		ImageIcon icono5 = new ImageIcon(imagen5);
-		laminaCinco.setIcon(icono5);
+		if (pagina.getLaminas()[2].estaObtenida()) {
 
-		String ruta6 = pagina.getLaminas()[5].getJugador();
-		BufferedImage imagen6 = convertidor(ruta6);
-		ImageIcon icono6 = new ImageIcon(imagen6);
-		laminaSeis.setIcon(icono6);
+			String ruta3 = pagina.getLaminas()[2].getJugador();
+			ImageIcon icono3 = new ImageIcon(ruta3);
+			laminaUno.setIcon(icono3);
+		} else {
 
-		String ruta7 = pagina.getLaminas()[6].getJugador();
-		BufferedImage imagen7 = convertidor(ruta7);
-		ImageIcon icono7 = new ImageIcon(imagen7);
-		laminaSiete.setIcon(icono7);
+			String ruta3 = pagina.getLaminas()[2].getJugador();
+			BufferedImage imagen3 = convertidor(ruta3);
+			ImageIcon icono3 = new ImageIcon(imagen3);
+			laminaTres.setIcon(icono3);
+		}
 
-		String ruta8 = pagina.getLaminas()[7].getJugador();
-		BufferedImage imagen8 = convertidor(ruta8);
-		ImageIcon icono8 = new ImageIcon(imagen8);
-		laminaOcho.setIcon(icono8);
+		if (pagina.getLaminas()[3].estaObtenida()) {
 
-		String ruta9 = pagina.getLaminas()[8].getJugador();
-		BufferedImage imagen9 = convertidor(ruta9);
-		ImageIcon icono9 = new ImageIcon(imagen9);
-		laminaNueve.setIcon(icono9);
+			String ruta4 = pagina.getLaminas()[3].getJugador();
+			ImageIcon icono4 = new ImageIcon(ruta4);
+			laminaUno.setIcon(icono4);
+		} else {
+			String ruta4 = pagina.getLaminas()[3].getJugador();
+			BufferedImage imagen4 = convertidor(ruta4);
+			ImageIcon icono4 = new ImageIcon(imagen4);
+			laminaCuatro.setIcon(icono4);
+		}
 
-		String ruta10 = pagina.getLaminas()[9].getJugador();
-		BufferedImage imagen10 = convertidor(ruta10);
-		ImageIcon icono10 = new ImageIcon(imagen10);
-		laminaDiez.setIcon(icono10);
+		if (pagina.getLaminas()[4].estaObtenida()) {
 
-		String ruta11 = pagina.getLaminas()[10].getJugador();
-		BufferedImage imagen11 = convertidor(ruta11);
-		ImageIcon icono11 = new ImageIcon(imagen11);
-		laminaOnce.setIcon(icono11);
+			String ruta5 = pagina.getLaminas()[4].getJugador();
+			ImageIcon icono5 = new ImageIcon(ruta5);
+			laminaUno.setIcon(icono5);
+		} else {
+			String ruta5 = pagina.getLaminas()[4].getJugador();
+			BufferedImage imagen5 = convertidor(ruta5);
+			ImageIcon icono5 = new ImageIcon(imagen5);
+			laminaCinco.setIcon(icono5);
+		}
 
+		if (pagina.getLaminas()[5].estaObtenida()) {
+
+			String ruta6 = pagina.getLaminas()[5].getJugador();
+			ImageIcon icono6 = new ImageIcon(ruta6);
+			laminaUno.setIcon(icono6);
+		} else {
+			String ruta6 = pagina.getLaminas()[5].getJugador();
+			BufferedImage imagen6 = convertidor(ruta6);
+			ImageIcon icono6 = new ImageIcon(imagen6);
+			laminaSeis.setIcon(icono6);
+		}
+
+		if (pagina.getLaminas()[6].estaObtenida()) {
+
+			String ruta7 = pagina.getLaminas()[6].getJugador();
+			ImageIcon icono7 = new ImageIcon(ruta7);
+			laminaUno.setIcon(icono7);
+		} else {
+			String ruta7 = pagina.getLaminas()[6].getJugador();
+			BufferedImage imagen7 = convertidor(ruta7);
+			ImageIcon icono7 = new ImageIcon(imagen7);
+			laminaSiete.setIcon(icono7);
+		}
+
+		if (pagina.getLaminas()[7].estaObtenida()) {
+
+			String ruta8 = pagina.getLaminas()[7].getJugador();
+			ImageIcon icono8 = new ImageIcon(ruta8);
+			laminaUno.setIcon(icono8);
+		} else {
+			String ruta8 = pagina.getLaminas()[7].getJugador();
+			BufferedImage imagen8 = convertidor(ruta8);
+			ImageIcon icono8 = new ImageIcon(imagen8);
+			laminaOcho.setIcon(icono8);
+		}
+
+		if (pagina.getLaminas()[8].estaObtenida()) {
+
+			String ruta9 = pagina.getLaminas()[8].getJugador();
+			ImageIcon icono9 = new ImageIcon(ruta9);
+			laminaUno.setIcon(icono9);
+		} else {
+
+			String ruta9 = pagina.getLaminas()[8].getJugador();
+			BufferedImage imagen9 = convertidor(ruta9);
+			ImageIcon icono9 = new ImageIcon(imagen9);
+			laminaNueve.setIcon(icono9);
+		}
+
+		if (pagina.getLaminas()[9].estaObtenida()) {
+
+			String ruta10 = pagina.getLaminas()[9].getJugador();
+			ImageIcon icono10 = new ImageIcon(ruta10);
+			laminaUno.setIcon(icono10);
+		} else {
+			String ruta10 = pagina.getLaminas()[9].getJugador();
+			BufferedImage imagen10 = convertidor(ruta10);
+			ImageIcon icono10 = new ImageIcon(imagen10);
+			laminaDiez.setIcon(icono10);
+		}
+
+		if (pagina.getLaminas()[10].estaObtenida()) {
+
+			String ruta11 = pagina.getLaminas()[10].getJugador();
+			ImageIcon icono11 = new ImageIcon(ruta11);
+			laminaUno.setIcon(icono11);
+		} else {
+			String ruta11 = pagina.getLaminas()[10].getJugador();
+			BufferedImage imagen11 = convertidor(ruta11);
+			ImageIcon icono11 = new ImageIcon(imagen11);
+			laminaOnce.setIcon(icono11);
+		}
 	}
 
 	public void actualizarPanini(Pagina pagina) {
