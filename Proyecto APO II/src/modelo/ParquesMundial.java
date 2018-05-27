@@ -37,9 +37,7 @@ public class ParquesMundial {
 	public ParquesMundial() {
 
 		usuarios = new ArrayList<Jugador>();
-		sesionActiva = null;
-
-		jugadorDePrueba();
+		sesionActiva = null;	
 		
 		recuperarData();
 
@@ -298,25 +296,6 @@ public class ParquesMundial {
 			usuarios.set(cual, temp);
 
 		}
-
-	}
-
-	public void jugadorDePrueba() {
-
-		Jugador player = new Jugador("Juancho", "123456");
-		usuarios.add(player);
-
-		Lamina james = new Lamina("James", 341);
-		Lamina x = new Lamina("James", 134);
-		Lamina y = new Lamina("James", 185);
-		Lamina z = new Lamina("James", 227);
-		Lamina w = new Lamina("James", 96);
-
-		usuarios.get(0).agregarLamina(james);
-		usuarios.get(0).agregarLamina(x);
-		usuarios.get(0).agregarLamina(y);
-		usuarios.get(0).agregarLamina(z);
-		usuarios.get(0).agregarLamina(w);
 
 	}
 

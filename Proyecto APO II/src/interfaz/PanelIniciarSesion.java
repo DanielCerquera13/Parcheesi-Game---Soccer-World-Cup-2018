@@ -127,10 +127,11 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 
 					if (actual.getContrasena().equalsIgnoreCase(contra)) {
 
+						inicial.getVentana().setSesionActiva(actual);
 						inicial.getVentana().remove(this);
 						inicial.getVentana().add(inicio);
 						inicial.getVentana().refresh();
-						inicial.getVentana().setSesionActiva(actual);
+						
 
 						txtUsuario.setText("");
 						pass.setText("");

@@ -47,7 +47,8 @@ public class PanelPanini extends JPanel implements ActionListener {
 		setLayout(null);
 		componentes();
 
-		inicializar();
+	
+//		inicializar();
 
 	}
 
@@ -142,10 +143,13 @@ public class PanelPanini extends JPanel implements ActionListener {
 
 	public void inicializar() {
 
-		Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
+		Jugador activo = inicio.getVentana().getSesionActiva();
+		
+		if(activo!=null) {
+		Album album = inicio.getVentana().getParquesMundial().getSesionActiva().getAlbum();
 
 		Pagina pagina = album.getPrimero();
-		album.setActual(pagina);
+		activo.getAlbum().setActual(pagina);
 
 		ImageIcon iconoBandera = new ImageIcon(album.getPrimero().getRutaBandera());
 		bandera.setIcon(iconoBandera);
@@ -291,6 +295,7 @@ public class PanelPanini extends JPanel implements ActionListener {
 			ImageIcon icono11 = new ImageIcon(imagen11);
 			laminaOnce.setIcon(icono11);
 		}
+	}
 	}
 
 	public void actualizarPanini(Pagina pagina) {
@@ -490,19 +495,23 @@ public class PanelPanini extends JPanel implements ActionListener {
 
 		if (a.equals(ANTERIOR)) {
 
-			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
+			Jugador activo = inicio.getVentana().getSesionActiva();
+			
+			Album album = activo.getAlbum();
 			Pagina actualizar = album.getActual().getAnterior();
 			actualizarPanini(actualizar);
-			album.setActual(actualizar);
-
+			activo.getAlbum().setActual(actualizar);	
+			
 		}
 
 		if (a.equals(SIGUIENTE)) {
 
-			Album album = inicio.getVentana().getParquesMundial().getUsuarios().get(0).getAlbum();
+			Jugador activo = inicio.getVentana().getSesionActiva();
+			
+			Album album = activo.getAlbum();
 			Pagina actualizar = album.getActual().getSiguiente();
 			actualizarPanini(actualizar);
-			album.setActual(actualizar);
+			activo.getAlbum().setActual(actualizar);
 
 		}
 

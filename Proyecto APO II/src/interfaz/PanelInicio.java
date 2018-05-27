@@ -97,8 +97,10 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 			
 			System.out.println("hola");
 			sesion.getVentana().remove(this);
-			sesion.getVentana().add(panini);
+			panini.inicializar();
+			sesion.getVentana().add(panini);						
 			sesion.getVentana().refresh();
+			
 			
 			
 		}

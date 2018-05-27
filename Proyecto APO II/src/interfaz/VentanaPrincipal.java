@@ -82,6 +82,12 @@ public class VentanaPrincipal extends JFrame {
 		
 	}
 	
+	public Jugador getSesionActiva() {
+		
+	return mundial.getSesionActiva();	
+		
+	}
+	
 	public void refresh() {
 
 		invalidate();
