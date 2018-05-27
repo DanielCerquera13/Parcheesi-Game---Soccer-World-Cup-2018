@@ -13,8 +13,8 @@ public class CasillaSalida extends Casilla {
 	 * @param tipo - tipo de Casilla
 	 * @param tipoFicha - tipo de Ficha
 	 */
-	public CasillaSalida(int tipo, int tipoFicha) {
-		super(tipo);
+	public CasillaSalida(int tipo,int posicion, int tipoFicha) {
+		super(tipo,posicion);
 		this.tipoFicha = tipoFicha;
 	}
 	

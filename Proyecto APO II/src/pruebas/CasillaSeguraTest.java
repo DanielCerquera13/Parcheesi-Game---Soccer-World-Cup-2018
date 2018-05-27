@@ -17,14 +17,14 @@ class CasillaSeguraTest  extends TestCase implements Constantes{
 	
 	public void escenario1() {
 		
-		casillaSegura = new CasillaSegura(Constantes.SEGURO);
+//		casillaSegura = new CasillaSegura(Constantes.SEGURO);
 			
 		}
 	
 	
 	 public void escenario2() {
 		 
-			casillaSegura = new CasillaSegura(Constantes.SEGURO);
+//			casillaSegura = new CasillaSegura(Constantes.SEGURO);
 			
 			  Ficha ficha1= new Ficha("colombia", 7, false, false, 1); 
 			   Ficha ficha2= new Ficha("colombia", 12, false, false, 1); 

@@ -17,13 +17,13 @@ class CasillaNormalTest extends TestCase implements Constantes {
 	
 	public void escenario1() {
 		
-		casillaNormal = new CasillaNormal(Constantes.NORMAL);
+//		casillaNormal = new CasillaNormal(Constantes.NORMAL);
 	}
 	
 	
 public void escenario2() {
 		
-		casillaNormal = new CasillaNormal(Constantes.NORMAL);
+//		casillaNormal = new CasillaNormal(Constantes.NORMAL);
 		
 		Ficha ficha1= new Ficha("colombia", 2, false, false, 1); 
 		   Ficha ficha2= new Ficha("colombia", 28, false, false, 1); 

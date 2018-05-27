@@ -9,8 +9,8 @@ public class CasillaNormal extends Casilla {
  * Constructor de la clase CasillaNormal.
  * @param tipo -  tipo de Casilla
  */
-	public CasillaNormal(int tipo) {
-		super(tipo);
+	public CasillaNormal(int tipo, int posicion) {
+		super(tipo,posicion);
 	}
  
 

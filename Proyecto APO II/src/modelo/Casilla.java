@@ -15,17 +15,31 @@ public class Casilla {
 	 * Indica que tipo de casilla es
 	 */
 	private int tipo;
+	
+	private int posicion;
 
 	/**
 	 * Constructor
 	 */
-	public Casilla(int tipo) {
+	public Casilla(int tipo, int posicion) {
 
 		fichas = new Ficha[10];
 		this.tipo = tipo;
-
+		this.posicion = posicion;
 	}
 
+	
+	public void setPosicion(int posicion) {
+		
+	this.posicion = posicion;	
+	}
+	
+	public int getPosicion() {
+		
+	return posicion;	
+		
+	}
+	
 	/**
 	 * Retorna que tipo de casilla es. 1 = NORMAL 2 = SALIDA 3 = SEGURO
 	 * 

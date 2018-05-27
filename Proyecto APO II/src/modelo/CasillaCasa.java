@@ -20,8 +20,8 @@ public class CasillaCasa extends Casilla {
 	 * @param tipo - numero de tipo de casilla
 	 * @param tipoFicha  numero de tipo de Ficha
 	 */
-	public CasillaCasa(int tipo, int tipoFicha) {
-		super(tipo);
+	public CasillaCasa(int tipo,int posicion, int tipoFicha) {
+		super(tipo,posicion);
 		this.tipoFicha = tipoFicha;
 	}
 
