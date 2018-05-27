@@ -10,6 +10,7 @@ import excepciones.PaginaYaExisteException;
 
 public class CasillaCasa extends Casilla {
 
+	
 	/**
 	 * numero de tipo de Ficha.
 	 */
