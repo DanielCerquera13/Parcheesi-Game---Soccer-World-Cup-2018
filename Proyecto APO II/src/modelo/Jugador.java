@@ -52,7 +52,7 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 
 		this.nickName = nickName;
 		this.contrasena = contrasena;
-		dinero = 0;
+		dinero = 500;
 		album = new Album();
 		laminas = new ArrayList<Lamina>();
 		laminasObtenidas = new boolean[353];

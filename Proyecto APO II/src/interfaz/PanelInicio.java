@@ -107,10 +107,13 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 		
 		if((e.getX()>=950 && e.getX()<= 1180)&&(e.getY() >= 230 && e.getY()<= 445)) {
 			
+			tienda.componentes();
 			System.out.println("bye");
 			sesion.getVentana().remove(this);
 			sesion.getVentana().add(tienda);
 			sesion.getVentana().refresh();
+			 
+			
 		}
 		
 	}
