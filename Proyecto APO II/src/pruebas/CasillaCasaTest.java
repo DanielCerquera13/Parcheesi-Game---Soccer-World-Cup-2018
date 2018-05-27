@@ -53,7 +53,7 @@ class CasillaCasaTest  extends TestCase implements Constantes{
 	   Ficha ficha4= new Ficha("colombia", 36, false, false, 1); 
 	     
 	   casillaCasa.agregarFicha(ficha1);
-	  casillaCasa.agregarFicha(ficha2);
+	   casillaCasa.agregarFicha(ficha2);
 	   casillaCasa.agregarFicha(ficha3);
 	   casillaCasa.agregarFicha(ficha4);
 	   System.out.println(casillaCasa.casilllasOcupadas());
@@ -77,7 +77,7 @@ class CasillaCasaTest  extends TestCase implements Constantes{
 	   Ficha ficha4= new Ficha("colombia", 36, false, false, 2); 
 	     
 	   casillaCasa.agregarFicha(ficha1);
-	  casillaCasa.agregarFicha(ficha2);
+	   casillaCasa.agregarFicha(ficha2);
 	   casillaCasa.agregarFicha(ficha3);
 	   casillaCasa.agregarFicha(ficha4);
 	   System.out.println(casillaCasa.casilllasOcupadas());
