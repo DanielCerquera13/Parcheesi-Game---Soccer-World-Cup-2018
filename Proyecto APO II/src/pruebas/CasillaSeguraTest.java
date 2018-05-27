@@ -17,33 +17,27 @@ class CasillaSeguraTest  extends TestCase implements Constantes{
 	
 	public void escenario1() {
 		
-//		casillaSegura = new CasillaSegura(Constantes.SEGURO);
+		casillaSegura = new CasillaSegura(Constantes.SEGURO,1);
 			
 		}
 	
 	
 	 public void escenario2() {
 		 
-//			casillaSegura = new CasillaSegura(Constantes.SEGURO);
+			casillaSegura = new CasillaSegura(Constantes.SEGURO, 1);
 			
 			  Ficha ficha1= new Ficha("colombia", 7, false, false, 1); 
 			   Ficha ficha2= new Ficha("colombia", 12, false, false, 1); 
 			   Ficha ficha3= new Ficha("colombia", 31, false, false, 2); 
 			   Ficha ficha4= new Ficha("colombia", 36, false, false, 4); 
-			   Ficha ficha5= new Ficha("colombia", 55, false, false, 2); 
-			   Ficha ficha6= new Ficha("colombia", 60, false, false, 3); 
-			   Ficha ficha7= new Ficha("colombia", 79, false, false, 1); 
-			   Ficha ficha8= new Ficha("colombia",  84, false, false, 2); 
+			 
 
 			     
 			   casillaSegura.agregarFicha(ficha1);
 			  casillaSegura.agregarFicha(ficha2);
 			   casillaSegura.agregarFicha(ficha3);
 			   casillaSegura.agregarFicha(ficha4);
-			   casillaSegura.agregarFicha(ficha5);
-			   casillaSegura.agregarFicha(ficha6);
-			   casillaSegura.agregarFicha(ficha7);
-			   casillaSegura.agregarFicha(ficha8);
+			   
 
 
 	 } 
@@ -59,22 +53,15 @@ class CasillaSeguraTest  extends TestCase implements Constantes{
 		   Ficha ficha2= new Ficha("colombia", 12, false, false, 1); 
 		   Ficha ficha3= new Ficha("colombia", 31, false, false, 2); 
 		   Ficha ficha4= new Ficha("colombia", 36, false, false, 4); 
-		   Ficha ficha5= new Ficha("colombia", 55, false, false, 2); 
-		   Ficha ficha6= new Ficha("colombia", 60, false, false, 3); 
-		   Ficha ficha7= new Ficha("colombia", 79, false, false, 1); 
-		   Ficha ficha8= new Ficha("colombia",  84, false, false, 2); 
+		
 
 		     
 		   casillaSegura.agregarFicha(ficha1);
 		  casillaSegura.agregarFicha(ficha2);
 		   casillaSegura.agregarFicha(ficha3);
 		   casillaSegura.agregarFicha(ficha4);
-		   casillaSegura.agregarFicha(ficha5);
-		   casillaSegura.agregarFicha(ficha6);
-		   casillaSegura.agregarFicha(ficha7);
-		   casillaSegura.agregarFicha(ficha8);
-		   
-		   assertEquals(8, casillaSegura.casilllasOcupadas());
+		 
+		   assertEquals(4, casillaSegura.casilllasOcupadas());
 	 }
 	 
 	 /**

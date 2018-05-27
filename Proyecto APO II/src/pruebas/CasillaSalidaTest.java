@@ -17,7 +17,7 @@ class CasillaSalidaTest extends TestCase implements Constantes{
 	
 	public void escenario1() {
 		
-//		casillaSalida = new CasillaSalida(Constantes.SALIDA, 1);
+		casillaSalida = new CasillaSalida(Constantes.SALIDA,1, 1);
 		
 		
 	}
@@ -25,7 +25,7 @@ class CasillaSalidaTest extends TestCase implements Constantes{
 	public void escenario2() {
 		
 		
-//		casillaSalida = new CasillaSalida(Constantes.SALIDA, 1);
+		casillaSalida = new CasillaSalida(Constantes.SALIDA,1,  1);
 
 		
 

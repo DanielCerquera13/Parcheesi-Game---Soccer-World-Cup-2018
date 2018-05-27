@@ -105,16 +105,12 @@ class AlbumTest  extends TestCase{
 		escenario1();
 		
 		
-		Pagina chile =new Pagina("./Archivos/imagenes/banderasRec/rusiaRec.png", "chile", 33, "Grupo H");
+		Pagina zimbawe =new Pagina("./Archivos/imagenes/banderasRec/rusiaRec.png", "zimbawe", 33, "Grupo H");
              
-		try {
-			album.agregarPagina(chile);
-			System.out.println(album.yaExiste(chile.getSeleccion()));
-			assertFalse(album.yaExiste(chile.getSeleccion()));
-		} catch (PaginaYaExisteException e) {
-			// TODO Auto-generated catch block
-			System.out.println(e.getMessage());
-		}
+		
+			System.out.println(album.yaExiste(zimbawe.getSeleccion()));
+			assertFalse(album.yaExiste(zimbawe.getSeleccion()));
+	
 		
 	}
 

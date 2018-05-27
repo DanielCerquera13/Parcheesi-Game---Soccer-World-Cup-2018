@@ -57,6 +57,7 @@ class ParquesMundialTest extends TestCase implements Constantes {
 		
 		escenario1();
 		
+		int tamanioUno = parquesMundial.getUsuarios().size();
 		Jugador jugador1 = new Jugador("juan", "1111");
 		Jugador jugador2 = new Jugador("david", "2222");
 		Jugador jugador3 = new Jugador("daniel", "3333");
@@ -75,6 +76,7 @@ class ParquesMundialTest extends TestCase implements Constantes {
 		}
 		      
 		System.out.println(parquesMundial.getUsuarios().size());
+		System.out.println(tamanioUno);
 		assertEquals(5, parquesMundial.getUsuarios().size());
  
 	}
@@ -88,10 +90,10 @@ class ParquesMundialTest extends TestCase implements Constantes {
 		
 		escenario1();
 		
-		Jugador jugador1 = new Jugador("juan", "1111");
-		Jugador jugador2 = new Jugador("david", "2222");
+		Jugador jugador1 = new Jugador("daniel", "1111");
+		Jugador jugador2 = new Jugador("daniel", "2222");
 		Jugador jugador3 = new Jugador("daniel", "3333");
-		Jugador jugador4 = new Jugador("juan", "44444");
+		Jugador jugador4 = new Jugador("daniel", "44444");
 		
 		
 		try {
@@ -104,8 +106,7 @@ class ParquesMundialTest extends TestCase implements Constantes {
 			// TODO Auto-generated catch block
            System.out.println(e.getMessage());
 		}
-		      
-		assertEquals(4, parquesMundial.getUsuarios().size());
+		assertNotEquals(5, parquesMundial.getUsuarios().size());
  
 	}
 }

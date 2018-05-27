@@ -18,13 +18,13 @@ class CasillaCasaTest  extends TestCase implements Constantes{
    
    public void escenario1() {
 	   
-//	   casillaCasa = new CasillaCasa(Constantes.CASA, 1);
+	   casillaCasa = new CasillaCasa(Constantes.CASA,1, 1);
 	   
    }
    
    public void escenario2() {
 	   
-//	   casillaCasa = new CasillaCasa(Constantes.CASA, 1);
+	   casillaCasa = new CasillaCasa(Constantes.CASA, 1,1);
 	 
 	   Ficha ficha1= new Ficha("colombia", 60, false, false, 1); 
 	   Ficha ficha2= new Ficha("colombia", 84, false, false, 1); 
