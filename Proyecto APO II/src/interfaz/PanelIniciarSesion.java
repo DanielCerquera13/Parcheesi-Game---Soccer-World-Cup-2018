@@ -40,7 +40,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 		setLayout(null);
 
 		ajustarComponentes();
-		
+
 		addMouseListener(this);
 
 	}
@@ -49,10 +49,10 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 
 		Font fuente = new Font("Garamond", 1, 30);
 		Font fuenteBoton = new Font("Garamond", 1, 24);
-		
+
 		ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/usuarios.png");
 		usuarios = new JLabel(icono);
-		usuarios.setBounds(600, 570, 150, 150);		
+		usuarios.setBounds(600, 570, 150, 150);
 		add(usuarios);
 
 		labUsuario = new JLabel("Usuario");
@@ -91,40 +91,37 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 		add(pass);
 		add(butIniciar);
 		add(butCancelar);
-		
-		
 
 	}
 
 	public void listaUsuarios() {
-		
-		 inicio.getVentana().getParquesMundial().ordenarUsuarios();
-		  ArrayList<Jugador> laminas = inicio.getVentana().getParquesMundial().getUsuarios();
-		  
-		  int numero = 1;
-		  
-		  
-		  String[] columnas = {"#", "Nombre"};
-		  Object[][] data = new Object[laminas.size()][laminas.size()];
-		  
-		  for (int i = 0; i <data.length; i++) {
-			
-			  data[i][0] = numero;
-			  data[i][1] = laminas.get(i).getNickName();
-			  
-			  numero++;
+
+		inicio.getVentana().getParquesMundial().ordenarUsuarios();
+		ArrayList<Jugador> laminas = inicio.getVentana().getParquesMundial().getUsuarios();
+
+		int numero = 1;
+
+		String[] columnas = { "#", "Nombre" };
+		Object[][] data = new Object[1000][1000];
+
+		for (int i = 0; i < laminas.size(); i++) {
+
+			data[i][0] = numero;
+			data[i][1] = laminas.get(i).getNickName();
+
+			numero++;
 		}
-		  
-		  JTable tabla  = new JTable(data, columnas);
-		  tabla.setEnabled(false);
-		  tabla.getTableHeader().setReorderingAllowed(false);
-		  tabla.setFont(new Font("Garamond", 1, 16));
-		  JScrollPane scroll = new JScrollPane(tabla);
-		  scroll.setPreferredSize(new Dimension(400, 300));
-		  
-       
-		  JOptionPane.showMessageDialog(null	, scroll, "lista de usuarios", 1	, null);
+
+		JTable tabla = new JTable(data, columnas);
+		tabla.setEnabled(false);
+		tabla.getTableHeader().setReorderingAllowed(false);
+		tabla.setFont(new Font("Garamond", 1, 16));
+		JScrollPane scroll = new JScrollPane(tabla);
+		scroll.setPreferredSize(new Dimension(400, 300));
+
+		JOptionPane.showMessageDialog(null, scroll, "Lista de usuarios", 1, null);
 	}
+
 	public VentanaPrincipal getVentana() {
 
 		return inicial.getVentana();
@@ -157,8 +154,6 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 
 		if (comando.equals(INICIAR)) {
 
-			
-			
 			if (inicial.getVentana().getParquesMundial().yaExiste(txtUsuario.getText())) {
 
 				Jugador actual = null;
@@ -173,8 +168,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 						inicial.getVentana().remove(this);
 						inicial.getVentana().add(inicio);
 						inicial.getVentana().refresh();
-                         inicio.ajustarComponentes();
-						
+						inicio.ajustarComponentes();
 
 						txtUsuario.setText("");
 						pass.setText("");
@@ -196,16 +190,15 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 
 				}
 
-			}else {
-				
-			try {
-				throw new UsuarioNoRegistradoException(txtUsuario.getText());
-			} catch (UsuarioNoRegistradoException ex) {
-				
-				JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-			}	
-				
-				
+			} else {
+
+				try {
+					throw new UsuarioNoRegistradoException(txtUsuario.getText());
+				} catch (UsuarioNoRegistradoException ex) {
+
+					JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+				}
+
 			}
 
 		}
@@ -214,38 +207,37 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-            
+
 		System.out.println(e.getX());
 		System.out.println(e.getY());
-		
-		if(e.getX()>600 && e.getX()<750 && e.getY()>570 && e.getY()<720) {
+
+		if (e.getX() > 600 && e.getX() < 750 && e.getY() > 570 && e.getY() < 720) {
 			listaUsuarios();
-			
-			
+
 		}
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
