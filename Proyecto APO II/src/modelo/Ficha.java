@@ -122,6 +122,9 @@ public class Ficha {
 		this.ganada = ganada;
 	}
 
+	/**
+	 * Metodo que simula la salida de la carcel de las fichas.
+	 */
 	public void salirDeLaCarcel() {
 
 		if (tipo == 1) {
@@ -152,20 +155,32 @@ public class Ficha {
 
 		}
 
-	}
 
+	}
+	
+   /**
+    * Simula el envio de una ficha a la carcel.
+   */
 	public void irALaCarcel() {
 		
 	this.posicion = null;
 		
 	}
 	
+	/**
+	 * Mueve la ficha la cantidad que el dado ofrece.
+	 * @param valorDado - la cantidad de casillas que debe mover la ficha.
+	 */
 	public void mover(int valorDado) {
 			
 	posicion = posicion+valorDado;		
 		
 	}
 	
+	
+	/**
+	 * Caputa otra ficha
+	 */
 	public void capturar() {
 		
 		

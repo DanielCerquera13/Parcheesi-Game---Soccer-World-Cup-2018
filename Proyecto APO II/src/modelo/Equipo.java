@@ -193,7 +193,11 @@ public class Equipo {
 		dadoDos.setValor(ran.nextInt(7 - 1) + 1);
 
 	}
-
+ 
+	/**
+	 * Verifica si el lanzamiento de los dados es par o no.
+	 * @return true si es par, false si no lo es.
+	 */
 	public boolean lanzamientoPar() {
 
 		boolean par = false;
@@ -206,7 +210,11 @@ public class Equipo {
 		return par;
 
 	}
-
+    
+	/**
+	 * Verifica si el jugador logra sacar tres pares seguidos.
+	 * @return True si saco 3 pares, False si no fue asi.
+	 */
 	public boolean verificarTresTiros() {
 
 		boolean si = false;
@@ -233,6 +241,10 @@ public class Equipo {
 
 	}
 
+	/**
+	 * Verifica si una ficha se encuentra en la carcel.
+	 * @return True si esta en la carcel. False si no lo esta.
+	 */
 	public boolean fichasEnLaCarcel() {
 
 		boolean si = false;
@@ -251,6 +263,12 @@ public class Equipo {
 
 	}
 
+	 /**
+	  * Realiza un movimiento basado en la decision del jugador. sacar sus fichas de la carcel o mover el par. 
+	  * @param ficha - la ficha que se desea mover. <br>
+	  * @param decision - la decision de mover o sacar de la carcel. <br>
+	  * @param valorDado - valor de cantidad de movimientos que proporciona el dado. 
+	  */
 	public void decidirPar(Ficha ficha,int decision, int valorDado) {
 
 		if (fichasEnLaCarcel()) {
@@ -277,7 +295,11 @@ public class Equipo {
 
 		}
 	}
-
+    /**
+     * Este metodo simula el movimiento de una ficha.
+     * @param ficha la ficha que se va a mover. <br>
+     * @param valorDado la cantidad de casillas que se va a mover.
+     */
 	public void moverFicha(Ficha ficha, int valorDado) {
 		
 	ficha.mover(valorDado);	

@@ -39,7 +39,11 @@ public class Parques implements Constantes {
 
 		rellenarZonas();
 	}
-
+   
+	/**
+	 * Entega que equipo de los cuatro tiene el turno.
+	 * @return el equipo con el turno actual.
+	 */
 	public Equipo getTurnoActual() {
 
 		Equipo actual = null;
@@ -56,7 +60,11 @@ public class Parques implements Constantes {
 
 		return actual;
 	}
-
+  
+	/**
+	 * Verifica si se sacan tres pares durante el juego.
+	 * @return true si saco tres pares, false si no es asi.
+	 */
 	public boolean verificarTresTiros() {
 
 		Equipo e = getTurnoActual();
@@ -80,7 +88,11 @@ public class Parques implements Constantes {
 		return si;
 
 	}
-
+ 
+	
+	/**
+	 * Asigna el turno a un equipo en especifico.
+	 */
 	public void asignarTurnos() {
 
 		Equipo e = getTurnoActual();
@@ -206,7 +218,10 @@ public class Parques implements Constantes {
 
 		}
 	}
-
+ 
+	/**
+	 * Inicializa la zona uno del parques con sus respectivas casillas.
+	 */
 	public void rellenarZonaUno() {
 
 		for (int i = 0, j = 83; i < zonaUno[0].length; i++, j--) {
@@ -235,6 +250,11 @@ public class Parques implements Constantes {
 
 	}
 
+	
+	/**
+	 * /**
+	 * Inicializa la zona dos del parques con sus respectivas casillas.
+	 */
 	public void rellenarZonaDos() {
 
 		for (int i = 0, j = 4; i < zonaDos.length; i++, j++) {
@@ -257,6 +277,10 @@ public class Parques implements Constantes {
 
 	}
 
+	/**
+	 * /**
+	 * Inicializa la zona tres del parques con sus respectivas casillas.
+	 */
 	public void rellenarZonaTres() {
 
 		for (int i = 0, j = 51; i < zonaTres[0].length; i++, j--) {
@@ -278,7 +302,11 @@ public class Parques implements Constantes {
 		}
 
 	}
-
+    
+	/**
+	 * /**
+	 * Inicializa la zona uno del parques con sus respectivas casillas.
+	 */
 	public void rellenarZonaCuatro() {
 
 		for (int i = 0, j = 68; i < zonaCuatro.length; i++, j++) {
@@ -301,30 +329,49 @@ public class Parques implements Constantes {
 
 	}
 
+	/**
+	 * Entrega las casillas de la zona uno del parques.
+	 * @return arreglo con las casillas.
+	 */ 
 	public Casilla[][] getZonaUno() {
 
 		return zonaUno;
 
 	}
 
+	/**
+	 * Entrega las casillas de la zona dos del parques.
+	 * @return arreglo con las casillas.
+	 */ 
 	public Casilla[][] getZonaDos() {
 
 		return zonaDos;
 
 	}
 
+	/**
+	 * Entrega las casillas de la zona tres del parques.
+	 * @return arreglo con las casillas.
+	 */ 
 	public Casilla[][] getZonaTres() {
 
 		return zonaTres;
 
 	}
 
+	/**
+	 * Entrega las casillas de la zona cuatro del parques.
+	 * @return arreglo con las casillas.
+	 */ 
 	public Casilla[][] getZonaCuatro() {
 
 		return zonaCuatro;
 
 	}
-
+  
+	/**
+	 * rellena en su totalidad y en conjuntos las casillas del parques.
+	 */
 	public void rellenarZonas() {
 
 		rellenarZonaUno();
@@ -334,6 +381,12 @@ public class Parques implements Constantes {
 
 	}
 	
+	/**
+	 * Prueba si las casillas salidas se encuentran debidamente inicializadas.
+	 * @param fichaUno
+	 * @param fichaDos
+	 * @param fichaTres
+	 */
 	public void probarCasillaSalida(Ficha fichaUno, Ficha fichaDos, Ficha fichaTres) {
 		
 	moverFicha(fichaUno, 72);
@@ -345,7 +398,10 @@ public class Parques implements Constantes {
 		
 	}
 	
-
+     /**
+      * Metodo saca las fichas que se encuentras en la carcel.
+      * @param fichas - el arreglo de fichas que se desea sacar de la carcel.
+      */
 	public void sacarFichasDeLaCarcel(Ficha[] fichas) {
 
 		for (int i = 0; i < fichas.length; i++) {
@@ -354,6 +410,12 @@ public class Parques implements Constantes {
 		}
 	}
 
+	
+
+    /**
+     * Este metodo mete las fichas que deben ir a la carce.
+     * @param fichas - el arreglo de fichas que se desea meter a la  carcel.
+     */
 	public void meterFichaALaCarcel(Ficha ficha) {
 
 		Casilla actual = null;
@@ -368,7 +430,11 @@ public class Parques implements Constantes {
 			}
 		}
 	}
-
+  /**
+   * Simula el movimiento de una ficha en el parques.
+   * @param ficha - la ficha que se desea mover.
+   * @param valorDado - la cantidad de casillas que se movera
+   */
 	public void moverFicha(Ficha ficha, int valorDado) {
 
 		Casilla actual = null;

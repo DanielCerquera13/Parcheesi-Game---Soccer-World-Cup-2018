@@ -118,7 +118,11 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 			laminasObtenidas[i] = false;
 		}
 	}
-
+ 
+	/**
+	 * Agrega una lamina al jugador.
+	 * @param lamina - la lamina que se desea agregar.
+	 */
 	public void agregarLamina(Lamina lamina) {
 
 		laminas.add(lamina);
@@ -131,12 +135,20 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 
 	}
 
+	/**
+	 * Modifica la cantidad de dinero que tiene el jugador.
+	 * @param dinero - la nueva cantidad de dinero.
+	 */
 	public void setDinero(int dinero) {
 
 		this.dinero = dinero;
 
 	}
-
+    
+	/**
+	 * Entrega la cantidad de dinero que tiene el jugador.
+	 * @return el dinero del jugador.
+	 */
 	public int getDinero() {
 
 		return dinero;
@@ -181,30 +193,54 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 		this.contrasena = contrasena;
 	}
 
+	/**
+	 * Entrega el album que tiene el jugador.
+	 * @return album del jugador.
+	 */
 	public Album getAlbum() {
 
 		return album;
 
 	}
-
+     
+	/**
+	 * Entrega el arreglo de laminas que tiene en su album el jugador
+	 * @return - arreglo de laminas obtenidas.
+	 */
 	public boolean[] getLaminasObtenidas() {
 
 		return laminasObtenidas;
 
 	}
-
+   
+	/**
+	 * Entrega las laminas del jugador.
+	 * @return laminas del jugador.
+	 */
 	public ArrayList<Lamina> getLaminas() {
 		return laminas;
 	}
 
+	
+	/**
+	 * Modifica las laminas que tiene el jugador, por unas nuevas.
+	 * @param laminas - la nueva lista de laminas que tendrá el jugador.
+	 */
 	public void setLaminas(ArrayList<Lamina> laminas) {
 		this.laminas = laminas;
 	}
 
+	/**
+	 * modifica el arreglo de laminas obtenidas que tiene el jugador en su album.
+	 * @param laminasObtenidas - el nuevo arreglo de laminas obtenidas.
+	 */
 	public void setLaminasObtenidas(boolean[] laminasObtenidas) {
 		this.laminasObtenidas = laminasObtenidas;
 	}
-
+     
+	/**
+	 * Ordena las laminas obtenidas del jugador en orden ascendente.
+	 */
 	public void ordenarLaminasObtenidas() {
 
 		for (int i = 0; i < laminas.size() - 1; i++) {
@@ -230,7 +266,14 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 		}
 
 	}
-
+   
+	/**
+	 * Este metodo busca una lamina en particular en las que tiene el jugador. <br>
+	 *  <b> pre: </b> num< 352.     <br>
+	 * @param num - numero de la lamina a buscar
+	 * @return la lamina que se desea busar
+	 * @throws LaminaNoObtenidaException - se lanza cuando la lamina no la tiene el jugador
+	 */
 	public Lamina buscarLamina(int num) throws LaminaNoObtenidaException {
 
 		Lamina lam = null;
