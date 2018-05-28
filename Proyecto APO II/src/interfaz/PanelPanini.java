@@ -157,6 +157,19 @@ public class PanelPanini extends JPanel implements ActionListener {
 		 
 		  inicio.getVentana().getSesionActiva().ordenarLaminasObtenidas(); 
 		  ArrayList<Lamina> laminas = inicio.getVentana().getSesionActiva().getLaminas();
+		  ArrayList<Object> definitiva= new ArrayList<>();
+		  
+		  for (int j = 0; j < laminas.size(); j++) {
+
+		  for (int i = 0; i < laminas.size(); i++) {
+				
+			  String[] separacion = laminas.get(i).getJugador().split("/");
+			int  fin = separacion[5].length()-4;
+			  definitiva.add(separacion[5].substring(0, fin).toUpperCase());
+			        
+		  }
+
+		}
 		  
 		  int numero = 1;
 		  
@@ -167,8 +180,11 @@ public class PanelPanini extends JPanel implements ActionListener {
 		  for (int i = 0; i <data.length; i++) {
 			
 			  data[i][0] = numero;
-			  data[i][1] = laminas.get(i).getJugador().substring(30, laminas.get(i).getJugador().length()-4);
+			//  data[i][1] = .get(i).getJugador().substring(30, laminas.get(i).getJugador().length()-4);
+			 // data[i][2] = laminas.get(i).getNumero();
+			  data[i][1] = definitiva.get(i);
 			  data[i][2] = laminas.get(i).getNumero();
+			  numero++;
 		}
 		  
 		  JTable tabla  = new JTable(data, columnas);
