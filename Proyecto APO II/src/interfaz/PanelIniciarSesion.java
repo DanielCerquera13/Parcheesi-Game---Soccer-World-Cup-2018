@@ -50,7 +50,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 		Font fuente = new Font("Garamond", 1, 30);
 		Font fuenteBoton = new Font("Garamond", 1, 24);
 		
-		ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/usuarios.jpg");
+		ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/usuarios.png");
 		usuarios = new JLabel(icono);
 		usuarios.setBounds(600, 570, 150, 150);		
 		add(usuarios);
@@ -64,7 +64,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 		txtUsuario.setBounds(125, 300, 400, 40);
 		txtUsuario.setFont(fuente);
 
-		contrasena = new JLabel("Contraseï¿½a");
+		contrasena = new JLabel("Contraseña");
 		contrasena.setFont(fuente);
 		contrasena.setForeground(Color.WHITE);
 		contrasena.setBounds(125, 365, 400, 40);
@@ -95,7 +95,6 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 		
 
 	}
-	
 
 	public void listaUsuarios() {
 		
