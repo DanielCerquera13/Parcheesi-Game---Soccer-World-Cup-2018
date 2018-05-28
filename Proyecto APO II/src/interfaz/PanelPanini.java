@@ -167,7 +167,7 @@ public class PanelPanini extends JPanel implements ActionListener {
 		  for (int i = 0; i <data.length; i++) {
 			
 			  data[i][0] = numero;
-			  data[i][1] = laminas.get(i).getJugador().substring(0, laminas.get(i).getJugador().length()-4);
+			  data[i][1] = laminas.get(i).getJugador().substring(30, laminas.get(i).getJugador().length()-4);
 			  data[i][2] = laminas.get(i).getNumero();
 		}
 		  
@@ -177,6 +177,9 @@ public class PanelPanini extends JPanel implements ActionListener {
 		  tabla.setFont(new Font("Garamond", 1, 16));
 		  JScrollPane scroll = new JScrollPane(tabla);
 		  scroll.setPreferredSize(new Dimension(400, 300));
+		  
+		  JOptionPane.showMessageDialog(null	, scroll, "lista de laminas", 1	, null);
+
 		  
 		//  tabla.setVisible(true);
 		 // tabla.isVisible();

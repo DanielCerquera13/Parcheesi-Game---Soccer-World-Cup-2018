@@ -112,6 +112,8 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 			
 			  data[i][0] = numero;
 			  data[i][1] = laminas.get(i).getNickName();
+			  
+			  numero++;
 		}
 		  
 		  JTable tabla  = new JTable(data, columnas);
@@ -120,7 +122,9 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 		  tabla.setFont(new Font("Garamond", 1, 16));
 		  JScrollPane scroll = new JScrollPane(tabla);
 		  scroll.setPreferredSize(new Dimension(400, 300));
-
+		  
+       
+		  JOptionPane.showMessageDialog(null	, scroll, "lista de usuarios", 1	, null);
 	}
 	public VentanaPrincipal getVentana() {
 
@@ -217,6 +221,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener, MouseL
 		
 		if(e.getX()>600 && e.getX()<750 && e.getY()>570 && e.getY()<720) {
 			listaUsuarios();
+			
 			
 		}
 	}
