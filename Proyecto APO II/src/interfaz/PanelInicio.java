@@ -24,6 +24,8 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	private JButton butJugar;
 	private JLabel labLaminas;
 	private JLabel labAlbum;
+	private JLabel labTituloAlbum;
+	private JLabel labTituloLaminas;
 	private PanelPanini panini; 
 	private PanelTienda tienda;
 
@@ -53,7 +55,18 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	butJugar.setActionCommand(JUGAR);
 	butJugar.addActionListener(this);
 	add(butJugar);
-
+	
+	labTituloAlbum = new JLabel(" ¡Completa el album! ");
+	labTituloAlbum.setBounds(50, 80, 500, 80);
+	labTituloAlbum.setFont(new Font(" Garamond ", 1, 35));
+	labTituloAlbum.setForeground(Color.BLACK);
+	add(labTituloAlbum);
+	
+	labTituloLaminas = new JLabel(" ¡Consigue laminas! ");
+	labTituloLaminas.setBounds(920, 80, 500, 80);
+	labTituloLaminas.setFont(new Font(" Garamond ", 1, 35));
+	labTituloLaminas.setForeground(Color.BLACK);
+	add(labTituloLaminas);
 	}
 
 	@Override
@@ -64,10 +77,10 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 		g.drawImage(FONDO, 0, 0, null);
 		g.drawImage(LOGO, 450, 10, null);
 		g.drawImage(ALBUM, 95, 175, null);
-		g.drawImage(LAMINA, 1000, 250, null);
-		g.drawImage(LAMINA, 975, 285, null);
-		g.drawImage(LAMINA, 1065, 285, null);
-		g.drawImage(LAMINA, 1035, 315, null);
+		g.drawImage(LAMINA, 1000, 230, null);
+		g.drawImage(LAMINA, 975, 245, null);
+		g.drawImage(LAMINA, 1065, 245, null);
+		g.drawImage(LAMINA, 1035, 285, null);
 
 		repaint();
 
@@ -147,3 +160,4 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	}
 
 }
+
