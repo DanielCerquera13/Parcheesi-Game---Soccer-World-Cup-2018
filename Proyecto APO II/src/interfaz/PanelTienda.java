@@ -111,7 +111,7 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 		jugador.agregarLamina(laminaRandom);	
 	   ImageIcon icono = new ImageIcon(laminaRandom.getJugador());
 		    laminaPrincipal.setIcon(icono);
-		    laminaPrincipal.setBounds(530, 200, 240, 300);
+		    laminaPrincipal.setBounds(580, 200, 240, 300);
 		    
 		    dinero = dinero - 100; 
 		    jugador.setDinero(dinero);
@@ -166,13 +166,14 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 			
 			  ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/lamina.png");
 			    laminaPrincipal.setIcon(icono);
-			    laminaPrincipal.setBounds(530, 200, 240, 300);
+			    laminaPrincipal.setBounds(555, 200, 240, 300);
        }
        
        else if (a.equals(COMPRAR)) {
     	      
     	   ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/lamina.png");
    	    laminaPrincipal.setIcon(icono);
+   	 laminaPrincipal.setBounds(530, 200, 240, 300);
        }
 	}
 
