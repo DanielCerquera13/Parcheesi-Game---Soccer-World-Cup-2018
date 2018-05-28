@@ -233,7 +233,7 @@ public class Equipo {
 
 	}
 
-	public boolean fichaEnLaCarcel() {
+	public boolean fichasEnLaCarcel() {
 
 		boolean si = false;
 
@@ -251,13 +251,13 @@ public class Equipo {
 
 	}
 
-	public void decidirPar(int decision) {
+	public void decidirPar(Ficha ficha,int decision, int valorDado) {
 
-		if (fichaEnLaCarcel()) {
+		if (fichasEnLaCarcel()) {
 
 			if (decision == 0) {
 
-				// Mover
+			moverFicha(ficha, valorDado);	
 
 			}
 
@@ -278,6 +278,16 @@ public class Equipo {
 		}
 	}
 
+	public void moverFicha(Ficha ficha, int valorDado) {
+		
+	ficha.mover(valorDado);	
+		
+	}
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
 
 		Equipo e = new Equipo("", "Colombia", 4);
@@ -295,7 +305,7 @@ public class Equipo {
 		int i = JOptionPane.showOptionDialog(null, "Que desea hacer?", "Opcion Par", JOptionPane.DEFAULT_OPTION,
 				JOptionPane.QUESTION_MESSAGE, null, ops, ops[0]);
 
-		e.decidirPar(i);
+//		e.decidirPar(i);
 
 		System.out.println(e.getFichas()[2].isLibre());
 		System.out.println(e.getFichas()[2].getPosicion());

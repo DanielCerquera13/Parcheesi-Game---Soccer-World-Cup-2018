@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import java.util.Arrays;
+
 public class Casilla {
 
 	/**
@@ -23,7 +25,7 @@ public class Casilla {
 	 */
 	public Casilla(int tipo, int posicion) {
 
-		fichas = new Ficha[10];
+		fichas = new Ficha[8];
 		this.tipo = tipo;
 		this.posicion = posicion;
 	}
@@ -84,6 +86,12 @@ public class Casilla {
 		return yes;
 
 	}
+	
+	public void agregarFicha(Ficha ficha) {
+		
+		
+		
+	}
 
 	/**
 	 * encuentra cuantas paginas del arreglo se encuentran ocupadas<br>
@@ -107,7 +115,7 @@ public class Casilla {
 
 	public String toString() {
 
-		return "" + posicion;
+		return "" + posicion + Arrays.toString(fichas);
 
 	}
 

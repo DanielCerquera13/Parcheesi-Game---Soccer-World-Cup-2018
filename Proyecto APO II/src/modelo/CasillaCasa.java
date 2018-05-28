@@ -33,6 +33,8 @@ public class CasillaCasa extends Casilla {
 	 * <b> post: </b> La ficha es agregada correctamente.
 	 * @param ficha - La nueva ficha que se va a agregar.<br>
 	 */
+	
+	@Override
 	public void agregarFicha(Ficha ficha) {
 
 		int tamanio = casilllasOcupadas();
@@ -45,7 +47,7 @@ public class CasillaCasa extends Casilla {
 
 			else if (hayFichas() == true) {
 
-				getFichas()[tamanio + 1] = ficha;
+				getFichas()[tamanio] = ficha;
 
 			}
 		}

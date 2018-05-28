@@ -76,27 +76,17 @@ public class Parques implements Constantes {
 			}
 
 		}
-		
-		
+
 		return si;
 
 	}
 
-	
-	
-	
-	
 	public void asignarTurnos() {
-			
-	Equipo e = getTurnoActual();
-		
-		
-	
-	
-		
+
+		Equipo e = getTurnoActual();
+
 	}
-	
-	
+
 	/**
 	 * Modifica el arreglo de equipos por uno nuevo.
 	 * 
@@ -343,15 +333,146 @@ public class Parques implements Constantes {
 		rellenarZonaCuatro();
 
 	}
+	
+	public void probarCasillaSalida(Ficha fichaUno, Ficha fichaDos, Ficha fichaTres) {
+		
+	moverFicha(fichaUno, 72);
+	moverFicha(fichaDos, 48);
+	moverFicha(fichaTres, 24);
+	
+	
+	rellenarZonas();
+		
+	}
+	
+
+	public void sacarFichasDeLaCarcel(Ficha[] fichas) {
+
+		for (int i = 0; i < fichas.length; i++) {
+			fichas[i].salirDeLaCarcel();
+			casillas[fichas[i].getPosicion()].agregarFicha(fichas[i]);
+		}
+	}
+
+	public void meterFichaALaCarcel(Ficha ficha) {
+
+		Casilla actual = null;
+		int posActual = ficha.getPosicion();		
+		
+		for (int i = 0; i < casillas[ficha.getPosicion()].getFichas().length; i++) {
+
+			if (casillas[ficha.getPosicion()].getFichas()[i] == ficha) {
+			
+				casillas[ficha.getPosicion()].getFichas()[i] = null;
+				ficha.irALaCarcel();
+			}
+		}
+	}
+
+	public void moverFicha(Ficha ficha, int valorDado) {
+
+		Casilla actual = null;
+		Casilla destino = null;
+		int posActual = ficha.getPosicion();
+
+		if (casillas[posActual].hayFichas()) {
+
+			for (int j = 0; j < casillas[posActual].getFichas().length; j++) {
+
+				if (casillas[posActual].getFichas()[j] == ficha) {
+
+					// Casilla en la que se encuentra la ficha que llega por parametro
+					actual = casillas[posActual];
+					// Casilla destino
+					destino = casillas[posActual + valorDado];
+
+					// En la casilla que se encontraba la ficha ya no lo estara
+					actual.getFichas()[j] = null;
+
+					// Se modifica la posicion de la ficha "moviendola"
+					ficha.mover(valorDado);
+
+					// Se agrega la ficha en la casilla destino
+					destino.agregarFicha(ficha);
+
+				}
+
+			}
+
+		}
+		// Se actualizan las zonas con el arreglo casillas de parques.
+		rellenarZonas();
+
+	}
 
 	public static void main(String[] args) {
 
+		// Ficha fichaUno = new Ficha("UNO", 1);
+		// Ficha fichaDos = new Ficha("UNO", 1);
+		//
+		// Ficha[] fichas = { fichaUno, fichaDos };
+		//
+		// for (int i = 0; i < fichas.length; i++) {
+		//
+		// System.out.println(fichas[i] == fichaUno);
+		//
+		// }
+
+		// System.out.println(fichaUno == fichaDos);
+
 		Parques p = new Parques();
 
+		Equipo e = new Equipo("", "", 1);
+		Equipo e2 = new Equipo("", "", 2);
+		Equipo e3 = new Equipo("", "", 3);
+		Equipo e4 = new Equipo("", "", 4);
+
+		p.sacarFichasDeLaCarcel(e2.getFichas());
+		p.sacarFichasDeLaCarcel(e.getFichas());
+		p.sacarFichasDeLaCarcel(e3.getFichas());			
+		
+		
+
+//		p.probarCasillaSalida(e.getFichas()[0], e2.getFichas()[0], e3.getFichas()[0]);
+		
+		p.moverFicha(e.getFichas()[0], 72);
+//		p.moverFicha(e.getFichas()[1], 72);
+		p.moverFicha(e2.getFichas()[0], 48);
+		p.moverFicha(e3.getFichas()[0], 24);
+		
+//		p.meterFichaALaCarcel(e4.getFichas()[0]);
+		
+		
+		
 		System.out.println(Arrays.deepToString(p.getZonaUno()));
 		System.out.println(Arrays.deepToString(p.getZonaDos()));
 		System.out.println(Arrays.deepToString(p.getZonaTres()));
 		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+		
+		System.out.println();
+		
+		
+		p.sacarFichasDeLaCarcel(e4.getFichas());
+		
+//
+//		p.moverFicha(e.getFichas()[0], 26);
+//
+		System.out.println();
+//
+		System.out.println(Arrays.deepToString(p.getZonaUno()));
+		System.out.println(Arrays.deepToString(p.getZonaDos()));
+		System.out.println(Arrays.deepToString(p.getZonaTres()));
+		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+//
+//		System.out.println();
+//
+//		p.moverFicha(e2.getFichas()[0], 2);
+//
+//		System.out.println(Arrays.deepToString(p.getZonaUno()));
+//		System.out.println(Arrays.deepToString(p.getZonaDos()));
+//		System.out.println(Arrays.deepToString(p.getZonaTres()));
+//		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+
 	}
 
 }

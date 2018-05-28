@@ -73,7 +73,7 @@ public class Ficha {
 	 * @param posicion
 	 *            Posicion a la que se desea mover.
 	 */
-	public void setPosicion(int posicion) {
+	public void setPosicion(Integer posicion) {
 		this.posicion = posicion;
 	}
 
@@ -93,7 +93,14 @@ public class Ficha {
 	 *            Valor de verdad al que se desea cambair.
 	 */
 	public void setLibre(boolean libre) {
+		
 		this.libre = libre;
+		
+		if(libre == false) {
+			
+		setPosicion(null);	
+			
+		}
 	}
 
 	/**
@@ -147,8 +154,15 @@ public class Ficha {
 
 	}
 
-	public void mover() {
+	public void irALaCarcel() {
+		
+	this.posicion = null;
+		
+	}
+	
+	public void mover(int valorDado) {
 			
+	posicion = posicion+valorDado;		
 		
 	}
 	
@@ -158,5 +172,10 @@ public class Ficha {
 		
 	}
 	
-	
+	@Override
+	public String toString() {
+		
+	return "Hola soy "+tipo;	
+		
+	}
 }

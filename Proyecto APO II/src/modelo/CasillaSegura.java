@@ -24,6 +24,7 @@ public class CasillaSegura extends Casilla {
 	 * @param ficha
 	 *            - La nueva ficha que se va a agregar.<br>
 	 */
+	@Override
 	public void agregarFicha(Ficha ficha) {
 
 		int tamanio = casilllasOcupadas();
@@ -33,7 +34,7 @@ public class CasillaSegura extends Casilla {
 
 		else if (hayFichas() == true) {
 
-			getFichas()[tamanio + 1] = ficha;
+			getFichas()[tamanio] = ficha;
 
 		}
 
