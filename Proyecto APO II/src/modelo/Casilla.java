@@ -107,7 +107,7 @@ public class Casilla {
 
 	public String toString() {
 
-		return "" + tipo;
+		return "" + posicion;
 
 	}
 

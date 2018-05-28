@@ -127,221 +127,221 @@ public class PanelEscogerEquipo extends JPanel implements ActionListener, MouseL
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/alemaniaRec.png";
 			String seleccion="ALEMANIA";
-			Equipo alemania=new Equipo(ruta,seleccion);
+			Equipo alemania=null;
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/arabia sauditaRec.png";
 			String seleccion="ARABIA SAUDITA";
-			Equipo arabia=new Equipo(ruta,seleccion);
+			Equipo arabia=null;
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/argentinaRec.png";
 			String seleccion="ARGENTINA";
-			Equipo argentina=new Equipo(ruta,seleccion);
+			Equipo argentina=null;
 			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/australiaRec.png";
 			String seleccion="AUSTRALIA";
-			Equipo australia=new Equipo(ruta,seleccion);
+			Equipo australia=null;
 			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/belgicaRec.png";
 			String seleccion="BELGICA";
-			Equipo belgica=new Equipo(ruta,seleccion);
+			Equipo belgica=null;
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/brasilRec.png";
 			String seleccion="BRASIL";
-			Equipo brasil=new Equipo(ruta,seleccion);
+			Equipo brasil=null;
 			
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/colombiaRec.png";
 			String seleccion="COLOMBIA";
-			Equipo colombia=new Equipo(ruta,seleccion);
+			Equipo colombia=null;
 		
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=280 && e.getY()<=350)) {
 			String ruta="Archivos/imagenes/banderasRec/coreaRec.png";
 			String seleccion="COREA DEL SUR";
-			Equipo corea=new Equipo(ruta,seleccion);
+			Equipo corea=null;
 			
 		}
 		
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/costa ricaRec.png";
 			String seleccion="COSTA RICA";
-			Equipo costa=new Equipo(ruta,seleccion);
+			Equipo costa=null;
 			
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/croaciaRec.png";
 			String seleccion="CROACIA";
-			Equipo croacia=new Equipo(ruta,seleccion);
+			Equipo croacia=null;
 			
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/dinamarcaRec.png";
 			String seleccion="DINAMARCA";
-			Equipo dinamarca=new Equipo(ruta,seleccion);
+			Equipo dinamarca=null;
 			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/egiptoRec.png";
 			String seleccion="EGIPTO";
-			Equipo egipto=new Equipo(ruta,seleccion);
+			Equipo egipto=null;
 			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/espanaRec.png";
 			String seleccion="ESPAÑA";
-			Equipo espana=new Equipo(ruta,seleccion);
+			Equipo espana=null;
 			
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/franciaRec.png";
 			String seleccion="FRANCIA";
-			Equipo francia=new Equipo(ruta,seleccion);
+			Equipo francia=null;
 	
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/inglaterraRec.png";
 			String seleccion="INGLATERRA";
-			Equipo inglaterra=new Equipo(ruta,seleccion);
+			Equipo inglaterra=null;
 			
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=380 && e.getY()<=450)) {
 			String ruta="Archivos/imagenes/banderasRec/iranRec.png";
 			String seleccion="IRAN";
-			Equipo iran=new Equipo(ruta,seleccion);
+			Equipo iran=null;
 			
 		}
 		
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/irlandaRec.png";
 			String seleccion="IRLANDA";
-			Equipo irlanda=new Equipo(ruta,seleccion);
+			Equipo irlanda=null;
 			
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/japonRec.png";
 			String seleccion="JAPON";
-			Equipo japon=new Equipo(ruta,seleccion);
+			Equipo japon=null;
 			
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/marruecosRec.png";
 			String seleccion="MARRUECOS";
-			Equipo marruecos=new Equipo(ruta,seleccion);
+			Equipo marruecos=null;
 			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/mexicoRec.png";
 			String seleccion="MEXICO";
-			Equipo mexico=new Equipo(ruta,seleccion);
+			Equipo mexico=null;
 			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/nigeriaRec.png";
 			String seleccion="NIGERIA";
-			Equipo nigeria=new Equipo(ruta,seleccion);
+			Equipo nigeria=null;
 			
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/panamaRec.png";
 			String seleccion="PANAMA";
-			Equipo panama=new Equipo(ruta,seleccion);
+			Equipo panama=null;
 			
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/peruRec.png";
 			String seleccion="PERU";
-			Equipo peru=new Equipo(ruta,seleccion);
+			Equipo peru=null;
 			
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=480 && e.getY()<=550)) {
 			String ruta="Archivos/imagenes/banderasRec/poloniaRec.png";
 			String seleccion="POLONIA";
-			Equipo polonia=new Equipo(ruta,seleccion);
+			Equipo polonia=null;
 			
 		}
 		
 		if((e.getX()>=250 && e.getX()<=320)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/portugalRec.png";
 			String seleccion="PORTUGAL";
-			Equipo portugal=new Equipo(ruta,seleccion);
+			Equipo portugal=null;
 			
 		}
 		
 		if((e.getX()>=350 && e.getX()<=420)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/rusiaRec.png";
 			String seleccion="RUSIA";
-			Equipo rusia=new Equipo(ruta,seleccion);
+			Equipo rusia=null;
 			
 		}
 		
 		if((e.getX()>=450 && e.getX()<=520)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/senegalRec.png";
 			String seleccion="SENEGAL";
-			Equipo senegal=new Equipo(ruta,seleccion);
+			Equipo senegal=null;
 			
 		}
 		
 		if((e.getX()>=550 && e.getX()<=620)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/serbiaRec.png";
 			String seleccion="SERBIA";
-			Equipo serbia=new Equipo(ruta,seleccion);
+			Equipo serbia=null;
 			
 		}
 		
 		if((e.getX()>=650 && e.getX()<=720)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/sueciaRec.png";
 			String seleccion="SUECIA";
-			Equipo suecia=new Equipo(ruta,seleccion);
+			Equipo suecia=null;
 			
 		}
 		
 		if((e.getX()>=750 && e.getX()<=820)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/suizaRec.png";
 			String seleccion="SUIZA";
-			Equipo suiza=new Equipo(ruta,seleccion);
+			Equipo suiza=null;
 			
 		}
 		
 		if((e.getX()>=850 && e.getX()<=920)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/turquiaRec.png";
 			String seleccion="TURQUIA";
-			Equipo turquia=new Equipo(ruta,seleccion);
+			Equipo turquia=null;
 			
 		}
 		
 		if((e.getX()>=950 && e.getX()<=1020)&&(e.getY()>=580 && e.getY()<=650)) {
 			String ruta="Archivos/imagenes/banderasRec/uruguayRec.png";
 			String seleccion="URUGUAY";
-			Equipo uruguay=new Equipo(ruta,seleccion);
+			Equipo uruguay=null;
 			System.out.println("URUGUAY");
 		}
 		
