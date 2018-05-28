@@ -135,6 +135,12 @@ public class ParquesMundial {
 		return si;
 	}
 
+	/**
+	 * Este metodo busca un usuario entre los que estan registrados.
+	 * @param nickname - nombre del usuario que se desea buscar.
+	 * @return - el jugador buscado.
+	 * @throws UsuarioNoRegistradoException - se lanza cuando el jugador a buscar no se encuentra en la lista.
+	 */
 	public Jugador buscarUsuario(String nickname) throws UsuarioNoRegistradoException {
 
 		Jugador jug = null;
@@ -194,7 +200,7 @@ public class ParquesMundial {
 	}
 
 	/**
-	 * Permite serializar el programa.
+	 * Permite serializar el programa, en este caso, los usuarios.
 	 */
 	public void guardar() {
 
@@ -232,6 +238,10 @@ public class ParquesMundial {
 
 	}
 
+	 /**
+	  * Permite deserializar el programa, recuperando los datos de los usuarios.
+	  * 
+	  */
 	public void recuperarData() {
 
 		FileInputStream fS = null;
@@ -273,6 +283,9 @@ public class ParquesMundial {
 
 	}
 
+	 /**
+	  * Ordena los usuarios de manera ascendente.
+	  */
 	public void ordenarUsuarios() {
 
 		for (int i = 0; i < usuarios.size() - 1; i++) {

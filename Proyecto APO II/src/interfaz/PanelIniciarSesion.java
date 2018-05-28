@@ -8,8 +8,11 @@ import modelo.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
-public class PanelIniciarSesion extends JPanel implements ActionListener {
+public class PanelIniciarSesion extends JPanel implements ActionListener, MouseListener {
 
 	public final static Image FONDO = Toolkit.getDefaultToolkit()
 			.createImage("./Archivos/imagenes/recursos/fondoDos.png");
@@ -26,6 +29,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 	private JPasswordField pass;
 	private JButton butIniciar;
 	private JButton butCancelar;
+	private JLabel usuarios;
 
 	public PanelIniciarSesion(PanelInicial inicial) {
 
@@ -36,6 +40,8 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		setLayout(null);
 
 		ajustarComponentes();
+		
+		addMouseListener(this);
 
 	}
 
@@ -43,6 +49,11 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 
 		Font fuente = new Font("Garamond", 1, 30);
 		Font fuenteBoton = new Font("Garamond", 1, 24);
+		
+		ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/usuarios.jpg");
+		usuarios = new JLabel(icono);
+		usuarios.setBounds(600, 570, 150, 150);		
+		add(usuarios);
 
 		labUsuario = new JLabel("Usuario");
 		labUsuario.setFont(fuente);
@@ -53,7 +64,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		txtUsuario.setBounds(125, 300, 400, 40);
 		txtUsuario.setFont(fuente);
 
-		contrasena = new JLabel("Contraseña");
+		contrasena = new JLabel("Contraseï¿½a");
 		contrasena.setFont(fuente);
 		contrasena.setForeground(Color.WHITE);
 		contrasena.setBounds(125, 365, 400, 40);
@@ -80,9 +91,41 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 		add(pass);
 		add(butIniciar);
 		add(butCancelar);
+		
+		
 
 	}
+	
 
+	public void listaUsuarios() {
+		
+		 inicio.getVentana().getParquesMundial().ordenarUsuarios();
+		  ArrayList<Jugador> laminas = inicio.getVentana().getParquesMundial().getUsuarios();
+		  
+		  int numero = 1;
+		  
+		  
+		  String[] columnas = {"#", "Nombre"};
+		  Object[][] data = new Object[laminas.size()][laminas.size()];
+		  
+		  for (int i = 0; i <data.length; i++) {
+			
+			  data[i][0] = numero;
+			  data[i][1] = laminas.get(i).getNickName();
+			  
+			  numero++;
+		}
+		  
+		  JTable tabla  = new JTable(data, columnas);
+		  tabla.setEnabled(false);
+		  tabla.getTableHeader().setReorderingAllowed(false);
+		  tabla.setFont(new Font("Garamond", 1, 16));
+		  JScrollPane scroll = new JScrollPane(tabla);
+		  scroll.setPreferredSize(new Dimension(400, 300));
+		  
+       
+		  JOptionPane.showMessageDialog(null	, scroll, "lista de usuarios", 1	, null);
+	}
 	public VentanaPrincipal getVentana() {
 
 		return inicial.getVentana();
@@ -131,6 +174,7 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 						inicial.getVentana().remove(this);
 						inicial.getVentana().add(inicio);
 						inicial.getVentana().refresh();
+                         inicio.ajustarComponentes();
 						
 
 						txtUsuario.setText("");
@@ -167,5 +211,42 @@ public class PanelIniciarSesion extends JPanel implements ActionListener {
 
 		}
 
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+            
+		System.out.println(e.getX());
+		System.out.println(e.getY());
+		
+		if(e.getX()>600 && e.getX()<750 && e.getY()>570 && e.getY()<720) {
+			listaUsuarios();
+			
+			
+		}
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

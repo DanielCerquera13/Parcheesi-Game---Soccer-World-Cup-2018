@@ -76,8 +76,8 @@ public class Lamina implements Comparable<Lamina>, Serializable{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Entrega un valor que identifica si la lamina ya la tiene el jugador o no.
+	 * @return true si ya la tiene. false si no es asi.
 	 */
 	public boolean estaObtenida() {
 		

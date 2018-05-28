@@ -28,12 +28,13 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	private JLabel labTituloLaminas;
 	private PanelPanini panini; 
 	private PanelTienda tienda;
+    private JLabel usuario;
 
 	public PanelInicio(PanelIniciarSesion sesion) {
 
 	this.sesion = sesion;
 	setLayout(null);
-	ajustarComponentes();
+	//ajustarComponentes();
 	addMouseListener(this);
 	panini = new PanelPanini(this);
 	tienda = new PanelTienda(this);
@@ -56,17 +57,24 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	butJugar.addActionListener(this);
 	add(butJugar);
 	
-	labTituloAlbum = new JLabel(" ¡Completa el album! ");
+	labTituloAlbum = new JLabel(" Completa el album! ");
 	labTituloAlbum.setBounds(50, 80, 500, 80);
 	labTituloAlbum.setFont(new Font(" Garamond ", 1, 35));
 	labTituloAlbum.setForeground(Color.BLACK);
 	add(labTituloAlbum);
 	
-	labTituloLaminas = new JLabel(" ¡Consigue laminas! ");
+	labTituloLaminas = new JLabel(" Consigue laminas! ");
 	labTituloLaminas.setBounds(920, 80, 500, 80);
 	labTituloLaminas.setFont(new Font(" Garamond ", 1, 35));
 	labTituloLaminas.setForeground(Color.BLACK);
 	add(labTituloLaminas);
+	
+	
+	usuario = new JLabel("Bienvenido" + " " + sesion.getVentana().getSesionActiva().getNickName());
+	usuario.setFont(new Font("Garamond", 1, 60));
+	usuario.setBounds(300, 580, 800, 95);
+	add(usuario);
+
 	}
 
 	@Override

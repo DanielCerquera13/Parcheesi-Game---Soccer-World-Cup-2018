@@ -166,13 +166,14 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 			
 			  ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/lamina.png");
 			    laminaPrincipal.setIcon(icono);
-			    laminaPrincipal.setBounds(530, 200, 240, 300);
+			    laminaPrincipal.setBounds(555, 200, 240, 300);
        }
        
        else if (a.equals(COMPRAR)) {
     	      
     	   ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/lamina.png");
    	    laminaPrincipal.setIcon(icono);
+   	 laminaPrincipal.setBounds(530, 200, 240, 300);
        }
 	}
 

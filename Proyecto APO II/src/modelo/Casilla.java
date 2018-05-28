@@ -18,6 +18,9 @@ public class Casilla {
 	 */
 	private int tipo;
 	
+	/**
+	 * Inndica la posicion de la casilla.
+	 */
 	private int posicion;
 
 	/**
@@ -31,11 +34,19 @@ public class Casilla {
 	}
 
 	
+	/**
+	 * Modifica la posicion de la casilla.
+	 * @param posicion - la nueva posicion de la casilla.
+	 */
 	public void setPosicion(int posicion) {
 		
 	this.posicion = posicion;	
 	}
 	
+	/**
+	 * Entega la posicion de la casilla.
+	 * @return posicion de la casilla.
+	 */
 	public int getPosicion() {
 		
 	return posicion;	
@@ -87,6 +98,10 @@ public class Casilla {
 
 	}
 	
+	/**
+	 * Agrega una ficha a la casilla. este metodo se utilzará en los hilos del programa.
+	 * @param ficha - la ficha que se desea agregar.
+	 */
 	public void agregarFicha(Ficha ficha) {
 		
 		

@@ -63,6 +63,7 @@ public class VentanaPrincipal extends JFrame {
 	}
 	
 	
+	 
 	public Jugador buscarUsuario(String nickname) throws UsuarioNoRegistradoException {
 		
 		

@@ -4,14 +4,13 @@ import modelo.*;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-import modelo.Pagina;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class PanelPanini extends JPanel implements ActionListener {
 
@@ -19,8 +18,11 @@ public class PanelPanini extends JPanel implements ActionListener {
 			.createImage("./Archivos/imagenes/recursos/fondoPrincipal.jpg");
 
 	public final static String ANTERIOR = "ANTERIOR";
+	public final static String LAMINAS = "MIS LAMINAS";
+
 	public final static String SIGUIENTE = "SIGUIENTE";
 	public final static String SALIR = "SALIR";
+	
 
 	private PanelInicio inicio;
 	private JButton salir;
@@ -40,6 +42,7 @@ public class PanelPanini extends JPanel implements ActionListener {
 	private JLabel laminaNueve;
 	private JLabel laminaDiez;
 	private JLabel laminaOnce;
+	private JButton lamina;
 
 	public PanelPanini(PanelInicio inicio) {
 
@@ -137,13 +140,70 @@ public class PanelPanini extends JPanel implements ActionListener {
 		laminaOnce.setBounds(970, 390, 160, 220);
 		add(laminaOnce);
 		// dsa
+		
+		lamina = new JButton(LAMINAS);
+		lamina.addActionListener(this);
+		lamina.setActionCommand(LAMINAS);
+		lamina.setBounds(700, 45, 180, 60);
+		add(lamina);
+		
 
 		inicializar();
 	}
+        
+	
+	
+	public void listaLaminas() {
+		 
+		  inicio.getVentana().getSesionActiva().ordenarLaminasObtenidas(); 
+		  ArrayList<Lamina> laminas = inicio.getVentana().getSesionActiva().getLaminas();
+		  ArrayList<Object> definitiva= new ArrayList<>();
+		  
+		  for (int j = 0; j < laminas.size(); j++) {
 
+		  for (int i = 0; i < laminas.size(); i++) {
+				
+			  String[] separacion = laminas.get(i).getJugador().split("/");
+			int  fin = separacion[5].length()-4;
+			  definitiva.add(separacion[5].substring(0, fin).toUpperCase());
+			        
+		  }
+
+		}
+		  
+		  int numero = 1;
+		  
+		  
+		  String[] columnas = {"#", "Nombre", "Numero"};
+		  Object[][] data = new Object[laminas.size()][laminas.size()];
+		  
+		  for (int i = 0; i <data.length; i++) {
+			
+			  data[i][0] = numero;
+			//  data[i][1] = .get(i).getJugador().substring(30, laminas.get(i).getJugador().length()-4);
+			 // data[i][2] = laminas.get(i).getNumero();
+			  data[i][1] = definitiva.get(i);
+			  data[i][2] = laminas.get(i).getNumero();
+			  numero++;
+		}
+		  
+		  JTable tabla  = new JTable(data, columnas);
+		  tabla.setEnabled(false);
+		  tabla.getTableHeader().setReorderingAllowed(false);
+		  tabla.setFont(new Font("Garamond", 1, 16));
+		  JScrollPane scroll = new JScrollPane(tabla);
+		  scroll.setPreferredSize(new Dimension(400, 300));
+		  
+		  JOptionPane.showMessageDialog(null	, scroll, "lista de laminas", 1	, null);
+
+		  
+		//  tabla.setVisible(true);
+		 // tabla.isVisible();
+	}
 	public void inicializar() {
 
 		Jugador activo = inicio.getVentana().getSesionActiva();
+		
 		
 		if(activo!=null) {
 		Album album = inicio.getVentana().getParquesMundial().getSesionActiva().getAlbum();
@@ -521,6 +581,16 @@ public class PanelPanini extends JPanel implements ActionListener {
 			inicio.getVentana().add(inicio);
 			inicio.getVentana().refresh();
 		}
+		if(a.equals(LAMINAS)) {
+			listaLaminas();
+		}
 	}
 
 }
+
+
+
+
+
+
+
