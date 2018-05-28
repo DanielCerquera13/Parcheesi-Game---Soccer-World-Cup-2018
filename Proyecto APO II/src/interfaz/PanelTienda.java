@@ -111,7 +111,7 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 		jugador.agregarLamina(laminaRandom);	
 	   ImageIcon icono = new ImageIcon(laminaRandom.getJugador());
 		    laminaPrincipal.setIcon(icono);
-		    laminaPrincipal.setBounds(580, 200, 240, 300);
+		    laminaPrincipal.setBounds(530, 200, 240, 300);
 		    
 		    dinero = dinero - 100; 
 		    jugador.setDinero(dinero);
