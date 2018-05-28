@@ -19,7 +19,9 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 	public final static String COMPRAR = "VOLVER A COMPRAR";
 
 	public final static Image FONDO = Toolkit.getDefaultToolkit()
-			.createImage("./Archivos/imagenes/recursos/fondoPrincipal.jpg");
+			.createImage("./Archivos/imagenes/recursos/fondoTienda.jpg");
+	public final static Image MESSI_FONDO = Toolkit.getDefaultToolkit()
+			.createImage("./Archivos/imagenes/recursos/messiFondo.png");
 	
 	private JLabel tienda;
 	private JLabel laminaPrincipal;
@@ -29,6 +31,8 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 	private JLabel flechaDos;
 	private JLabel flechaTres;
 	private JLabel flechaCuatro;
+	private JLabel messi;
+	private JLabel flechaAbajo;
     private PanelInicio inicio;
     private JButton comprar;
     
@@ -44,16 +48,16 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 	public void componentes () {
 		   
 		tienda = new JLabel("TIENDA DE LAMINAS");
-		tienda.setBounds(60, 30, 320, 60);
-		tienda.setFont(new Font(" Garamond ", 1, 26));
-		tienda.setForeground(Color.WHITE);
+		tienda.setBounds(510, 0, 320, 50);
+		tienda.setFont(new Font(" Garamond ", 1, 30));
+		tienda.setForeground(Color.BLACK);
 		add(tienda);
 		
 		 int dinero1 = inicio.getVentana().getSesionActiva().getDinero();
-		dinero = new JLabel(dinero1 + "");
-		dinero.setBounds(980, 30, 320, 60);
+		dinero = new JLabel(dinero1 + "$");
+		dinero.setBounds(620, 500, 320, 60);
 		dinero.setFont(new Font(" Garamond ", 1, 40));
-		dinero.setForeground(Color.WHITE);
+		dinero.setForeground(Color.RED);
 		add(dinero); 
 		
 		salir = new JButton(SALIR);
@@ -69,15 +73,15 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 	    add(laminaPrincipal);
 	    
 	    
-	    ImageIcon icono1 = new ImageIcon("Archivos/imagenes/recursos/flecha.png");
-	    flechaUno = new JLabel(icono1);
-	    flechaUno.setBounds(800, 150, 480, 280);
-	    add(flechaUno);
-	    
-	    ImageIcon icono2 = new ImageIcon("Archivos/imagenes/recursos/flecha2.png");
-	    flechaDos = new JLabel(icono2);
-	    flechaDos.setBounds(20, 150, 480, 280);
-	    add(flechaDos);
+	    ImageIcon icono1 = new ImageIcon("Archivos/imagenes/recursos/flechaAbajo.png");
+	    flechaAbajo = new JLabel(icono1);
+	    flechaAbajo.setBounds(600, 45, 100, 150);
+	    add(flechaAbajo);
+//	    
+//	    ImageIcon icono2 = new ImageIcon("Archivos/imagenes/recursos/flecha2.png");
+//	    flechaDos = new JLabel(icono2);
+//	    flechaDos.setBounds(20, 150, 480, 280);
+//	    add(flechaDos);
 		
 	    
 	    comprar = new JButton(COMPRAR);
@@ -85,9 +89,15 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 	    comprar.setActionCommand(COMPRAR);
 	    comprar.setBounds(555, 580, 200, 60);
 		add(comprar);
+		
+//		ImageIcon  iconoMessi = new ImageIcon("./Archivos/imagenes/recursos/messiFondo.png");
+//		messi = new JLabel(iconoMessi);
+//		messi.setBounds(860, 100, 405, 580);
+//		add(messi);
 	    
 	} 
-	   
+	//JSAHSDKAHDSJ   
+	
 	public void ganarLamina() {
 		
 		Jugador jugador = inicio.getVentana().getSesionActiva();
@@ -101,12 +111,12 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 		jugador.agregarLamina(laminaRandom);	
 	   ImageIcon icono = new ImageIcon(laminaRandom.getJugador());
 		    laminaPrincipal.setIcon(icono);
-		    laminaPrincipal.setBounds(550, 200, 240, 300);
+		    laminaPrincipal.setBounds(580, 200, 240, 300);
 		    
 		    dinero = dinero - 100; 
 		    jugador.setDinero(dinero);
 		    
-		    this.dinero.setText(jugador.getDinero() + "");
+		    this.dinero.setText(jugador.getDinero() + " $");
         }
         
         else {
@@ -133,9 +143,10 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 			
 		g.drawImage(FONDO, 0, 0, null);
 
-		
-	
-
+//		g.drawRect(550, 150, 280, 320);
+//	
+//		g.draw3DRect(550, 180, 220, 300, true);
+		g.drawRoundRect(550, 220, 210, 260, 80, 80);
 
 		repaint();
 		
