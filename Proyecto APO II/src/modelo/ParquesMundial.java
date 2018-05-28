@@ -284,29 +284,24 @@ public class ParquesMundial {
 	}
 
 	 /**
-	  * Ordena los usuarios de manera ascendente.
+	  * Ordena los usuarios de manera ascendente por insercion.
 	  */
 	public void ordenarUsuarios() {
 
-		for (int i = 0; i < usuarios.size() - 1; i++) {
-
-			Jugador menor = usuarios.get(i);
-			int cual = i;
-
-			for (int j = i + 1; j < usuarios.size(); j++) {
-
-				if (usuarios.get(j).compareTo(menor) < 0) {
-
-					menor = usuarios.get(j);
-					cual = j;
-
+		for (int i = 1; i < usuarios.size() - 1; i++) {
+        for (int j = 1; j>0  &&  usuarios.get(j-1).compareTo(usuarios.get(j))>0 ; j--) {
+			
+	
+			Jugador temp  = usuarios.get(j);
+            usuarios.set(j, usuarios.get(j-1));
+            usuarios.set(j-1, temp);
+            
+		
 				}
 
-			}
+			
 
-			Jugador temp = usuarios.get(i);
-			usuarios.set(i, menor);
-			usuarios.set(cual, temp);
+			
 
 		}
 
