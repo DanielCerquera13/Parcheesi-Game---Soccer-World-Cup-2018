@@ -42,6 +42,12 @@ public class ParquesMundial {
 		recuperarData();
 
 	}
+	
+	public ParquesMundial(int numero) {
+		
+		usuarios = new ArrayList<>();
+		sesionActiva = null;
+	}
 
 	/**
 	 * Permite modificar la sesion que se encuentra iniciada en el programa

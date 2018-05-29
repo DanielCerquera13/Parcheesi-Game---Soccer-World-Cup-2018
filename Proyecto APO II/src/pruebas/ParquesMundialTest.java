@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import excepciones.UsuarioNoRegistradoException;
 import excepciones.UsuarioYaRegistradoException;
 import junit.framework.TestCase;
 import modelo.Constantes;
@@ -19,17 +20,17 @@ class ParquesMundialTest extends TestCase implements Constantes {
 	public void escenario1() {
 		
 		
-		parquesMundial = new ParquesMundial();
+		parquesMundial = new ParquesMundial(1);
 		
 		
 	}
 	
 	public void escenario2() {
 		 
-		parquesMundial = new ParquesMundial();
+		parquesMundial = new ParquesMundial(1);
 		
 		Jugador jugador1 = new Jugador("juan", "1111");
-		Jugador jugador2 = new Jugador("david", "2222");
+		Jugador jugador2 = new Jugador("andres", "2222");
 		Jugador jugador3 = new Jugador("daniel", "3333");
 		Jugador jugador4 = new Jugador("ju", "44444");
 		
@@ -77,7 +78,7 @@ class ParquesMundialTest extends TestCase implements Constantes {
 		      
 		System.out.println(parquesMundial.getUsuarios().size());
 		System.out.println(tamanioUno);
-		assertEquals(5, parquesMundial.getUsuarios().size());
+		assertEquals(4, parquesMundial.getUsuarios().size());
  
 	}
 	
@@ -91,8 +92,8 @@ class ParquesMundialTest extends TestCase implements Constantes {
 		escenario1();
 		
 		Jugador jugador1 = new Jugador("daniel", "1111");
-		Jugador jugador2 = new Jugador("daniel", "2222");
-		Jugador jugador3 = new Jugador("daniel", "3333");
+		Jugador jugador2 = new Jugador("daniel2", "2222");
+		Jugador jugador3 = new Jugador("daniel3", "3333");
 		Jugador jugador4 = new Jugador("daniel", "44444");
 		
 		
@@ -106,7 +107,98 @@ class ParquesMundialTest extends TestCase implements Constantes {
 			// TODO Auto-generated catch block
            System.out.println(e.getMessage());
 		}
-		assertNotEquals(5, parquesMundial.getUsuarios().size());
+		assertNotEquals(4, parquesMundial.getUsuarios().size());
  
 	}
+	
+	
+	/**
+	 * Verifica que un usuario ya existe cuando buscamos uno que si esta en la lista.
+	 */
+	@Test
+	public void testYaExisteTrue() {
+		escenario2();
+		
+		assertTrue(parquesMundial.yaExiste("juan"));
+	}
+	
+	
+	/**
+	 * Verifica que un usuario ya existe cuando buscamos uno que si esta en la lista.
+	 */
+	@Test
+	public void testYaExisteFalse() {
+		escenario2();
+		
+		assertFalse(parquesMundial.yaExiste("uribehp"));
+	}
+	
+	
+	
+	/**
+	 * verifica si el metodo buscar funciona correctamente cuando se busca un jugador valido.
+	 */
+	@Test
+	public  void testBuscarCorrectamente() {
+		
+		escenario2();
+		
+		try {
+			Jugador prueba = parquesMundial.buscarUsuario("juan");
+			assertEquals("juan", prueba.getNickName());
+		} catch (UsuarioNoRegistradoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	
+
+	/**
+	 * verifica si el metodo buscar funciona correctamente cuando se busca un jugador invalido.
+	 */
+	@Test
+	public  void testBuscarInCorrectamente() {
+		
+		escenario2();
+		
+		try {
+			Jugador prueba = parquesMundial.buscarUsuario("petrosky");
+			assertEquals("petrosky", prueba.getNickName());
+		} catch (UsuarioNoRegistradoException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		
+		
+	}
+	
+	
+	/**
+	 * verifica si los usuarios se encuentran ordenados.
+	 */
+
+	@Test
+	public void testOrdenar() {
+		
+		escenario2();
+		
+		parquesMundial.ordenarUsuarios();
+		System.out.println(parquesMundial.getUsuarios().get(0).getNickName());
+		assertEquals("andres", parquesMundial.getUsuarios().get(0).getNickName());
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
