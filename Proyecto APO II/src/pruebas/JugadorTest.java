@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import excepciones.LaminaNoObtenidaException;
 import junit.framework.TestCase;
 import modelo.Album;
 import modelo.Constantes;
@@ -22,6 +23,21 @@ class JugadorTest extends TestCase implements Constantes{
 				
 				album = jugador.getAlbum();
 	
+	}
+	
+	
+	public void escenario2() {
+		jugador = new Jugador("juan", "1234");
+		
+	Lamina lamina1 = new Lamina("messi", 4);
+	Lamina lamina2 = new Lamina("james", 3);
+	Lamina lamina3 = new Lamina("falcao", 2);
+	Lamina lamina4 = new Lamina("salah", 1);
+
+	jugador.agregarLamina(lamina1);
+	jugador.agregarLamina(lamina2);
+	jugador.agregarLamina(lamina3);
+	jugador.agregarLamina(lamina4);
 	}
 	
 	/**
@@ -121,5 +137,52 @@ class JugadorTest extends TestCase implements Constantes{
 		
 	}
 	
+	/**
+	 * verifica que se ordena correctamente las laminas
+	 * 
+	 */
+	@Test
+	public void testOrdenar() {
+		
+		escenario2();
+		
+		
+		jugador.ordenarLaminasObtenidas();
+		assertEquals("salah", jugador.getLaminas().get(0).getJugador());
+	}
+	
+	/**
+	 * verifica que si se busca una lamina correctamente cuando existe.
+	 */
+      @Test
+      public void testBuscarCorrectamente() {
+    	       
+    	  escenario2();
+    	  
+    	  try {
+			Lamina lamina = jugador.buscarLamina(1);
+			assertEquals("salah", lamina.getJugador());
+		} catch (LaminaNoObtenidaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+      }
+      
 
+  	/**
+  	 * verifica que no se busca una lamina correctamente cuando  no existe.
+  	 */
+        @Test
+        public void testBuscarInCorrectamente() {
+      	       
+      	  escenario2();
+      	  
+      	  try {
+  			Lamina lamina = jugador.buscarLamina(5);
+  			assertNotEquals("salah", lamina.getJugador());
+  		} catch (LaminaNoObtenidaException e) {
+  			// TODO Auto-generated catch block
+  			System.out.println(e.getMessage());
+  		}
+        }
 }
