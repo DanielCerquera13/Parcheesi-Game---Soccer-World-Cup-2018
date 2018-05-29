@@ -212,8 +212,8 @@ public class Equipo {
 	}
     
 	/**
-	 * Verifica si el jugador logra sacar tres pares seguidos.
-	 * @return True si saco 3 pares, False si no fue asi.
+	 * Verifica si el jugador logra sacar las fichas de la carcel.
+	 * @return True si realizo sus tres tiros, False si no fue asi.
 	 */
 	public boolean verificarTresTiros() {
 
