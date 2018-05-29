@@ -34,8 +34,7 @@ public class PanelParques extends JPanel {
 
 		inicializarTablero();
 		refresh();
-		
-		
+
 		add(carcelCuatro);
 		add(zonaCuatro);
 		add(carcelTres);
@@ -45,10 +44,9 @@ public class PanelParques extends JPanel {
 		add(carcelUno);
 		add(zonaDos);
 		add(carcelDos);
-		
-		
-	}
 
+	}
+	
 	public void inicializarTablero() {
 
 		carcelUno = new JPanel();
@@ -74,9 +72,7 @@ public class PanelParques extends JPanel {
 		zonaDosBut = new JButton[8][3];
 		zonaTresBut = new JButton[3][8];
 		zonaCuatroBut = new JButton[8][3];
-		
-		
-		
+
 		rellenarTablero();
 
 	}
@@ -92,91 +88,120 @@ public class PanelParques extends JPanel {
 		for (int i = 0; i < zonaUnoBut.length; i++) {
 			for (int j = 0; j < zonaUnoBut[0].length; j++) {
 
+				
 				zonaUnoBut[i][j] = new JButton(zonaUnoC[i][j].toString());
+				zonaUnoBut[i][j].setLayout(new GridLayout(4, 2));
+				
+							
+				for(int k = 0; k<8; k++) {
+					
+				zonaUnoBut[i][j].add(new JButton());	
+					
+				}
 				zonaUnoBut[i][j].setOpaque(true);
 				
+
+				
 				zonaTresBut[i][j] = new JButton(zonaTresC[i][j].toString());
+				zonaTresBut[i][j].setLayout(new GridLayout(4, 2));
+				for(int k = 0; k<8; k++) {
+					
+				zonaTresBut[i][j].add(new JButton());	
+					
+				}
 				zonaTresBut[i][j].setOpaque(true);
 
 				zonaUno.add(zonaUnoBut[i][j]);
 				zonaTres.add(zonaTresBut[i][j]);
-				
 
 			}
 
 		}
-		
-		
-		for(int i=0; i<zonaDosBut.length;i++) {
-			
-			for(int j=0; j<zonaDosBut[0].length;j++) {
-				
-			zonaDosBut[i][j] = new JButton(zonaDosC[i][j].toString());
-			zonaDosBut[i][j].setOpaque(true);
-			
-			
-			zonaCuatroBut[i][j] = new JButton(zonaCuatroC[i][j].toString());
-			zonaCuatroBut[i][j].setOpaque(true);
-			
-			zonaDos.add(zonaDosBut[i][j]);
-			zonaCuatro.add(zonaCuatroBut[i][j]);
-			
-				
-			}
-			
-			
-		}
-	}
-		
-		public void actualizarTablero() {
-			
-			
-			Casilla[][] zonaUnoC = inicio.getVentana().getZonaUno();
-			Casilla[][] zonaDosC = inicio.getVentana().getZonaDos();
-			Casilla[][] zonaTresC = inicio.getVentana().getZonaTres();
-			Casilla[][] zonaCuatroC = inicio.getVentana().getZonaCuatro();
-			
-			// Rellena la zona Uno
-			for (int i = 0; i < zonaUnoBut.length; i++) {
-				for (int j = 0; j < zonaUnoBut[0].length; j++) {
 
-					zonaUnoBut[i][j].setText(zonaUnoC[i][j].toString());
-					zonaUnoBut[i][j].setOpaque(true);
+		for (int i = 0; i < zonaDosBut.length; i++) {
+
+			for (int j = 0; j < zonaDosBut[0].length; j++) {
+
+				
+				zonaDosBut[i][j] = new JButton(zonaDosC[i][j].toString());
+				zonaDosBut[i][j].setLayout(new GridLayout(2, 4));
+				for(int k = 0 ; k<8; k++) {
 					
-					zonaTresBut[i][j].setText(zonaTresC[i][j].toString());
-					zonaTresBut[i][j].setOpaque(true);
-				
-
+				zonaDosBut[i][j].add(new JButton());	
+					
 				}
-
-			}
-			
-			
-			for(int i=0; i<zonaDosBut.length;i++) {
-				
-				for(int j=0; j<zonaDosBut[0].length;j++) {
-					
-				zonaDosBut[i][j].setText(zonaDosC[i][j].toString());
 				zonaDosBut[i][j].setOpaque(true);
-				
-				
-				zonaCuatroBut[i][j].setText(zonaCuatroC[i][j].toString());
+
+							
+			
+				zonaCuatroBut[i][j] = new JButton(zonaCuatroC[i][j].toString());
+				zonaCuatroBut[i][j].setLayout(new GridLayout(2, 4));
+				for(int k = 0 ; k<8; k++) {
+					
+				zonaCuatroBut[i][j].add(new JButton());	
+					
+				}
 				zonaCuatroBut[i][j].setOpaque(true);
-				
+
 				zonaDos.add(zonaDosBut[i][j]);
 				zonaCuatro.add(zonaCuatroBut[i][j]);
-				
-					
-				}
-				
-				
+
 			}
+
+		}
+	}
+
+	public void actualizarTablero() {
+
+		Casilla[][] zonaUnoC = inicio.getVentana().getZonaUno();
+		Casilla[][] zonaDosC = inicio.getVentana().getZonaDos();
+		Casilla[][] zonaTresC = inicio.getVentana().getZonaTres();
+		Casilla[][] zonaCuatroC = inicio.getVentana().getZonaCuatro();
+
+		
+	
 			
 			
+				
+		
+		
+		
+		// Rellena la zona Uno
+		for (int i = 0; i < zonaUnoBut.length; i++) {
+			for (int j = 0; j < zonaUnoBut[0].length; j++) {
+
+				zonaUnoBut[i][j].setText(zonaUnoC[i][j].toString());
+				zonaUnoBut[i][j].setOpaque(true);
+
+				zonaTresBut[i][j].setText(zonaTresC[i][j].toString());
+				zonaTresBut[i][j].setOpaque(true);
+
+			}
+
+		}
+
+		for (int i = 0; i < zonaDosBut.length; i++) {
+
+			for (int j = 0; j < zonaDosBut[0].length; j++) {
+
+				zonaDosBut[i][j].setText(zonaDosC[i][j].toString());
+				zonaDosBut[i][j].setOpaque(true);
+
+				zonaCuatroBut[i][j].setText(zonaCuatroC[i][j].toString());
+				zonaCuatroBut[i][j].setOpaque(true);
+
+				zonaDos.add(zonaDosBut[i][j]);
+				zonaCuatro.add(zonaCuatroBut[i][j]);
+
+			}
+
 		}
 		
+		
+		
+		
 
-	
+	}
 
 	public void refresh() {
 
@@ -184,6 +209,202 @@ public class PanelParques extends JPanel {
 		revalidate();
 		repaint();
 
+	}
+
+	/**
+	 * @return the inicio
+	 */
+	public PanelInicio getInicio() {
+		return inicio;
+	}
+
+	/**
+	 * @param inicio the inicio to set
+	 */
+	public void setInicio(PanelInicio inicio) {
+		this.inicio = inicio;
+	}
+
+	/**
+	 * @return the carcelUno
+	 */
+	public JPanel getCarcelUno() {
+		return carcelUno;
+	}
+
+	/**
+	 * @param carcelUno the carcelUno to set
+	 */
+	public void setCarcelUno(JPanel carcelUno) {
+		this.carcelUno = carcelUno;
+	}
+
+	/**
+	 * @return the carcelDos
+	 */
+	public JPanel getCarcelDos() {
+		return carcelDos;
+	}
+
+	/**
+	 * @param carcelDos the carcelDos to set
+	 */
+	public void setCarcelDos(JPanel carcelDos) {
+		this.carcelDos = carcelDos;
+	}
+
+	/**
+	 * @return the carcelTres
+	 */
+	public JPanel getCarcelTres() {
+		return carcelTres;
+	}
+
+	/**
+	 * @param carcelTres the carcelTres to set
+	 */
+	public void setCarcelTres(JPanel carcelTres) {
+		this.carcelTres = carcelTres;
+	}
+
+	/**
+	 * @return the carcelCuatro
+	 */
+	public JPanel getCarcelCuatro() {
+		return carcelCuatro;
+	}
+
+	/**
+	 * @param carcelCuatro the carcelCuatro to set
+	 */
+	public void setCarcelCuatro(JPanel carcelCuatro) {
+		this.carcelCuatro = carcelCuatro;
+	}
+
+	/**
+	 * @return the elCentro
+	 */
+	public JPanel getElCentro() {
+		return elCentro;
+	}
+
+	/**
+	 * @param elCentro the elCentro to set
+	 */
+	public void setElCentro(JPanel elCentro) {
+		this.elCentro = elCentro;
+	}
+
+	/**
+	 * @return the zonaUno
+	 */
+	public JPanel getZonaUno() {
+		return zonaUno;
+	}
+
+	/**
+	 * @param zonaUno the zonaUno to set
+	 */
+	public void setZonaUno(JPanel zonaUno) {
+		this.zonaUno = zonaUno;
+	}
+
+	/**
+	 * @return the zonaDos
+	 */
+	public JPanel getZonaDos() {
+		return zonaDos;
+	}
+
+	/**
+	 * @param zonaDos the zonaDos to set
+	 */
+	public void setZonaDos(JPanel zonaDos) {
+		this.zonaDos = zonaDos;
+	}
+
+	/**
+	 * @return the zonaTres
+	 */
+	public JPanel getZonaTres() {
+		return zonaTres;
+	}
+
+	/**
+	 * @param zonaTres the zonaTres to set
+	 */
+	public void setZonaTres(JPanel zonaTres) {
+		this.zonaTres = zonaTres;
+	}
+
+	/**
+	 * @return the zonaCuatro
+	 */
+	public JPanel getZonaCuatro() {
+		return zonaCuatro;
+	}
+
+	/**
+	 * @param zonaCuatro the zonaCuatro to set
+	 */
+	public void setZonaCuatro(JPanel zonaCuatro) {
+		this.zonaCuatro = zonaCuatro;
+	}
+
+	/**
+	 * @return the zonaUnoBut
+	 */
+	public JButton[][] getZonaUnoBut() {
+		return zonaUnoBut;
+	}
+
+	/**
+	 * @param zonaUnoBut the zonaUnoBut to set
+	 */
+	public void setZonaUnoBut(JButton[][] zonaUnoBut) {
+		this.zonaUnoBut = zonaUnoBut;
+	}
+
+	/**
+	 * @return the zonaDosBut
+	 */
+	public JButton[][] getZonaDosBut() {
+		return zonaDosBut;
+	}
+
+	/**
+	 * @param zonaDosBut the zonaDosBut to set
+	 */
+	public void setZonaDosBut(JButton[][] zonaDosBut) {
+		this.zonaDosBut = zonaDosBut;
+	}
+
+	/**
+	 * @return the zonaTresBut
+	 */
+	public JButton[][] getZonaTresBut() {
+		return zonaTresBut;
+	}
+
+	/**
+	 * @param zonaTresBut the zonaTresBut to set
+	 */
+	public void setZonaTresBut(JButton[][] zonaTresBut) {
+		this.zonaTresBut = zonaTresBut;
+	}
+
+	/**
+	 * @return the zonaCuatroBut
+	 */
+	public JButton[][] getZonaCuatroBut() {
+		return zonaCuatroBut;
+	}
+
+	/**
+	 * @param zonaCuatroBut the zonaCuatroBut to set
+	 */
+	public void setZonaCuatroBut(JButton[][] zonaCuatroBut) {
+		this.zonaCuatroBut = zonaCuatroBut;
 	}
 
 }

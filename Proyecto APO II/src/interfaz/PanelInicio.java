@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import modelo.*;
 
-public class PanelInicio extends JPanel implements ActionListener,MouseListener{
+public class PanelInicio extends JPanel implements ActionListener, MouseListener {
 
 	public static final Image ALBUM = Toolkit.getDefaultToolkit().createImage("./Archivos/imagenes/recursos/album.png");
 	public static final Image LAMINA = Toolkit.getDefaultToolkit()
@@ -21,6 +21,7 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	public static final String JUGAR = "jugar";
 
 	private PanelParques parques;
+	private PanelEscogerEquipo escoger;
 	private PanelIniciarSesion sesion;
 	private JLabel labUsuario;
 	private JButton butJugar;
@@ -28,55 +29,60 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	private JLabel labAlbum;
 	private JLabel labTituloAlbum;
 	private JLabel labTituloLaminas;
-	private PanelPanini panini; 
+	private PanelPanini panini;
 	private PanelTienda tienda;
-    private JLabel usuario;
+	private JLabel usuario;
+	private Equipo actual;
+
+	private Equipo e1 = new Equipo("Archivos/imagenes/banderas/colombia.png", "Colombia", 1);
+	private Equipo e2 = new Equipo("Archivos/imagenes/banderas/brasil.png", "Brasil", 2);
+	private Equipo e3 = new Equipo("Archivos/imagenes/banderas/españa.png", "España", 3);
+	private Equipo e4 = new Equipo("Archivos/imagenes/banderas/argentina.png", "Argentina", 4);
 
 	public PanelInicio(PanelIniciarSesion sesion) {
 
-	this.sesion = sesion;
-	setLayout(null);
-	//ajustarComponentes();
-	addMouseListener(this);
-	panini = new PanelPanini(this);
-	tienda = new PanelTienda(this);
-	parques = null;
-	
+		this.sesion = sesion;
+		setLayout(null);
+		// ajustarComponentes();
+		addMouseListener(this);
+		panini = new PanelPanini(this);
+		tienda = new PanelTienda(this);
+		parques = null;
+		actual = null;
+
 	}
-	
 
 	public VentanaPrincipal getVentana() {
-		
-	return sesion.getVentana();	
-		
+
+		return sesion.getVentana();
+
 	}
-	
+
 	public void ajustarComponentes() {
-		
-	butJugar = new JButton("JUGAR");
-	butJugar.setFont(new Font("Garamond", 1, 40));
-	butJugar.setBounds(530, 480, 235, 95);
-	butJugar.setActionCommand(JUGAR);
-	butJugar.addActionListener(this);
-	add(butJugar);
-	
-	labTituloAlbum = new JLabel(" Completa el album! ");
-	labTituloAlbum.setBounds(50, 80, 500, 80);
-	labTituloAlbum.setFont(new Font(" Garamond ", 1, 35));
-	labTituloAlbum.setForeground(Color.BLACK);
-	add(labTituloAlbum);
-	
-	labTituloLaminas = new JLabel(" Consigue laminas! ");
-	labTituloLaminas.setBounds(920, 80, 500, 80);
-	labTituloLaminas.setFont(new Font(" Garamond ", 1, 35));
-	labTituloLaminas.setForeground(Color.BLACK);
-	add(labTituloLaminas);
-	
-	
-	usuario = new JLabel("Bienvenido" + " " + sesion.getVentana().getSesionActiva().getNickName());
-	usuario.setFont(new Font("Garamond", 1, 60));
-	usuario.setBounds(300, 580, 800, 95);
-	add(usuario);
+
+		butJugar = new JButton("JUGAR");
+		butJugar.setFont(new Font("Garamond", 1, 40));
+		butJugar.setBounds(530, 480, 235, 95);
+		butJugar.setActionCommand(JUGAR);
+		butJugar.addActionListener(this);
+		add(butJugar);
+
+		labTituloAlbum = new JLabel(" Completa el album! ");
+		labTituloAlbum.setBounds(50, 80, 500, 80);
+		labTituloAlbum.setFont(new Font(" Garamond ", 1, 35));
+		labTituloAlbum.setForeground(Color.BLACK);
+		add(labTituloAlbum);
+
+		labTituloLaminas = new JLabel(" Consigue laminas! ");
+		labTituloLaminas.setBounds(920, 80, 500, 80);
+		labTituloLaminas.setFont(new Font(" Garamond ", 1, 35));
+		labTituloLaminas.setForeground(Color.BLACK);
+		add(labTituloLaminas);
+
+		usuario = new JLabel("Bienvenido" + " " + sesion.getVentana().getSesionActiva().getNickName());
+		usuario.setFont(new Font("Garamond", 1, 60));
+		usuario.setBounds(300, 580, 800, 95);
+		add(usuario);
 
 	}
 
@@ -97,125 +103,199 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 
 	}
 
+	public void setActual(Equipo actual) {
+
+		this.actual = actual;
+
+	}
+
+	public Equipo getActual() {
+
+		return actual;
+
+	}
+
+	public Equipo getE1() {
+
+		return e1;
+
+	}
+
+	public Equipo getE2() {
+
+		return e2;
+
+	}
+
+	public Equipo getE3() {
+
+		return e3;
+	}
+
+	public Equipo getE4() {
+		return e4;
+
+	}
+
+	public void personalizarParques() {
+	
+		
+		parques = new PanelParques(this);
+
+		parques.getCarcelUno().setLayout(new BorderLayout());
+
+		parques.getCarcelUno().add(new JLabel(new ImageIcon(e1.getRutaBandera())), BorderLayout.CENTER);
+
+		parques.getCarcelDos().setLayout(new BorderLayout());
+
+		parques.getCarcelDos().add(new JLabel(new ImageIcon(e2.getRutaBandera())), BorderLayout.CENTER);
+
+		parques.getCarcelTres().setLayout(new BorderLayout());
+
+		parques.getCarcelTres().add(new JLabel(new ImageIcon(e3.getRutaBandera())), BorderLayout.CENTER);
+
+		parques.getCarcelCuatro().setLayout(new BorderLayout());
+
+		parques.getCarcelCuatro().add(new JLabel(new ImageIcon(e4.getRutaBandera())), BorderLayout.CENTER);
+		
+		parques.getElCentro().setLayout(new BorderLayout());
+		
+		parques.getElCentro().add(new JLabel(new ImageIcon("./Archivos/imagenes/recursos/centroParques.png")), BorderLayout.CENTER);
+
+		for(int k = 0; k<parques.getZonaUnoBut()[0].length; k++) {
+		parques.getZonaUnoBut()[1][k].setBackground(Color.YELLOW);
+		}
+		
+		for(int k = 0; k<parques.getZonaDosBut().length; k++) {
+			parques.getZonaDosBut()[k][1].setBackground(Color.GREEN);
+		}
+		
+		for(int k = 0; k<parques.getZonaTresBut()[0].length; k++) {
+			parques.getZonaTresBut()[1][k].setBackground(Color.RED);
+		}
+		
+		for(int k = 0; k<parques.getZonaCuatroBut().length; k++) {
+			parques.getZonaCuatroBut()[k][1].setBackground(Color.CYAN);
+		}
+		
+		parques.getZonaUnoBut()[1][0].setBackground(Color.DARK_GRAY);
+		parques.getZonaUnoBut()[0][4].setBackground(Color.DARK_GRAY);
+		
+		parques.getZonaDosBut()[3][0].setBackground(Color.DARK_GRAY);
+		parques.getZonaDosBut()[7][1].setBackground(Color.DARK_GRAY);
+		
+		parques.getZonaTresBut()[1][7].setBackground(Color.DARK_GRAY);
+		parques.getZonaTresBut()[2][3].setBackground(Color.DARK_GRAY);
+	
+		parques.getZonaCuatroBut()[0][1].setBackground(Color.DARK_GRAY);
+		parques.getZonaCuatroBut()[4][2].setBackground(Color.DARK_GRAY);
+		
+		parques.getZonaUnoBut()[2][4].setBackground(Color.YELLOW);
+	
+		parques.getZonaDosBut()[3][2].setBackground(Color.GREEN);
+				
+		parques.getZonaTresBut()[0][3].setBackground(Color.RED);
+
+		parques.getZonaCuatroBut()[4][0].setBackground(Color.CYAN);
+		
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String comando = e.getActionCommand();
-		
-		if(comando.equals(JUGAR)) {
-		
-		VentanaPrincipal vent = sesion.getVentana();	
-			
-		sesion.getVentana().remove(this);
-		
-		
-		// Se crean los equipos
-		Equipo e1 = new Equipo("", "Colombia", 1);
-		Equipo e2 = new Equipo("", "Brasil", 2);
-		Equipo e3 = new Equipo("", "Alemania", 3);
-		Equipo e4 = new Equipo("", "Senegal", 4);
 
-		// Se crean los jugadores
-		Jugador j2 = new Jugador("Jugador 2");
-		Jugador j3 = new Jugador("Jugador 3");
-		Jugador j4 = new Jugador("Jugador 4");
-		
-		
-		// Se asignan los equipos a los jugadores
-		vent.getSesionActiva().setEquipo(e1);
-		j2.setEquipo(e2);
-		j3.setEquipo(e3);
-		j4.setEquipo(e4);
-		
-		Equipo[] equipos = {vent.getSesionActiva().getEquipo(), j2.getEquipo(), j3.getEquipo(), j4.getEquipo()};
-				
-		
-		Partida laPartida = new Partida();
-		
-		laPartida.getParques().setEquipos(equipos);
-		
-		vent.getSesionActiva().setPartida(laPartida);
-		
-		parques = new PanelParques(this);
-		
-		Parques p = laPartida.getParques();
-		
-		p.sacarFichasDeLaCarcel(e2.getFichas());
-//		p.rellenarZonas();
-		parques.actualizarTablero();
-		
-		p.moverFichaNew(e2.getFichas()[0], 5);
-		
-		parques.actualizarTablero();
-		
-		sesion.getVentana().add(parques);
-		sesion.getVentana().setSize(1920,1000);
-		sesion.getVentana().refresh();
-		
-			
+		if (comando.equals(JUGAR)) {
+
+			VentanaPrincipal vent = sesion.getVentana();
+
+			sesion.getVentana().remove(this);
+
+			escoger = new PanelEscogerEquipo(this);
+
+			// sesion.getVentana().add(escoger);
+			// sesion.getVentana().refresh();
+
+			// Se crean los jugadores
+			Jugador j2 = new Jugador("Jugador 2");
+			Jugador j3 = new Jugador("Jugador 3");
+			Jugador j4 = new Jugador("Jugador 4");
+
+			// Se asignan los equipos a los jugadores
+			vent.getSesionActiva().setEquipo(e1);
+			j2.setEquipo(e2);
+			j3.setEquipo(e3);
+			j4.setEquipo(e4);
+
+			Equipo[] equipos = { vent.getSesionActiva().getEquipo(), j2.getEquipo(), j3.getEquipo(), j4.getEquipo() };
+
+			Partida laPartida = new Partida();
+
+			laPartida.getParques().setEquipos(equipos);
+
+			vent.getSesionActiva().setPartida(laPartida);
+
+			personalizarParques();
+
+			Parques p = laPartida.getParques();
+
+			sesion.getVentana().add(parques);
+			sesion.getVentana().setSize(1400, 1000);
+			sesion.getVentana().refresh();
+
 		}
 
 	}
-
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		
-		System.out.println("x = "+e.getX()+"  y = "+ e.getY());
-		
-		
+
+		// System.out.println("x = "+e.getX()+" y = "+ e.getY());
+
 		// Condicion para entrar al album panini
-		if((e.getX() >= 100 && e.getX() <= 310)&&(e.getY() >=185 && e.getY() <= 485)) {
-			
-			System.out.println("hola");
+		if ((e.getX() >= 100 && e.getX() <= 310) && (e.getY() >= 185 && e.getY() <= 485)) {
+
+			// System.out.println("hola");
 			sesion.getVentana().remove(this);
 			panini.inicializar();
-			sesion.getVentana().add(panini);						
+			sesion.getVentana().add(panini);
 			sesion.getVentana().refresh();
-			
-			
-			
+
 		}
-		
-		if((e.getX()>=950 && e.getX()<= 1180)&&(e.getY() >= 230 && e.getY()<= 445)) {
-			
+
+		if ((e.getX() >= 950 && e.getX() <= 1180) && (e.getY() >= 230 && e.getY() <= 445)) {
+
 			tienda.componentes();
-			System.out.println("bye");
+			// System.out.println("bye");
 			sesion.getVentana().remove(this);
 			sesion.getVentana().add(tienda);
 			sesion.getVentana().refresh();
-			 
-			
-		}
-		
-	}
 
+		}
+
+	}
 
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
-	}
 
+	}
 
 	@Override
 	public void mouseExited(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
-	}
 
+	}
 
 	@Override
 	public void mousePressed(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
-	}
 
+	}
 
 	@Override
 	public void mouseReleased(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
-

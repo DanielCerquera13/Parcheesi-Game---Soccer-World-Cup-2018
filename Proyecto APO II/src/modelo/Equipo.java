@@ -306,8 +306,12 @@ public class Equipo {
 		
 	}
 	
-	
-	
+	@Override
+	public String toString() {
+		
+	return rutaBandera+" "+seleccion+" "+ numero;	
+		
+	}
 	
 	
 	public static void main(String[] args) {
