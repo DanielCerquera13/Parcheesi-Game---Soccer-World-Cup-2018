@@ -126,9 +126,57 @@ public class PanelParques extends JPanel {
 			
 			
 		}
+	}
+		
+		public void actualizarTablero() {
+			
+			
+			Casilla[][] zonaUnoC = inicio.getVentana().getZonaUno();
+			Casilla[][] zonaDosC = inicio.getVentana().getZonaDos();
+			Casilla[][] zonaTresC = inicio.getVentana().getZonaTres();
+			Casilla[][] zonaCuatroC = inicio.getVentana().getZonaCuatro();
+			
+			// Rellena la zona Uno
+			for (int i = 0; i < zonaUnoBut.length; i++) {
+				for (int j = 0; j < zonaUnoBut[0].length; j++) {
+
+					zonaUnoBut[i][j].setText(zonaUnoC[i][j].toString());
+					zonaUnoBut[i][j].setOpaque(true);
+					
+					zonaTresBut[i][j].setText(zonaTresC[i][j].toString());
+					zonaTresBut[i][j].setOpaque(true);
+				
+
+				}
+
+			}
+			
+			
+			for(int i=0; i<zonaDosBut.length;i++) {
+				
+				for(int j=0; j<zonaDosBut[0].length;j++) {
+					
+				zonaDosBut[i][j].setText(zonaDosC[i][j].toString());
+				zonaDosBut[i][j].setOpaque(true);
+				
+				
+				zonaCuatroBut[i][j].setText(zonaCuatroC[i][j].toString());
+				zonaCuatroBut[i][j].setOpaque(true);
+				
+				zonaDos.add(zonaDosBut[i][j]);
+				zonaCuatro.add(zonaCuatroBut[i][j]);
+				
+					
+				}
+				
+				
+			}
+			
+			
+		}
 		
 
-	}
+	
 
 	public void refresh() {
 

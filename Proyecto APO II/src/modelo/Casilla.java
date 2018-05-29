@@ -28,7 +28,7 @@ public class Casilla {
 	 */
 	public Casilla(int tipo, int posicion) {
 
-		fichas = new Ficha[10];
+		fichas = new Ficha[6];
 		this.tipo = tipo;
 		this.posicion = posicion;
 	}
@@ -136,8 +136,8 @@ public class Casilla {
 
 	public String toString() {
 
-		return "" + posicion + Arrays.toString(fichas);
-
+		return ""+ Arrays.toString(fichas);
+//		 + posicion
 	}
 
 }

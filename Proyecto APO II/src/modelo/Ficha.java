@@ -199,7 +199,7 @@ public class Ficha {
 	@Override
 	public String toString() {
 
-		return "Hola soy " + tipo;
+		return ""+tipo;
 
 	}
 }

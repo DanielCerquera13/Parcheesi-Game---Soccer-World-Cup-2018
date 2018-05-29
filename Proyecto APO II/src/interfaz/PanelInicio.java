@@ -137,8 +137,18 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 		
 		parques = new PanelParques(this);
 		
+		Parques p = laPartida.getParques();
+		
+		p.sacarFichasDeLaCarcel(e2.getFichas());
+//		p.rellenarZonas();
+		parques.actualizarTablero();
+		
+		p.moverFichaNew(e2.getFichas()[0], 5);
+		
+		parques.actualizarTablero();
+		
 		sesion.getVentana().add(parques);
-		sesion.getVentana().setSize(1000,1000);
+		sesion.getVentana().setSize(1920,1000);
 		sesion.getVentana().refresh();
 		
 			
