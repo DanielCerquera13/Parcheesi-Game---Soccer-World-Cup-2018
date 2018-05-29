@@ -46,6 +46,8 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 
 	
 	public void componentes () {
+		
+		this.repaint();
 		   
 		tienda = new JLabel("TIENDA DE LAMINAS");
 		tienda.setBounds(510, 0, 320, 50);
@@ -54,7 +56,7 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 		add(tienda);
 		
 		 int dinero1 = inicio.getVentana().getSesionActiva().getDinero();
-		dinero = new JLabel(dinero1 + "$");
+		dinero = new JLabel(dinero1 + " $");
 		dinero.setBounds(620, 500, 320, 60);
 		dinero.setFont(new Font(" Garamond ", 1, 40));
 		dinero.setForeground(Color.RED);
@@ -114,9 +116,12 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 		    laminaPrincipal.setBounds(580, 200, 240, 300);
 		    
 		    dinero = dinero - 100; 
+
 		    jugador.setDinero(dinero);
 		    
+		    this.dinero.setText(" ");
 		    this.dinero.setText(jugador.getDinero() + " $");
+		    this.repaint();
         }
         
         else {
@@ -143,9 +148,6 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 			
 		g.drawImage(FONDO, 0, 0, null);
 
-//		g.drawRect(550, 150, 280, 320);
-//	
-//		g.draw3DRect(550, 180, 220, 300, true);
 		g.drawRoundRect(550, 220, 210, 260, 80, 80);
 
 		repaint();
@@ -164,9 +166,10 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 			inicio.getVentana().refresh();
 			
 			
-			  ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/lamina.png");
-			    laminaPrincipal.setIcon(icono);
-			    laminaPrincipal.setBounds(555, 200, 240, 300);
+//			  ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/lamina.png");
+			    laminaPrincipal.setIcon(null);
+			    this.dinero.setText("");
+			   
        }
        
        else if (a.equals(COMPRAR)) {
@@ -174,6 +177,8 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
     	   ImageIcon icono = new ImageIcon("Archivos/imagenes/recursos/lamina.png");
    	    laminaPrincipal.setIcon(icono);
    	 laminaPrincipal.setBounds(530, 200, 240, 300);
+
+   	 
        }
 	}
 
@@ -188,7 +193,8 @@ public class PanelTienda extends JPanel implements ActionListener, MouseListener
 		
 		ganarLamina();
 		inicio.getVentana().guardar();
-		
+		this.repaint();
+		inicio.getVentana().refresh();
 		}
 	}
 
