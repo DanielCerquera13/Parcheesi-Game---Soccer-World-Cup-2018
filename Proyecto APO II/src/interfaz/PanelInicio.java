@@ -36,8 +36,8 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 
 	private Equipo e1 = new Equipo("Archivos/imagenes/banderas/colombia.png", "Colombia", 1);
 	private Equipo e2 = new Equipo("Archivos/imagenes/banderas/brasil.png", "Brasil", 2);
-	private Equipo e3 = new Equipo("Archivos/imagenes/banderas/españa.png", "España", 3);
-	private Equipo e4 = new Equipo("Archivos/imagenes/banderas/argentina.png", "Argentina", 4);
+	private Equipo e3 = new Equipo("Archivos/imagenes/banderas/argentina.png", "Argentina", 3);
+	private Equipo e4 = new Equipo("Archivos/imagenes/banderas/españa.png", "España", 4);
 
 	public PanelInicio(PanelIniciarSesion sesion) {
 
@@ -138,8 +138,7 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 	}
 
 	public void personalizarParques() {
-	
-		
+
 		parques = new PanelParques(this);
 
 		parques.getCarcelUno().setLayout(new BorderLayout());
@@ -157,55 +156,58 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 		parques.getCarcelCuatro().setLayout(new BorderLayout());
 
 		parques.getCarcelCuatro().add(new JLabel(new ImageIcon(e4.getRutaBandera())), BorderLayout.CENTER);
-		
-		parques.getElCentro().setLayout(new BorderLayout());
-		
-		parques.getElCentro().add(new JLabel(new ImageIcon("./Archivos/imagenes/recursos/centroParques.png")), BorderLayout.CENTER);
 
-		for(int k = 0; k<parques.getZonaUnoBut()[0].length; k++) {
-		parques.getZonaUnoBut()[1][k].setBackground(Color.YELLOW);
+		parques.getElCentro().setLayout(new BorderLayout());
+
+		parques.getElCentro().add(new JLabel(new ImageIcon("./Archivos/imagenes/recursos/centroParques.png")),
+				BorderLayout.CENTER);
+
+		for (int k = 0; k < parques.getZonaUnoBut()[0].length; k++) {
+			parques.getZonaUnoBut()[1][k].setBackground(Color.YELLOW);
 		}
-		
-		for(int k = 0; k<parques.getZonaDosBut().length; k++) {
+
+		for (int k = 0; k < parques.getZonaDosBut().length; k++) {
 			parques.getZonaDosBut()[k][1].setBackground(Color.GREEN);
 		}
-		
-		for(int k = 0; k<parques.getZonaTresBut()[0].length; k++) {
-			parques.getZonaTresBut()[1][k].setBackground(Color.RED);
+
+		for (int k = 0; k < parques.getZonaTresBut()[0].length; k++) {
+			parques.getZonaTresBut()[1][k].setBackground(Color.CYAN);
 		}
-		
-		for(int k = 0; k<parques.getZonaCuatroBut().length; k++) {
-			parques.getZonaCuatroBut()[k][1].setBackground(Color.CYAN);
+
+		for (int k = 0; k < parques.getZonaCuatroBut().length; k++) {
+			parques.getZonaCuatroBut()[k][1].setBackground(Color.RED);
 		}
-		
+
 		parques.getZonaUnoBut()[1][0].setBackground(Color.DARK_GRAY);
 		parques.getZonaUnoBut()[0][4].setBackground(Color.DARK_GRAY);
-		
+
 		parques.getZonaDosBut()[3][0].setBackground(Color.DARK_GRAY);
 		parques.getZonaDosBut()[7][1].setBackground(Color.DARK_GRAY);
-		
+
 		parques.getZonaTresBut()[1][7].setBackground(Color.DARK_GRAY);
 		parques.getZonaTresBut()[2][3].setBackground(Color.DARK_GRAY);
-	
+
 		parques.getZonaCuatroBut()[0][1].setBackground(Color.DARK_GRAY);
 		parques.getZonaCuatroBut()[4][2].setBackground(Color.DARK_GRAY);
-		
-		parques.getZonaUnoBut()[2][4].setBackground(Color.YELLOW);
-	
-		parques.getZonaDosBut()[3][2].setBackground(Color.GREEN);
-				
-		parques.getZonaTresBut()[0][3].setBackground(Color.RED);
 
-		parques.getZonaCuatroBut()[4][0].setBackground(Color.CYAN);
-		
+		parques.getZonaUnoBut()[2][4].setBackground(Color.YELLOW);
+
+		parques.getZonaDosBut()[3][2].setBackground(Color.GREEN);
+
+		parques.getZonaTresBut()[0][3].setBackground(Color.CYAN);
+
+		parques.getZonaCuatroBut()[4][0].setBackground(Color.RED);
+
 	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String comando = e.getActionCommand();
 
 		if (comando.equals(JUGAR)) {
 
+			JOptionPane.showMessageDialog(null,"Esta seccion se encuentra en fase BETA");
+			
 			VentanaPrincipal vent = sesion.getVentana();
 
 			sesion.getVentana().remove(this);
@@ -237,6 +239,179 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 			personalizarParques();
 
 			Parques p = laPartida.getParques();
+
+			p.sacarFichasDeLaCarcel(e1.getFichas());
+			p.sacarFichasDeLaCarcel(e2.getFichas());
+			p.sacarFichasDeLaCarcel(e3.getFichas());
+			p.sacarFichasDeLaCarcel(e4.getFichas());
+			p.moverFichaNew(e1.getFichas()[0], 12);
+			p.moverFichaNew(e2.getFichas()[0], 7);
+			p.moverFichaNew(e3.getFichas()[0], 10);
+			p.moverFichaNew(e4.getFichas()[0], 5);
+			
+			parques.actualizarTablero();
+			System.out.println(p.getZonaUno()[0][0].getFichas().length);
+
+			// Recorrido para actualizar zona uno
+			for (int k = 0; k < p.getZonaUno().length; k++) {
+				for (int h = 0; h < p.getZonaUno()[0].length; h++) {
+					for (int j = 0; j < p.getZonaUno()[k][h].getFichas().length; j++) {
+
+						if (p.getZonaUno()[k][h].getFichas()[j] != null
+								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 1) {
+
+							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+						}
+
+						if (p.getZonaUno()[k][h].getFichas()[j] != null
+								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 2) {
+
+							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+						}
+
+						if (p.getZonaUno()[k][h].getFichas()[j] != null
+								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 3) {
+
+							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+						}
+
+						if (p.getZonaUno()[k][h].getFichas()[j] != null
+								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 4) {
+
+							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
+
+						}
+
+					}
+
+				}
+
+			}
+
+			
+			// Recorrido para actualizar zona dos
+			for (int k = 0; k < p.getZonaDos().length; k++) {
+				for (int h = 0; h < p.getZonaDos()[0].length; h++) {
+					for (int j = 0; j < p.getZonaDos()[k][h].getFichas().length; j++) {
+
+						if (p.getZonaDos()[k][h].getFichas()[j] != null
+								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 1) {
+
+							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+						}
+
+						if (p.getZonaDos()[k][h].getFichas()[j] != null
+								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 2) {
+
+							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+						}
+
+						if (p.getZonaDos()[k][h].getFichas()[j] != null
+								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 3) {
+
+							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+						}
+
+						if (p.getZonaDos()[k][h].getFichas()[j] != null
+								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 4) {
+
+							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
+
+						}
+
+					}
+
+				}
+
+			}
+			
+			// Recorrido para actualizar zona cuatro
+			for (int k = 0; k < p.getZonaTres().length; k++) {
+				for (int h = 0; h < p.getZonaTres()[0].length; h++) {
+					for (int j = 0; j < p.getZonaTres()[k][h].getFichas().length; j++) {
+
+						if (p.getZonaTres()[k][h].getFichas()[j] != null
+								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 1) {
+
+							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+						}
+
+						if (p.getZonaTres()[k][h].getFichas()[j] != null
+								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 2) {
+
+							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+						}
+
+						if (p.getZonaTres()[k][h].getFichas()[j] != null
+								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 3) {
+
+							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+						}
+
+						if (p.getZonaTres()[k][h].getFichas()[j] != null
+								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 4) {
+
+							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
+
+						}
+
+					}
+
+				}
+
+			}
+			
+			// Recorrido para actualizar zona cuatro
+			for (int k = 0; k < p.getZonaCuatro().length; k++) {
+				for (int h = 0; h < p.getZonaCuatro()[0].length; h++) {
+					for (int j = 0; j < p.getZonaCuatro()[k][h].getFichas().length; j++) {
+
+						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
+								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 1) {
+
+							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+						}
+
+						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
+								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 2) {
+
+							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+						}
+
+						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
+								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 3) {
+
+							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+						}
+
+						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
+								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 4) {
+
+							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
+
+						}
+
+					}
+
+				}
+
+			}
+
+			parques.actualizarTablero();
+
+			System.out.println(parques.getZonaUnoBut()[2][4]);
 
 			sesion.getVentana().add(parques);
 			sesion.getVentana().setSize(1400, 1000);

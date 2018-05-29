@@ -136,8 +136,8 @@ public class Casilla {
 
 	public String toString() {
 
-		return ""+  posicion; 
-//		Arrays.toString(fichas);
+		return ""+  posicion + Arrays.toString(fichas);
+
 		
 	}
 

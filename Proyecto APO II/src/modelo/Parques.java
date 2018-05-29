@@ -394,6 +394,8 @@ public class Parques implements Constantes {
 			fichas[i].salirDeLaCarcel();
 			casillas[fichas[i].getPosicion()].agregarFicha(fichas[i]);
 		}
+		
+		rellenarZonas();
 	}
 
 	/**

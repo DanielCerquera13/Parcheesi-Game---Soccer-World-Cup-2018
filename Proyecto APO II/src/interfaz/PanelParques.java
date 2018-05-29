@@ -159,13 +159,6 @@ public class PanelParques extends JPanel {
 		Casilla[][] zonaCuatroC = inicio.getVentana().getZonaCuatro();
 
 		
-	
-			
-			
-				
-		
-		
-		
 		// Rellena la zona Uno
 		for (int i = 0; i < zonaUnoBut.length; i++) {
 			for (int j = 0; j < zonaUnoBut[0].length; j++) {
