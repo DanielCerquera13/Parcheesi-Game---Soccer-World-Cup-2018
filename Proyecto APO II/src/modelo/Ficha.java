@@ -93,13 +93,13 @@ public class Ficha {
 	 *            Valor de verdad al que se desea cambair.
 	 */
 	public void setLibre(boolean libre) {
-		
+
 		this.libre = libre;
-		
-		if(libre == false) {
-			
-		setPosicion(null);	
-			
+
+		if (libre == false) {
+
+			setPosicion(null);
+
 		}
 	}
 
@@ -155,42 +155,51 @@ public class Ficha {
 
 		}
 
+	}
+
+	/**
+	 * Simula el envio de una ficha a la carcel.
+	 */
+	public void irALaCarcel() {
+
+		this.posicion = null;
 
 	}
-	
-   /**
-    * Simula el envio de una ficha a la carcel.
-   */
-	public void irALaCarcel() {
-		
-	this.posicion = null;
-		
-	}
-	
+
 	/**
 	 * Mueve la ficha la cantidad que el dado ofrece.
-	 * @param valorDado - la cantidad de casillas que debe mover la ficha.
+	 * 
+	 * @param valorDado
+	 *            - la cantidad de casillas que debe mover la ficha.
 	 */
 	public void mover(int valorDado) {
-			
-	posicion = posicion+valorDado;		
-		
+
+		posicion = posicion + valorDado;
+
 	}
-	
-	
+
 	/**
-	 * Caputa otra ficha
+	 * Las fichas tipo 2 tipo 3 y tipo 4 pueden avanzar despues de la casilla 95 a 0
+	 * en adelante.
 	 */
-	public void capturar() {
-		
-		
-		
+	public boolean saltarUltimaCasilla() {
+
+		boolean saltar = false;
+
+		if (this.getTipo() == 2 || this.getTipo() == 3 || this.getTipo() == 4) {
+
+			saltar = true;
+
+		}
+
+		return saltar;
+
 	}
 	
 	@Override
 	public String toString() {
-		
-	return "Hola soy "+tipo;	
-		
+
+		return "Hola soy " + tipo;
+
 	}
 }

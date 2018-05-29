@@ -39,9 +39,10 @@ public class Parques implements Constantes {
 
 		rellenarZonas();
 	}
-   
+
 	/**
 	 * Entega que equipo de los cuatro tiene el turno.
+	 * 
 	 * @return el equipo con el turno actual.
 	 */
 	public Equipo getTurnoActual() {
@@ -60,9 +61,10 @@ public class Parques implements Constantes {
 
 		return actual;
 	}
-  
+
 	/**
 	 * Verifica si se sacan tres pares durante el juego.
+	 * 
 	 * @return true si saco tres pares, false si no es asi.
 	 */
 	public boolean verificarTresTiros() {
@@ -88,8 +90,7 @@ public class Parques implements Constantes {
 		return si;
 
 	}
- 
-	
+
 	/**
 	 * Asigna el turno a un equipo en especifico.
 	 */
@@ -214,11 +215,11 @@ public class Parques implements Constantes {
 				casillas[i] = new CasillaCasa(Constantes.CASA, i, Constantes.TRES);
 
 			if (i >= 61 && i <= 67)
-				casillas[i] = new CasillaCasa(Constantes.CASA, i, Constantes.DOS);
+				casillas[i] = new CasillaCasa(Constantes.CASA, i, Constantes.CUATRO);
 
 		}
 	}
- 
+
 	/**
 	 * Inicializa la zona uno del parques con sus respectivas casillas.
 	 */
@@ -250,10 +251,8 @@ public class Parques implements Constantes {
 
 	}
 
-	
 	/**
-	 * /**
-	 * Inicializa la zona dos del parques con sus respectivas casillas.
+	 * /** Inicializa la zona dos del parques con sus respectivas casillas.
 	 */
 	public void rellenarZonaDos() {
 
@@ -278,8 +277,7 @@ public class Parques implements Constantes {
 	}
 
 	/**
-	 * /**
-	 * Inicializa la zona tres del parques con sus respectivas casillas.
+	 * /** Inicializa la zona tres del parques con sus respectivas casillas.
 	 */
 	public void rellenarZonaTres() {
 
@@ -302,10 +300,9 @@ public class Parques implements Constantes {
 		}
 
 	}
-    
+
 	/**
-	 * /**
-	 * Inicializa la zona uno del parques con sus respectivas casillas.
+	 * /** Inicializa la zona uno del parques con sus respectivas casillas.
 	 */
 	public void rellenarZonaCuatro() {
 
@@ -331,8 +328,9 @@ public class Parques implements Constantes {
 
 	/**
 	 * Entrega las casillas de la zona uno del parques.
+	 * 
 	 * @return arreglo con las casillas.
-	 */ 
+	 */
 	public Casilla[][] getZonaUno() {
 
 		return zonaUno;
@@ -341,8 +339,9 @@ public class Parques implements Constantes {
 
 	/**
 	 * Entrega las casillas de la zona dos del parques.
+	 * 
 	 * @return arreglo con las casillas.
-	 */ 
+	 */
 	public Casilla[][] getZonaDos() {
 
 		return zonaDos;
@@ -351,8 +350,9 @@ public class Parques implements Constantes {
 
 	/**
 	 * Entrega las casillas de la zona tres del parques.
+	 * 
 	 * @return arreglo con las casillas.
-	 */ 
+	 */
 	public Casilla[][] getZonaTres() {
 
 		return zonaTres;
@@ -361,14 +361,15 @@ public class Parques implements Constantes {
 
 	/**
 	 * Entrega las casillas de la zona cuatro del parques.
+	 * 
 	 * @return arreglo con las casillas.
-	 */ 
+	 */
 	public Casilla[][] getZonaCuatro() {
 
 		return zonaCuatro;
 
 	}
-  
+
 	/**
 	 * rellena en su totalidad y en conjuntos las casillas del parques.
 	 */
@@ -380,28 +381,13 @@ public class Parques implements Constantes {
 		rellenarZonaCuatro();
 
 	}
-	
+
 	/**
-	 * Prueba si las casillas salidas se encuentran debidamente inicializadas.
-	 * @param fichaUno
-	 * @param fichaDos
-	 * @param fichaTres
+	 * Metodo saca las fichas que se encuentras en la carcel.
+	 * 
+	 * @param fichas
+	 *            - el arreglo de fichas que se desea sacar de la carcel.
 	 */
-	public void probarCasillaSalida(Ficha fichaUno, Ficha fichaDos, Ficha fichaTres) {
-		
-	moverFicha(fichaUno, 72);
-	moverFicha(fichaDos, 48);
-	moverFicha(fichaTres, 24);
-	
-	
-	rellenarZonas();
-		
-	}
-	
-     /**
-      * Metodo saca las fichas que se encuentras en la carcel.
-      * @param fichas - el arreglo de fichas que se desea sacar de la carcel.
-      */
 	public void sacarFichasDeLaCarcel(Ficha[] fichas) {
 
 		for (int i = 0; i < fichas.length; i++) {
@@ -410,61 +396,158 @@ public class Parques implements Constantes {
 		}
 	}
 
-	
-
-    /**
-     * Este metodo mete las fichas que deben ir a la carce.
-     * @param fichas - el arreglo de fichas que se desea meter a la  carcel.
-     */
+	/**
+	 * Este metodo mete las fichas que deben ir a la carce.
+	 * 
+	 * @param fichas
+	 *            - el arreglo de fichas que se desea meter a la carcel.
+	 */
 	public void meterFichaALaCarcel(Ficha ficha) {
 
 		Casilla actual = null;
-		int posActual = ficha.getPosicion();		
-		
+		int posActual = ficha.getPosicion();
+
 		for (int i = 0; i < casillas[ficha.getPosicion()].getFichas().length; i++) {
 
 			if (casillas[ficha.getPosicion()].getFichas()[i] == ficha) {
-			
+
 				casillas[ficha.getPosicion()].getFichas()[i] = null;
 				ficha.irALaCarcel();
 			}
 		}
 	}
-  /**
-   * Simula el movimiento de una ficha en el parques.
-   * @param ficha - la ficha que se desea mover.
-   * @param valorDado - la cantidad de casillas que se movera
-   */
-	public void moverFicha(Ficha ficha, int valorDado) {
+
+	/**
+	 * Simula el movimiento de una ficha en el parques.
+	 * 
+	 * @param ficha
+	 *            - la ficha que se desea mover.
+	 * @param valorDado
+	 *            - la cantidad de casillas que se movera
+	 */
+	public void moverFichaNew(Ficha ficha, int valorDado) {
 
 		Casilla actual = null;
 		Casilla destino = null;
 		int posActual = ficha.getPosicion();
+		boolean pasoPorCasaAjena = false;
+
+		// Definir si pasa por casa ajena
+		for (int k = posActual + 1; k <= posActual + valorDado && !pasoPorCasaAjena; k++) {
+
+			if (casillas[k].getTipo() == Constantes.CASA) {
+				if (ficha.getTipo() != casillas[k].getTipoFicha()) {
+
+					pasoPorCasaAjena = true;
+
+				}
+			}
+		}
+		System.out.println(pasoPorCasaAjena);
+
+		// Fin pasa por casa ajena recorrido
 
 		if (casillas[posActual].hayFichas()) {
 
-			for (int j = 0; j < casillas[posActual].getFichas().length; j++) {
+			// Si suman mas de 95 entonces
+			if (posActual + valorDado > 95) {
 
-				if (casillas[posActual].getFichas()[j] == ficha) {
+				// si las fichas son tipo 2 o 3 o 4
+				if (ficha.saltarUltimaCasilla()) {
 
-					// Casilla en la que se encuentra la ficha que llega por parametro
-					actual = casillas[posActual];
-					// Casilla destino
-					destino = casillas[posActual + valorDado];
+					// Quitar la ficha de la posicion actual
+					for (int i = 0; i < casillas[posActual].getFichas().length; i++) {
 
-					// En la casilla que se encontraba la ficha ya no lo estara
-					actual.getFichas()[j] = null;
+						// No paso por casa ajena ?
+						if (casillas[posActual].getFichas()[i] == ficha && !pasoPorCasaAjena) {
 
-					// Se modifica la posicion de la ficha "moviendola"
-					ficha.mover(valorDado);
+							// Ecuacion para seguir despues del 95 a 0 en adelante
+							destino = casillas[-96 + posActual + valorDado];
 
-					// Se agrega la ficha en la casilla destino
-					destino.agregarFicha(ficha);
+							actual = casillas[posActual];
+
+							actual.getFichas()[i] = null;
+
+							// Se modifica la posicion de la ficha "moviendola"
+
+							ficha.mover(-96 + valorDado);
+							// Se agrega la ficha en la casilla destino
+							destino.agregarFicha(ficha);
+
+							// Pasa por casa ajena ??
+						} else if (casillas[posActual].getFichas()[i] == ficha && pasoPorCasaAjena) {
+
+							destino = casillas[-96 + posActual + 7 + valorDado];
+
+							actual = casillas[posActual];
+
+							actual.getFichas()[i] = null;
+
+							ficha.mover(-96 + valorDado + 7);
+
+							destino.agregarFicha(ficha);
+
+						}
+
+					}
+
+				}
+				// Es menor a 95 posActual + valorDado ?
+			} else {
+
+				for (int j = 0; j < casillas[posActual].getFichas().length; j++) {
+
+					// No pasa por casa ajena ?
+					if (casillas[posActual].getFichas()[j] == ficha && !pasoPorCasaAjena) {
+
+						// Casilla en la que se encuentra la ficha que llega por parametro
+						actual = casillas[posActual];
+						// Casilla destino
+						destino = casillas[posActual + valorDado];
+
+						// En la casilla que se encontraba la ficha ya no lo estara
+						actual.getFichas()[j] = null;
+
+						// Se modifica la posicion de la ficha "moviendola"
+						ficha.mover(valorDado);
+
+						// Se agrega la ficha en la casilla destino
+						destino.agregarFicha(ficha);
+
+						// Si pasa por casa Ajena ?
+					} else if (casillas[posActual].getFichas()[j] == ficha && pasoPorCasaAjena) {
+
+						if (posActual + 7 + valorDado > 95) {
+
+							destino = casillas[-96 + posActual + 7 + valorDado];
+
+							actual = casillas[posActual];
+
+							actual.getFichas()[j] = null;
+
+							ficha.mover(-96 + valorDado + 7);
+
+							destino.agregarFicha(ficha);
+
+						} else {
+
+							actual = casillas[posActual];
+
+							destino = casillas[posActual + 7 + valorDado];
+
+							actual.getFichas()[j] = null;
+
+							ficha.mover(valorDado + 7);
+
+							destino.agregarFicha(ficha);
+
+						}
+
+					}
 
 				}
 
 			}
-
 		}
 		// Se actualizan las zonas con el arreglo casillas de parques.
 		rellenarZonas();
@@ -495,50 +578,93 @@ public class Parques implements Constantes {
 
 		p.sacarFichasDeLaCarcel(e2.getFichas());
 		p.sacarFichasDeLaCarcel(e.getFichas());
-		p.sacarFichasDeLaCarcel(e3.getFichas());			
-		
-		
-
-//		p.probarCasillaSalida(e.getFichas()[0], e2.getFichas()[0], e3.getFichas()[0]);
-		
-		p.moverFicha(e.getFichas()[0], 72);
-//		p.moverFicha(e.getFichas()[1], 72);
-		p.moverFicha(e2.getFichas()[0], 48);
-		p.moverFicha(e3.getFichas()[0], 24);
-		
-//		p.meterFichaALaCarcel(e4.getFichas()[0]);
-		
-		
-		
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-		
-		System.out.println();
-		
-		
+		p.sacarFichasDeLaCarcel(e3.getFichas());
 		p.sacarFichasDeLaCarcel(e4.getFichas());
-		
-//
-//		p.moverFicha(e.getFichas()[0], 26);
-//
-		System.out.println();
-//
+
+		// p.probarCasillaSalida(e.getFichas()[0], e2.getFichas()[0],
+		// e3.getFichas()[0]);
+
+		// p.moverFicha(e.getFichas()[0], 72);
+		// p.moverFicha(e.getFichas()[1], 72);
+		// p.moverFicha(e2.getFichas()[0], 48);
+		// p.moverFicha(e3.getFichas()[0], 24);
+
+		// p.meterFichaALaCarcel(e4.getFichas()[0]);
+
 		System.out.println(Arrays.deepToString(p.getZonaUno()));
 		System.out.println(Arrays.deepToString(p.getZonaDos()));
 		System.out.println(Arrays.deepToString(p.getZonaTres()));
 		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-//
-//		System.out.println();
-//
-//		p.moverFicha(e2.getFichas()[0], 2);
-//
-//		System.out.println(Arrays.deepToString(p.getZonaUno()));
-//		System.out.println(Arrays.deepToString(p.getZonaDos()));
-//		System.out.println(Arrays.deepToString(p.getZonaTres()));
-//		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
 
+		System.out.println();
+
+		// p.moverFicha(e.getFichas()[0], 84);
+		// p.moverFicha(e2.getFichas()[0], 60);
+		// p.moverFicha(e3.getFichas()[0], 36);
+		// p.moverFicha(e4.getFichas()[0], 12);
+
+		//
+		p.moverFichaNew(e2.getFichas()[0], 12);
+
+		System.out.println(e2.getFichas()[0].getPosicion());
+		//
+		System.out.println();
+		//
+		System.out.println(Arrays.deepToString(p.getZonaUno()));
+		System.out.println(Arrays.deepToString(p.getZonaDos()));
+		System.out.println(Arrays.deepToString(p.getZonaTres()));
+		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+		//
+		System.out.println();
+		//
+		p.moverFichaNew(e2.getFichas()[0], 12);
+		System.out.println(e2.getFichas()[0].getPosicion());
+		//
+		System.out.println(Arrays.deepToString(p.getZonaUno()));
+		System.out.println(Arrays.deepToString(p.getZonaDos()));
+		System.out.println(Arrays.deepToString(p.getZonaTres()));
+		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+
+		System.out.println();
+		//
+		p.moverFichaNew(e2.getFichas()[0], 10);
+		System.out.println(e2.getFichas()[0].getPosicion());
+		//
+		System.out.println(Arrays.deepToString(p.getZonaUno()));
+		System.out.println(Arrays.deepToString(p.getZonaDos()));
+		System.out.println(Arrays.deepToString(p.getZonaTres()));
+		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+
+		System.out.println();
+		//
+		p.moverFichaNew(e2.getFichas()[0], 12);
+		System.out.println(e2.getFichas()[0].getPosicion());
+		//
+		System.out.println(Arrays.deepToString(p.getZonaUno()));
+		System.out.println(Arrays.deepToString(p.getZonaDos()));
+		System.out.println(Arrays.deepToString(p.getZonaTres()));
+		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+
+		System.out.println();
+		//
+		p.moverFichaNew(e2.getFichas()[0], 12);
+		System.out.println(e2.getFichas()[0].getPosicion());
+		//
+		System.out.println(Arrays.deepToString(p.getZonaUno()));
+		System.out.println(Arrays.deepToString(p.getZonaDos()));
+		System.out.println(Arrays.deepToString(p.getZonaTres()));
+		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
+		
+		
+		System.out.println();
+		//
+		p.moverFichaNew(e2.getFichas()[0], 6);
+		System.out.println(e2.getFichas()[0].getPosicion());
+		//
+		System.out.println(Arrays.deepToString(p.getZonaUno()));
+		System.out.println(Arrays.deepToString(p.getZonaDos()));
+		System.out.println(Arrays.deepToString(p.getZonaTres()));
+		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
 	}
 
 }

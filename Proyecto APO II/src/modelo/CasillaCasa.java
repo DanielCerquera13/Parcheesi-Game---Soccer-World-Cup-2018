@@ -26,7 +26,14 @@ public class CasillaCasa extends Casilla {
 		this.tipoFicha = tipoFicha;
 	}
 
-
+	@Override
+	public int getTipoFicha() {
+		
+	return tipoFicha;	
+		
+	}
+	
+	
 	/**
 	 * El metodo agrega una nueva ficha a la casilla.<br>
 	 *  <b> pre: </b> ficha != null <br>

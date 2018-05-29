@@ -108,6 +108,12 @@ public class Casilla {
 		
 	}
 
+	public int getTipoFicha() {
+		
+	return 0;	
+		
+	}
+	
 	/**
 	 * encuentra cuantas paginas del arreglo se encuentran ocupadas<br>
 	 * 
