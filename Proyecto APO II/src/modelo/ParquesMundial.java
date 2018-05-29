@@ -313,4 +313,36 @@ public class ParquesMundial {
 
 	}
 
+	public Casilla[][] getZonaUno(){
+		
+	return sesionActiva.getPartida().getParques().getZonaUno();
+		
+	}
+	
+	public Casilla[][] getZonaDos(){
+		
+	return sesionActiva.getPartida().getParques().getZonaDos();	
+		
+	}
+	
+	public Casilla[][] getZonaTres(){
+		
+	return sesionActiva.getPartida().getParques().getZonaTres();	
+		
+	}
+	
+	public Casilla[][] getZonaCuatro(){
+		
+		
+	return sesionActiva.getPartida().getParques().getZonaCuatro();	
+		
+	}
+	
+	public void rellenarZonas() {
+		
+	sesionActiva.getPartida().getParques().rellenarZonas();	
+		
+	}
+	
+	
 }

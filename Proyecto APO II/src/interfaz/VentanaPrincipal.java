@@ -13,7 +13,7 @@ public class VentanaPrincipal extends JFrame {
 	/**
 	 * Relaciones
 	 */
-	
+
 	private PanelInicial inicial;
 	private ParquesMundial mundial;
 
@@ -44,11 +44,11 @@ public class VentanaPrincipal extends JFrame {
 		// asd
 
 	}
-	
+
 	public ParquesMundial getParquesMundial() {
-		
-	return mundial;	
-		
+
+		return mundial;
+
 	}
 
 	public PanelInicial getPanelInicial() {
@@ -57,38 +57,35 @@ public class VentanaPrincipal extends JFrame {
 	}
 
 	public void agregarUsuario(Jugador usuario) throws UsuarioYaRegistradoException {
-		
-	mundial.agregarUsuario(usuario);	
-		
+
+		mundial.agregarUsuario(usuario);
+
 	}
-	
-	
-	 
+
 	public Jugador buscarUsuario(String nickname) throws UsuarioNoRegistradoException {
-		
-		
-	return mundial.buscarUsuario(nickname);	
-		
+
+		return mundial.buscarUsuario(nickname);
+
 	}
-	
+
 	public void guardar() {
-		
-	mundial.guardar();	
-		
+
+		mundial.guardar();
+
 	}
-	
+
 	public void setSesionActiva(Jugador sesion) {
-		
-	mundial.setSesionActiva(sesion);	
-		
+
+		mundial.setSesionActiva(sesion);
+
 	}
-	
+
 	public Jugador getSesionActiva() {
-		
-	return mundial.getSesionActiva();	
-		
+
+		return mundial.getSesionActiva();
+
 	}
-	
+
 	public void refresh() {
 
 		invalidate();
@@ -97,6 +94,36 @@ public class VentanaPrincipal extends JFrame {
 
 	}
 
+	public Casilla[][] getZonaUno() {
+
+		return mundial.getZonaUno();
+
+	}
+
+	public Casilla[][] getZonaDos() {
+
+		return mundial.getZonaDos();
+
+	}
+
+	public Casilla[][] getZonaTres() {
+
+		return mundial.getZonaTres();
+
+	}
+
+	public Casilla[][] getZonaCuatro() {
+
+		return mundial.getZonaCuatro();
+
+	}
+
+	public void rellenarZonas() {
+		
+	mundial.rellenarZonas();	
+		
+	}
+	
 	public static void main(String args[]) {
 		VentanaPrincipal ventana = new VentanaPrincipal();
 		ventana.setVisible(true);

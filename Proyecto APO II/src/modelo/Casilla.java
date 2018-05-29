@@ -28,7 +28,7 @@ public class Casilla {
 	 */
 	public Casilla(int tipo, int posicion) {
 
-		fichas = new Ficha[8];
+		fichas = new Ficha[10];
 		this.tipo = tipo;
 		this.posicion = posicion;
 	}

@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import modelo.*;
 
 public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 
@@ -19,6 +20,7 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 
 	public static final String JUGAR = "jugar";
 
+	private PanelParques parques;
 	private PanelIniciarSesion sesion;
 	private JLabel labUsuario;
 	private JButton butJugar;
@@ -38,7 +40,8 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 	addMouseListener(this);
 	panini = new PanelPanini(this);
 	tienda = new PanelTienda(this);
-		
+	parques = null;
+	
 	}
 	
 
@@ -99,8 +102,45 @@ public class PanelInicio extends JPanel implements ActionListener,MouseListener{
 		String comando = e.getActionCommand();
 		
 		if(comando.equals(JUGAR)) {
+		
+		VentanaPrincipal vent = sesion.getVentana();	
 			
-			
+		sesion.getVentana().remove(this);
+		
+		
+		// Se crean los equipos
+		Equipo e1 = new Equipo("", "Colombia", 1);
+		Equipo e2 = new Equipo("", "Brasil", 2);
+		Equipo e3 = new Equipo("", "Alemania", 3);
+		Equipo e4 = new Equipo("", "Senegal", 4);
+
+		// Se crean los jugadores
+		Jugador j2 = new Jugador("Jugador 2");
+		Jugador j3 = new Jugador("Jugador 3");
+		Jugador j4 = new Jugador("Jugador 4");
+		
+		
+		// Se asignan los equipos a los jugadores
+		vent.getSesionActiva().setEquipo(e1);
+		j2.setEquipo(e2);
+		j3.setEquipo(e3);
+		j4.setEquipo(e4);
+		
+		Equipo[] equipos = {vent.getSesionActiva().getEquipo(), j2.getEquipo(), j3.getEquipo(), j4.getEquipo()};
+				
+		
+		Partida laPartida = new Partida();
+		
+		laPartida.getParques().setEquipos(equipos);
+		
+		vent.getSesionActiva().setPartida(laPartida);
+		
+		parques = new PanelParques(this);
+		
+		sesion.getVentana().add(parques);
+		sesion.getVentana().setSize(1000,1000);
+		sesion.getVentana().refresh();
+		
 			
 		}
 

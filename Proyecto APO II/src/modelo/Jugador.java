@@ -33,6 +33,10 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 	 */
 	private Album album;
 
+	private transient Partida partida;
+
+	private transient Equipo equipo;
+
 	// CONSTRUCTOR
 
 	/**
@@ -48,6 +52,13 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 	 */
 	private boolean[] laminasObtenidas;
 
+	public Jugador(String nickName) {
+
+		this.nickName = nickName;
+		equipo = null;
+
+	}
+
 	public Jugador(String nickName, String contrasena) {
 
 		this.nickName = nickName;
@@ -56,11 +67,36 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 		album = new Album();
 		laminas = new ArrayList<Lamina>();
 		laminasObtenidas = new boolean[353];
+		partida = null;
+		equipo = null;
 
 		iniciarFalse();
 	}
 
 	// GET AND SET
+
+	public void setEquipo(Equipo equipo) {
+
+		this.equipo = equipo;
+
+	}
+
+	public Equipo getEquipo() {
+
+		return equipo;
+
+	}
+
+	public void setPartida(Partida partida) {
+
+		this.partida = partida;
+
+	}
+
+	public Partida getPartida() {
+
+		return partida;
+	}
 
 	/**
 	 * Este metodo permite actualizar las laminas obtenidas en el album, para que se
@@ -118,10 +154,12 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 			laminasObtenidas[i] = false;
 		}
 	}
- 
+
 	/**
 	 * Agrega una lamina al jugador.
-	 * @param lamina - la lamina que se desea agregar.
+	 * 
+	 * @param lamina
+	 *            - la lamina que se desea agregar.
 	 */
 	public void agregarLamina(Lamina lamina) {
 
@@ -137,16 +175,19 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 
 	/**
 	 * Modifica la cantidad de dinero que tiene el jugador.
-	 * @param dinero - la nueva cantidad de dinero.
+	 * 
+	 * @param dinero
+	 *            - la nueva cantidad de dinero.
 	 */
 	public void setDinero(int dinero) {
 
 		this.dinero = dinero;
 
 	}
-    
+
 	/**
 	 * Entrega la cantidad de dinero que tiene el jugador.
+	 * 
 	 * @return el dinero del jugador.
 	 */
 	public int getDinero() {
@@ -195,6 +236,7 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 
 	/**
 	 * Entrega el album que tiene el jugador.
+	 * 
 	 * @return album del jugador.
 	 */
 	public Album getAlbum() {
@@ -202,9 +244,10 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 		return album;
 
 	}
-     
+
 	/**
 	 * Entrega el arreglo de laminas que tiene en su album el jugador
+	 * 
 	 * @return - arreglo de laminas obtenidas.
 	 */
 	public boolean[] getLaminasObtenidas() {
@@ -212,19 +255,21 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 		return laminasObtenidas;
 
 	}
-   
+
 	/**
 	 * Entrega las laminas del jugador.
+	 * 
 	 * @return laminas del jugador.
 	 */
 	public ArrayList<Lamina> getLaminas() {
 		return laminas;
 	}
 
-	
 	/**
 	 * Modifica las laminas que tiene el jugador, por unas nuevas.
-	 * @param laminas - la nueva lista de laminas que tendrá el jugador.
+	 * 
+	 * @param laminas
+	 *            - la nueva lista de laminas que tendrá el jugador.
 	 */
 	public void setLaminas(ArrayList<Lamina> laminas) {
 		this.laminas = laminas;
@@ -232,12 +277,14 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 
 	/**
 	 * modifica el arreglo de laminas obtenidas que tiene el jugador en su album.
-	 * @param laminasObtenidas - el nuevo arreglo de laminas obtenidas.
+	 * 
+	 * @param laminasObtenidas
+	 *            - el nuevo arreglo de laminas obtenidas.
 	 */
 	public void setLaminasObtenidas(boolean[] laminasObtenidas) {
 		this.laminasObtenidas = laminasObtenidas;
 	}
-     
+
 	/**
 	 * Ordena las laminas obtenidas del jugador en orden ascendente.
 	 */
@@ -266,13 +313,16 @@ public class Jugador implements Serializable, Comparable<Jugador> {
 		}
 
 	}
-   
+
 	/**
 	 * Este metodo busca una lamina en particular en las que tiene el jugador. <br>
-	 *  <b> pre: </b> num< 352.     <br>
-	 * @param num - numero de la lamina a buscar
+	 * <b> pre: </b> num< 352. <br>
+	 * 
+	 * @param num
+	 *            - numero de la lamina a buscar
 	 * @return la lamina que se desea busar
-	 * @throws LaminaNoObtenidaException - se lanza cuando la lamina no la tiene el jugador
+	 * @throws LaminaNoObtenidaException
+	 *             - se lanza cuando la lamina no la tiene el jugador
 	 */
 	public Lamina buscarLamina(int num) throws LaminaNoObtenidaException {
 
