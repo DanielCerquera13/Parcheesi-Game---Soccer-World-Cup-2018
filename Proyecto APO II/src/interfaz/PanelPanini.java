@@ -175,9 +175,9 @@ public class PanelPanini extends JPanel implements ActionListener {
 		  
 		  
 		  String[] columnas = {"#", "Nombre", "Numero"};
-		  Object[][] data = new Object[laminas.size()][laminas.size()];
+		  Object[][] data = new Object[2500][2500];
 		  
-		  for (int i = 0; i <data.length; i++) {
+		  for (int i = 0; i <laminas.size(); i++) {
 			
 			  data[i][0] = numero;
 			//  data[i][1] = .get(i).getJugador().substring(30, laminas.get(i).getJugador().length()-4);
