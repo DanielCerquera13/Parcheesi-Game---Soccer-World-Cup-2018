@@ -5,6 +5,7 @@ import javax.swing.*;
 
 import excepciones.UsuarioNoRegistradoException;
 import excepciones.UsuarioYaRegistradoException;
+import hilos.HiloParques;
 
 import java.awt.*;
 
@@ -16,6 +17,7 @@ public class VentanaPrincipal extends JFrame {
 
 	private PanelInicial inicial;
 	private ParquesMundial mundial;
+	private HiloParques hilo;
 
 	/**
 	 * Constructor
@@ -39,11 +41,14 @@ public class VentanaPrincipal extends JFrame {
 
 		inicial = new PanelInicial(this);
 
+		hilo = null;
 		add(inicial);
 
 		// asd
 
 	}
+
+	
 
 	public ParquesMundial getParquesMundial() {
 

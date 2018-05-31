@@ -1,12 +1,16 @@
 package interfaz;
 
 import javax.swing.*;
+
+import hilos.HiloParques;
+
 import java.awt.*;
 import modelo.*;
 
 public class PanelParques extends JPanel {
 
 	private PanelInicio inicio;
+
 
 	// Componentes para pintar el parques
 	private JPanel carcelUno;
@@ -46,6 +50,9 @@ public class PanelParques extends JPanel {
 		add(carcelDos);
 
 	}
+
+
+	
 	
 	public void inicializarTablero() {
 
@@ -88,26 +95,22 @@ public class PanelParques extends JPanel {
 		for (int i = 0; i < zonaUnoBut.length; i++) {
 			for (int j = 0; j < zonaUnoBut[0].length; j++) {
 
-				
 				zonaUnoBut[i][j] = new JButton(zonaUnoC[i][j].toString());
 				zonaUnoBut[i][j].setLayout(new GridLayout(4, 2));
-				
-							
-				for(int k = 0; k<8; k++) {
-					
-				zonaUnoBut[i][j].add(new JButton());	
-					
+
+				for (int k = 0; k < 8; k++) {
+
+					zonaUnoBut[i][j].add(new JButton());
+
 				}
 				zonaUnoBut[i][j].setOpaque(true);
-				
 
-				
 				zonaTresBut[i][j] = new JButton(zonaTresC[i][j].toString());
 				zonaTresBut[i][j].setLayout(new GridLayout(4, 2));
-				for(int k = 0; k<8; k++) {
-					
-				zonaTresBut[i][j].add(new JButton());	
-					
+				for (int k = 0; k < 8; k++) {
+
+					zonaTresBut[i][j].add(new JButton());
+
 				}
 				zonaTresBut[i][j].setOpaque(true);
 
@@ -122,24 +125,21 @@ public class PanelParques extends JPanel {
 
 			for (int j = 0; j < zonaDosBut[0].length; j++) {
 
-				
 				zonaDosBut[i][j] = new JButton(zonaDosC[i][j].toString());
 				zonaDosBut[i][j].setLayout(new GridLayout(2, 4));
-				for(int k = 0 ; k<8; k++) {
-					
-				zonaDosBut[i][j].add(new JButton());	
-					
+				for (int k = 0; k < 8; k++) {
+
+					zonaDosBut[i][j].add(new JButton());
+
 				}
 				zonaDosBut[i][j].setOpaque(true);
 
-							
-			
 				zonaCuatroBut[i][j] = new JButton(zonaCuatroC[i][j].toString());
 				zonaCuatroBut[i][j].setLayout(new GridLayout(2, 4));
-				for(int k = 0 ; k<8; k++) {
-					
-				zonaCuatroBut[i][j].add(new JButton());	
-					
+				for (int k = 0; k < 8; k++) {
+
+					zonaCuatroBut[i][j].add(new JButton());
+
 				}
 				zonaCuatroBut[i][j].setOpaque(true);
 
@@ -158,7 +158,6 @@ public class PanelParques extends JPanel {
 		Casilla[][] zonaTresC = inicio.getVentana().getZonaTres();
 		Casilla[][] zonaCuatroC = inicio.getVentana().getZonaCuatro();
 
-		
 		// Rellena la zona Uno
 		for (int i = 0; i < zonaUnoBut.length; i++) {
 			for (int j = 0; j < zonaUnoBut[0].length; j++) {
@@ -189,10 +188,6 @@ public class PanelParques extends JPanel {
 			}
 
 		}
-		
-		
-		
-		
 
 	}
 
@@ -212,7 +207,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param inicio the inicio to set
+	 * @param inicio
+	 *            the inicio to set
 	 */
 	public void setInicio(PanelInicio inicio) {
 		this.inicio = inicio;
@@ -226,7 +222,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param carcelUno the carcelUno to set
+	 * @param carcelUno
+	 *            the carcelUno to set
 	 */
 	public void setCarcelUno(JPanel carcelUno) {
 		this.carcelUno = carcelUno;
@@ -240,7 +237,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param carcelDos the carcelDos to set
+	 * @param carcelDos
+	 *            the carcelDos to set
 	 */
 	public void setCarcelDos(JPanel carcelDos) {
 		this.carcelDos = carcelDos;
@@ -254,7 +252,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param carcelTres the carcelTres to set
+	 * @param carcelTres
+	 *            the carcelTres to set
 	 */
 	public void setCarcelTres(JPanel carcelTres) {
 		this.carcelTres = carcelTres;
@@ -268,7 +267,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param carcelCuatro the carcelCuatro to set
+	 * @param carcelCuatro
+	 *            the carcelCuatro to set
 	 */
 	public void setCarcelCuatro(JPanel carcelCuatro) {
 		this.carcelCuatro = carcelCuatro;
@@ -282,7 +282,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param elCentro the elCentro to set
+	 * @param elCentro
+	 *            the elCentro to set
 	 */
 	public void setElCentro(JPanel elCentro) {
 		this.elCentro = elCentro;
@@ -296,7 +297,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaUno the zonaUno to set
+	 * @param zonaUno
+	 *            the zonaUno to set
 	 */
 	public void setZonaUno(JPanel zonaUno) {
 		this.zonaUno = zonaUno;
@@ -310,7 +312,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaDos the zonaDos to set
+	 * @param zonaDos
+	 *            the zonaDos to set
 	 */
 	public void setZonaDos(JPanel zonaDos) {
 		this.zonaDos = zonaDos;
@@ -324,7 +327,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaTres the zonaTres to set
+	 * @param zonaTres
+	 *            the zonaTres to set
 	 */
 	public void setZonaTres(JPanel zonaTres) {
 		this.zonaTres = zonaTres;
@@ -338,7 +342,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaCuatro the zonaCuatro to set
+	 * @param zonaCuatro
+	 *            the zonaCuatro to set
 	 */
 	public void setZonaCuatro(JPanel zonaCuatro) {
 		this.zonaCuatro = zonaCuatro;
@@ -352,7 +357,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaUnoBut the zonaUnoBut to set
+	 * @param zonaUnoBut
+	 *            the zonaUnoBut to set
 	 */
 	public void setZonaUnoBut(JButton[][] zonaUnoBut) {
 		this.zonaUnoBut = zonaUnoBut;
@@ -366,7 +372,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaDosBut the zonaDosBut to set
+	 * @param zonaDosBut
+	 *            the zonaDosBut to set
 	 */
 	public void setZonaDosBut(JButton[][] zonaDosBut) {
 		this.zonaDosBut = zonaDosBut;
@@ -380,7 +387,8 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaTresBut the zonaTresBut to set
+	 * @param zonaTresBut
+	 *            the zonaTresBut to set
 	 */
 	public void setZonaTresBut(JButton[][] zonaTresBut) {
 		this.zonaTresBut = zonaTresBut;
@@ -394,10 +402,177 @@ public class PanelParques extends JPanel {
 	}
 
 	/**
-	 * @param zonaCuatroBut the zonaCuatroBut to set
+	 * @param zonaCuatroBut
+	 *            the zonaCuatroBut to set
 	 */
 	public void setZonaCuatroBut(JButton[][] zonaCuatroBut) {
 		this.zonaCuatroBut = zonaCuatroBut;
 	}
+
+	// Actualiza los botones de cada Boton Casilla 
+	public void actualizarFichas() {
+
+		// Recorrido para actualizar zona uno
+		for (int k = 0; k < inicio.getParques().getZonaUno().length; k++) {
+			for (int h = 0; h < inicio.getParques().getZonaUno()[0].length; h++) {
+				for (int j = 0; j < inicio.getParques().getZonaUno()[k][h].getFichas().length; j++) {
+
+					if (inicio.getParques().getZonaUno()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaUno()[k][h].getFichas()[j].getTipo() == 1) {
+
+						getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaUno()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaUno()[k][h].getFichas()[j].getTipo() == 2) {
+
+						getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaUno()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaUno()[k][h].getFichas()[j].getTipo() == 3) {
+
+						getZonaUnoBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+					}
+
+					if (inicio.getParques().getZonaUno()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaUno()[k][h].getFichas()[j].getTipo() == 4) {
+
+						getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(128, 0, 0));
+
+					}
+
+				}
+
+			}
+
+		}
+
+		// Recorrido para actualizar zona dos
+		for (int k = 0; k < inicio.getParques().getZonaDos().length; k++) {
+			for (int h = 0; h < inicio.getParques().getZonaDos()[0].length; h++) {
+				for (int j = 0; j < inicio.getParques().getZonaDos()[k][h].getFichas().length; j++) {
+
+					if (inicio.getParques().getZonaDos()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaDos()[k][h].getFichas()[j].getTipo() == 1) {
+
+						getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaDos()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaDos()[k][h].getFichas()[j].getTipo() == 2) {
+
+						getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaDos()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaDos()[k][h].getFichas()[j].getTipo() == 3) {
+
+						getZonaDosBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+					}
+
+					if (inicio.getParques().getZonaDos()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaDos()[k][h].getFichas()[j].getTipo() == 4) {
+
+						getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(128, 0, 0));
+
+					}
+
+				}
+
+			}
+
+		}
+
+		// Recorrido para actualizar zona cuatro
+		for (int k = 0; k < inicio.getParques().getZonaTres().length; k++) {
+			for (int h = 0; h < inicio.getParques().getZonaTres()[0].length; h++) {
+				for (int j = 0; j < inicio.getParques().getZonaTres()[k][h].getFichas().length; j++) {
+
+					if (inicio.getParques().getZonaTres()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaTres()[k][h].getFichas()[j].getTipo() == 1) {
+
+						getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaTres()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaTres()[k][h].getFichas()[j].getTipo() == 2) {
+
+						getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaTres()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaTres()[k][h].getFichas()[j].getTipo() == 3) {
+
+						getZonaTresBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+					}
+
+					if (inicio.getParques().getZonaTres()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaTres()[k][h].getFichas()[j].getTipo() == 4) {
+
+						getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(128, 0, 0));
+
+					}
+
+				}
+
+			}
+
+		}
+
+		// Recorrido para actualizar zona cuatro
+		for (int k = 0; k < inicio.getParques().getZonaCuatro().length; k++) {
+			for (int h = 0; h < inicio.getParques().getZonaCuatro()[0].length; h++) {
+				for (int j = 0; j < inicio.getParques().getZonaCuatro()[k][h].getFichas().length; j++) {
+
+					if (inicio.getParques().getZonaCuatro()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaCuatro()[k][h].getFichas()[j].getTipo() == 1) {
+
+						getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaCuatro()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaCuatro()[k][h].getFichas()[j].getTipo() == 2) {
+
+						getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
+
+					}
+
+					if (inicio.getParques().getZonaCuatro()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaCuatro()[k][h].getFichas()[j].getTipo() == 3) {
+
+						getZonaCuatroBut()[k][h].getComponent(j).setBackground(Color.BLUE);
+
+					}
+
+					if (inicio.getParques().getZonaCuatro()[k][h].getFichas()[j] != null
+							&& inicio.getParques().getZonaCuatro()[k][h].getFichas()[j].getTipo() == 4) {
+
+						getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(128, 0, 0));
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+
+	
+	
+
 
 }

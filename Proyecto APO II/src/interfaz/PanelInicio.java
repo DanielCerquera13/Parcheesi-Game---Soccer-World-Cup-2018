@@ -1,6 +1,9 @@
 package interfaz;
 
 import javax.swing.*;
+
+import hilos.HiloParques;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,12 +36,14 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 	private PanelTienda tienda;
 	private JLabel usuario;
 	private Equipo actual;
-
+	private Parques p;
 	private Equipo e1 = new Equipo("Archivos/imagenes/banderas/colombia.png", "Colombia", 1);
 	private Equipo e2 = new Equipo("Archivos/imagenes/banderas/brasil.png", "Brasil", 2);
 	private Equipo e3 = new Equipo("Archivos/imagenes/banderas/argentina.png", "Argentina", 3);
 	private Equipo e4 = new Equipo("Archivos/imagenes/banderas/españa.png", "España", 4);
-
+	private HiloParques hilo;
+	
+	
 	public PanelInicio(PanelIniciarSesion sesion) {
 
 		this.sesion = sesion;
@@ -49,6 +54,8 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 		tienda = new PanelTienda(this);
 		parques = null;
 		actual = null;
+		p = null;
+		hilo = null;
 
 	}
 
@@ -56,6 +63,12 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 
 		return sesion.getVentana();
 
+	}
+	
+	public HiloParques getHiloParques() {
+		
+	return hilo;	
+		
 	}
 
 	public void ajustarComponentes() {
@@ -141,6 +154,7 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 
 		parques = new PanelParques(this);
 
+		// Se agregan las banderas de los equipos que representa cada jugador
 		parques.getCarcelUno().setLayout(new BorderLayout());
 
 		parques.getCarcelUno().add(new JLabel(new ImageIcon(e1.getRutaBandera())), BorderLayout.CENTER);
@@ -162,6 +176,7 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 		parques.getElCentro().add(new JLabel(new ImageIcon("./Archivos/imagenes/recursos/centroParques.png")),
 				BorderLayout.CENTER);
 
+		// Se pintan las casillas casa para cada equipo
 		for (int k = 0; k < parques.getZonaUnoBut()[0].length; k++) {
 			parques.getZonaUnoBut()[1][k].setBackground(Color.YELLOW);
 		}
@@ -178,6 +193,7 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 			parques.getZonaCuatroBut()[k][1].setBackground(Color.RED);
 		}
 
+		// Casillas Seguro
 		parques.getZonaUnoBut()[1][0].setBackground(Color.DARK_GRAY);
 		parques.getZonaUnoBut()[0][4].setBackground(Color.DARK_GRAY);
 
@@ -189,15 +205,20 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 
 		parques.getZonaCuatroBut()[0][1].setBackground(Color.DARK_GRAY);
 		parques.getZonaCuatroBut()[4][2].setBackground(Color.DARK_GRAY);
+		// Fin Casillas Seguro
 
+		// Se pintan las casillas salida de los equipos
 		parques.getZonaUnoBut()[2][4].setBackground(Color.YELLOW);
-
 		parques.getZonaDosBut()[3][2].setBackground(Color.GREEN);
-
 		parques.getZonaTresBut()[0][3].setBackground(Color.CYAN);
-
 		parques.getZonaCuatroBut()[4][0].setBackground(Color.RED);
 
+	}
+	
+	public Parques getParques() {
+		
+	return p;	
+		
 	}
 
 	@Override
@@ -206,16 +227,11 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 
 		if (comando.equals(JUGAR)) {
 
-			JOptionPane.showMessageDialog(null,"Esta seccion se encuentra en fase BETA");
-			
+			JOptionPane.showMessageDialog(null, "Esta seccion se encuentra en fase BETA");
+
 			VentanaPrincipal vent = sesion.getVentana();
 
 			sesion.getVentana().remove(this);
-
-			escoger = new PanelEscogerEquipo(this);
-
-			// sesion.getVentana().add(escoger);
-			// sesion.getVentana().refresh();
 
 			// Se crean los jugadores
 			Jugador j2 = new Jugador("Jugador 2");
@@ -236,186 +252,40 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 
 			vent.getSesionActiva().setPartida(laPartida);
 
+			// Equipos y colores
 			personalizarParques();
 
-			Parques p = laPartida.getParques();
+			p = laPartida.getParques();
 
-			p.sacarFichasDeLaCarcel(e1.getFichas());
-			p.sacarFichasDeLaCarcel(e2.getFichas());
-			p.sacarFichasDeLaCarcel(e3.getFichas());
-			p.sacarFichasDeLaCarcel(e4.getFichas());
-			p.moverFichaNew(e1.getFichas()[0], 12);
-			p.moverFichaNew(e2.getFichas()[0], 7);
-			p.moverFichaNew(e3.getFichas()[0], 10);
-			p.moverFichaNew(e4.getFichas()[0], 5);
+			hilo = new HiloParques(p, parques);
 			
-			parques.actualizarTablero();
-			System.out.println(p.getZonaUno()[0][0].getFichas().length);
-
-			// Recorrido para actualizar zona uno
-			for (int k = 0; k < p.getZonaUno().length; k++) {
-				for (int h = 0; h < p.getZonaUno()[0].length; h++) {
-					for (int j = 0; j < p.getZonaUno()[k][h].getFichas().length; j++) {
-
-						if (p.getZonaUno()[k][h].getFichas()[j] != null
-								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 1) {
-
-							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
-
-						}
-
-						if (p.getZonaUno()[k][h].getFichas()[j] != null
-								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 2) {
-
-							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
-
-						}
-
-						if (p.getZonaUno()[k][h].getFichas()[j] != null
-								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 3) {
-
-							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(Color.BLUE);
-
-						}
-
-						if (p.getZonaUno()[k][h].getFichas()[j] != null
-								&& p.getZonaUno()[k][h].getFichas()[j].getTipo() == 4) {
-
-							parques.getZonaUnoBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
-
-						}
-
-					}
-
-				}
-
-			}
-
-			
-			// Recorrido para actualizar zona dos
-			for (int k = 0; k < p.getZonaDos().length; k++) {
-				for (int h = 0; h < p.getZonaDos()[0].length; h++) {
-					for (int j = 0; j < p.getZonaDos()[k][h].getFichas().length; j++) {
-
-						if (p.getZonaDos()[k][h].getFichas()[j] != null
-								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 1) {
-
-							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
-
-						}
-
-						if (p.getZonaDos()[k][h].getFichas()[j] != null
-								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 2) {
-
-							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
-
-						}
-
-						if (p.getZonaDos()[k][h].getFichas()[j] != null
-								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 3) {
-
-							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(Color.BLUE);
-
-						}
-
-						if (p.getZonaDos()[k][h].getFichas()[j] != null
-								&& p.getZonaDos()[k][h].getFichas()[j].getTipo() == 4) {
-
-							parques.getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
-
-						}
-
-					}
-
-				}
-
-			}
-			
-			// Recorrido para actualizar zona cuatro
-			for (int k = 0; k < p.getZonaTres().length; k++) {
-				for (int h = 0; h < p.getZonaTres()[0].length; h++) {
-					for (int j = 0; j < p.getZonaTres()[k][h].getFichas().length; j++) {
-
-						if (p.getZonaTres()[k][h].getFichas()[j] != null
-								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 1) {
-
-							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
-
-						}
-
-						if (p.getZonaTres()[k][h].getFichas()[j] != null
-								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 2) {
-
-							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
-
-						}
-
-						if (p.getZonaTres()[k][h].getFichas()[j] != null
-								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 3) {
-
-							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(Color.BLUE);
-
-						}
-
-						if (p.getZonaTres()[k][h].getFichas()[j] != null
-								&& p.getZonaTres()[k][h].getFichas()[j].getTipo() == 4) {
-
-							parques.getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
-
-						}
-
-					}
-
-				}
-
-			}
-			
-			// Recorrido para actualizar zona cuatro
-			for (int k = 0; k < p.getZonaCuatro().length; k++) {
-				for (int h = 0; h < p.getZonaCuatro()[0].length; h++) {
-					for (int j = 0; j < p.getZonaCuatro()[k][h].getFichas().length; j++) {
-
-						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
-								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 1) {
-
-							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(128, 128, 0));
-
-						}
-
-						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
-								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 2) {
-
-							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(0, 128, 0));
-
-						}
-
-						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
-								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 3) {
-
-							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(Color.BLUE);
-
-						}
-
-						if (p.getZonaCuatro()[k][h].getFichas()[j] != null
-								&& p.getZonaCuatro()[k][h].getFichas()[j].getTipo() == 4) {
-
-							parques.getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(128,0,0));
-
-						}
-
-					}
-
-				}
-
-			}
-
-			parques.actualizarTablero();
-
-			System.out.println(parques.getZonaUnoBut()[2][4]);
-
 			sesion.getVentana().add(parques);
 			sesion.getVentana().setSize(1400, 1000);
 			sesion.getVentana().refresh();
+			
+			Thread proceso = new Thread(hilo);
+			
+			proceso.start();
+			
+//			p.sacarFichasDeLaCarcel(e1.getFichas());
+			
+			
+//			p.sacarFichasDeLaCarcel(e2.getFichas());
+//			p.sacarFichasDeLaCarcel(e3.getFichas());
+//			p.sacarFichasDeLaCarcel(e4.getFichas());
+//			p.moverFichaNew(e1.getFichas()[0], 12);
+//			p.moverFichaNew(e2.getFichas()[0], 7);
+//			p.moverFichaNew(e3.getFichas()[0], 10);
+//			p.moverFichaNew(e4.getFichas()[0], 5);
+
+//			parques.actualizarTablero();
+
+
+//			parques.actualizarFichas();
+
+//			parques.actualizarTablero();
+
+	
 
 		}
 
