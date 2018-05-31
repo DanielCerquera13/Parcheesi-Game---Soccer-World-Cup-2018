@@ -274,6 +274,7 @@ public class PanelInicio extends JPanel implements ActionListener, MouseListener
 //			p.sacarFichasDeLaCarcel(e3.getFichas());
 //			p.sacarFichasDeLaCarcel(e4.getFichas());
 //			p.moverFichaNew(e1.getFichas()[0], 12);
+//			p.moverFichaNew(e1.getFichas()[1], 10);
 //			p.moverFichaNew(e2.getFichas()[0], 7);
 //			p.moverFichaNew(e3.getFichas()[0], 10);
 //			p.moverFichaNew(e4.getFichas()[0], 5);

@@ -412,6 +412,8 @@ public class PanelParques extends JPanel {
 	// Actualiza los botones de cada Boton Casilla 
 	public void actualizarFichas() {
 
+		Color c = getZonaUnoBut()[0][0].getComponent(0).getBackground();
+		
 		// Recorrido para actualizar zona uno
 		for (int k = 0; k < inicio.getParques().getZonaUno().length; k++) {
 			for (int h = 0; h < inicio.getParques().getZonaUno()[0].length; h++) {
@@ -445,6 +447,12 @@ public class PanelParques extends JPanel {
 
 					}
 
+					if(inicio.getParques().getZonaUno()[k][h].getFichas()[j]== null) {
+						
+						getZonaUnoBut()[k][h].getComponent(j).setBackground(c);
+						
+					}
+					
 				}
 
 			}
@@ -482,6 +490,14 @@ public class PanelParques extends JPanel {
 
 						getZonaDosBut()[k][h].getComponent(j).setBackground(new Color(128, 0, 0));
 
+					}
+					
+
+					
+					if(inicio.getParques().getZonaDos()[k][h].getFichas()[j]== null) {
+						
+						getZonaDosBut()[k][h].getComponent(j).setBackground(c);
+						
 					}
 
 				}
@@ -522,6 +538,12 @@ public class PanelParques extends JPanel {
 						getZonaTresBut()[k][h].getComponent(j).setBackground(new Color(128, 0, 0));
 
 					}
+					
+					if(inicio.getParques().getZonaTres()[k][h].getFichas()[j]== null) {
+						
+						getZonaTresBut()[k][h].getComponent(j).setBackground(c);
+						
+					}
 
 				}
 
@@ -560,6 +582,12 @@ public class PanelParques extends JPanel {
 
 						getZonaCuatroBut()[k][h].getComponent(j).setBackground(new Color(128, 0, 0));
 
+					}
+					
+					if(inicio.getParques().getZonaCuatro()[k][h].getFichas()[j] == null) {
+						
+						getZonaCuatroBut()[k][h].getComponent(j).setBackground(c);
+						
 					}
 
 				}
