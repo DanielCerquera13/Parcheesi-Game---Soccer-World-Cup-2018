@@ -437,8 +437,20 @@ public class Parques implements Constantes {
 		// Definir si pasa por casa ajena
 		for (int k = posActual + 1; k <= posActual + valorDado && !pasoPorCasaAjena; k++) {
 
-			if (casillas[k].getTipo() == Constantes.CASA) {
-				if (ficha.getTipo() != casillas[k].getTipoFicha()) {
+			int auxK = 0;
+			
+			if(k>95) {
+				
+			auxK = k-96;	
+				
+			}else {
+				
+			auxK = k;	
+				
+			}
+			
+			if (casillas[auxK].getTipo() == Constantes.CASA) {
+				if (ficha.getTipo() != casillas[auxK].getTipoFicha()) {
 
 					pasoPorCasaAjena = true;
 
@@ -527,7 +539,7 @@ public class Parques implements Constantes {
 
 							actual.getFichas()[j] = null;
 
-							ficha.mover(-96 + valorDado + 7);
+							ficha.mover(-96 +valorDado + 7);
 
 							destino.agregarFicha(ficha);
 
@@ -556,117 +568,5 @@ public class Parques implements Constantes {
 
 	}
 
-	public static void main(String[] args) {
-
-		// Ficha fichaUno = new Ficha("UNO", 1);
-		// Ficha fichaDos = new Ficha("UNO", 1);
-		//
-		// Ficha[] fichas = { fichaUno, fichaDos };
-		//
-		// for (int i = 0; i < fichas.length; i++) {
-		//
-		// System.out.println(fichas[i] == fichaUno);
-		//
-		// }
-
-		// System.out.println(fichaUno == fichaDos);
-
-		Parques p = new Parques();
-
-		Equipo e = new Equipo("", "", 1);
-		Equipo e2 = new Equipo("", "", 2);
-		Equipo e3 = new Equipo("", "", 3);
-		Equipo e4 = new Equipo("", "", 4);
-
-		p.sacarFichasDeLaCarcel(e2.getFichas());
-		p.sacarFichasDeLaCarcel(e.getFichas());
-		p.sacarFichasDeLaCarcel(e3.getFichas());
-		p.sacarFichasDeLaCarcel(e4.getFichas());
-
-		// p.probarCasillaSalida(e.getFichas()[0], e2.getFichas()[0],
-		// e3.getFichas()[0]);
-
-		// p.moverFicha(e.getFichas()[0], 72);
-		// p.moverFicha(e.getFichas()[1], 72);
-		// p.moverFicha(e2.getFichas()[0], 48);
-		// p.moverFicha(e3.getFichas()[0], 24);
-
-		// p.meterFichaALaCarcel(e4.getFichas()[0]);
-
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-
-		System.out.println();
-
-		// p.moverFicha(e.getFichas()[0], 84);
-		// p.moverFicha(e2.getFichas()[0], 60);
-		// p.moverFicha(e3.getFichas()[0], 36);
-		// p.moverFicha(e4.getFichas()[0], 12);
-
-		//
-		p.moverFichaNew(e2.getFichas()[0], 12);
-
-		System.out.println(e2.getFichas()[0].getPosicion());
-		//
-		System.out.println();
-		//
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-		//
-		System.out.println();
-		//
-		p.moverFichaNew(e2.getFichas()[0], 12);
-		System.out.println(e2.getFichas()[0].getPosicion());
-		//
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-
-		System.out.println();
-		//
-		p.moverFichaNew(e2.getFichas()[0], 10);
-		System.out.println(e2.getFichas()[0].getPosicion());
-		//
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-
-		System.out.println();
-		//
-		p.moverFichaNew(e2.getFichas()[0], 12);
-		System.out.println(e2.getFichas()[0].getPosicion());
-		//
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-
-		System.out.println();
-		//
-		p.moverFichaNew(e2.getFichas()[0], 12);
-		System.out.println(e2.getFichas()[0].getPosicion());
-		//
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-		
-		
-		System.out.println();
-		//
-		p.moverFichaNew(e2.getFichas()[0], 6);
-		System.out.println(e2.getFichas()[0].getPosicion());
-		//
-		System.out.println(Arrays.deepToString(p.getZonaUno()));
-		System.out.println(Arrays.deepToString(p.getZonaDos()));
-		System.out.println(Arrays.deepToString(p.getZonaTres()));
-		System.out.println(Arrays.deepToString(p.getZonaCuatro()));
-	}
 
 }
