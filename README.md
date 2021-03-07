@@ -8,6 +8,8 @@ In this part, the main objective is to fill the panini album with their respecti
 
 ![Soccer Selection](./ReadmeFiles/TeamSoccer.JPG)
 
+This Album was implemented as a Doubly Circular Linked List
+
 ![Sheet](./ReadmeFiles/Lamina.JPG)
 
 ![Updated Album](./ReadmeFiles/UploadLamina.JPG)
